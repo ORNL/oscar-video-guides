@@ -1,0 +1,19 @@
+name: Verify Video Guides
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ffprobe
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg python3
+      - name: Verify NVENC H.264 stream, GOP, captions, and hygiene
+        run: python3 scripts/verify-guides.py .

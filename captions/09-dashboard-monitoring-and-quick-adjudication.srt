@@ -1,0 +1,11 @@
+1
+00:00:00,040 --> 00:00:04,334
+Monitor real-time Lane Status indicators across all 50 portal lanes on the Dashboard.
+
+2
+00:00:04,374 --> 00:00:09,596
+Inspect live occupancy and alarm rows in the Dashboard DataGrid and open row actions.
+
+3
+00:00:09,636 --> 00:00:12,995
+Review peak gamma/neutron alarm telemetry and adjudication controls from the selected event.

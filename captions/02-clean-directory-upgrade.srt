@@ -1,0 +1,11 @@
+1
+00:00:00,040 --> 00:00:03,468
+Extract the new release archive into a clean sibling directory without overlaying old files.
+
+2
+00:00:03,508 --> 00:00:08,229
+Copy only .env, secrets/, and tls/ from the active deployment into the new directory.
+
+3
+00:00:08,269 --> 00:00:12,823
+Run sudo bash oscar.sh upgrade to migrate indexes under lock and recreate containers cleanly.

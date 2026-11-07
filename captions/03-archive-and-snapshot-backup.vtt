@@ -1,0 +1,13 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:03.441
+Check PARQUET_PRIMARY cold-tier generation status and parity receipts.
+
+2
+00:00:03.481 --> 00:00:06.841
+Verify SHA-256 digests and row-count parity across sealed Parquet archive partitions.
+
+3
+00:00:06.881 --> 00:00:11.431
+Create a coordinated single-snapshot backup and run backup-verify.

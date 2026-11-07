@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OSCAR 3.11.0 How-To Video Guides</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1120;
+      --panel: #111827;
+      --border: #1f2937;
+      --accent: #38bdf8;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+    header {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 36px 24px 16px;
+    }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    header p { margin: 0; color: var(--muted); max-width: 880px; }
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 24px 64px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .card-head { display: flex; gap: 12px; align-items: flex-start; }
+    .badge {
+      background: rgba(56, 189, 248, 0.16);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 6px;
+      padding: 3px 9px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    h2 { margin: 0; font-size: 19px; line-height: 1.3; }
+    .meta { margin: 3px 0 0; font-size: 13px; color: var(--muted); }
+    .summary { margin: 0; font-size: 14.5px; color: #d1d5db; }
+    video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 8px;
+      border: 1px solid #374151;
+    }
+    .steps { margin: 0; padding-left: 22px; font-size: 14.5px; color: #e5e7eb; }
+    .steps li { margin-bottom: 6px; }
+    code {
+      background: #1f2937;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #7dd3fc;
+    }
+    .links { display: flex; gap: 16px; font-size: 13px; }
+    .links a { color: var(--accent); text-decoration: none; }
+    .links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OSCAR 3.11.0 How-To Video Guides</h1>
+    <p>Concise, zero-filler 1080p workflow screen recordings encoded via NVIDIA RTX 5060 Ti hardware NVENC H.264 (NV12 4:2:0, 10s GOP 300, differential 30 FPS peak VFR) with synchronized closed captions and sequential step references.</p>
+  </header>
+  <main>
+      <article class="card" id="01-deployment-init-and-credentials" data-track="Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle">
+        <div class="card-head">
+          <span class="badge">01</span>
+          <div>
+            <h2>Initialize OSCAR Deployment, Admin Credentials &amp; TLS</h2>
+            <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 11.2s · 201 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Extract a clean OSCAR release archive, initialize administrator credentials and TLS SAN certificates with oscar init, and verify healthy container startup.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/01-deployment-init-and-credentials.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/01-deployment-init-and-credentials.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Extract <code>oscar-3.11.0.zip</code> into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into <code>oscar-3.11.0/</code>.</li>
+            <li>Run <code>sudo bash oscar.sh init</code> (or <code>.\oscar.bat init</code> on Windows 11) and supply the deployment hostname, IANA timezone, and administrator password (<code>&gt;= 14</code> characters).</li>
+            <li>Allow <code>init</code> to generate deployment-bound PostgreSQL secrets, TLS gateway certificates, and external <code>oscar_oscar_state</code> / <code>oscar_postgres_data</code> volumes.</li>
+            <li>Run <code>sudo bash oscar.sh status</code> (or <code>.\oscar.bat status</code>) to confirm <code>oscar-gateway</code>, <code>oscar</code>, and <code>oscar-postgis</code> report <code>running (healthy)</code>.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/01-deployment-init-and-credentials.mp4">MP4 Video</a>
+          <a href="captions/01-deployment-init-and-credentials.vtt">WebVTT (.vtt)</a>
+          <a href="captions/01-deployment-init-and-credentials.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="02-clean-directory-upgrade" data-track="Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle">
+        <div class="card-head">
+          <span class="badge">02</span>
+          <div>
+            <h2>Upgrade OSCAR in a Clean Release Directory</h2>
+            <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 12.8s · 293.5 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Verify a pre-upgrade snapshot, copy only .env, secrets/, and tls/ into a newly extracted release folder, and run oscar upgrade while preserving external volumes.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/02-clean-directory-upgrade.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/02-clean-directory-upgrade.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>When <code>single</code> backup mode is enabled, run <code>sudo bash oscar.sh backup</code> and <code>sudo bash oscar.sh backup-verify</code> from the active release directory before upgrading.</li>
+            <li>Extract the target <code>oscar-3.11.0.zip</code> archive into a separate sibling directory — never unzip over an existing release directory.</li>
+            <li>Copy only <code>.env</code>, <code>secrets/</code>, and <code>tls/</code> (plus <code>.oscar-volume-adoption</code> if previously adopted) into the newly extracted directory.</li>
+            <li>Run <code>sudo bash oscar.sh upgrade</code> (or <code>.\oscar.bat upgrade</code>) and confirm all containers return <code>healthy</code> with preserved named volumes and archive roots.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/02-clean-directory-upgrade.mp4">MP4 Video</a>
+          <a href="captions/02-clean-directory-upgrade.vtt">WebVTT (.vtt)</a>
+          <a href="captions/02-clean-directory-upgrade.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="03-archive-and-snapshot-backup" data-track="Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle">
+        <div class="card-head">
+          <span class="badge">03</span>
+          <div>
+            <h2>Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup</h2>
+            <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 11.4s · 193.1 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Inspect PARQUET_PRIMARY cold-tier generation status, verify sealed Parquet SHA-256 parity receipts, and run a coordinated single-snapshot backup and verification.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/03-archive-and-snapshot-backup.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/03-archive-and-snapshot-backup.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Run <code>sudo bash oscar.sh archive status</code> (or <code>.\oscar.bat archive status</code>) to inspect <code>PARQUET_PRIMARY</code> staging windows, sealed generation counts, and parity receipts.</li>
+            <li>Run <code>sudo bash oscar.sh archive verify</code> to validate manifest SHA-256 checksums and row-count parity across immutable Parquet files.</li>
+            <li>Ensure <code>single</code> backup mode is configured with a non-overlapping absolute backup directory (<code>--backup-mode single --backup-dir &lt;path&gt;</code>).</li>
+            <li>Run <code>sudo bash oscar.sh backup</code> followed by <code>sudo bash oscar.sh backup-verify</code> to create and verify the coordinated PostGIS, state, and archive-generation snapshot.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/03-archive-and-snapshot-backup.mp4">MP4 Video</a>
+          <a href="captions/03-archive-and-snapshot-backup.vtt">WebVTT (.vtt)</a>
+          <a href="captions/03-archive-and-snapshot-backup.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="04-admin-oscar-service-and-custom-codes" data-track="Track B — SensorHub Admin Configuration">
+        <div class="card-head">
+          <span class="badge">04</span>
+          <div>
+            <h2>Configure OSCAR Service Retention &amp; Custom Disposition Codes</h2>
+            <p class="meta">Track B — SensorHub Admin Configuration · 12.3s · 693.4 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Open Services -&gt; OSCAR Service in SensorHub Admin to review 5-JPEG media retention settings, storage-pressure thresholds, and custom adjudication disposition codes.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/04-admin-oscar-service-and-custom-codes.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/04-admin-oscar-service-and-custom-codes.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <code>https://oscar.local/sensorhub/admin</code>, expand <strong>Services</strong>, and select <strong>OSCAR Service</strong>.</li>
+            <li>Review <strong>Video Retention Config</strong> (<code>timeToRetention = 0</code>, <code>frameRetentionCount = 5</code>, <code>jpegQuality = 85</code>) and <strong>Storage Pressure Retention Config</strong>.</li>
+            <li>Expand <strong>Custom Disposition Codes</strong> to add or update site-specific adjudication code entries alongside built-in codes.</li>
+            <li>Click <strong>Apply Changes</strong> and <strong>Save</strong> in the top toolbar to persist the updated service configuration.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/04-admin-oscar-service-and-custom-codes.mp4">MP4 Video</a>
+          <a href="captions/04-admin-oscar-service-and-custom-codes.vtt">WebVTT (.vtt)</a>
+          <a href="captions/04-admin-oscar-service-and-custom-codes.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="05-admin-lane-spreadsheet-sync" data-track="Track B — SensorHub Admin Configuration">
+        <div class="card-head">
+          <span class="badge">05</span>
+          <div>
+            <h2>Sync Multi-Lane Spreadsheet Configuration (config.csv)</h2>
+            <p class="meta">Track B — SensorHub Admin Configuration · 10.6s · 418.8 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Import or download the multi-lane config.csv spreadsheet in OSCAR Service to provision RPM endpoints, RTSP cameras, and OperationalViews assignments in bulk.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/05-admin-lane-spreadsheet-sync.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/05-admin-lane-spreadsheet-sync.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Navigate to <strong>Services -&gt; OSCAR Service</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>).</li>
+            <li>Locate <strong>Config File Path</strong> / <strong>Upload</strong> under <strong>General</strong> to upload or export the site's multi-lane <code>config.csv</code> spreadsheet (including <code>OperationalViews</code> semicolon-delimited keys such as <code>east-gate;entrance</code>).</li>
+            <li>Click <strong>Apply Changes</strong> and <strong>Save</strong> to synchronize all lane definitions.</li>
+            <li>Expand <strong>Sensors</strong> in the left accordion to confirm every imported <code>Lane System</code> module is registered and online.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/05-admin-lane-spreadsheet-sync.mp4">MP4 Video</a>
+          <a href="captions/05-admin-lane-spreadsheet-sync.vtt">WebVTT (.vtt)</a>
+          <a href="captions/05-admin-lane-spreadsheet-sync.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="06-admin-manual-lane-and-site-diagram" data-track="Track B — SensorHub Admin Configuration">
+        <div class="card-head">
+          <span class="badge">06</span>
+          <div>
+            <h2>Configure a Lane System &amp; Georeferenced Site Diagram</h2>
+            <p class="meta">Track B — SensorHub Admin Configuration · 13.6s · 721.5 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Inspect individual Lane System location and camera/RPM options under Sensors, then configure the georeferenced facility Site Diagram bounding coordinates in OSCAR Service.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/06-admin-manual-lane-and-site-diagram.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/06-admin-manual-lane-and-site-diagram.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <strong>Sensors</strong> in SensorHub Admin and select a <strong>Lane System</strong> module.</li>
+            <li>Review <strong>General</strong>, <strong>Fixed Location</strong> (latitude/longitude coordinates), and <strong>Lane Options</strong> (RPM driver address and RTSP camera stream parameters).</li>
+            <li>Switch to <strong>Services -&gt; OSCAR Service</strong> and inspect <strong>Site Diagram Config</strong> to upload a site map image and set georeferenced lower-left and upper-right coordinates.</li>
+            <li>Click <strong>Apply Changes</strong> and <strong>Save</strong> to publish lane coordinates and site map bounds to the Viewer.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/06-admin-manual-lane-and-site-diagram.mp4">MP4 Video</a>
+          <a href="captions/06-admin-manual-lane-and-site-diagram.vtt">WebVTT (.vtt)</a>
+          <a href="captions/06-admin-manual-lane-and-site-diagram.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="07-admin-eml-plugin-setup" data-track="Track B — SensorHub Admin Configuration">
+        <div class="card-head">
+          <span class="badge">07</span>
+          <div>
+            <h2>Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML</h2>
+            <p class="meta">Track B — SensorHub Admin Configuration · 11.8s · 818.1 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Verify or upload a separately licensed EML VM-250 .jar plugin in OSCAR Service, inspect per-lane EML enablement under Lane Options, and review built-in operator documentation.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/07-admin-eml-plugin-setup.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/07-admin-eml-plugin-setup.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <strong>Services -&gt; OSCAR Service</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>).</li>
+            <li>Locate <strong>EML Plugin Path</strong> and use <strong>Upload</strong> to install the external licensed EML VM-250 <code>.jar</code> runtime into private state storage.</li>
+            <li>Open <strong>Sensors -&gt; &lt;Rapiscan Lane&gt; -&gt; Lane Options</strong> to verify per-lane EML analysis settings (<code>Collimated</code> / <code>Enable EML</code>).</li>
+            <li>Open the <strong>README</strong> tab in OSCAR Service to reference localized administrator guidance on automated <code>Code 9999: EML Non-Threat</code> adjudications.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/07-admin-eml-plugin-setup.mp4">MP4 Video</a>
+          <a href="captions/07-admin-eml-plugin-setup.vtt">WebVTT (.vtt)</a>
+          <a href="captions/07-admin-eml-plugin-setup.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="08-viewer-signin-language-and-nodes" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">08</span>
+          <div>
+            <h2>Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 15.1s · 875.6 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Authenticate at the OSCAR TLS gateway login page, switch console UI localization live between English and Spanish, and inspect connected server nodes.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/08-viewer-signin-language-and-nodes.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/08-viewer-signin-language-and-nodes.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <code>https://oscar.local</code>, enter the operator <strong>Username</strong> and <strong>Password</strong>, and click <strong>Sign in</strong>.</li>
+            <li>Click the top-bar language selector (<strong>English</strong>) to switch the console interface live between <code>English</code>, <code>Español</code>, <code>Français</code>, and <code>Ελληνικά</code>.</li>
+            <li>Open <strong>Servers</strong> (<code>/servers</code>) from the navigation drawer to verify <strong>Local Node</strong> status or add federated OSCAR nodes.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/08-viewer-signin-language-and-nodes.mp4">MP4 Video</a>
+          <a href="captions/08-viewer-signin-language-and-nodes.vtt">WebVTT (.vtt)</a>
+          <a href="captions/08-viewer-signin-language-and-nodes.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="09-dashboard-monitoring-and-quick-adjudication" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">09</span>
+          <div>
+            <h2>Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 13s · 509.6 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Monitor real-time 50-lane status tiles and live alarm occupancy rows on the Dashboard, inspect row action menus, and launch rapid alarm review.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/09-dashboard-monitoring-and-quick-adjudication.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/09-dashboard-monitoring-and-quick-adjudication.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open the OSCAR <strong>Dashboard</strong> (<code>/</code>) to monitor real-time <strong>Lane Status</strong> tiles across all configured portal lanes.</li>
+            <li>Review incoming occupancy and gamma/neutron alarm rows in the live Dashboard event table, sorting or customizing visible columns as needed.</li>
+            <li>Click a row's action menu (<code>⋮</code>) or double-click an alarm row to open immediate event inspection and adjudication controls.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/09-dashboard-monitoring-and-quick-adjudication.mp4">MP4 Video</a>
+          <a href="captions/09-dashboard-monitoring-and-quick-adjudication.vtt">WebVTT (.vtt)</a>
+          <a href="captions/09-dashboard-monitoring-and-quick-adjudication.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="10-operational-views-scoping" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">10</span>
+          <div>
+            <h2>Scope Workstation Lanes with Fail-Closed Operational Views</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 11.4s · 662.3 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Scope the Dashboard and Status of Health to an assigned workstation Operational View (?view=east-gate) and verify fail-closed protection on unassigned views.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/10-operational-views-scoping.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/10-operational-views-scoping.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open a workstation-scoped URL such as <code>https://oscar.local/?view=east-gate</code> and confirm the <strong><code>View: east-gate</code></strong> badge appears in the header.</li>
+            <li>Navigate to <strong>Status of Health</strong> (<code>/health?view=east-gate</code>) to verify that only lanes assigned to <code>east-gate</code> are loaded.</li>
+            <li>Verify that unassigned or malformed <code>?view=</code> keys fail closed with an explicit warning banner and zero loaded lane data.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/10-operational-views-scoping.mp4">MP4 Video</a>
+          <a href="captions/10-operational-views-scoping.vtt">WebVTT (.vtt)</a>
+          <a href="captions/10-operational-views-scoping.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="11-live-lane-video-and-charts" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">11</span>
+          <div>
+            <h2>Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 11.6s · 669.4 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Open Lane Details from the Dashboard to watch live RTSP/HLS camera video alongside real-time Gamma and Neutron count-rate charts and lane occupancy history.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/11-live-lane-video-and-charts.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/11-live-lane-video-and-charts.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Click a lane tile under <strong>Lane Status</strong> on the Dashboard (<code>/</code>) to open <strong>Lane Details</strong> (<code>/lane-view</code>).</li>
+            <li>Monitor the live camera video player alongside the real-time <strong>Gamma</strong> (red) and <strong>Neutron</strong> (blue) count-rate waveform charts.</li>
+            <li>Scroll to the lane event table below the charts to inspect historical occupancies recorded on that lane.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/11-live-lane-video-and-charts.mp4">MP4 Video</a>
+          <a href="captions/11-live-lane-video-and-charts.vtt">WebVTT (.vtt)</a>
+          <a href="captions/11-live-lane-video-and-charts.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="12-event-log-filtering-and-adjudication-codes" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">12</span>
+          <div>
+            <h2>Filter Event Log by Lane, Adjudication Code &amp; Event UUID</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.9s · 1318.8 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Search historical occupancies in Event Log using server-side Advanced Filters (including Code 9999: EML Non-Threat and custom codes) and direct Event UUID lookup.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/12-event-log-filtering-and-adjudication-codes.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/12-event-log-filtering-and-adjudication-codes.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Navigate to <strong>Event Log</strong> (<code>/event-log</code>) to browse paginated historical occupancies and alarms across the deployment.</li>
+            <li>Click <strong>ADVANCED FILTERS</strong> to filter server-side by date/time window, lane, alarm status, or <strong>Adjudication Code</strong> (including automated <code>Code 9999: EML Non-Threat</code> and custom codes).</li>
+            <li>Paste an occupancy observation identifier into <strong>Event UUID</strong> and click <strong>FIND EVENT</strong> to open that exact record.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/12-event-log-filtering-and-adjudication-codes.mp4">MP4 Video</a>
+          <a href="captions/12-event-log-filtering-and-adjudication-codes.vtt">WebVTT (.vtt)</a>
+          <a href="captions/12-event-log-filtering-and-adjudication-codes.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="13-event-details-adjudication-and-daily-file" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">13</span>
+          <div>
+            <h2>Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 19.5s · 1461.1 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Inspect five-frame retained JPEG camera evidence, examine exact RPM Daily File Output lines (hot journal or cold historical slice), and submit a full adjudication.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/13-event-details-adjudication-and-daily-file.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/13-event-details-adjudication-and-daily-file.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>) and step through the five retained camera JPEG thumbnails under <strong>Retained camera evidence</strong>.</li>
+            <li>Scroll to <strong>Occupancy Overview</strong> and <strong>Daily File Output</strong> to inspect exact <code>GS</code>, <code>GA</code>, <code>NS</code>, and <code>GX</code> RPM daily-file records (served automatically from hot journal or historical daily CSV slice).</li>
+            <li>Complete <strong>Vehicle ID</strong>, <strong>Adjudicate</strong> disposition code, <strong>Secondary Inspection</strong>, and <strong>Notes</strong> under <strong>Adjudication Form</strong>.</li>
+            <li>Click <strong>Submit</strong> and confirm in <strong>Confirm Adjudication Submission</strong> (<code>Confirm &amp; Submit</code>) to log the signed audit record.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/13-event-details-adjudication-and-daily-file.mp4">MP4 Video</a>
+          <a href="captions/13-event-details-adjudication-and-daily-file.vtt">WebVTT (.vtt)</a>
+          <a href="captions/13-event-details-adjudication-and-daily-file.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="14-airgapped-alarm-qr-transfer" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">14</span>
+          <div>
+            <h2>Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 25.2s · 1723.7 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Export a SHA-256-authenticated Alarm QR image from Event Details, then import and verify its cryptographic integrity and waveforms offline on Alarm Transfer.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/14-airgapped-alarm-qr-transfer.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/14-airgapped-alarm-qr-transfer.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>On <strong>Event Details</strong>, click <strong>Export Alarm QR</strong> to generate the <code>OSCAR-ALARM:1:</code> signed transfer payload.</li>
+            <li>Click <strong>Download QR Image</strong> (or <strong>Download Alarm File</strong>) to save the portable PNG QR symbol or JSON package.</li>
+            <li>Open <strong>Alarm Transfer</strong> (<code>/alarm-transfer</code>) on the receiving workstation and import the QR PNG image or scan via camera.</li>
+            <li>Confirm <strong><code>The alarm data passed its SHA-256 integrity check.</code></strong> and review the reconstructed occupancy UUID and Gamma/Neutron waveforms.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/14-airgapped-alarm-qr-transfer.mp4">MP4 Video</a>
+          <a href="captions/14-airgapped-alarm-qr-transfer.vtt">WebVTT (.vtt)</a>
+          <a href="captions/14-airgapped-alarm-qr-transfer.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="15-status-of-health-and-site-map" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">15</span>
+          <div>
+            <h2>Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.2s · 727.8 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Track RPM connectivity, camera stream health, detector/tamper faults, and extended occupancy on Status of Health, then inspect georeferenced lane markers on Site Map.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/15-status-of-health-and-site-map.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/15-status-of-health-and-site-map.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <strong>Status of Health</strong> (<code>/health</code>) from the navigation drawer to inspect real-time RPM connectivity, camera stream status, and detector or tamper fault badges across every lane.</li>
+            <li>Review lane-level health indicators and extended-occupancy status to isolate degraded sensors quickly.</li>
+            <li>Open <strong>Map</strong> (<code>/map</code>) to view georeferenced lane markers and real-time alarm/health status overlaid on the facility map.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/15-status-of-health-and-site-map.mp4">MP4 Video</a>
+          <a href="captions/15-status-of-health-and-site-map.vtt">WebVTT (.vtt)</a>
+          <a href="captions/15-status-of-health-and-site-map.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="16-national-statistics-and-reports" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">16</span>
+          <div>
+            <h2>Analyze National View Statistics &amp; Generate PDF Reports</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 18.2s · 432.8 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Review aggregated occupancy and alarm trends on National View, then configure and generate downloadable PDF Event, Lane, Adjudication, or RDS Site reports.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/16-national-statistics-and-reports.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/16-national-statistics-and-reports.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <strong>National View</strong> (<code>/national-view</code>) to inspect aggregated occupancy totals, gamma/neutron alarm counts, and multi-lane trends.</li>
+            <li>Navigate to <strong>Report Generator</strong> (<code>/report</code>) and choose <strong>Node Selector</strong>, <strong>Report Type</strong> (<code>RDS_SITE</code>, <code>EVENT</code>, <code>LANE</code>, or <code>ADJUDICATION</code>), and <strong>Time Range</strong>.</li>
+            <li>Click <strong>Generate Report</strong> and review or download the rendered PDF report from the inline preview.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/16-national-statistics-and-reports.mp4">MP4 Video</a>
+          <a href="captions/16-national-statistics-and-reports.vtt">WebVTT (.vtt)</a>
+          <a href="captions/16-national-statistics-and-reports.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+  </main>
+</body>
+</html>

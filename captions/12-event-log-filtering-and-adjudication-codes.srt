@@ -1,0 +1,11 @@
+1
+00:00:00,040 --> 00:00:03,440
+Click ADVANCED FILTERS on Event Log to open server-side lane, date, and adjudication filters.
+
+2
+00:00:03,480 --> 00:00:06,841
+Inspect Lane, Status, and Adjudication Code filter selectors (including EML Non-Threat Code 9999).
+
+3
+00:00:06,881 --> 00:00:10,925
+Enter an occupancy identifier in Event UUID and click FIND EVENT for direct lookup.

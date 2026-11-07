@@ -1,0 +1,11 @@
+1
+00:00:00,040 --> 00:00:03,440
+Inspect EML Plugin Path and Upload control in Services -> OSCAR Service.
+
+2
+00:00:03,480 --> 00:00:06,842
+Open the localized README tab in OSCAR Service to review EML setup documentation.
+
+3
+00:00:06,882 --> 00:00:11,817
+Switch to Sensors -> Lane System -> Lane Options to confirm per-lane EML configuration.

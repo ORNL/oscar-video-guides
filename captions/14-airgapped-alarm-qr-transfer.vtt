@@ -1,0 +1,13 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:17.827
+Click Export Alarm QR on Event Details and download the signed QR PNG image.
+
+2
+00:00:17.867 --> 00:00:21.228
+Open Alarm Transfer (/alarm-transfer) and import the exported Alarm QR PNG image.
+
+3
+00:00:21.268 --> 00:00:25.215
+Verify the SHA-256 integrity check banner and reconstructed offline Gamma/Neutron charts.
