@@ -1,13 +1,13 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:03.440
+00:00:00.040 --> 00:00:03.441
 Inspect aggregated occupancy and alarm statistics across lanes on National View.
 
 2
-00:00:03.480 --> 00:00:12.682
-Open Report Generator (/report), select Node, Report Type, and Last 24 Hours, and click Generate Report.
+00:00:03.481 --> 00:00:13.652
+Open Report Generator (/report), select Node, Scope, Report Type, Export Format (PDF, CSV, JSON, or Excel), and Time Range, then click Generate Report.
 
 3
-00:00:12.722 --> 00:00:18.151
-Wait for the generated PDF report to render in the inline preview frame.
+00:00:13.692 --> 00:00:17.051
+Wait for the freshly generated report to render in the inline preview pane.
