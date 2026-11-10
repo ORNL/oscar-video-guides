@@ -1,13 +1,13 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:05.220
-Select a Lane System under Sensors to inspect General, Fixed Location, and Lane Options.
+00:00:00.040 --> 00:00:06.515
+Select a Lane System under Sensors to inspect General (Extended Occupancy Threshold), Fixed Location, and Lane Options.
 
 2
-00:00:05.260 --> 00:00:10.169
+00:00:06.555 --> 00:00:11.500
 Open Services -> OSCAR Service and select the Site Diagram Config tab.
 
 3
-00:00:10.209 --> 00:00:13.570
+00:00:11.540 --> 00:00:14.901
 Apply Changes and Save to publish georeferenced lane markers to the Site Map.

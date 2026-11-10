@@ -1,13 +1,13 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:04.334
-Monitor real-time Lane Status indicators across all 50 portal lanes on the Dashboard.
+00:00:00.040 --> 00:00:04.353
+Monitor real-time Lane Status indicators across all 50 portal lanes and inspect Customize Dashboard.
 
 2
-00:00:04.374 --> 00:00:09.596
+00:00:04.393 --> 00:00:09.510
 Inspect live occupancy and alarm rows in the Dashboard DataGrid and open row actions.
 
 3
-00:00:09.636 --> 00:00:12.995
+00:00:09.550 --> 00:00:12.910
 Review peak gamma/neutron alarm telemetry and adjudication controls from the selected event.

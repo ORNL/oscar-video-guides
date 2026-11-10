@@ -5,9 +5,9 @@ WEBVTT
 Click ADVANCED FILTERS on Event Log to open server-side lane, date, and adjudication filters.
 
 2
-00:00:03.480 --> 00:00:06.841
-Inspect Lane, Status, and Adjudication Code filter selectors (including EML Non-Threat Code 9999).
+00:00:03.480 --> 00:00:06.840
+Inspect Lane, Status, and Adjudication Code filter selectors (including Code 9998 and Code 9999).
 
 3
-00:00:06.881 --> 00:00:10.925
+00:00:06.880 --> 00:00:10.937
 Enter an occupancy identifier in Event UUID and click FIND EVENT for direct lookup.

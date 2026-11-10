@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:04,267
+00:00:00,040 --> 00:00:04,283
 Select Lane50 on the Dashboard to open live Lane Details (/lane-view).
 
 2
-00:00:04,307 --> 00:00:08,238
-Monitor live camera video alongside real-time Gamma and Neutron count-rate waveforms.
+00:00:04,323 --> 00:00:08,022
+Monitor live camera video alongside real-time Gamma and Neutron count-rate waveforms and detector plot toggles.
 
 3
-00:00:08,278 --> 00:00:11,638
+00:00:08,062 --> 00:00:11,422
 Inspect the lane occupancy DataGrid below the live charts to review recent lane events.

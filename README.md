@@ -24,16 +24,16 @@ Concise, single-task `1920x1080` screen-recording guides covering every major wo
 | 03 | [Verify Parquet Cold-Tier Archives & Single-Snapshot Backup](#03-archive-and-snapshot-backup) ([MP4](videos/03-archive-and-snapshot-backup.mp4)) | Track A | 11.4s | 193.1 KiB | [VTT](captions/03-archive-and-snapshot-backup.vtt) · [SRT](captions/03-archive-and-snapshot-backup.srt) |
 | 04 | [Configure OSCAR Service Retention & Custom Disposition Codes](#04-admin-oscar-service-and-custom-codes) ([MP4](videos/04-admin-oscar-service-and-custom-codes.mp4)) | Track B | 12.3s | 693.4 KiB | [VTT](captions/04-admin-oscar-service-and-custom-codes.vtt) · [SRT](captions/04-admin-oscar-service-and-custom-codes.srt) |
 | 05 | [Sync Multi-Lane Spreadsheet Configuration (config.csv)](#05-admin-lane-spreadsheet-sync) ([MP4](videos/05-admin-lane-spreadsheet-sync.mp4)) | Track B | 10.6s | 418.8 KiB | [VTT](captions/05-admin-lane-spreadsheet-sync.vtt) · [SRT](captions/05-admin-lane-spreadsheet-sync.srt) |
-| 06 | [Configure a Lane System & Georeferenced Site Diagram](#06-admin-manual-lane-and-site-diagram) ([MP4](videos/06-admin-manual-lane-and-site-diagram.mp4)) | Track B | 13.6s | 721.5 KiB | [VTT](captions/06-admin-manual-lane-and-site-diagram.vtt) · [SRT](captions/06-admin-manual-lane-and-site-diagram.srt) |
+| 06 | [Configure a Lane System & Georeferenced Site Diagram](#06-admin-manual-lane-and-site-diagram) ([MP4](videos/06-admin-manual-lane-and-site-diagram.mp4)) | Track B | 14.9s | 785 KiB | [VTT](captions/06-admin-manual-lane-and-site-diagram.vtt) · [SRT](captions/06-admin-manual-lane-and-site-diagram.srt) |
 | 07 | [Upload External EML VM-250 Plugin & Enable Per-Lane EML](#07-admin-eml-plugin-setup) ([MP4](videos/07-admin-eml-plugin-setup.mp4)) | Track B | 11.8s | 818.1 KiB | [VTT](captions/07-admin-eml-plugin-setup.vtt) · [SRT](captions/07-admin-eml-plugin-setup.srt) |
-| 08 | [Sign In to OSCAR Viewer, Switch Language & Manage Nodes](#08-viewer-signin-language-and-nodes) ([MP4](videos/08-viewer-signin-language-and-nodes.mp4)) | Track C | 15.1s | 875.6 KiB | [VTT](captions/08-viewer-signin-language-and-nodes.vtt) · [SRT](captions/08-viewer-signin-language-and-nodes.srt) |
-| 09 | [Monitor Live 50-Lane Dashboard & Inspect Alarm Rows](#09-dashboard-monitoring-and-quick-adjudication) ([MP4](videos/09-dashboard-monitoring-and-quick-adjudication.mp4)) | Track C | 13s | 509.6 KiB | [VTT](captions/09-dashboard-monitoring-and-quick-adjudication.vtt) · [SRT](captions/09-dashboard-monitoring-and-quick-adjudication.srt) |
+| 08 | [Sign In to OSCAR Viewer, Switch Language & Manage Nodes](#08-viewer-signin-language-and-nodes) ([MP4](videos/08-viewer-signin-language-and-nodes.mp4)) | Track C | 16.9s | 3020.4 KiB | [VTT](captions/08-viewer-signin-language-and-nodes.vtt) · [SRT](captions/08-viewer-signin-language-and-nodes.srt) |
+| 09 | [Monitor Live 50-Lane Dashboard & Inspect Alarm Rows](#09-dashboard-monitoring-and-quick-adjudication) ([MP4](videos/09-dashboard-monitoring-and-quick-adjudication.mp4)) | Track C | 12.9s | 939.5 KiB | [VTT](captions/09-dashboard-monitoring-and-quick-adjudication.vtt) · [SRT](captions/09-dashboard-monitoring-and-quick-adjudication.srt) |
 | 10 | [Scope Workstation Lanes with Fail-Closed Operational Views](#10-operational-views-scoping) ([MP4](videos/10-operational-views-scoping.mp4)) | Track C | 11.4s | 662.3 KiB | [VTT](captions/10-operational-views-scoping.vtt) · [SRT](captions/10-operational-views-scoping.srt) |
-| 11 | [Inspect Live Lane Camera Stream & Gamma/Neutron Waveforms](#11-live-lane-video-and-charts) ([MP4](videos/11-live-lane-video-and-charts.mp4)) | Track C | 11.6s | 669.4 KiB | [VTT](captions/11-live-lane-video-and-charts.vtt) · [SRT](captions/11-live-lane-video-and-charts.srt) |
-| 12 | [Filter Event Log by Lane, Adjudication Code & Event UUID](#12-event-log-filtering-and-adjudication-codes) ([MP4](videos/12-event-log-filtering-and-adjudication-codes.mp4)) | Track C | 10.9s | 1318.8 KiB | [VTT](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT](captions/12-event-log-filtering-and-adjudication-codes.srt) |
-| 13 | [Review Retained 5-Frame Media, Daily File Output & Adjudicate](#13-event-details-adjudication-and-daily-file) ([MP4](videos/13-event-details-adjudication-and-daily-file.mp4)) | Track C | 19.5s | 1461.1 KiB | [VTT](captions/13-event-details-adjudication-and-daily-file.vtt) · [SRT](captions/13-event-details-adjudication-and-daily-file.srt) |
+| 11 | [Inspect Live Lane Camera Stream & Gamma/Neutron Waveforms](#11-live-lane-video-and-charts) ([MP4](videos/11-live-lane-video-and-charts.mp4)) | Track C | 12s | 2359.3 KiB | [VTT](captions/11-live-lane-video-and-charts.vtt) · [SRT](captions/11-live-lane-video-and-charts.srt) |
+| 12 | [Filter Event Log by Lane, Adjudication Code & Event UUID](#12-event-log-filtering-and-adjudication-codes) ([MP4](videos/12-event-log-filtering-and-adjudication-codes.mp4)) | Track C | 10.9s | 1145.7 KiB | [VTT](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT](captions/12-event-log-filtering-and-adjudication-codes.srt) |
+| 13 | [Review Retained 5-Frame Media, Daily File Output & Adjudicate](#13-event-details-adjudication-and-daily-file) ([MP4](videos/13-event-details-adjudication-and-daily-file.mp4)) | Track C | 19.4s | 1216.1 KiB | [VTT](captions/13-event-details-adjudication-and-daily-file.vtt) · [SRT](captions/13-event-details-adjudication-and-daily-file.srt) |
 | 14 | [Export Signed Alarm QR & Verify Offline on Air-Gapped Transfer](#14-airgapped-alarm-qr-transfer) ([MP4](videos/14-airgapped-alarm-qr-transfer.mp4)) | Track C | 25.2s | 1723.7 KiB | [VTT](captions/14-airgapped-alarm-qr-transfer.vtt) · [SRT](captions/14-airgapped-alarm-qr-transfer.srt) |
-| 15 | [Monitor RPM/Camera Status of Health & Georeferenced Site Map](#15-status-of-health-and-site-map) ([MP4](videos/15-status-of-health-and-site-map.mp4)) | Track C | 10.2s | 727.8 KiB | [VTT](captions/15-status-of-health-and-site-map.vtt) · [SRT](captions/15-status-of-health-and-site-map.srt) |
+| 15 | [Monitor RPM/Camera Status of Health & Georeferenced Site Map](#15-status-of-health-and-site-map) ([MP4](videos/15-status-of-health-and-site-map.mp4)) | Track C | 10.2s | 1251.1 KiB | [VTT](captions/15-status-of-health-and-site-map.vtt) · [SRT](captions/15-status-of-health-and-site-map.srt) |
 | 16 | [Analyze National View Statistics & Generate Multi-Format Reports](#16-national-statistics-and-reports) ([MP4](videos/16-national-statistics-and-reports.mp4)) | Track C | 17.1s | 544.2 KiB | [VTT](captions/16-national-statistics-and-reports.vtt) · [SRT](captions/16-national-statistics-and-reports.srt) |
 
 ## Track A — CLI Deployment, Upgrades & Storage Lifecycle
@@ -103,12 +103,12 @@ Import or download the multi-lane config.csv spreadsheet in OSCAR Service to pro
 <a id="06-admin-manual-lane-and-site-diagram"></a>
 ### 06. Configure a Lane System & Georeferenced Site Diagram
 
-Inspect individual Lane System location and camera/RPM options under Sensors, then configure the georeferenced facility Site Diagram bounding coordinates in OSCAR Service.
+Inspect individual Lane System location, Extended Occupancy Threshold (min), and camera/RPM options under Sensors, then configure the georeferenced facility Site Diagram bounding coordinates in OSCAR Service.
 
-- **Video:** [Watch `06-admin-manual-lane-and-site-diagram.mp4` (13.6s, 721.5 KiB)](videos/06-admin-manual-lane-and-site-diagram.mp4) · [WebVTT Captions](captions/06-admin-manual-lane-and-site-diagram.vtt) · [SRT Captions](captions/06-admin-manual-lane-and-site-diagram.srt)
+- **Video:** [Watch `06-admin-manual-lane-and-site-diagram.mp4` (14.9s, 785 KiB)](videos/06-admin-manual-lane-and-site-diagram.mp4) · [WebVTT Captions](captions/06-admin-manual-lane-and-site-diagram.vtt) · [SRT Captions](captions/06-admin-manual-lane-and-site-diagram.srt)
 
 1. Open **Sensors** in SensorHub Admin and select a **Lane System** module.
-2. Review **General**, **Fixed Location** (latitude/longitude coordinates), and **Lane Options** (RPM driver address and RTSP camera stream parameters).
+2. Review **General** (including **Extended Occupancy Threshold (min)** and **Operational View Keys**), **Fixed Location** (latitude/longitude coordinates), and **Lane Options** (RPM driver address and RTSP camera stream parameters).
 3. Switch to **Services -> OSCAR Service** and inspect **Site Diagram Config** to upload a site map image and set georeferenced lower-left and upper-right coordinates.
 4. Click **Apply Changes** and **Save** to publish lane coordinates and site map bounds to the Viewer.
 
@@ -129,22 +129,22 @@ Verify or upload a separately licensed EML VM-250 .jar plugin in OSCAR Service, 
 <a id="08-viewer-signin-language-and-nodes"></a>
 ### 08. Sign In to OSCAR Viewer, Switch Language & Manage Nodes
 
-Authenticate at the OSCAR TLS gateway login page, switch console UI localization live between English and Spanish, and inspect connected server nodes.
+Authenticate at the OSCAR TLS gateway login page, switch console UI localization live between English and Spanish, open the in-app Operator Quick Guide & Glossary (?), and inspect connected server nodes.
 
-- **Video:** [Watch `08-viewer-signin-language-and-nodes.mp4` (15.1s, 875.6 KiB)](videos/08-viewer-signin-language-and-nodes.mp4) · [WebVTT Captions](captions/08-viewer-signin-language-and-nodes.vtt) · [SRT Captions](captions/08-viewer-signin-language-and-nodes.srt)
+- **Video:** [Watch `08-viewer-signin-language-and-nodes.mp4` (16.9s, 3020.4 KiB)](videos/08-viewer-signin-language-and-nodes.mp4) · [WebVTT Captions](captions/08-viewer-signin-language-and-nodes.vtt) · [SRT Captions](captions/08-viewer-signin-language-and-nodes.srt)
 
 1. Open `https://oscar.local`, enter the operator **Username** and **Password**, and click **Sign in**.
-2. Click the top-bar language selector (**English**) to switch the console interface live between `English`, `Español`, `Français`, and `Ελληνικά`.
+2. Click the top-bar language selector (**English**) to switch the console interface live between `English`, `Español`, `Français`, and `Ελληνικά`, and click the `?` help icon to open the **Operator Quick Guide & Glossary**.
 3. Open **Servers** (`/servers`) from the navigation drawer to verify **Local Node** status or add federated OSCAR nodes.
 
 <a id="09-dashboard-monitoring-and-quick-adjudication"></a>
 ### 09. Monitor Live 50-Lane Dashboard & Inspect Alarm Rows
 
-Monitor real-time 50-lane status tiles and live alarm occupancy rows on the Dashboard, inspect row action menus, and launch rapid alarm review.
+Monitor real-time 50-lane status tiles and live alarm occupancy rows on the Dashboard, customize visible panels with Customize Dashboard, and launch rapid alarm review.
 
-- **Video:** [Watch `09-dashboard-monitoring-and-quick-adjudication.mp4` (13s, 509.6 KiB)](videos/09-dashboard-monitoring-and-quick-adjudication.mp4) · [WebVTT Captions](captions/09-dashboard-monitoring-and-quick-adjudication.vtt) · [SRT Captions](captions/09-dashboard-monitoring-and-quick-adjudication.srt)
+- **Video:** [Watch `09-dashboard-monitoring-and-quick-adjudication.mp4` (12.9s, 939.5 KiB)](videos/09-dashboard-monitoring-and-quick-adjudication.mp4) · [WebVTT Captions](captions/09-dashboard-monitoring-and-quick-adjudication.vtt) · [SRT Captions](captions/09-dashboard-monitoring-and-quick-adjudication.srt)
 
-1. Open the OSCAR **Dashboard** (`/`) to monitor real-time **Lane Status** tiles across all configured portal lanes.
+1. Open the OSCAR **Dashboard** (`/`) to monitor real-time **Lane Status** tiles across all configured portal lanes and toggle **Customize Dashboard** to show or hide **Lane Status**, **Events**, or **Map**.
 2. Review incoming occupancy and gamma/neutron alarm rows in the live Dashboard event table, sorting or customizing visible columns as needed.
 3. Click a row's action menu (`⋮`) or double-click an alarm row to open immediate event inspection and adjudication controls.
 
@@ -162,36 +162,36 @@ Scope the Dashboard and Status of Health to an assigned workstation Operational 
 <a id="11-live-lane-video-and-charts"></a>
 ### 11. Inspect Live Lane Camera Stream & Gamma/Neutron Waveforms
 
-Open Lane Details from the Dashboard to watch live RTSP/HLS camera video alongside real-time Gamma and Neutron count-rate charts and lane occupancy history.
+Open Lane Details from the Dashboard to watch live RTSP/HLS camera video alongside real-time Gamma and Neutron count-rate charts (including Show Individual Detectors and Separate Plots (Accessibility) toggles) and lane occupancy history.
 
-- **Video:** [Watch `11-live-lane-video-and-charts.mp4` (11.6s, 669.4 KiB)](videos/11-live-lane-video-and-charts.mp4) · [WebVTT Captions](captions/11-live-lane-video-and-charts.vtt) · [SRT Captions](captions/11-live-lane-video-and-charts.srt)
+- **Video:** [Watch `11-live-lane-video-and-charts.mp4` (12s, 2359.3 KiB)](videos/11-live-lane-video-and-charts.mp4) · [WebVTT Captions](captions/11-live-lane-video-and-charts.vtt) · [SRT Captions](captions/11-live-lane-video-and-charts.srt)
 
 1. Click a lane tile under **Lane Status** on the Dashboard (`/`) to open **Lane Details** (`/lane-view`).
-2. Monitor the live camera video player alongside the real-time **Gamma** (red) and **Neutron** (blue) count-rate waveform charts.
+2. Monitor the live camera video player alongside the real-time **Gamma** (red) and **Neutron** (blue) count-rate waveform charts, and toggle **Show Individual Detectors** or **Separate Plots (Accessibility)** (`G1`–`G4`, `N1`–`N4`).
 3. Scroll to the lane event table below the charts to inspect historical occupancies recorded on that lane.
 
 <a id="12-event-log-filtering-and-adjudication-codes"></a>
 ### 12. Filter Event Log by Lane, Adjudication Code & Event UUID
 
-Search historical occupancies in Event Log using server-side Advanced Filters (including Code 9999: EML Non-Threat and custom codes) and direct Event UUID lookup.
+Search historical occupancies in Event Log using server-side Advanced Filters (including Code 9998: Extended Occupancy Gamma Alarm, Code 9999: EML Non-Threat, and custom codes) and direct Event UUID lookup.
 
-- **Video:** [Watch `12-event-log-filtering-and-adjudication-codes.mp4` (10.9s, 1318.8 KiB)](videos/12-event-log-filtering-and-adjudication-codes.mp4) · [WebVTT Captions](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT Captions](captions/12-event-log-filtering-and-adjudication-codes.srt)
+- **Video:** [Watch `12-event-log-filtering-and-adjudication-codes.mp4` (10.9s, 1145.7 KiB)](videos/12-event-log-filtering-and-adjudication-codes.mp4) · [WebVTT Captions](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT Captions](captions/12-event-log-filtering-and-adjudication-codes.srt)
 
 1. Navigate to **Event Log** (`/event-log`) to browse paginated historical occupancies and alarms across the deployment.
-2. Click **ADVANCED FILTERS** to filter server-side by date/time window, lane, alarm status, or **Adjudication Code** (including automated `Code 9999: EML Non-Threat` and custom codes).
+2. Click **ADVANCED FILTERS** to filter server-side by date/time window, lane, alarm status, or **Adjudication Code** (including automated `Code 9998: Extended Occupancy Gamma Alarm`, `Code 9999: EML Non-Threat`, and custom codes).
 3. Paste an occupancy observation identifier into **Event UUID** and click **FIND EVENT** to open that exact record.
 
 <a id="13-event-details-adjudication-and-daily-file"></a>
 ### 13. Review Retained 5-Frame Media, Daily File Output & Adjudicate
 
-Inspect five-frame retained JPEG camera evidence, examine exact RPM Daily File Output lines (hot journal or cold historical slice), and submit a full adjudication.
+Inspect five-frame retained JPEG camera evidence, toggle individual detector charts, examine exact RPM Daily File Output lines (hot journal or cold historical slice), and submit an append-only adjudication.
 
-- **Video:** [Watch `13-event-details-adjudication-and-daily-file.mp4` (19.5s, 1461.1 KiB)](videos/13-event-details-adjudication-and-daily-file.mp4) · [WebVTT Captions](captions/13-event-details-adjudication-and-daily-file.vtt) · [SRT Captions](captions/13-event-details-adjudication-and-daily-file.srt)
+- **Video:** [Watch `13-event-details-adjudication-and-daily-file.mp4` (19.4s, 1216.1 KiB)](videos/13-event-details-adjudication-and-daily-file.mp4) · [WebVTT Captions](captions/13-event-details-adjudication-and-daily-file.vtt) · [SRT Captions](captions/13-event-details-adjudication-and-daily-file.srt)
 
-1. Open **Event Details** (`/event-details?eventId=<id>`) and step through the five retained camera JPEG thumbnails under **Retained camera evidence**.
-2. Scroll to **Occupancy Overview** and **Daily File Output** to inspect exact `GS`, `GA`, `NS`, and `GX` RPM daily-file records (served automatically from hot journal or historical daily CSV slice).
+1. Open **Event Details** (`/event-details?eventId=<id>`), verify the **Event UUID** header bar, and step through the five retained camera JPEG thumbnails under **Retained camera evidence**.
+2. Toggle **Show Individual Detectors** / **Separate Plots (Accessibility)** on the waveform charts and scroll to **Daily File Output** to inspect exact `GS`, `GA`, `NS`, and `GX` RPM daily-file records.
 3. Complete **Vehicle ID**, **Adjudicate** disposition code, **Secondary Inspection**, and **Notes** under **Adjudication Form**.
-4. Click **Submit** and confirm in **Confirm Adjudication Submission** (`Confirm & Submit`) to log the signed audit record.
+4. Click **Submit** and confirm in **Confirm Adjudication Submission** (`Confirm & Submit`) to append the signed audit record while preserving prior adjudications.
 
 <a id="14-airgapped-alarm-qr-transfer"></a>
 ### 14. Export Signed Alarm QR & Verify Offline on Air-Gapped Transfer
@@ -208,12 +208,12 @@ Export a SHA-256-authenticated Alarm QR image from Event Details, then import an
 <a id="15-status-of-health-and-site-map"></a>
 ### 15. Monitor RPM/Camera Status of Health & Georeferenced Site Map
 
-Track RPM connectivity, camera stream health, detector/tamper faults, and extended occupancy on Status of Health, then inspect georeferenced lane markers on Site Map.
+Track RPM connectivity, camera stream health, detector/tamper faults, and Fault - Extended Occupancy (Ext-Occ, with automated Code 9998 gamma-only alarm adjudication) on Status of Health, then inspect georeferenced lane markers on Site Map.
 
-- **Video:** [Watch `15-status-of-health-and-site-map.mp4` (10.2s, 727.8 KiB)](videos/15-status-of-health-and-site-map.mp4) · [WebVTT Captions](captions/15-status-of-health-and-site-map.vtt) · [SRT Captions](captions/15-status-of-health-and-site-map.srt)
+- **Video:** [Watch `15-status-of-health-and-site-map.mp4` (10.2s, 1251.1 KiB)](videos/15-status-of-health-and-site-map.mp4) · [WebVTT Captions](captions/15-status-of-health-and-site-map.vtt) · [SRT Captions](captions/15-status-of-health-and-site-map.srt)
 
 1. Open **Status of Health** (`/health`) from the navigation drawer to inspect real-time RPM connectivity, camera stream status, and detector or tamper fault badges across every lane.
-2. Review lane-level health indicators and extended-occupancy status to isolate degraded sensors quickly.
+2. Review lane-level health indicators and `Fault - Extended Occupancy` (`Ext-Occ`) status (which suppresses gamma-only extended occupancy alarms from the Dashboard and auto-adjudicates them as `Code 9998: Extended Occupancy Gamma Alarm`).
 3. Open **Map** (`/map`) to view georeferenced lane markers and real-time alarm/health status overlaid on the facility map.
 
 <a id="16-national-statistics-and-reports"></a>

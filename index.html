@@ -220,17 +220,17 @@
           <span class="badge">06</span>
           <div>
             <h2>Configure a Lane System &amp; Georeferenced Site Diagram</h2>
-            <p class="meta">Track B — SensorHub Admin Configuration · 13.6s · 721.5 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track B — SensorHub Admin Configuration · 14.9s · 785 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Inspect individual Lane System location and camera/RPM options under Sensors, then configure the georeferenced facility Site Diagram bounding coordinates in OSCAR Service.</p>
+        <p class="summary">Inspect individual Lane System location, Extended Occupancy Threshold (min), and camera/RPM options under Sensors, then configure the georeferenced facility Site Diagram bounding coordinates in OSCAR Service.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/06-admin-manual-lane-and-site-diagram.mp4" type="video/mp4" />
           <track kind="captions" src="captions/06-admin-manual-lane-and-site-diagram.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Open <strong>Sensors</strong> in SensorHub Admin and select a <strong>Lane System</strong> module.</li>
-            <li>Review <strong>General</strong>, <strong>Fixed Location</strong> (latitude/longitude coordinates), and <strong>Lane Options</strong> (RPM driver address and RTSP camera stream parameters).</li>
+            <li>Review <strong>General</strong> (including <strong>Extended Occupancy Threshold (min)</strong> and <strong>Operational View Keys</strong>), <strong>Fixed Location</strong> (latitude/longitude coordinates), and <strong>Lane Options</strong> (RPM driver address and RTSP camera stream parameters).</li>
             <li>Switch to <strong>Services -&gt; OSCAR Service</strong> and inspect <strong>Site Diagram Config</strong> to upload a site map image and set georeferenced lower-left and upper-right coordinates.</li>
             <li>Click <strong>Apply Changes</strong> and <strong>Save</strong> to publish lane coordinates and site map bounds to the Viewer.</li>
         </ol>
@@ -272,17 +272,17 @@
           <span class="badge">08</span>
           <div>
             <h2>Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 15.1s · 875.6 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 16.9s · 3020.4 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Authenticate at the OSCAR TLS gateway login page, switch console UI localization live between English and Spanish, and inspect connected server nodes.</p>
+        <p class="summary">Authenticate at the OSCAR TLS gateway login page, switch console UI localization live between English and Spanish, open the in-app Operator Quick Guide &amp; Glossary (?), and inspect connected server nodes.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/08-viewer-signin-language-and-nodes.mp4" type="video/mp4" />
           <track kind="captions" src="captions/08-viewer-signin-language-and-nodes.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Open <code>https://oscar.local</code>, enter the operator <strong>Username</strong> and <strong>Password</strong>, and click <strong>Sign in</strong>.</li>
-            <li>Click the top-bar language selector (<strong>English</strong>) to switch the console interface live between <code>English</code>, <code>Español</code>, <code>Français</code>, and <code>Ελληνικά</code>.</li>
+            <li>Click the top-bar language selector (<strong>English</strong>) to switch the console interface live between <code>English</code>, <code>Español</code>, <code>Français</code>, and <code>Ελληνικά</code>, and click the <code>?</code> help icon to open the <strong>Operator Quick Guide &amp; Glossary</strong>.</li>
             <li>Open <strong>Servers</strong> (<code>/servers</code>) from the navigation drawer to verify <strong>Local Node</strong> status or add federated OSCAR nodes.</li>
         </ol>
         <div class="links">
@@ -297,16 +297,16 @@
           <span class="badge">09</span>
           <div>
             <h2>Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 13s · 509.6 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 12.9s · 939.5 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Monitor real-time 50-lane status tiles and live alarm occupancy rows on the Dashboard, inspect row action menus, and launch rapid alarm review.</p>
+        <p class="summary">Monitor real-time 50-lane status tiles and live alarm occupancy rows on the Dashboard, customize visible panels with Customize Dashboard, and launch rapid alarm review.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/09-dashboard-monitoring-and-quick-adjudication.mp4" type="video/mp4" />
           <track kind="captions" src="captions/09-dashboard-monitoring-and-quick-adjudication.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open the OSCAR <strong>Dashboard</strong> (<code>/</code>) to monitor real-time <strong>Lane Status</strong> tiles across all configured portal lanes.</li>
+            <li>Open the OSCAR <strong>Dashboard</strong> (<code>/</code>) to monitor real-time <strong>Lane Status</strong> tiles across all configured portal lanes and toggle <strong>Customize Dashboard</strong> to show or hide <strong>Lane Status</strong>, <strong>Events</strong>, or <strong>Map</strong>.</li>
             <li>Review incoming occupancy and gamma/neutron alarm rows in the live Dashboard event table, sorting or customizing visible columns as needed.</li>
             <li>Click a row's action menu (<code>⋮</code>) or double-click an alarm row to open immediate event inspection and adjudication controls.</li>
         </ol>
@@ -347,17 +347,17 @@
           <span class="badge">11</span>
           <div>
             <h2>Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 11.6s · 669.4 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 12s · 2359.3 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Open Lane Details from the Dashboard to watch live RTSP/HLS camera video alongside real-time Gamma and Neutron count-rate charts and lane occupancy history.</p>
+        <p class="summary">Open Lane Details from the Dashboard to watch live RTSP/HLS camera video alongside real-time Gamma and Neutron count-rate charts (including Show Individual Detectors and Separate Plots (Accessibility) toggles) and lane occupancy history.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/11-live-lane-video-and-charts.mp4" type="video/mp4" />
           <track kind="captions" src="captions/11-live-lane-video-and-charts.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Click a lane tile under <strong>Lane Status</strong> on the Dashboard (<code>/</code>) to open <strong>Lane Details</strong> (<code>/lane-view</code>).</li>
-            <li>Monitor the live camera video player alongside the real-time <strong>Gamma</strong> (red) and <strong>Neutron</strong> (blue) count-rate waveform charts.</li>
+            <li>Monitor the live camera video player alongside the real-time <strong>Gamma</strong> (red) and <strong>Neutron</strong> (blue) count-rate waveform charts, and toggle <strong>Show Individual Detectors</strong> or <strong>Separate Plots (Accessibility)</strong> (<code>G1</code>–<code>G4</code>, <code>N1</code>–<code>N4</code>).</li>
             <li>Scroll to the lane event table below the charts to inspect historical occupancies recorded on that lane.</li>
         </ol>
         <div class="links">
@@ -372,17 +372,17 @@
           <span class="badge">12</span>
           <div>
             <h2>Filter Event Log by Lane, Adjudication Code &amp; Event UUID</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.9s · 1318.8 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.9s · 1145.7 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Search historical occupancies in Event Log using server-side Advanced Filters (including Code 9999: EML Non-Threat and custom codes) and direct Event UUID lookup.</p>
+        <p class="summary">Search historical occupancies in Event Log using server-side Advanced Filters (including Code 9998: Extended Occupancy Gamma Alarm, Code 9999: EML Non-Threat, and custom codes) and direct Event UUID lookup.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/12-event-log-filtering-and-adjudication-codes.mp4" type="video/mp4" />
           <track kind="captions" src="captions/12-event-log-filtering-and-adjudication-codes.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Navigate to <strong>Event Log</strong> (<code>/event-log</code>) to browse paginated historical occupancies and alarms across the deployment.</li>
-            <li>Click <strong>ADVANCED FILTERS</strong> to filter server-side by date/time window, lane, alarm status, or <strong>Adjudication Code</strong> (including automated <code>Code 9999: EML Non-Threat</code> and custom codes).</li>
+            <li>Click <strong>ADVANCED FILTERS</strong> to filter server-side by date/time window, lane, alarm status, or <strong>Adjudication Code</strong> (including automated <code>Code 9998: Extended Occupancy Gamma Alarm</code>, <code>Code 9999: EML Non-Threat</code>, and custom codes).</li>
             <li>Paste an occupancy observation identifier into <strong>Event UUID</strong> and click <strong>FIND EVENT</strong> to open that exact record.</li>
         </ol>
         <div class="links">
@@ -397,19 +397,19 @@
           <span class="badge">13</span>
           <div>
             <h2>Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 19.5s · 1461.1 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 19.4s · 1216.1 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Inspect five-frame retained JPEG camera evidence, examine exact RPM Daily File Output lines (hot journal or cold historical slice), and submit a full adjudication.</p>
+        <p class="summary">Inspect five-frame retained JPEG camera evidence, toggle individual detector charts, examine exact RPM Daily File Output lines (hot journal or cold historical slice), and submit an append-only adjudication.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/13-event-details-adjudication-and-daily-file.mp4" type="video/mp4" />
           <track kind="captions" src="captions/13-event-details-adjudication-and-daily-file.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>) and step through the five retained camera JPEG thumbnails under <strong>Retained camera evidence</strong>.</li>
-            <li>Scroll to <strong>Occupancy Overview</strong> and <strong>Daily File Output</strong> to inspect exact <code>GS</code>, <code>GA</code>, <code>NS</code>, and <code>GX</code> RPM daily-file records (served automatically from hot journal or historical daily CSV slice).</li>
+            <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>), verify the <strong>Event UUID</strong> header bar, and step through the five retained camera JPEG thumbnails under <strong>Retained camera evidence</strong>.</li>
+            <li>Toggle <strong>Show Individual Detectors</strong> / <strong>Separate Plots (Accessibility)</strong> on the waveform charts and scroll to <strong>Daily File Output</strong> to inspect exact <code>GS</code>, <code>GA</code>, <code>NS</code>, and <code>GX</code> RPM daily-file records.</li>
             <li>Complete <strong>Vehicle ID</strong>, <strong>Adjudicate</strong> disposition code, <strong>Secondary Inspection</strong>, and <strong>Notes</strong> under <strong>Adjudication Form</strong>.</li>
-            <li>Click <strong>Submit</strong> and confirm in <strong>Confirm Adjudication Submission</strong> (<code>Confirm &amp; Submit</code>) to log the signed audit record.</li>
+            <li>Click <strong>Submit</strong> and confirm in <strong>Confirm Adjudication Submission</strong> (<code>Confirm &amp; Submit</code>) to append the signed audit record while preserving prior adjudications.</li>
         </ol>
         <div class="links">
           <a href="videos/13-event-details-adjudication-and-daily-file.mp4">MP4 Video</a>
@@ -449,17 +449,17 @@
           <span class="badge">15</span>
           <div>
             <h2>Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.2s · 727.8 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.2s · 1251.1 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Track RPM connectivity, camera stream health, detector/tamper faults, and extended occupancy on Status of Health, then inspect georeferenced lane markers on Site Map.</p>
+        <p class="summary">Track RPM connectivity, camera stream health, detector/tamper faults, and Fault - Extended Occupancy (Ext-Occ, with automated Code 9998 gamma-only alarm adjudication) on Status of Health, then inspect georeferenced lane markers on Site Map.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/15-status-of-health-and-site-map.mp4" type="video/mp4" />
           <track kind="captions" src="captions/15-status-of-health-and-site-map.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Open <strong>Status of Health</strong> (<code>/health</code>) from the navigation drawer to inspect real-time RPM connectivity, camera stream status, and detector or tamper fault badges across every lane.</li>
-            <li>Review lane-level health indicators and extended-occupancy status to isolate degraded sensors quickly.</li>
+            <li>Review lane-level health indicators and <code>Fault - Extended Occupancy</code> (<code>Ext-Occ</code>) status (which suppresses gamma-only extended occupancy alarms from the Dashboard and auto-adjudicates them as <code>Code 9998: Extended Occupancy Gamma Alarm</code>).</li>
             <li>Open <strong>Map</strong> (<code>/map</code>) to view georeferenced lane markers and real-time alarm/health status overlaid on the facility map.</li>
         </ol>
         <div class="links">
