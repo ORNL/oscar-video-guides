@@ -1,0 +1,11 @@
+1
+00:00:00,040 --> 00:00:05,278
+Open a Lane System in SensorHub Admin and select the Vehicle OCR tab to review Enable Vehicle OCR and Alarms Only.
+
+2
+00:00:05,318 --> 00:00:11,615
+Open Event Details in OSCAR Viewer to inspect ISO 6346 container and plate OCR suggestion chips and Vehicle ID auto-fill.
+
+3
+00:00:11,655 --> 00:00:22,491
+Select Adjudicate disposition and Secondary Inspection status, then confirm append-only submission.

@@ -1,0 +1,7 @@
+1
+00:00:00,040 --> 00:00:05,336
+Click the Help (?) icon in the top bar and browse Console Pages, Reports & Exports, and Key Terms Explained.
+
+2
+00:00:05,376 --> 00:00:10,852
+Open Manual & Video Guides and click Export Support Bundle to download secret-redacted client + server diagnostics.

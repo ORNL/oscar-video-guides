@@ -493,6 +493,57 @@
           <a href="captions/16-national-statistics-and-reports.srt">SubRip (.srt)</a>
         </div>
       </article>
+
+      <article class="card" id="17-vehicle-ocr-and-adjudication" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">17</span>
+          <div>
+            <h2>Configure Per-Lane Vehicle OCR &amp; Adjudicate with ISO 6346 Auto-Fill</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 22.9s · 1657.6 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Inspect optional per-lane Vehicle OCR configuration in SensorHub Admin, then open an alarm event in Event Details to review ISO 6346 container and plate OCR suggestion chips, evidence crops, and Vehicle ID auto-fill during adjudication.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/17-vehicle-ocr-and-adjudication.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/17-vehicle-ocr-and-adjudication.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <strong>Sensors -&gt; &lt;Lane System&gt; -&gt; Vehicle OCR</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>) to review <strong>Enable Vehicle OCR</strong>, <strong>Alarms Only</strong>, <strong>Frames Per Clip</strong>, and confidence thresholds.</li>
+            <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>) in OSCAR Viewer for an alarm occupancy on an OCR-enabled lane.</li>
+            <li>Verify that <strong>Vehicle ID</strong> automatically populates the ISO 6346 check-digit-verified container code and displays clickable container/plate suggestion chips backed by bounded JPEG evidence crops.</li>
+            <li>Select an <strong>Adjudicate</strong> disposition code and <strong>Secondary Inspection</strong> status, click <strong>Submit</strong>, and confirm in <strong>Confirm Adjudication Submission</strong> to append the signed audit decision.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/17-vehicle-ocr-and-adjudication.mp4">MP4 Video</a>
+          <a href="captions/17-vehicle-ocr-and-adjudication.vtt">WebVTT (.vtt)</a>
+          <a href="captions/17-vehicle-ocr-and-adjudication.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="18-operator-help-and-support-bundle" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">18</span>
+          <div>
+            <h2>Use Operator Quick Guide (?) &amp; Export Redacted Support Bundle</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.9s · 2049.3 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Open the localized in-UI Operator Quick Guide &amp; Glossary (?) from the top navigation bar, browse console pages, report formats, and radiation/OCR glossary terms, and export a secret-redacted diagnostic support bundle (.zip).</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/18-operator-help-and-support-bundle.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/18-operator-help-and-support-bundle.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Click the <strong>Help (<code>?</code>)</strong> button in the OSCAR Viewer top navigation bar to open the localized <strong>OSCAR 3.11.0 Operator Quick Guide &amp; Glossary</strong> (<code>en</code>, <code>es</code>, <code>fr</code>, <code>el</code>).</li>
+            <li>Switch across <strong>Console Pages</strong>, <strong>Reports &amp; Exports</strong>, <strong>Key Terms Explained</strong> (<code>EML &amp; Code 9999</code>, <code>Code 9998</code>, <code>PARQUET_PRIMARY</code>, <code>Container &amp; License Plate OCR</code>), and <strong>Manual &amp; Video Guides</strong>.</li>
+            <li>Click <strong>Export Support Bundle</strong> under <strong>Troubleshooting &amp; Support Bundle (<code>.zip</code>)</strong> to download a credential-redacted client + server diagnostic archive (<code>oscar-support-&lt;UTC&gt;.zip</code>), or run <code>sudo bash oscar.sh support-bundle</code> / <code>oscar.bat support-bundle</code> on the host if offline.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/18-operator-help-and-support-bundle.mp4">MP4 Video</a>
+          <a href="captions/18-operator-help-and-support-bundle.vtt">WebVTT (.vtt)</a>
+          <a href="captions/18-operator-help-and-support-bundle.srt">SubRip (.srt)</a>
+        </div>
+      </article>
   </main>
 </body>
 </html>
