@@ -30,12 +30,12 @@ Concise, single-task `1920x1080` screen-recording guides covering every major wo
 | 09 | [Monitor Live 50-Lane Dashboard & Inspect Alarm Rows](#09-dashboard-monitoring-and-quick-adjudication) ([MP4](videos/09-dashboard-monitoring-and-quick-adjudication.mp4)) | Track C | 12.9s | 939.5 KiB | [VTT](captions/09-dashboard-monitoring-and-quick-adjudication.vtt) · [SRT](captions/09-dashboard-monitoring-and-quick-adjudication.srt) |
 | 10 | [Scope Workstation Lanes with Fail-Closed Operational Views](#10-operational-views-scoping) ([MP4](videos/10-operational-views-scoping.mp4)) | Track C | 11.4s | 662.3 KiB | [VTT](captions/10-operational-views-scoping.vtt) · [SRT](captions/10-operational-views-scoping.srt) |
 | 11 | [Inspect Live Lane Camera Stream & Gamma/Neutron Waveforms](#11-live-lane-video-and-charts) ([MP4](videos/11-live-lane-video-and-charts.mp4)) | Track C | 12s | 2359.3 KiB | [VTT](captions/11-live-lane-video-and-charts.vtt) · [SRT](captions/11-live-lane-video-and-charts.srt) |
-| 12 | [Filter Event Log by Lane, Adjudication Code & Event UUID](#12-event-log-filtering-and-adjudication-codes) ([MP4](videos/12-event-log-filtering-and-adjudication-codes.mp4)) | Track C | 10.9s | 1145.7 KiB | [VTT](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT](captions/12-event-log-filtering-and-adjudication-codes.srt) |
+| 12 | [Filter Event Log by Vehicle ID, Adjudication Code & Event UUID](#12-event-log-filtering-and-adjudication-codes) ([MP4](videos/12-event-log-filtering-and-adjudication-codes.mp4)) | Track C | 18.9s | 2397.5 KiB | [VTT](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT](captions/12-event-log-filtering-and-adjudication-codes.srt) |
 | 13 | [Review Retained 5-Frame Media, Daily File Output & Adjudicate](#13-event-details-adjudication-and-daily-file) ([MP4](videos/13-event-details-adjudication-and-daily-file.mp4)) | Track C | 19.4s | 1216.1 KiB | [VTT](captions/13-event-details-adjudication-and-daily-file.vtt) · [SRT](captions/13-event-details-adjudication-and-daily-file.srt) |
 | 14 | [Export Signed Alarm QR & Verify Offline on Air-Gapped Transfer](#14-airgapped-alarm-qr-transfer) ([MP4](videos/14-airgapped-alarm-qr-transfer.mp4)) | Track C | 25.2s | 1723.7 KiB | [VTT](captions/14-airgapped-alarm-qr-transfer.vtt) · [SRT](captions/14-airgapped-alarm-qr-transfer.srt) |
 | 15 | [Monitor RPM/Camera Status of Health & Georeferenced Site Map](#15-status-of-health-and-site-map) ([MP4](videos/15-status-of-health-and-site-map.mp4)) | Track C | 10.2s | 1251.1 KiB | [VTT](captions/15-status-of-health-and-site-map.vtt) · [SRT](captions/15-status-of-health-and-site-map.srt) |
-| 16 | [Analyze National View Statistics & Generate Multi-Format Reports](#16-national-statistics-and-reports) ([MP4](videos/16-national-statistics-and-reports.mp4)) | Track C | 17.1s | 544.2 KiB | [VTT](captions/16-national-statistics-and-reports.vtt) · [SRT](captions/16-national-statistics-and-reports.srt) |
-| 17 | [Configure Per-Lane Vehicle OCR & Adjudicate with ISO 6346 Auto-Fill](#17-vehicle-ocr-and-adjudication) ([MP4](videos/17-vehicle-ocr-and-adjudication.mp4)) | Track C | 22.9s | 1657.6 KiB | [VTT](captions/17-vehicle-ocr-and-adjudication.vtt) · [SRT](captions/17-vehicle-ocr-and-adjudication.srt) |
+| 16 | [Analyze National View Statistics & Generate Multi-Format Reports](#16-national-statistics-and-reports) ([MP4](videos/16-national-statistics-and-reports.mp4)) | Track C | 19.6s | 658 KiB | [VTT](captions/16-national-statistics-and-reports.vtt) · [SRT](captions/16-national-statistics-and-reports.srt) |
+| 17 | [Configure Vehicle OCR, Compare Multi-Pass Transits & Adjudicate](#17-vehicle-ocr-and-adjudication) ([MP4](videos/17-vehicle-ocr-and-adjudication.mp4)) | Track C | 32.4s | 2777.8 KiB | [VTT](captions/17-vehicle-ocr-and-adjudication.vtt) · [SRT](captions/17-vehicle-ocr-and-adjudication.srt) |
 | 18 | [Use Operator Quick Guide (?) & Export Redacted Support Bundle](#18-operator-help-and-support-bundle) ([MP4](videos/18-operator-help-and-support-bundle.mp4)) | Track C | 10.9s | 2049.3 KiB | [VTT](captions/18-operator-help-and-support-bundle.vtt) · [SRT](captions/18-operator-help-and-support-bundle.srt) |
 
 ## Track A — CLI Deployment, Upgrades & Storage Lifecycle
@@ -173,15 +173,16 @@ Open Lane Details from the Dashboard to watch live RTSP/HLS camera video alongsi
 3. Scroll to the lane event table below the charts to inspect historical occupancies recorded on that lane.
 
 <a id="12-event-log-filtering-and-adjudication-codes"></a>
-### 12. Filter Event Log by Lane, Adjudication Code & Event UUID
+### 12. Filter Event Log by Vehicle ID, Adjudication Code & Event UUID
 
-Search historical occupancies in Event Log using server-side Advanced Filters (including Code 9998: Extended Occupancy Gamma Alarm, Code 9999: EML Non-Threat, and custom codes) and direct Event UUID lookup.
+Correlate repeat occupancies in Event Log using normalized Vehicle ID search and Compare Passes, filter server-side with Advanced Filters (including Code 9998, Code 9999, and Vehicle ID rules), and open exact records by Event UUID.
 
-- **Video:** [Watch `12-event-log-filtering-and-adjudication-codes.mp4` (10.9s, 1145.7 KiB)](videos/12-event-log-filtering-and-adjudication-codes.mp4) · [WebVTT Captions](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT Captions](captions/12-event-log-filtering-and-adjudication-codes.srt)
+- **Video:** [Watch `12-event-log-filtering-and-adjudication-codes.mp4` (18.9s, 2397.5 KiB)](videos/12-event-log-filtering-and-adjudication-codes.mp4) · [WebVTT Captions](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT Captions](captions/12-event-log-filtering-and-adjudication-codes.srt)
 
-1. Navigate to **Event Log** (`/event-log`) to browse paginated historical occupancies and alarms across the deployment.
-2. Click **ADVANCED FILTERS** to filter server-side by date/time window, lane, alarm status, or **Adjudication Code** (including automated `Code 9998: Extended Occupancy Gamma Alarm`, `Code 9999: EML Non-Threat`, and custom codes).
-3. Paste an occupancy observation identifier into **Event UUID** and click **FIND EVENT** to open that exact record.
+1. Navigate to **Event Log** (`/event-log`), enter a container or plate identifier in the **Vehicle / Container ID** search bar (ignoring case, spaces, and hyphens), click **SEARCH VEHICLE**, and click **COMPARE PASSES (`N`)** to inspect correlated transits.
+2. Review chronological cross-lane passes and visual continuity crops inside **Multi-Pass Vehicle Comparison**, then close the dialog or click **CLEAR**.
+3. Click **ADVANCED FILTERS** to filter server-side by date/time window, lane, alarm status, **Vehicle ID**, or **Adjudication Code** (including automated `Code 9998: Extended Occupancy Gamma Alarm`, `Code 9999: EML Non-Threat`, and custom codes).
+4. Paste an occupancy observation identifier into **Event UUID** and click **FIND EVENT** to open that exact record.
 
 <a id="13-event-details-adjudication-and-daily-file"></a>
 ### 13. Review Retained 5-Frame Media, Daily File Output & Adjudicate
@@ -221,24 +222,24 @@ Track RPM connectivity, camera stream health, detector/tamper faults, and Fault 
 <a id="16-national-statistics-and-reports"></a>
 ### 16. Analyze National View Statistics & Generate Multi-Format Reports
 
-Review aggregated occupancy and alarm trends on National View, then configure and generate RDS Site, Lane, Event, Adjudication (starting with summed All Selected Lanes totals), or Adjudication Details Extract reports in PDF, CSV, JSON, or Excel (.xlsx) format.
+Review aggregated occupancy and alarm trends on National View, then configure and generate RDS Site, Lane, Event, Adjudication (starting with summed All Selected Lanes totals), Adjudication Details, or consolidated Vehicle Incident reports in PDF, CSV, JSON, or Excel (.xlsx) format.
 
-- **Video:** [Watch `16-national-statistics-and-reports.mp4` (17.1s, 544.2 KiB)](videos/16-national-statistics-and-reports.mp4) · [WebVTT Captions](captions/16-national-statistics-and-reports.vtt) · [SRT Captions](captions/16-national-statistics-and-reports.srt)
+- **Video:** [Watch `16-national-statistics-and-reports.mp4` (19.6s, 658 KiB)](videos/16-national-statistics-and-reports.mp4) · [WebVTT Captions](captions/16-national-statistics-and-reports.vtt) · [SRT Captions](captions/16-national-statistics-and-reports.srt)
 
 1. Open **National View** (`/national-view`) to inspect aggregated occupancy totals, gamma/neutron alarm counts, and multi-lane trends.
-2. Navigate to **Report Generator** (`/report`) and choose **Node Selector**, **Report Scope** (`Entire Node`, `Operational View`, or `Specific Lanes`), **Report Type** (`RDS_SITE`, `LANE`, `EVENT`, `ADJUDICATION`, or `ADJUDICATION_DETAILS`), **Export Format** (`PDF`, `CSV`, `JSON`, or `Excel (.xlsx)`), and **Time Range**.
-3. Click **Generate Report** and review the rendered PDF or inline tabular preview (`CSV`, `JSON`, `XLSX`) and download the generated report.
+2. Navigate to **Report Generator** (`/report`) and choose **Node Selector**, **Report Scope** (`Entire Node`, `Operational View`, or `Specific Lanes`), **Report Type** (`RDS_SITE`, `LANE`, `EVENT`, `ADJUDICATION`, `ADJUDICATION_DETAILS`, or `VEHICLE_INCIDENT`), **Export Format** (`PDF`, `CSV`, `JSON`, or `Excel (.xlsx)`), and **Time Range**.
+3. When generating a **Vehicle Incident Report**, enter a normalized **Vehicle ID** (or leave blank for all tagged vehicles), click **Generate Report**, and review the rendered PDF or inline tabular preview (`CSV`, `JSON`, `XLSX`) before downloading.
 
 <a id="17-vehicle-ocr-and-adjudication"></a>
-### 17. Configure Per-Lane Vehicle OCR & Adjudicate with ISO 6346 Auto-Fill
+### 17. Configure Vehicle OCR, Compare Multi-Pass Transits & Adjudicate
 
-Inspect optional per-lane Vehicle OCR configuration in SensorHub Admin, then open an alarm event in Event Details to review ISO 6346 container and plate OCR suggestion chips, evidence crops, and Vehicle ID auto-fill during adjudication.
+Inspect optional per-lane Vehicle OCR configuration in SensorHub Admin, open an alarm in Event Details to review ISO 6346 container auto-fill, OCR suggestion chips, and Multi-Pass Vehicle History, compare overlaid radiation traces across passes, and record an adjudication.
 
-- **Video:** [Watch `17-vehicle-ocr-and-adjudication.mp4` (22.9s, 1657.6 KiB)](videos/17-vehicle-ocr-and-adjudication.mp4) · [WebVTT Captions](captions/17-vehicle-ocr-and-adjudication.vtt) · [SRT Captions](captions/17-vehicle-ocr-and-adjudication.srt)
+- **Video:** [Watch `17-vehicle-ocr-and-adjudication.mp4` (32.4s, 2777.8 KiB)](videos/17-vehicle-ocr-and-adjudication.mp4) · [WebVTT Captions](captions/17-vehicle-ocr-and-adjudication.vtt) · [SRT Captions](captions/17-vehicle-ocr-and-adjudication.srt)
 
 1. Open **Sensors -> <Lane System> -> Vehicle OCR** in SensorHub Admin (`https://oscar.local/sensorhub/admin`) to review **Enable Vehicle OCR**, **Alarms Only**, **Frames Per Clip**, and confidence thresholds.
-2. Open **Event Details** (`/event-details?eventId=<id>`) in OSCAR Viewer for an alarm occupancy on an OCR-enabled lane.
-3. Verify that **Vehicle ID** automatically populates the ISO 6346 check-digit-verified container code and displays clickable container/plate suggestion chips backed by bounded JPEG evidence crops.
+2. Open **Event Details** (`/event-details?eventId=<id>`) in OSCAR Viewer for an alarm occupancy on an OCR-enabled lane to verify ISO 6346 **Vehicle ID** auto-fill, clickable OCR suggestion chips, and the **Multi-Pass Vehicle History** correlation banner.
+3. Click **COMPARE PASSES** to inspect chronological confirmation re-scans or secondary spectroscopic transits, visual continuity crops, and on-demand overlaid gamma/neutron radiation traces.
 4. Select an **Adjudicate** disposition code and **Secondary Inspection** status, click **Submit**, and confirm in **Confirm Adjudication Submission** to append the signed audit decision.
 
 <a id="18-operator-help-and-support-bundle"></a>

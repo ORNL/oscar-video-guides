@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:03,440
-Click ADVANCED FILTERS on Event Log to open server-side lane, date, and adjudication filters.
+00:00:00,040 --> 00:00:11,432
+Search Event Log by normalized Vehicle ID and open Multi-Pass Vehicle Comparison.
 
 2
-00:00:03,480 --> 00:00:06,840
-Inspect Lane, Status, and Adjudication Code filter selectors (including Code 9998 and Code 9999).
+00:00:11,472 --> 00:00:14,832
+Click ADVANCED FILTERS on Event Log to open server-side lane, date, Vehicle ID, and adjudication filters.
 
 3
-00:00:06,880 --> 00:00:10,937
+00:00:14,872 --> 00:00:18,887
 Enter an occupancy identifier in Event UUID and click FIND EVENT for direct lookup.

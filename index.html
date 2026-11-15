@@ -371,18 +371,19 @@
         <div class="card-head">
           <span class="badge">12</span>
           <div>
-            <h2>Filter Event Log by Lane, Adjudication Code &amp; Event UUID</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.9s · 1145.7 KiB · 1080p NVENC H.264 VFR</p>
+            <h2>Filter Event Log by Vehicle ID, Adjudication Code &amp; Event UUID</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 18.9s · 2397.5 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Search historical occupancies in Event Log using server-side Advanced Filters (including Code 9998: Extended Occupancy Gamma Alarm, Code 9999: EML Non-Threat, and custom codes) and direct Event UUID lookup.</p>
+        <p class="summary">Correlate repeat occupancies in Event Log using normalized Vehicle ID search and Compare Passes, filter server-side with Advanced Filters (including Code 9998, Code 9999, and Vehicle ID rules), and open exact records by Event UUID.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/12-event-log-filtering-and-adjudication-codes.mp4" type="video/mp4" />
           <track kind="captions" src="captions/12-event-log-filtering-and-adjudication-codes.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Navigate to <strong>Event Log</strong> (<code>/event-log</code>) to browse paginated historical occupancies and alarms across the deployment.</li>
-            <li>Click <strong>ADVANCED FILTERS</strong> to filter server-side by date/time window, lane, alarm status, or <strong>Adjudication Code</strong> (including automated <code>Code 9998: Extended Occupancy Gamma Alarm</code>, <code>Code 9999: EML Non-Threat</code>, and custom codes).</li>
+            <li>Navigate to <strong>Event Log</strong> (<code>/event-log</code>), enter a container or plate identifier in the <strong>Vehicle / Container ID</strong> search bar (ignoring case, spaces, and hyphens), click <strong>SEARCH VEHICLE</strong>, and click <strong>COMPARE PASSES (<code>N</code>)</strong> to inspect correlated transits.</li>
+            <li>Review chronological cross-lane passes and visual continuity crops inside <strong>Multi-Pass Vehicle Comparison</strong>, then close the dialog or click <strong>CLEAR</strong>.</li>
+            <li>Click <strong>ADVANCED FILTERS</strong> to filter server-side by date/time window, lane, alarm status, <strong>Vehicle ID</strong>, or <strong>Adjudication Code</strong> (including automated <code>Code 9998: Extended Occupancy Gamma Alarm</code>, <code>Code 9999: EML Non-Threat</code>, and custom codes).</li>
             <li>Paste an occupancy observation identifier into <strong>Event UUID</strong> and click <strong>FIND EVENT</strong> to open that exact record.</li>
         </ol>
         <div class="links">
@@ -474,18 +475,18 @@
           <span class="badge">16</span>
           <div>
             <h2>Analyze National View Statistics &amp; Generate Multi-Format Reports</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 17.1s · 544.2 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 19.6s · 658 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Review aggregated occupancy and alarm trends on National View, then configure and generate RDS Site, Lane, Event, Adjudication (starting with summed All Selected Lanes totals), or Adjudication Details Extract reports in PDF, CSV, JSON, or Excel (.xlsx) format.</p>
+        <p class="summary">Review aggregated occupancy and alarm trends on National View, then configure and generate RDS Site, Lane, Event, Adjudication (starting with summed All Selected Lanes totals), Adjudication Details, or consolidated Vehicle Incident reports in PDF, CSV, JSON, or Excel (.xlsx) format.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/16-national-statistics-and-reports.mp4" type="video/mp4" />
           <track kind="captions" src="captions/16-national-statistics-and-reports.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Open <strong>National View</strong> (<code>/national-view</code>) to inspect aggregated occupancy totals, gamma/neutron alarm counts, and multi-lane trends.</li>
-            <li>Navigate to <strong>Report Generator</strong> (<code>/report</code>) and choose <strong>Node Selector</strong>, <strong>Report Scope</strong> (<code>Entire Node</code>, <code>Operational View</code>, or <code>Specific Lanes</code>), <strong>Report Type</strong> (<code>RDS_SITE</code>, <code>LANE</code>, <code>EVENT</code>, <code>ADJUDICATION</code>, or <code>ADJUDICATION_DETAILS</code>), <strong>Export Format</strong> (<code>PDF</code>, <code>CSV</code>, <code>JSON</code>, or <code>Excel (.xlsx)</code>), and <strong>Time Range</strong>.</li>
-            <li>Click <strong>Generate Report</strong> and review the rendered PDF or inline tabular preview (<code>CSV</code>, <code>JSON</code>, <code>XLSX</code>) and download the generated report.</li>
+            <li>Navigate to <strong>Report Generator</strong> (<code>/report</code>) and choose <strong>Node Selector</strong>, <strong>Report Scope</strong> (<code>Entire Node</code>, <code>Operational View</code>, or <code>Specific Lanes</code>), <strong>Report Type</strong> (<code>RDS_SITE</code>, <code>LANE</code>, <code>EVENT</code>, <code>ADJUDICATION</code>, <code>ADJUDICATION_DETAILS</code>, or <code>VEHICLE_INCIDENT</code>), <strong>Export Format</strong> (<code>PDF</code>, <code>CSV</code>, <code>JSON</code>, or <code>Excel (.xlsx)</code>), and <strong>Time Range</strong>.</li>
+            <li>When generating a <strong>Vehicle Incident Report</strong>, enter a normalized <strong>Vehicle ID</strong> (or leave blank for all tagged vehicles), click <strong>Generate Report</strong>, and review the rendered PDF or inline tabular preview (<code>CSV</code>, <code>JSON</code>, <code>XLSX</code>) before downloading.</li>
         </ol>
         <div class="links">
           <a href="videos/16-national-statistics-and-reports.mp4">MP4 Video</a>
@@ -498,19 +499,19 @@
         <div class="card-head">
           <span class="badge">17</span>
           <div>
-            <h2>Configure Per-Lane Vehicle OCR &amp; Adjudicate with ISO 6346 Auto-Fill</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 22.9s · 1657.6 KiB · 1080p NVENC H.264 VFR</p>
+            <h2>Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 32.4s · 2777.8 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Inspect optional per-lane Vehicle OCR configuration in SensorHub Admin, then open an alarm event in Event Details to review ISO 6346 container and plate OCR suggestion chips, evidence crops, and Vehicle ID auto-fill during adjudication.</p>
+        <p class="summary">Inspect optional per-lane Vehicle OCR configuration in SensorHub Admin, open an alarm in Event Details to review ISO 6346 container auto-fill, OCR suggestion chips, and Multi-Pass Vehicle History, compare overlaid radiation traces across passes, and record an adjudication.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/17-vehicle-ocr-and-adjudication.mp4" type="video/mp4" />
           <track kind="captions" src="captions/17-vehicle-ocr-and-adjudication.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Open <strong>Sensors -&gt; &lt;Lane System&gt; -&gt; Vehicle OCR</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>) to review <strong>Enable Vehicle OCR</strong>, <strong>Alarms Only</strong>, <strong>Frames Per Clip</strong>, and confidence thresholds.</li>
-            <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>) in OSCAR Viewer for an alarm occupancy on an OCR-enabled lane.</li>
-            <li>Verify that <strong>Vehicle ID</strong> automatically populates the ISO 6346 check-digit-verified container code and displays clickable container/plate suggestion chips backed by bounded JPEG evidence crops.</li>
+            <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>) in OSCAR Viewer for an alarm occupancy on an OCR-enabled lane to verify ISO 6346 <strong>Vehicle ID</strong> auto-fill, clickable OCR suggestion chips, and the <strong>Multi-Pass Vehicle History</strong> correlation banner.</li>
+            <li>Click <strong>COMPARE PASSES</strong> to inspect chronological confirmation re-scans or secondary spectroscopic transits, visual continuity crops, and on-demand overlaid gamma/neutron radiation traces.</li>
             <li>Select an <strong>Adjudicate</strong> disposition code and <strong>Secondary Inspection</strong> status, click <strong>Submit</strong>, and confirm in <strong>Confirm Adjudication Submission</strong> to append the signed audit decision.</li>
         </ol>
         <div class="links">
