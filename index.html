@@ -272,18 +272,18 @@
           <span class="badge">08</span>
           <div>
             <h2>Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 16.9s · 3020.4 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 17.9s · 3062.2 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Authenticate at the OSCAR TLS gateway login page, switch console UI localization live between English and Spanish, open the in-app Operator Quick Guide &amp; Glossary (?), and inspect connected server nodes.</p>
+        <p class="summary">Authenticate at the OSCAR TLS gateway login page (with Keep me signed in until I log out and offline Passkey support), switch console UI localization live across 4 languages, open the Operator Quick Guide (?), and configure federated OSCAR nodes.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/08-viewer-signin-language-and-nodes.mp4" type="video/mp4" />
           <track kind="captions" src="captions/08-viewer-signin-language-and-nodes.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <code>https://oscar.local</code>, enter the operator <strong>Username</strong> and <strong>Password</strong>, and click <strong>Sign in</strong>.</li>
+            <li>Open <code>https://oscar.local</code>, enter the operator <strong>Username</strong> and <strong>Password</strong> (with <strong>Keep me signed in until I log out</strong> enabled, or click <strong>Sign in with a passkey</strong>), and click <strong>Sign in</strong>.</li>
             <li>Click the top-bar language selector (<strong>English</strong>) to switch the console interface live between <code>English</code>, <code>Español</code>, <code>Français</code>, and <code>Ελληνικά</code>, and click the <code>?</code> help icon to open the <strong>Operator Quick Guide &amp; Glossary</strong>.</li>
-            <li>Open <strong>Servers</strong> (<code>/servers</code>) from the navigation drawer to verify <strong>Local Node</strong> status or add federated OSCAR nodes.</li>
+            <li>Open <strong>Nodes</strong> (<code>/servers</code>) from the navigation drawer to verify <strong>Local Node</strong> status or add federated OSCAR nodes using interactive browser sessions or scoped <strong>Federation Service Tokens (<code>oscar_fed_...</code>)</strong>.</li>
         </ol>
         <div class="links">
           <a href="videos/08-viewer-signin-language-and-nodes.mp4">MP4 Video</a>
@@ -543,6 +543,32 @@
           <a href="videos/18-operator-help-and-support-bundle.mp4">MP4 Video</a>
           <a href="captions/18-operator-help-and-support-bundle.vtt">WebVTT (.vtt)</a>
           <a href="captions/18-operator-help-and-support-bundle.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="19-viewer-users-passkeys-and-access" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">19</span>
+          <div>
+            <h2>Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 19.7s · 1915.6 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Open Users &amp; Access (/users) to enroll offline WebAuthn Passkeys, bulk-enroll a CSV user list with ready-to-send startup text messages and 1-tap setup QR codes, mint scoped Federation Service Tokens, and download the hardware-replacement recovery checklist.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/19-viewer-users-passkeys-and-access.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/19-viewer-users-passkeys-and-access.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <strong>Users &amp; Access</strong> (<code>/users</code>) from the navigation drawer (or click your username in the top bar) to inspect your persistent session status (<code>Stays signed in until you click Log Out</code>), register offline <strong>Passkeys / YubiKeys</strong>, or update your local password.</li>
+            <li>Switch to <strong>Users &amp; Roles</strong> and click <strong>Bulk Enroll (CSV / Paste)</strong> to upload or paste a CSV/Excel user list (<code>username, role, display_name, views</code>), preview validated rows, and click <strong>Enroll User(s) &amp; Generate QR Pack</strong>.</li>
+            <li>Copy or print the generated <strong>Startup Messages &amp; 1-Tap Setup QR Codes</strong> (<code>/login/enroll?token=oscar_inv_...</code>, including fallback workstation codes for phone-free facilities).</li>
+            <li>Open <strong>Federation Tokens</strong> to mint least-privilege <code>oscar_fed_...</code> tokens for remote nodes and <strong>Backup &amp; Hardware Recovery</strong> to download the emergency recovery checklist.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/19-viewer-users-passkeys-and-access.mp4">MP4 Video</a>
+          <a href="captions/19-viewer-users-passkeys-and-access.vtt">WebVTT (.vtt)</a>
+          <a href="captions/19-viewer-users-passkeys-and-access.srt">SubRip (.srt)</a>
         </div>
       </article>
   </main>

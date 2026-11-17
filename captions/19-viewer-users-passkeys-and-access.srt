@@ -1,0 +1,15 @@
+1
+00:00:00,040 --> 00:00:03,758
+Review persistent Stay Signed In status and offline Passkey / password controls in My Account & Passkeys.
+
+2
+00:00:03,798 --> 00:00:09,423
+Open Users & Roles, click Bulk Enroll (CSV / Paste), and paste an operator and viewer roster.
+
+3
+00:00:09,463 --> 00:00:14,393
+Inspect the generated Startup Text Messages and 1-Tap Passkey/Password Setup QR Codes.
+
+4
+00:00:14,433 --> 00:00:19,724
+Review scoped Federation Service Tokens and the Non-IT Backup & Hardware Replacement checklist.

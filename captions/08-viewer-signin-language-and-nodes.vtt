@@ -1,13 +1,13 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:05.298
-Enter operator credentials at https://oscar.local and click Sign in.
+00:00:00.040 --> 00:00:06.316
+Sign in at https://oscar.local with Keep me signed in until I log out enabled (or via Passkey).
 
 2
-00:00:05.338 --> 00:00:12.973
+00:00:06.356 --> 00:00:14.001
 Switch the live Viewer language between English and Español and inspect the Operator Quick Guide (?).
 
 3
-00:00:13.013 --> 00:00:16.915
+00:00:14.041 --> 00:00:17.932
 Open the Servers page (/servers) to verify Local Node connectivity and multi-node settings.
