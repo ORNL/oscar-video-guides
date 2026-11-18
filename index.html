@@ -371,18 +371,18 @@
         <div class="card-head">
           <span class="badge">12</span>
           <div>
-            <h2>Filter Event Log by Vehicle ID, Adjudication Code &amp; Event UUID</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 18.9s · 2397.5 KiB · 1080p NVENC H.264 VFR</p>
+            <h2>Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 27s · 2383.5 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Correlate repeat occupancies in Event Log using normalized Vehicle ID search and Compare Passes, filter server-side with Advanced Filters (including Code 9998, Code 9999, and Vehicle ID rules), and open exact records by Event UUID.</p>
+        <p class="summary">Expand the Alarm Category Co-Occurrence (UpSet) panel to filter by populated-first main categories or combinations (including crimson Other SNM), correlate repeat occupancies by normalized Vehicle ID and Compare Passes, apply server-side Advanced Filters, and look up exact records by Event UUID.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/12-event-log-filtering-and-adjudication-codes.mp4" type="video/mp4" />
           <track kind="captions" src="captions/12-event-log-filtering-and-adjudication-codes.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Navigate to <strong>Event Log</strong> (<code>/event-log</code>), enter a container or plate identifier in the <strong>Vehicle / Container ID</strong> search bar (ignoring case, spaces, and hyphens), click <strong>SEARCH VEHICLE</strong>, and click <strong>COMPARE PASSES (<code>N</code>)</strong> to inspect correlated transits.</li>
-            <li>Review chronological cross-lane passes and visual continuity crops inside <strong>Multi-Pass Vehicle Comparison</strong>, then close the dialog or click <strong>CLEAR</strong>.</li>
+            <li>Click <strong>Alarm Category Co-Occurrence (UpSet)</strong> (<code>Show</code>) to display populated main categories first (<code>Unknown</code>, <code>SNM</code>, <code>NORM</code>, <code>Medical</code>, <code>Industrial</code>, <code>Gamma</code>, <code>Neutron</code>), then click any populated <strong>Categories</strong> chip, combination bar, or rolled-up crimson <strong>Other SNM</strong> bar to filter the table.</li>
             <li>Click <strong>ADVANCED FILTERS</strong> to filter server-side by date/time window, lane, alarm status, <strong>Vehicle ID</strong>, or <strong>Adjudication Code</strong> (including automated <code>Code 9998: Extended Occupancy Gamma Alarm</code>, <code>Code 9999: EML Non-Threat</code>, and custom codes).</li>
             <li>Paste an occupancy observation identifier into <strong>Event UUID</strong> and click <strong>FIND EVENT</strong> to open that exact record.</li>
         </ol>
@@ -551,19 +551,19 @@
           <span class="badge">19</span>
           <div>
             <h2>Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 19.7s · 1915.6 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 24.4s · 2275 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Open Users &amp; Access (/users) to enroll offline WebAuthn Passkeys, bulk-enroll a CSV user list with ready-to-send startup text messages and 1-tap setup QR codes, mint scoped Federation Service Tokens, and download the hardware-replacement recovery checklist.</p>
+        <p class="summary">Open Users &amp; Access (/users) to enroll offline WebAuthn Passkeys (with local passwords independent of Octelium tunnel credentials), bulk-enroll a CSV user list with 1-tap setup QR codes, mint scoped Federation Service Tokens, and launch Servers (/servers?auth=bearer) in Federation Token mode.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/19-viewer-users-passkeys-and-access.mp4" type="video/mp4" />
           <track kind="captions" src="captions/19-viewer-users-passkeys-and-access.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <strong>Users &amp; Access</strong> (<code>/users</code>) from the navigation drawer (or click your username in the top bar) to inspect your persistent session status (<code>Stays signed in until you click Log Out</code>), register offline <strong>Passkeys / YubiKeys</strong>, or update your local password.</li>
+            <li>Open <strong>Users &amp; Access</strong> (<code>/users</code>) from the navigation drawer (or click your username in the top bar) to inspect your persistent session status (<code>Stays signed in until you click Log Out</code>), register offline <strong>Passkeys / YubiKeys</strong>, or update your local OSCAR password (which is completely separate from any Octelium Zero-Trust tunnel credentials).</li>
             <li>Switch to <strong>Users &amp; Roles</strong> and click <strong>Bulk Enroll (CSV / Paste)</strong> to upload or paste a CSV/Excel user list (<code>username, role, display_name, views</code>), preview validated rows, and click <strong>Enroll User(s) &amp; Generate QR Pack</strong>.</li>
             <li>Copy or print the generated <strong>Startup Messages &amp; 1-Tap Setup QR Codes</strong> (<code>/login/enroll?token=oscar_inv_...</code>, including fallback workstation codes for phone-free facilities).</li>
-            <li>Open <strong>Federation Tokens</strong> to mint least-privilege <code>oscar_fed_...</code> tokens for remote nodes and <strong>Backup &amp; Hardware Recovery</strong> to download the emergency recovery checklist.</li>
+            <li>Open <strong>Federation Tokens</strong>, mint a least-privilege <code>oscar_fed_...</code> token, and click <strong>Open Servers Page (Federation Token Mode)</strong> (<code>/servers?auth=bearer</code>) on the NOC/HQ viewer to paste the token into <strong>Servers</strong> (<code>HTTPS</code>, port <code>443</code>).</li>
         </ol>
         <div class="links">
           <a href="videos/19-viewer-users-passkeys-and-access.mp4">MP4 Video</a>

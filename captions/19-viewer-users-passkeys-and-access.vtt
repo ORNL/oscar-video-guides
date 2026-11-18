@@ -1,17 +1,17 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:03.758
-Review persistent Stay Signed In status and offline Passkey / password controls in My Account & Passkeys.
+00:00:00.040 --> 00:00:03.754
+Review persistent Stay Signed In status, offline Passkeys, and local-password vs. Octelium tunnel separation.
 
 2
-00:00:03.798 --> 00:00:09.423
+00:00:03.794 --> 00:00:09.452
 Open Users & Roles, click Bulk Enroll (CSV / Paste), and paste an operator and viewer roster.
 
 3
-00:00:09.463 --> 00:00:14.393
+00:00:09.492 --> 00:00:14.385
 Inspect the generated Startup Text Messages and 1-Tap Passkey/Password Setup QR Codes.
 
 4
-00:00:14.433 --> 00:00:19.724
-Review scoped Federation Service Tokens and the Non-IT Backup & Hardware Replacement checklist.
+00:00:14.425 --> 00:00:24.364
+Mint a scoped Federation Service Token and click Open Servers Page (Federation Token Mode) to configure remote node access.

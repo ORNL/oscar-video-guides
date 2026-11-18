@@ -1,13 +1,17 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:11.432
+00:00:00.040 --> 00:00:13.067
 Search Event Log by normalized Vehicle ID and open Multi-Pass Vehicle Comparison.
 
 2
-00:00:11.472 --> 00:00:14.832
-Click ADVANCED FILTERS on Event Log to open server-side lane, date, Vehicle ID, and adjudication filters.
+00:00:13.107 --> 00:00:19.611
+Expand Alarm Category Co-Occurrence (UpSet) and filter by a populated main category.
 
 3
-00:00:14.872 --> 00:00:18.887
+00:00:19.651 --> 00:00:23.011
+Click ADVANCED FILTERS on Event Log to open server-side lane, date, Vehicle ID, and adjudication filters.
+
+4
+00:00:23.051 --> 00:00:26.956
 Enter an occupancy identifier in Event UUID and click FIND EVENT for direct lookup.

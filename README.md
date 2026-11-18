@@ -30,14 +30,14 @@ Concise, single-task `1920x1080` screen-recording guides covering every major wo
 | 09 | [Monitor Live 50-Lane Dashboard & Inspect Alarm Rows](#09-dashboard-monitoring-and-quick-adjudication) ([MP4](videos/09-dashboard-monitoring-and-quick-adjudication.mp4)) | Track C | 12.9s | 939.5 KiB | [VTT](captions/09-dashboard-monitoring-and-quick-adjudication.vtt) · [SRT](captions/09-dashboard-monitoring-and-quick-adjudication.srt) |
 | 10 | [Scope Workstation Lanes with Fail-Closed Operational Views](#10-operational-views-scoping) ([MP4](videos/10-operational-views-scoping.mp4)) | Track C | 11.4s | 662.3 KiB | [VTT](captions/10-operational-views-scoping.vtt) · [SRT](captions/10-operational-views-scoping.srt) |
 | 11 | [Inspect Live Lane Camera Stream & Gamma/Neutron Waveforms](#11-live-lane-video-and-charts) ([MP4](videos/11-live-lane-video-and-charts.mp4)) | Track C | 12s | 2359.3 KiB | [VTT](captions/11-live-lane-video-and-charts.vtt) · [SRT](captions/11-live-lane-video-and-charts.srt) |
-| 12 | [Filter Event Log by Vehicle ID, Adjudication Code & Event UUID](#12-event-log-filtering-and-adjudication-codes) ([MP4](videos/12-event-log-filtering-and-adjudication-codes.mp4)) | Track C | 18.9s | 2397.5 KiB | [VTT](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT](captions/12-event-log-filtering-and-adjudication-codes.srt) |
+| 12 | [Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code & Event UUID](#12-event-log-filtering-and-adjudication-codes) ([MP4](videos/12-event-log-filtering-and-adjudication-codes.mp4)) | Track C | 27s | 2383.5 KiB | [VTT](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT](captions/12-event-log-filtering-and-adjudication-codes.srt) |
 | 13 | [Review Retained 5-Frame Media, Daily File Output & Adjudicate](#13-event-details-adjudication-and-daily-file) ([MP4](videos/13-event-details-adjudication-and-daily-file.mp4)) | Track C | 19.4s | 1216.1 KiB | [VTT](captions/13-event-details-adjudication-and-daily-file.vtt) · [SRT](captions/13-event-details-adjudication-and-daily-file.srt) |
 | 14 | [Export Signed Alarm QR & Verify Offline on Air-Gapped Transfer](#14-airgapped-alarm-qr-transfer) ([MP4](videos/14-airgapped-alarm-qr-transfer.mp4)) | Track C | 25.2s | 1723.7 KiB | [VTT](captions/14-airgapped-alarm-qr-transfer.vtt) · [SRT](captions/14-airgapped-alarm-qr-transfer.srt) |
 | 15 | [Monitor RPM/Camera Status of Health & Georeferenced Site Map](#15-status-of-health-and-site-map) ([MP4](videos/15-status-of-health-and-site-map.mp4)) | Track C | 10.2s | 1251.1 KiB | [VTT](captions/15-status-of-health-and-site-map.vtt) · [SRT](captions/15-status-of-health-and-site-map.srt) |
 | 16 | [Analyze National View Statistics & Generate Multi-Format Reports](#16-national-statistics-and-reports) ([MP4](videos/16-national-statistics-and-reports.mp4)) | Track C | 19.6s | 658 KiB | [VTT](captions/16-national-statistics-and-reports.vtt) · [SRT](captions/16-national-statistics-and-reports.srt) |
 | 17 | [Configure Vehicle OCR, Compare Multi-Pass Transits & Adjudicate](#17-vehicle-ocr-and-adjudication) ([MP4](videos/17-vehicle-ocr-and-adjudication.mp4)) | Track C | 32.4s | 2777.8 KiB | [VTT](captions/17-vehicle-ocr-and-adjudication.vtt) · [SRT](captions/17-vehicle-ocr-and-adjudication.srt) |
 | 18 | [Use Operator Quick Guide (?) & Export Redacted Support Bundle](#18-operator-help-and-support-bundle) ([MP4](videos/18-operator-help-and-support-bundle.mp4)) | Track C | 10.9s | 2049.3 KiB | [VTT](captions/18-operator-help-and-support-bundle.vtt) · [SRT](captions/18-operator-help-and-support-bundle.srt) |
-| 19 | [Manage Users, Bulk QR Invites, Offline Passkeys & Federation Tokens](#19-viewer-users-passkeys-and-access) ([MP4](videos/19-viewer-users-passkeys-and-access.mp4)) | Track C | 19.7s | 1915.6 KiB | [VTT](captions/19-viewer-users-passkeys-and-access.vtt) · [SRT](captions/19-viewer-users-passkeys-and-access.srt) |
+| 19 | [Manage Users, Bulk QR Invites, Offline Passkeys & Federation Tokens](#19-viewer-users-passkeys-and-access) ([MP4](videos/19-viewer-users-passkeys-and-access.mp4)) | Track C | 24.4s | 2275 KiB | [VTT](captions/19-viewer-users-passkeys-and-access.vtt) · [SRT](captions/19-viewer-users-passkeys-and-access.srt) |
 
 ## Track A — CLI Deployment, Upgrades & Storage Lifecycle
 
@@ -174,14 +174,14 @@ Open Lane Details from the Dashboard to watch live RTSP/HLS camera video alongsi
 3. Scroll to the lane event table below the charts to inspect historical occupancies recorded on that lane.
 
 <a id="12-event-log-filtering-and-adjudication-codes"></a>
-### 12. Filter Event Log by Vehicle ID, Adjudication Code & Event UUID
+### 12. Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code & Event UUID
 
-Correlate repeat occupancies in Event Log using normalized Vehicle ID search and Compare Passes, filter server-side with Advanced Filters (including Code 9998, Code 9999, and Vehicle ID rules), and open exact records by Event UUID.
+Expand the Alarm Category Co-Occurrence (UpSet) panel to filter by populated-first main categories or combinations (including crimson Other SNM), correlate repeat occupancies by normalized Vehicle ID and Compare Passes, apply server-side Advanced Filters, and look up exact records by Event UUID.
 
-- **Video:** [Watch `12-event-log-filtering-and-adjudication-codes.mp4` (18.9s, 2397.5 KiB)](videos/12-event-log-filtering-and-adjudication-codes.mp4) · [WebVTT Captions](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT Captions](captions/12-event-log-filtering-and-adjudication-codes.srt)
+- **Video:** [Watch `12-event-log-filtering-and-adjudication-codes.mp4` (27s, 2383.5 KiB)](videos/12-event-log-filtering-and-adjudication-codes.mp4) · [WebVTT Captions](captions/12-event-log-filtering-and-adjudication-codes.vtt) · [SRT Captions](captions/12-event-log-filtering-and-adjudication-codes.srt)
 
 1. Navigate to **Event Log** (`/event-log`), enter a container or plate identifier in the **Vehicle / Container ID** search bar (ignoring case, spaces, and hyphens), click **SEARCH VEHICLE**, and click **COMPARE PASSES (`N`)** to inspect correlated transits.
-2. Review chronological cross-lane passes and visual continuity crops inside **Multi-Pass Vehicle Comparison**, then close the dialog or click **CLEAR**.
+2. Click **Alarm Category Co-Occurrence (UpSet)** (`Show`) to display populated main categories first (`Unknown`, `SNM`, `NORM`, `Medical`, `Industrial`, `Gamma`, `Neutron`), then click any populated **Categories** chip, combination bar, or rolled-up crimson **Other SNM** bar to filter the table.
 3. Click **ADVANCED FILTERS** to filter server-side by date/time window, lane, alarm status, **Vehicle ID**, or **Adjudication Code** (including automated `Code 9998: Extended Occupancy Gamma Alarm`, `Code 9999: EML Non-Threat`, and custom codes).
 4. Paste an occupancy observation identifier into **Event UUID** and click **FIND EVENT** to open that exact record.
 
@@ -257,11 +257,11 @@ Open the localized in-UI Operator Quick Guide & Glossary (?) from the top naviga
 <a id="19-viewer-users-passkeys-and-access"></a>
 ### 19. Manage Users, Bulk QR Invites, Offline Passkeys & Federation Tokens
 
-Open Users & Access (/users) to enroll offline WebAuthn Passkeys, bulk-enroll a CSV user list with ready-to-send startup text messages and 1-tap setup QR codes, mint scoped Federation Service Tokens, and download the hardware-replacement recovery checklist.
+Open Users & Access (/users) to enroll offline WebAuthn Passkeys (with local passwords independent of Octelium tunnel credentials), bulk-enroll a CSV user list with 1-tap setup QR codes, mint scoped Federation Service Tokens, and launch Servers (/servers?auth=bearer) in Federation Token mode.
 
-- **Video:** [Watch `19-viewer-users-passkeys-and-access.mp4` (19.7s, 1915.6 KiB)](videos/19-viewer-users-passkeys-and-access.mp4) · [WebVTT Captions](captions/19-viewer-users-passkeys-and-access.vtt) · [SRT Captions](captions/19-viewer-users-passkeys-and-access.srt)
+- **Video:** [Watch `19-viewer-users-passkeys-and-access.mp4` (24.4s, 2275 KiB)](videos/19-viewer-users-passkeys-and-access.mp4) · [WebVTT Captions](captions/19-viewer-users-passkeys-and-access.vtt) · [SRT Captions](captions/19-viewer-users-passkeys-and-access.srt)
 
-1. Open **Users & Access** (`/users`) from the navigation drawer (or click your username in the top bar) to inspect your persistent session status (`Stays signed in until you click Log Out`), register offline **Passkeys / YubiKeys**, or update your local password.
+1. Open **Users & Access** (`/users`) from the navigation drawer (or click your username in the top bar) to inspect your persistent session status (`Stays signed in until you click Log Out`), register offline **Passkeys / YubiKeys**, or update your local OSCAR password (which is completely separate from any Octelium Zero-Trust tunnel credentials).
 2. Switch to **Users & Roles** and click **Bulk Enroll (CSV / Paste)** to upload or paste a CSV/Excel user list (`username, role, display_name, views`), preview validated rows, and click **Enroll User(s) & Generate QR Pack**.
 3. Copy or print the generated **Startup Messages & 1-Tap Setup QR Codes** (`/login/enroll?token=oscar_inv_...`, including fallback workstation codes for phone-free facilities).
-4. Open **Federation Tokens** to mint least-privilege `oscar_fed_...` tokens for remote nodes and **Backup & Hardware Recovery** to download the emergency recovery checklist.
+4. Open **Federation Tokens**, mint a least-privilege `oscar_fed_...` token, and click **Open Servers Page (Federation Token Mode)** (`/servers?auth=bearer`) on the NOC/HQ viewer to paste the token into **Servers** (`HTTPS`, port `443`).
