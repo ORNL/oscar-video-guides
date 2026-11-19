@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.889
+On West Gate Portal, open Users & Access -> Federation Tokens and mint a scoped oscar_fed_ service token.
+
+2
+00:00:02.929 --> 00:00:09.981
+On Central HQ Node, open Servers in Federation Token mode (HTTPS 443), paste the token, and connect West Gate Portal.
+
+3
+00:00:10.021 --> 00:00:32.702
+Search Events for container CLDU 962674-9 and click Compare Passes to inspect transits, OCR crops, and waveforms from both nodes.
+
+4
+00:00:32.742 --> 00:00:45.883
+In Report Generator, select Vehicle Incident with Include Federated Servers enabled and generate unified JSON and PDF reports across both nodes.

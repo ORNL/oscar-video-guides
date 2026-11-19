@@ -525,19 +525,20 @@
         <div class="card-head">
           <span class="badge">18</span>
           <div>
-            <h2>Use Operator Quick Guide (?) &amp; Export Redacted Support Bundle</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.9s · 2049.3 KiB · 1080p NVENC H.264 VFR</p>
+            <h2>Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 16.3s · 2027.5 KiB · 1080p NVENC H.264 VFR</p>
           </div>
         </div>
-        <p class="summary">Open the localized in-UI Operator Quick Guide &amp; Glossary (?) from the top navigation bar, browse console pages, report formats, and radiation/OCR glossary terms, and export a secret-redacted diagnostic support bundle (.zip).</p>
+        <p class="summary">Open Help (?) to browse the localized Operator Quick Guide &amp; Glossary, export the built-in 400-event browser Flight Recorder + rolling server logs into oscar-support-&lt;UTC&gt;.zip (or run oscar.sh / oscar.bat support-bundle offline), and inspect summary.json and redaction-report.json.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/18-operator-help-and-support-bundle.mp4" type="video/mp4" />
           <track kind="captions" src="captions/18-operator-help-and-support-bundle.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Click the <strong>Help (<code>?</code>)</strong> button in the OSCAR Viewer top navigation bar to open the localized <strong>OSCAR 3.11.0 Operator Quick Guide &amp; Glossary</strong> (<code>en</code>, <code>es</code>, <code>fr</code>, <code>el</code>).</li>
-            <li>Switch across <strong>Console Pages</strong>, <strong>Reports &amp; Exports</strong>, <strong>Key Terms Explained</strong> (<code>EML &amp; Code 9999</code>, <code>Code 9998</code>, <code>PARQUET_PRIMARY</code>, <code>Container &amp; License Plate OCR</code>), and <strong>Manual &amp; Video Guides</strong>.</li>
-            <li>Click <strong>Export Support Bundle</strong> under <strong>Troubleshooting &amp; Support Bundle (<code>.zip</code>)</strong> to download a credential-redacted client + server diagnostic archive (<code>oscar-support-&lt;UTC&gt;.zip</code>), or run <code>sudo bash oscar.sh support-bundle</code> / <code>oscar.bat support-bundle</code> on the host if offline.</li>
+            <li>Open <strong>Manual &amp; Video Guides</strong> and click <strong>Export Support Bundle</strong> to merge the 400-event browser Flight Recorder (<code>client/client-diagnostics.json</code>) with rolling server logs (<code>backend/oscar.log</code>) into <code>oscar-support-&lt;UTC&gt;.zip</code> (automatically falling back to <code>oscar-client-support-&lt;UTC&gt;.zip</code> if the server is offline).</li>
+            <li>When containers are stopped or unreachable over HTTPS, run <code>sudo bash oscar.sh support-bundle</code> (Ubuntu) or <code>.\oscar.bat support-bundle</code> (Windows) on the host to capture <code>oscar-host-support-&lt;UTC&gt;.zip</code>.</li>
+            <li>Inspect <code>summary.json</code>, <code>client/client-diagnostics.json</code>, and <code>redaction-report.json</code> to review recent errors and confirm automatic <code>[REDACTED]</code> credential scrubbing.</li>
         </ol>
         <div class="links">
           <a href="videos/18-operator-help-and-support-bundle.mp4">MP4 Video</a>
@@ -569,6 +570,109 @@
           <a href="videos/19-viewer-users-passkeys-and-access.mp4">MP4 Video</a>
           <a href="captions/19-viewer-users-passkeys-and-access.vtt">WebVTT (.vtt)</a>
           <a href="captions/19-viewer-users-passkeys-and-access.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="20-multi-node-federation-vehicle-search-and-report" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">20</span>
+          <div>
+            <h2>Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 45.9s · 2617.3 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Mint a scoped oscar_fed_* Federation Service Token on a remote portal, register the remote HTTPS node on the Central HQ Viewer, verify combined lane counts in National View, correlate transits across nodes in Events -&gt; Compare Passes, and export a unified multi-node Vehicle Incident Report (JSON &amp; PDF).</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/20-multi-node-federation-vehicle-search-and-report.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/20-multi-node-federation-vehicle-search-and-report.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>On the remote OSCAR portal, open <strong>Users &amp; Access (<code>/users</code>) -&gt; Federation Tokens</strong>, enter a descriptive node label, select <code>Viewer</code> or <code>Operator</code>, and click <strong>Create Federation Token</strong> to mint a revocable <code>oscar_fed_...</code> bearer credential.</li>
+            <li>On the primary/HQ OSCAR Viewer, open <strong>Servers (<code>/servers</code>)</strong>, enter the remote portal's <strong>Name</strong>, <strong>Address</strong>, and <strong>Port <code>443</code></strong> with <strong>Use a secure connection</strong> checked, select <strong>Federation Service Token</strong>, paste the <code>oscar_fed_...</code> token, and click <strong>Add Node</strong>.</li>
+            <li>Verify combined multi-node statistics in <strong>National View (<code>/national-view</code>)</strong>, then open <strong>Events (<code>/event-log</code>)</strong>, enter an ISO 6346 container ID or license plate, and click <strong>Compare Passes</strong> to inspect cross-node crossings, OCR crops, and UpSet co-occurrence.</li>
+            <li>Open <strong>Report Generator (<code>/report</code>)</strong>, choose <strong>Vehicle Incident Report</strong>, keep <strong>Include correlated passes from federated nodes</strong> checked, and generate consolidated <code>JSON</code>, <code>CSV</code>, <code>Excel (.xlsx)</code>, and <code>PDF</code> reports containing transits from all federated nodes.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/20-multi-node-federation-vehicle-search-and-report.mp4">MP4 Video</a>
+          <a href="captions/20-multi-node-federation-vehicle-search-and-report.vtt">WebVTT (.vtt)</a>
+          <a href="captions/20-multi-node-federation-vehicle-search-and-report.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="21-federated-sso-passkey-onboarding-and-revocation" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">21</span>
+          <div>
+            <h2>Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 21.7s · 1354.4 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Create centralized operator and viewer accounts in Authentik, map roles via oscar-admins, oscar-operators, and oscar-viewers, issue single-use 1-tap SSO Passkey enrollment links, and permanently revoke access across Authentik, Octelium Zero-Trust Hub, and OSCAR /users.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/21-federated-sso-passkey-onboarding-and-revocation.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/21-federated-sso-passkey-onboarding-and-revocation.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>In <strong>Authentik Admin (<code>https://auth.hub.example.org/if/admin/</code>) -&gt; Directory -&gt; Users</strong>, click <strong>Create</strong>, enter the username, display name, and email address, and add the user to <code>oscar-admins</code>, <code>oscar-operators</code>, or <code>oscar-viewers</code>.</li>
+            <li>Open the user's <strong>Overview</strong> tab and click <strong>Create Recovery Link</strong> to copy a single-use <code>oscar-passkey-onboarding</code> URL so the recipient registers their FIDO2 Passkey in one tap.</li>
+            <li>To completely offboard a user, select the account in <strong>Authentik -&gt; Directory -&gt; Users</strong>, click <strong>Delete</strong>, and confirm permanent deletion; <code>oscar-hub-sync.timer</code> automatically purges the <code>managed-by: authentik-sync</code> user from Octelium within 30 seconds (or immediately via <code>sudo ./oscar-hub.sh sync-users</code>).</li>
+            <li>Open <strong>Users &amp; Access -&gt; Users &amp; Roles (<code>/users</code>)</strong> on federated OSCAR nodes and delete any cached user profile row to clear active browser cookies.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/21-federated-sso-passkey-onboarding-and-revocation.mp4">MP4 Video</a>
+          <a href="captions/21-federated-sso-passkey-onboarding-and-revocation.vtt">WebVTT (.vtt)</a>
+          <a href="captions/21-federated-sso-passkey-onboarding-and-revocation.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="22-regression-suite-setup-and-certification" data-track="Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling">
+        <div class="card-head">
+          <span class="badge">22</span>
+          <div>
+            <h2>Install, Configure &amp; Run the End-to-End OSCAR Regression Suite</h2>
+            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 23.9s · 823.5 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Install ORNL/oscar-regression, run all 246 offline unit tests, configure .env capability gates and 4-layer safety interlocks, execute smoke, full, 3.11.0-release, restore-drill, and ui-endurance profiles across all 23 functional scenarios, and inspect summary.md and CSV evidence.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/22-regression-suite-setup-and-certification.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/22-regression-suite-setup-and-certification.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Clone [<code>ORNL/oscar-regression</code>](https://github.com/ORNL/oscar-regression), run <code>npm ci</code> and <code>npm run install:browser</code>, and verify TypeScript compilation and all 246 offline unit tests with <code>npm run check &amp;&amp; npm test</code>.</li>
+            <li>Copy <code>.env.example</code> to <code>.env</code> (<code>chmod 600 .env</code>), set target, emulator, <code>RPM_LANE_MAPPING_ACK</code>, and <code>DISPOSABLE-STORAGE</code> safety interlocks, and run <code>./scripts/rebind-active-release.sh --apply --build-label &lt;label&gt;</code> after clean-directory upgrades.</li>
+            <li>Execute <code>npm run test:smoke</code> (<code>13</code> read-only scenarios), <code>npm run test:full</code> (<code>23</code> scenarios including faults, alarms, Vehicle OCR, EML, and <code>PARQUET_PRIMARY</code> retirement), <code>npm run test:3.11.0-release</code>, <code>npm run test:restore-drill</code>, <code>./scripts/run-ui-endurance.sh</code>, or <code>-- --scenario &lt;list&gt;</code>.</li>
+            <li>Review <code>results/&lt;UTC-timestamp&gt;-&lt;runner&gt;/summary.md</code>, <code>functional-results.csv</code>, <code>performance.csv</code>, <code>storage-performance.csv</code>, <code>errors.csv</code>, and <code>evidence/</code> screenshots (<code>exit 0</code> requires <code>0</code> incorrect checks).</li>
+        </ol>
+        <div class="links">
+          <a href="videos/22-regression-suite-setup-and-certification.mp4">MP4 Video</a>
+          <a href="captions/22-regression-suite-setup-and-certification.vtt">WebVTT (.vtt)</a>
+          <a href="captions/22-regression-suite-setup-and-certification.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="23-windows-wsl2-host-readiness-and-ocr-scaling" data-track="Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling">
+        <div class="card-head">
+          <span class="badge">23</span>
+          <div>
+            <h2>Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR</h2>
+            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 16.4s · 443.6 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Prepare unattended 24/7 Windows 11 + WSL 2 hosts with oscar.bat prepare-host, attach outbound Zero-Trust tunnels, and size 100% Container &amp; License Plate OCR cleanly (6 OCR lanes on Windows 11 WSL 2 vs. 50 OCR lanes on Ubuntu Server 24.04 bare-metal) without 5 Hz RPM sample bunching.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/23-windows-wsl2-host-readiness-and-ocr-scaling.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>On Windows 11 x86-64 (Administrator PowerShell 5.1), run <code>.\oscar.bat host-check</code> and <code>.\oscar.bat prepare-host</code> to enable High Performance AC power, disable sleep/USB suspend, and write bounded <code>%USERPROFILE%\.wslconfig</code> limits.</li>
+            <li>Attach firewalled portals outbound over TLS <code>443</code> via <code>.\oscar-remote-access.ps1 configure</code> (Windows) or <code>sudo bash oscar-remote-access.sh configure</code> (Ubuntu).</li>
+            <li>When enabling <code>100%</code> per-lane Container &amp; License Plate OCR (<code>ocrConfig.enabled = true</code>), size Windows 11 + WSL 2 deployments to <code>1–8</code> lanes (such as <code>6</code> lanes) so Hyper-V/WSL 2 network virtualization maintains smooth <code>200 ms</code> (<code>5 Hz</code>) radiation plots, and deploy <code>25–50</code> OCR-enabled lanes on Ubuntu Server 24.04 bare-metal.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/23-windows-wsl2-host-readiness-and-ocr-scaling.mp4">MP4 Video</a>
+          <a href="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt">WebVTT (.vtt)</a>
+          <a href="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.srt">SubRip (.srt)</a>
         </div>
       </article>
   </main>

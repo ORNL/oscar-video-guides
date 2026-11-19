@@ -1,0 +1,13 @@
+WEBVTT
+
+1
+00:00:02.507 --> 00:00:13.327
+In Authentik Directory -> Users, create an operator account with an email address and add it to oscar-operators, oscar-admins, or oscar-viewers.
+
+2
+00:00:13.367 --> 00:00:15.833
+Click Create recovery link on the user Overview tab to generate a single-use 1-tap SSO Passkey enrollment URL.
+
+3
+00:00:15.873 --> 00:00:21.714
+To offboard a user completely, delete the account in Authentik; oscar-hub-sync automatically revokes Octelium access, then delete any cached /users row.

@@ -36,8 +36,12 @@ Concise, single-task `1920x1080` screen-recording guides covering every major wo
 | 15 | [Monitor RPM/Camera Status of Health & Georeferenced Site Map](#15-status-of-health-and-site-map) ([MP4](videos/15-status-of-health-and-site-map.mp4)) | Track C | 10.2s | 1251.1 KiB | [VTT](captions/15-status-of-health-and-site-map.vtt) · [SRT](captions/15-status-of-health-and-site-map.srt) |
 | 16 | [Analyze National View Statistics & Generate Multi-Format Reports](#16-national-statistics-and-reports) ([MP4](videos/16-national-statistics-and-reports.mp4)) | Track C | 19.6s | 658 KiB | [VTT](captions/16-national-statistics-and-reports.vtt) · [SRT](captions/16-national-statistics-and-reports.srt) |
 | 17 | [Configure Vehicle OCR, Compare Multi-Pass Transits & Adjudicate](#17-vehicle-ocr-and-adjudication) ([MP4](videos/17-vehicle-ocr-and-adjudication.mp4)) | Track C | 32.4s | 2777.8 KiB | [VTT](captions/17-vehicle-ocr-and-adjudication.vtt) · [SRT](captions/17-vehicle-ocr-and-adjudication.srt) |
-| 18 | [Use Operator Quick Guide (?) & Export Redacted Support Bundle](#18-operator-help-and-support-bundle) ([MP4](videos/18-operator-help-and-support-bundle.mp4)) | Track C | 10.9s | 2049.3 KiB | [VTT](captions/18-operator-help-and-support-bundle.vtt) · [SRT](captions/18-operator-help-and-support-bundle.srt) |
+| 18 | [Use Flight Recorder, Help (?) & Redacted Support Bundles (UI & CLI)](#18-operator-help-and-support-bundle) ([MP4](videos/18-operator-help-and-support-bundle.mp4)) | Track C | 16.3s | 2027.5 KiB | [VTT](captions/18-operator-help-and-support-bundle.vtt) · [SRT](captions/18-operator-help-and-support-bundle.srt) |
 | 19 | [Manage Users, Bulk QR Invites, Offline Passkeys & Federation Tokens](#19-viewer-users-passkeys-and-access) ([MP4](videos/19-viewer-users-passkeys-and-access.mp4)) | Track C | 24.4s | 2275 KiB | [VTT](captions/19-viewer-users-passkeys-and-access.vtt) · [SRT](captions/19-viewer-users-passkeys-and-access.srt) |
+| 20 | [Federate Multi-Site Nodes, Search Vehicles Across Portals & Generate Reports](#20-multi-node-federation-vehicle-search-and-report) ([MP4](videos/20-multi-node-federation-vehicle-search-and-report.mp4)) | Track C | 45.9s | 2617.3 KiB | [VTT](captions/20-multi-node-federation-vehicle-search-and-report.vtt) · [SRT](captions/20-multi-node-federation-vehicle-search-and-report.srt) |
+| 21 | [Onboard Authentik SSO Passkey Users & Revoke Access Across All Layers](#21-federated-sso-passkey-onboarding-and-revocation) ([MP4](videos/21-federated-sso-passkey-onboarding-and-revocation.mp4)) | Track C | 21.7s | 1354.4 KiB | [VTT](captions/21-federated-sso-passkey-onboarding-and-revocation.vtt) · [SRT](captions/21-federated-sso-passkey-onboarding-and-revocation.srt) |
+| 22 | [Install, Configure & Run the End-to-End OSCAR Regression Suite](#22-regression-suite-setup-and-certification) ([MP4](videos/22-regression-suite-setup-and-certification.mp4)) | Track D | 23.9s | 823.5 KiB | [VTT](captions/22-regression-suite-setup-and-certification.vtt) · [SRT](captions/22-regression-suite-setup-and-certification.srt) |
+| 23 | [Prepare Windows 11 WSL 2 Hosts & Right-Size 100% Per-Lane OCR](#23-windows-wsl2-host-readiness-and-ocr-scaling) ([MP4](videos/23-windows-wsl2-host-readiness-and-ocr-scaling.mp4)) | Track D | 16.4s | 443.6 KiB | [VTT](captions/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt) · [SRT](captions/23-windows-wsl2-host-readiness-and-ocr-scaling.srt) |
 
 ## Track A — CLI Deployment, Upgrades & Storage Lifecycle
 
@@ -244,15 +248,16 @@ Inspect optional per-lane Vehicle OCR configuration in SensorHub Admin, open an 
 4. Select an **Adjudicate** disposition code and **Secondary Inspection** status, click **Submit**, and confirm in **Confirm Adjudication Submission** to append the signed audit decision.
 
 <a id="18-operator-help-and-support-bundle"></a>
-### 18. Use Operator Quick Guide (?) & Export Redacted Support Bundle
+### 18. Use Flight Recorder, Help (?) & Redacted Support Bundles (UI & CLI)
 
-Open the localized in-UI Operator Quick Guide & Glossary (?) from the top navigation bar, browse console pages, report formats, and radiation/OCR glossary terms, and export a secret-redacted diagnostic support bundle (.zip).
+Open Help (?) to browse the localized Operator Quick Guide & Glossary, export the built-in 400-event browser Flight Recorder + rolling server logs into oscar-support-<UTC>.zip (or run oscar.sh / oscar.bat support-bundle offline), and inspect summary.json and redaction-report.json.
 
-- **Video:** [Watch `18-operator-help-and-support-bundle.mp4` (10.9s, 2049.3 KiB)](videos/18-operator-help-and-support-bundle.mp4) · [WebVTT Captions](captions/18-operator-help-and-support-bundle.vtt) · [SRT Captions](captions/18-operator-help-and-support-bundle.srt)
+- **Video:** [Watch `18-operator-help-and-support-bundle.mp4` (16.3s, 2027.5 KiB)](videos/18-operator-help-and-support-bundle.mp4) · [WebVTT Captions](captions/18-operator-help-and-support-bundle.vtt) · [SRT Captions](captions/18-operator-help-and-support-bundle.srt)
 
 1. Click the **Help (`?`)** button in the OSCAR Viewer top navigation bar to open the localized **OSCAR 3.11.0 Operator Quick Guide & Glossary** (`en`, `es`, `fr`, `el`).
-2. Switch across **Console Pages**, **Reports & Exports**, **Key Terms Explained** (`EML & Code 9999`, `Code 9998`, `PARQUET_PRIMARY`, `Container & License Plate OCR`), and **Manual & Video Guides**.
-3. Click **Export Support Bundle** under **Troubleshooting & Support Bundle (`.zip`)** to download a credential-redacted client + server diagnostic archive (`oscar-support-<UTC>.zip`), or run `sudo bash oscar.sh support-bundle` / `oscar.bat support-bundle` on the host if offline.
+2. Open **Manual & Video Guides** and click **Export Support Bundle** to merge the 400-event browser Flight Recorder (`client/client-diagnostics.json`) with rolling server logs (`backend/oscar.log`) into `oscar-support-<UTC>.zip` (automatically falling back to `oscar-client-support-<UTC>.zip` if the server is offline).
+3. When containers are stopped or unreachable over HTTPS, run `sudo bash oscar.sh support-bundle` (Ubuntu) or `.\oscar.bat support-bundle` (Windows) on the host to capture `oscar-host-support-<UTC>.zip`.
+4. Inspect `summary.json`, `client/client-diagnostics.json`, and `redaction-report.json` to review recent errors and confirm automatic `[REDACTED]` credential scrubbing.
 
 <a id="19-viewer-users-passkeys-and-access"></a>
 ### 19. Manage Users, Bulk QR Invites, Offline Passkeys & Federation Tokens
@@ -265,3 +270,52 @@ Open Users & Access (/users) to enroll offline WebAuthn Passkeys (with local pas
 2. Switch to **Users & Roles** and click **Bulk Enroll (CSV / Paste)** to upload or paste a CSV/Excel user list (`username, role, display_name, views`), preview validated rows, and click **Enroll User(s) & Generate QR Pack**.
 3. Copy or print the generated **Startup Messages & 1-Tap Setup QR Codes** (`/login/enroll?token=oscar_inv_...`, including fallback workstation codes for phone-free facilities).
 4. Open **Federation Tokens**, mint a least-privilege `oscar_fed_...` token, and click **Open Servers Page (Federation Token Mode)** (`/servers?auth=bearer`) on the NOC/HQ viewer to paste the token into **Servers** (`HTTPS`, port `443`).
+
+<a id="20-multi-node-federation-vehicle-search-and-report"></a>
+### 20. Federate Multi-Site Nodes, Search Vehicles Across Portals & Generate Reports
+
+Mint a scoped oscar_fed_* Federation Service Token on a remote portal, register the remote HTTPS node on the Central HQ Viewer, verify combined lane counts in National View, correlate transits across nodes in Events -> Compare Passes, and export a unified multi-node Vehicle Incident Report (JSON & PDF).
+
+- **Video:** [Watch `20-multi-node-federation-vehicle-search-and-report.mp4` (45.9s, 2617.3 KiB)](videos/20-multi-node-federation-vehicle-search-and-report.mp4) · [WebVTT Captions](captions/20-multi-node-federation-vehicle-search-and-report.vtt) · [SRT Captions](captions/20-multi-node-federation-vehicle-search-and-report.srt)
+
+1. On the remote OSCAR portal, open **Users & Access (`/users`) -> Federation Tokens**, enter a descriptive node label, select `Viewer` or `Operator`, and click **Create Federation Token** to mint a revocable `oscar_fed_...` bearer credential.
+2. On the primary/HQ OSCAR Viewer, open **Servers (`/servers`)**, enter the remote portal's **Name**, **Address**, and **Port `443`** with **Use a secure connection** checked, select **Federation Service Token**, paste the `oscar_fed_...` token, and click **Add Node**.
+3. Verify combined multi-node statistics in **National View (`/national-view`)**, then open **Events (`/event-log`)**, enter an ISO 6346 container ID or license plate, and click **Compare Passes** to inspect cross-node crossings, OCR crops, and UpSet co-occurrence.
+4. Open **Report Generator (`/report`)**, choose **Vehicle Incident Report**, keep **Include correlated passes from federated nodes** checked, and generate consolidated `JSON`, `CSV`, `Excel (.xlsx)`, and `PDF` reports containing transits from all federated nodes.
+
+<a id="21-federated-sso-passkey-onboarding-and-revocation"></a>
+### 21. Onboard Authentik SSO Passkey Users & Revoke Access Across All Layers
+
+Create centralized operator and viewer accounts in Authentik, map roles via oscar-admins, oscar-operators, and oscar-viewers, issue single-use 1-tap SSO Passkey enrollment links, and permanently revoke access across Authentik, Octelium Zero-Trust Hub, and OSCAR /users.
+
+- **Video:** [Watch `21-federated-sso-passkey-onboarding-and-revocation.mp4` (21.7s, 1354.4 KiB)](videos/21-federated-sso-passkey-onboarding-and-revocation.mp4) · [WebVTT Captions](captions/21-federated-sso-passkey-onboarding-and-revocation.vtt) · [SRT Captions](captions/21-federated-sso-passkey-onboarding-and-revocation.srt)
+
+1. In **Authentik Admin (`https://auth.hub.example.org/if/admin/`) -> Directory -> Users**, click **Create**, enter the username, display name, and email address, and add the user to `oscar-admins`, `oscar-operators`, or `oscar-viewers`.
+2. Open the user's **Overview** tab and click **Create Recovery Link** to copy a single-use `oscar-passkey-onboarding` URL so the recipient registers their FIDO2 Passkey in one tap.
+3. To completely offboard a user, select the account in **Authentik -> Directory -> Users**, click **Delete**, and confirm permanent deletion; `oscar-hub-sync.timer` automatically purges the `managed-by: authentik-sync` user from Octelium within 30 seconds (or immediately via `sudo ./oscar-hub.sh sync-users`).
+4. Open **Users & Access -> Users & Roles (`/users`)** on federated OSCAR nodes and delete any cached user profile row to clear active browser cookies.
+
+## Track D — End-to-End Regression & Multi-OS Capacity Scaling
+
+<a id="22-regression-suite-setup-and-certification"></a>
+### 22. Install, Configure & Run the End-to-End OSCAR Regression Suite
+
+Install ORNL/oscar-regression, run all 246 offline unit tests, configure .env capability gates and 4-layer safety interlocks, execute smoke, full, 3.11.0-release, restore-drill, and ui-endurance profiles across all 23 functional scenarios, and inspect summary.md and CSV evidence.
+
+- **Video:** [Watch `22-regression-suite-setup-and-certification.mp4` (23.9s, 823.5 KiB)](videos/22-regression-suite-setup-and-certification.mp4) · [WebVTT Captions](captions/22-regression-suite-setup-and-certification.vtt) · [SRT Captions](captions/22-regression-suite-setup-and-certification.srt)
+
+1. Clone [`ORNL/oscar-regression`](https://github.com/ORNL/oscar-regression), run `npm ci` and `npm run install:browser`, and verify TypeScript compilation and all 246 offline unit tests with `npm run check && npm test`.
+2. Copy `.env.example` to `.env` (`chmod 600 .env`), set target, emulator, `RPM_LANE_MAPPING_ACK`, and `DISPOSABLE-STORAGE` safety interlocks, and run `./scripts/rebind-active-release.sh --apply --build-label <label>` after clean-directory upgrades.
+3. Execute `npm run test:smoke` (`13` read-only scenarios), `npm run test:full` (`23` scenarios including faults, alarms, Vehicle OCR, EML, and `PARQUET_PRIMARY` retirement), `npm run test:3.11.0-release`, `npm run test:restore-drill`, `./scripts/run-ui-endurance.sh`, or `-- --scenario <list>`.
+4. Review `results/<UTC-timestamp>-<runner>/summary.md`, `functional-results.csv`, `performance.csv`, `storage-performance.csv`, `errors.csv`, and `evidence/` screenshots (`exit 0` requires `0` incorrect checks).
+
+<a id="23-windows-wsl2-host-readiness-and-ocr-scaling"></a>
+### 23. Prepare Windows 11 WSL 2 Hosts & Right-Size 100% Per-Lane OCR
+
+Prepare unattended 24/7 Windows 11 + WSL 2 hosts with oscar.bat prepare-host, attach outbound Zero-Trust tunnels, and size 100% Container & License Plate OCR cleanly (6 OCR lanes on Windows 11 WSL 2 vs. 50 OCR lanes on Ubuntu Server 24.04 bare-metal) without 5 Hz RPM sample bunching.
+
+- **Video:** [Watch `23-windows-wsl2-host-readiness-and-ocr-scaling.mp4` (16.4s, 443.6 KiB)](videos/23-windows-wsl2-host-readiness-and-ocr-scaling.mp4) · [WebVTT Captions](captions/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt) · [SRT Captions](captions/23-windows-wsl2-host-readiness-and-ocr-scaling.srt)
+
+1. On Windows 11 x86-64 (Administrator PowerShell 5.1), run `.\oscar.bat host-check` and `.\oscar.bat prepare-host` to enable High Performance AC power, disable sleep/USB suspend, and write bounded `%USERPROFILE%\.wslconfig` limits.
+2. Attach firewalled portals outbound over TLS `443` via `.\oscar-remote-access.ps1 configure` (Windows) or `sudo bash oscar-remote-access.sh configure` (Ubuntu).
+3. When enabling `100%` per-lane Container & License Plate OCR (`ocrConfig.enabled = true`), size Windows 11 + WSL 2 deployments to `1–8` lanes (such as `6` lanes) so Hyper-V/WSL 2 network virtualization maintains smooth `200 ms` (`5 Hz`) radiation plots, and deploy `25–50` OCR-enabled lanes on Ubuntu Server 24.04 bare-metal.

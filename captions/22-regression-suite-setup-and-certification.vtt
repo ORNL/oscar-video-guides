@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:05.201
+Clone ORNL/oscar-regression, run npm ci and npm run install:browser, then run npm run check and npm test to verify all 246 unit tests.
+
+2
+00:00:05.242 --> 00:00:11.312
+Configure .env with target, emulator, lane-mapping, and DISPOSABLE-STORAGE acknowledgements, and use rebind-active-release.sh after upgrades.
+
+3
+00:00:11.352 --> 00:00:17.826
+Run smoke, full, 3.11.0-release, restore-drill, or ui-endurance—or pass --scenario to target individual modules across all 23 scenarios.
+
+4
+00:00:17.866 --> 00:00:23.883
+Inspect results/<run-id>/summary.md, functional-results.csv, performance.csv, and evidence/ screenshots; exit code 0 requires zero incorrect checks.
