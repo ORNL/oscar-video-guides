@@ -1,0 +1,15 @@
+1
+00:00:00,040 --> 00:00:04,056
+Open Runtime Extensions (/extensions) to inspect shipped OCR defaults, then upload a Unicode regional plate-rules.json override.
+
+2
+00:00:04,096 --> 00:00:09,673
+Switch to Offline Maps (.pmtiles), name the layer Regional Port Corridor, and upload a PMTiles v3 regional archive.
+
+3
+00:00:09,713 --> 00:00:15,686
+Review Spectroscopy and Trusted CA tabs, then open Map (/map) to verify Offline: Regional Port Corridor with live portal lane markers.
+
+4
+00:00:15,726 --> 00:00:20,652
+Return to Runtime Extensions (/extensions) and click Reset to Shipped Default to restore OSCAR's built-in configuration.

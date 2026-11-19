@@ -675,6 +675,84 @@
           <a href="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.srt">SubRip (.srt)</a>
         </div>
       </article>
+
+      <article class="card" id="24-continual-and-occasional-usb-backups" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">24</span>
+          <div>
+            <h2>Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 16.7s · 944.6 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Open USB Backups (/usb-backups) to inspect an attached NTFS external USB 3.x NVMe SSD, configure Continual vs. Occasional zero-downtime sync, run an on-demand incremental backup, download the off-site recovery key, and perform a 1-click Safely Eject USB Drive offload.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/24-continual-and-occasional-usb-backups.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/24-continual-and-occasional-usb-backups.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <strong>USB Backups (<code>/usb-backups</code>)</strong> from the left navigation drawer to inspect the attached external USB 3.x NVMe SSD (<code>ATTACHED &amp; ONLINE</code>), carrier capacity, PostgreSQL WAL LSN, and deduplicated Parquet/media pack counts.</li>
+            <li>Under <strong>Backup Mode &amp; Sync Schedule</strong>, choose <strong>Continual Background Sync</strong> (<code>15 min</code> default, <code>0.0 s</code> portal outage with automatic USB reconnect catch-up) or <strong>Occasional / On-Demand Visit Sync</strong>, and click <strong>Save Mode &amp; Schedule</strong>.</li>
+            <li>Click <strong>Sync Incremental Snapshot Now</strong> to capture new sealed Parquet daily packs, retained media/OCR crops, and an encrypted PostgreSQL checkpoint, and click <strong>Download Off-Site Recovery Key (<code>backup-key.txt</code>)</strong> to store the decryption key in off-site escrow.</li>
+            <li>Before unplugging the drive for laptop offload (<code>COPY-TO-ANOTHER-DRIVE.bat</code> or <code>./copy-to-another-drive.sh</code>) or cold-iron recovery (<code>sudo bash oscar.sh usb-backup restore</code>), click <strong>Safely Eject USB Drive</strong> and wait for the green <strong>SAFE TO UNPLUG</strong> banner.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/24-continual-and-occasional-usb-backups.mp4">MP4 Video</a>
+          <a href="captions/24-continual-and-occasional-usb-backups.vtt">WebVTT (.vtt)</a>
+          <a href="captions/24-continual-and-occasional-usb-backups.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="25-pluggable-runtime-extensions-and-pmtiles" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">25</span>
+          <div>
+            <h2>Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 20.7s · 1473.9 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Open Runtime Extensions (/extensions) to inspect OSCAR's shipped built-in defaults, hot-swap a Unicode regional OCR plate-rule pack and an offline PMTiles v3 (.pmtiles) regional basemap, render live portal lane markers offline on Map (/map), review Spectroscopy, Trusted CAs, Policy Packs &amp; EML, and restore shipped defaults.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/25-pluggable-runtime-extensions-and-pmtiles.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/25-pluggable-runtime-extensions-and-pmtiles.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Open <strong>Runtime Extensions (<code>/extensions</code>)</strong> from the left navigation drawer to review the six upgrade-safe extension domains (<code>OCR Models &amp; Engines</code>, <code>Offline Maps (.pmtiles)</code>, <code>Spectroscopy / Nuclide ID</code>, <code>Trusted CA Certificates</code>, <code>Adjudication Policy Packs</code>, and <code>EML Alarm Assessment</code>) persisted under <code>/var/lib/oscar/extensions/</code>.</li>
+            <li>On <strong>OCR Models &amp; Engines</strong>, upload a compliant <code>plate-rules.json</code> or ONNX/SPI <code>.zip</code> package to activate regional non-Latin or numeric plate rules (<code>CUSTOM OVERRIDE (UPGRADE-SAFE)</code>) while inheriting OSCAR's shipped PP-OCRv3 + PARSeq models.</li>
+            <li>Switch to <strong>Offline Maps (<code>.pmtiles</code>)</strong>, enter a layer display name, upload a Protomaps <strong>PMTiles v3</strong> regional archive (<code>pmtiles extract ...</code>), and open <strong>Map (<code>/map</code>)</strong> to view live portal lane markers over <code>Offline: &lt;Layer Name&gt;</code> via HTTP <code>206</code> byte-range serving with zero internet requests.</li>
+            <li>Browse <strong>Spectroscopy</strong>, <strong>Trusted CA Certificates</strong>, <strong>Adjudication Policy Packs</strong>, and <strong>EML Alarm Assessment</strong>, or click <strong>Reset to Shipped Default</strong> on any tab to revert immediately with zero portal downtime.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/25-pluggable-runtime-extensions-and-pmtiles.mp4">MP4 Video</a>
+          <a href="captions/25-pluggable-runtime-extensions-and-pmtiles.vtt">WebVTT (.vtt)</a>
+          <a href="captions/25-pluggable-runtime-extensions-and-pmtiles.srt">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="26-ubuntu-hotel-staging-and-airgapped-cutover" data-track="Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling">
+        <div class="card-head">
+          <span class="badge">26</span>
+          <div>
+            <h2>Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets</h2>
+            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 15.6s · 516.8 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Unpack the self-contained Ubuntu 24.04 offline bundle on hotel/office Wi-Fi, identify physical NICs by carrier blink, pre-stage the portal's static Netplan YAML without dropping SSH, expand Ubuntu LVM root storage and initialize OSCAR offline, then cut over on-site and discover RPMs and RTSP cameras.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Off-site (hotel or staging bench), extract <code>oscar-3.11.0-ubuntu-x86_64-offline-full.zip</code>, verify bundle checksums (<code>sudo bash verify-bundle.sh</code>), and run <code>sudo bash oscar.sh identify-nics --watch</code> while plugging a patch cord into the target NIC to confirm its Linux interface name (<code>enp2s0</code>).</li>
+            <li>Stage the portal's static IPv4 configuration safely without touching active Wi-Fi/SSH via <code>sudo bash oscar.sh stage-site-network --interface enp2s0 --ip 198.51.100.10/24 --gateway 198.51.100.1</code>.</li>
+            <li>Run <code>sudo bash oscar.sh prepare-host --offline --expand-lvm</code> to expand Ubuntu Server's default <code>100 GiB</code> LVM logical volume across the full NVMe disk and install offline <code>.deb</code> packages, then run <code>sudo bash oscar.sh init --offline</code> to load air-gapped container images and initialize credentials.</li>
+            <li>On-site inside the air-gapped portal rack, apply the pre-staged static subnet with <code>sudo bash oscar.sh apply-site-network</code> and scan the sensor LAN with <code>sudo bash oscar.sh discover-devices --interface enp2s0</code> to verify Rapiscan RPM (<code>10001–10050</code>) and RTSP camera (<code>554</code>/<code>8554</code>) endpoints.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4">MP4 Video</a>
+          <a href="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt">WebVTT (.vtt)</a>
+          <a href="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.srt">SubRip (.srt)</a>
+        </div>
+      </article>
   </main>
 </body>
 </html>
