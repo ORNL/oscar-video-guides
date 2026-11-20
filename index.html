@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OSCAR 3.11.0 How-To Video Guides</title>
+  <title>OSCAR 3.11.1 How-To Video Guides</title>
   <style>
     :root {
       color-scheme: dark;
@@ -81,7 +81,7 @@
 </head>
 <body>
   <header>
-    <h1>OSCAR 3.11.0 How-To Video Guides</h1>
+    <h1>OSCAR 3.11.1 How-To Video Guides</h1>
     <p>Concise, zero-filler 1080p workflow screen recordings encoded via NVIDIA RTX 5060 Ti hardware NVENC H.264 (NV12 4:2:0, 10s GOP 300, differential 30 FPS peak VFR) with synchronized closed captions and sequential step references.</p>
   </header>
   <main>
@@ -99,7 +99,7 @@
           <track kind="captions" src="captions/01-deployment-init-and-credentials.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Extract <code>oscar-3.11.0.zip</code> into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into <code>oscar-3.11.0/</code>.</li>
+            <li>Extract <code>oscar-3.11.1.zip</code> into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into <code>oscar-3.11.1/</code>.</li>
             <li>Run <code>sudo bash oscar.sh init</code> (or <code>.\oscar.bat init</code> on Windows 11) and supply the deployment hostname, IANA timezone, and administrator password (<code>&gt;= 14</code> characters).</li>
             <li>Allow <code>init</code> to generate deployment-bound PostgreSQL secrets, TLS gateway certificates, and external <code>oscar_oscar_state</code> / <code>oscar_postgres_data</code> volumes.</li>
             <li>Run <code>sudo bash oscar.sh status</code> (or <code>.\oscar.bat status</code>) to confirm <code>oscar-gateway</code>, <code>oscar</code>, and <code>oscar-postgis</code> report <code>running (healthy)</code>.</li>
@@ -126,7 +126,7 @@
         </video>
         <ol class="steps">
             <li>When <code>single</code> backup mode is enabled, run <code>sudo bash oscar.sh backup</code> and <code>sudo bash oscar.sh backup-verify</code> from the active release directory before upgrading.</li>
-            <li>Extract the target <code>oscar-3.11.0.zip</code> archive into a separate sibling directory — never unzip over an existing release directory.</li>
+            <li>Extract the target <code>oscar-3.11.1.zip</code> archive into a separate sibling directory — never unzip over an existing release directory.</li>
             <li>Copy only <code>.env</code>, <code>secrets/</code>, and <code>tls/</code> (plus <code>.oscar-volume-adoption</code> if previously adopted) into the newly extracted directory.</li>
             <li>Run <code>sudo bash oscar.sh upgrade</code> (or <code>.\oscar.bat upgrade</code>) and confirm all containers return <code>healthy</code> with preserved named volumes and archive roots.</li>
         </ol>
@@ -535,7 +535,7 @@
           <track kind="captions" src="captions/18-operator-help-and-support-bundle.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Click the <strong>Help (<code>?</code>)</strong> button in the OSCAR Viewer top navigation bar to open the localized <strong>OSCAR 3.11.0 Operator Quick Guide &amp; Glossary</strong> (<code>en</code>, <code>es</code>, <code>fr</code>, <code>el</code>).</li>
+            <li>Click the <strong>Help (<code>?</code>)</strong> button in the OSCAR Viewer top navigation bar to open the localized <strong>OSCAR 3.11.1 Operator Quick Guide &amp; Glossary</strong> (<code>en</code>, <code>es</code>, <code>fr</code>, <code>el</code>).</li>
             <li>Open <strong>Manual &amp; Video Guides</strong> and click <strong>Export Support Bundle</strong> to merge the 400-event browser Flight Recorder (<code>client/client-diagnostics.json</code>) with rolling server logs (<code>backend/oscar.log</code>) into <code>oscar-support-&lt;UTC&gt;.zip</code> (automatically falling back to <code>oscar-client-support-&lt;UTC&gt;.zip</code> if the server is offline).</li>
             <li>When containers are stopped or unreachable over HTTPS, run <code>sudo bash oscar.sh support-bundle</code> (Ubuntu) or <code>.\oscar.bat support-bundle</code> (Windows) on the host to capture <code>oscar-host-support-&lt;UTC&gt;.zip</code>.</li>
             <li>Inspect <code>summary.json</code>, <code>client/client-diagnostics.json</code>, and <code>redaction-report.json</code> to review recent errors and confirm automatic <code>[REDACTED]</code> credential scrubbing.</li>
@@ -742,7 +742,7 @@
           <track kind="captions" src="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Off-site (hotel or staging bench), extract <code>oscar-3.11.0-ubuntu-x86_64-offline-full.zip</code>, verify bundle checksums (<code>sudo bash verify-bundle.sh</code>), and run <code>sudo bash oscar.sh identify-nics --watch</code> while plugging a patch cord into the target NIC to confirm its Linux interface name (<code>enp2s0</code>).</li>
+            <li>Off-site (hotel or staging bench), extract <code>oscar-3.11.1-ubuntu-x86_64-offline-full.zip</code>, verify bundle checksums (<code>sudo bash verify-bundle.sh</code>), and run <code>sudo bash oscar.sh identify-nics --watch</code> while plugging a patch cord into the target NIC to confirm its Linux interface name (<code>enp2s0</code>).</li>
             <li>Stage the portal's static IPv4 configuration safely without touching active Wi-Fi/SSH via <code>sudo bash oscar.sh stage-site-network --interface enp2s0 --ip 198.51.100.10/24 --gateway 198.51.100.1</code>.</li>
             <li>Run <code>sudo bash oscar.sh prepare-host --offline --expand-lvm</code> to expand Ubuntu Server's default <code>100 GiB</code> LVM logical volume across the full NVMe disk and install offline <code>.deb</code> packages, then run <code>sudo bash oscar.sh init --offline</code> to load air-gapped container images and initialize credentials.</li>
             <li>On-site inside the air-gapped portal rack, apply the pre-staged static subnet with <code>sudo bash oscar.sh apply-site-network</code> and scan the sensor LAN with <code>sudo bash oscar.sh discover-devices --interface enp2s0</code> to verify Rapiscan RPM (<code>10001–10050</code>) and RTSP camera (<code>554</code>/<code>8554</code>) endpoints.</li>
