@@ -1,6 +1,6 @@
 # OSCAR How-To Video Guides
 
-Concise, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.1** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
+Concise, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.2** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
 
 ## Encoding & Playback Profile
 
@@ -45,6 +45,7 @@ Concise, single-task `1920x1080` screen-recording guides covering every major wo
 | 24 | [Manage Continual & Occasional USB NVMe Backups & Safe Field Eject](#24-continual-and-occasional-usb-backups) ([MP4](videos/24-continual-and-occasional-usb-backups.mp4)) | Track C | 16.7s | 944.6 KiB | [VTT](captions/24-continual-and-occasional-usb-backups.vtt) · [SRT](captions/24-continual-and-occasional-usb-backups.srt) |
 | 25 | [Swap Pluggable OCR Packs & Air-Gapped Regional .pmtiles Basemaps](#25-pluggable-runtime-extensions-and-pmtiles) ([MP4](videos/25-pluggable-runtime-extensions-and-pmtiles.mp4)) | Track C | 20.7s | 1473.9 KiB | [VTT](captions/25-pluggable-runtime-extensions-and-pmtiles.vtt) · [SRT](captions/25-pluggable-runtime-extensions-and-pmtiles.srt) |
 | 26 | [Stage Ubuntu 24.04 Off-Site & Cut Over to Air-Gapped Portal Subnets](#26-ubuntu-hotel-staging-and-airgapped-cutover) ([MP4](videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4)) | Track D | 15.6s | 516.8 KiB | [VTT](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt) · [SRT](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.srt) |
+| 27 | [Connect Cargo NII (WCO UFF 2.0 & 3.0.0) SMB Shares & Inspect 16-Bit X-Rays](#27-cargo-uff-smb-and-xray-inspection) ([MP4](videos/27-cargo-uff-smb-and-xray-inspection.mp4)) | Track D | 55.8s | 2686.5 KiB | [VTT](captions/27-cargo-uff-smb-and-xray-inspection.vtt) · [SRT](captions/27-cargo-uff-smb-and-xray-inspection.srt) |
 
 ## Track A — CLI Deployment, Upgrades & Storage Lifecycle
 
@@ -55,7 +56,7 @@ Extract a clean OSCAR release archive, initialize administrator credentials and 
 
 - **Video:** [Watch `01-deployment-init-and-credentials.mp4` (11.2s, 201 KiB)](videos/01-deployment-init-and-credentials.mp4) · [WebVTT Captions](captions/01-deployment-init-and-credentials.vtt) · [SRT Captions](captions/01-deployment-init-and-credentials.srt)
 
-1. Extract `oscar-3.11.1.zip` into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into `oscar-3.11.1/`.
+1. Extract `oscar-3.11.0.zip` into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into `oscar-3.11.0/`.
 2. Run `sudo bash oscar.sh init` (or `.\oscar.bat init` on Windows 11) and supply the deployment hostname, IANA timezone, and administrator password (`>= 14` characters).
 3. Allow `init` to generate deployment-bound PostgreSQL secrets, TLS gateway certificates, and external `oscar_oscar_state` / `oscar_postgres_data` volumes.
 4. Run `sudo bash oscar.sh status` (or `.\oscar.bat status`) to confirm `oscar-gateway`, `oscar`, and `oscar-postgis` report `running (healthy)`.
@@ -68,7 +69,7 @@ Verify a pre-upgrade snapshot, copy only .env, secrets/, and tls/ into a newly e
 - **Video:** [Watch `02-clean-directory-upgrade.mp4` (12.8s, 293.5 KiB)](videos/02-clean-directory-upgrade.mp4) · [WebVTT Captions](captions/02-clean-directory-upgrade.vtt) · [SRT Captions](captions/02-clean-directory-upgrade.srt)
 
 1. When `single` backup mode is enabled, run `sudo bash oscar.sh backup` and `sudo bash oscar.sh backup-verify` from the active release directory before upgrading.
-2. Extract the target `oscar-3.11.1.zip` archive into a separate sibling directory — never unzip over an existing release directory.
+2. Extract the target `oscar-3.11.0.zip` archive into a separate sibling directory — never unzip over an existing release directory.
 3. Copy only `.env`, `secrets/`, and `tls/` (plus `.oscar-volume-adoption` if previously adopted) into the newly extracted directory.
 4. Run `sudo bash oscar.sh upgrade` (or `.\oscar.bat upgrade`) and confirm all containers return `healthy` with preserved named volumes and archive roots.
 
@@ -257,7 +258,7 @@ Open Help (?) to browse the localized Operator Quick Guide & Glossary, export th
 
 - **Video:** [Watch `18-operator-help-and-support-bundle.mp4` (16.3s, 2027.5 KiB)](videos/18-operator-help-and-support-bundle.mp4) · [WebVTT Captions](captions/18-operator-help-and-support-bundle.vtt) · [SRT Captions](captions/18-operator-help-and-support-bundle.srt)
 
-1. Click the **Help (`?`)** button in the OSCAR Viewer top navigation bar to open the localized **OSCAR 3.11.1 Operator Quick Guide & Glossary** (`en`, `es`, `fr`, `el`).
+1. Click the **Help (`?`)** button in the OSCAR Viewer top navigation bar to open the localized **OSCAR 3.11.0 Operator Quick Guide & Glossary** (`en`, `es`, `fr`, `el`).
 2. Open **Manual & Video Guides** and click **Export Support Bundle** to merge the 400-event browser Flight Recorder (`client/client-diagnostics.json`) with rolling server logs (`backend/oscar.log`) into `oscar-support-<UTC>.zip` (automatically falling back to `oscar-client-support-<UTC>.zip` if the server is offline).
 3. When containers are stopped or unreachable over HTTPS, run `sudo bash oscar.sh support-bundle` (Ubuntu) or `.\oscar.bat support-bundle` (Windows) on the host to capture `oscar-host-support-<UTC>.zip`.
 4. Inspect `summary.json`, `client/client-diagnostics.json`, and `redaction-report.json` to review recent errors and confirm automatic `[REDACTED]` credential scrubbing.
@@ -354,7 +355,19 @@ Unpack the self-contained Ubuntu 24.04 offline bundle on hotel/office Wi-Fi, ide
 
 - **Video:** [Watch `26-ubuntu-hotel-staging-and-airgapped-cutover.mp4` (15.6s, 516.8 KiB)](videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4) · [WebVTT Captions](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt) · [SRT Captions](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.srt)
 
-1. Off-site (hotel or staging bench), extract `oscar-3.11.1-ubuntu-x86_64-offline-full.zip`, verify bundle checksums (`sudo bash verify-bundle.sh`), and run `sudo bash oscar.sh identify-nics --watch` while plugging a patch cord into the target NIC to confirm its Linux interface name (`enp2s0`).
+1. Off-site (hotel or staging bench), extract `oscar-3.11.0-ubuntu-x86_64-offline-full.zip`, verify bundle checksums (`sudo bash verify-bundle.sh`), and run `sudo bash oscar.sh identify-nics --watch` while plugging a patch cord into the target NIC to confirm its Linux interface name (`enp2s0`).
 2. Stage the portal's static IPv4 configuration safely without touching active Wi-Fi/SSH via `sudo bash oscar.sh stage-site-network --interface enp2s0 --ip 198.51.100.10/24 --gateway 198.51.100.1`.
 3. Run `sudo bash oscar.sh prepare-host --offline --expand-lvm` to expand Ubuntu Server's default `100 GiB` LVM logical volume across the full NVMe disk and install offline `.deb` packages, then run `sudo bash oscar.sh init --offline` to load air-gapped container images and initialize credentials.
 4. On-site inside the air-gapped portal rack, apply the pre-staged static subnet with `sudo bash oscar.sh apply-site-network` and scan the sensor LAN with `sudo bash oscar.sh discover-devices --interface enp2s0` to verify Rapiscan RPM (`10001–10050`) and RTSP camera (`554`/`8554`) endpoints.
+
+<a id="27-cargo-uff-smb-and-xray-inspection"></a>
+### 27. Connect Cargo NII (WCO UFF 2.0 & 3.0.0) SMB Shares & Inspect 16-Bit X-Rays
+
+Enable an optional SMBv2/SMBv3 Cargo Non-Intrusive Inspection share in Runtime Extensions, browse scanner packages with 1-character fuzzy ISO 6346 OCR correlation in Event Details, inspect progressive 16-bit dual-energy HEMD radiographs aligned with the RPM gamma/neutron waveform, and link evidence with zero archive download.
+
+- **Video:** [Watch `27-cargo-uff-smb-and-xray-inspection.mp4` (55.8s, 2686.5 KiB)](videos/27-cargo-uff-smb-and-xray-inspection.mp4) · [WebVTT Captions](captions/27-cargo-uff-smb-and-xray-inspection.vtt) · [SRT Captions](captions/27-cargo-uff-smb-and-xray-inspection.srt)
+
+1. Open **Runtime Extensions** (`/extensions`), select **Cargo NII (WCO UFF)**, configure the read-only SMBv2/SMBv3 share (`\\nas.port.local\oscar-uff`), click **TEST CONNECTION**, and click **SAVE & INDEX** to index `.uff` packages in place.
+2. In **Event Details** (`/event-details`), click **Browse Cargo Share** (`CargoUffSmbPickerDialog`) to search by container/plate (including **OCR ±1** 1-character fuzzy matching), scanner ID, customs HS code, or UFF UUID.
+3. Click **Inspect 16-Bit X-Ray** (`CargoUffViewerDialog`) to view the instant progressive preview followed by full 16-bit Window/Level, **HEMD (`Z_eff`)** material coloration, **High-Z** `<Annotation>` bounding boxes, and the longitudinal RPM Gamma/Neutron alignment strip.
+4. Click **Link to Adjudication** to attach a lightweight `.uffref.json` NAS pointer, stage the customs manifest PDF, and auto-populate embedded ANSI N42.42 spectra into **WebID** without copying multi-megabyte `.uff` archives.
