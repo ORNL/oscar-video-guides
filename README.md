@@ -1,6 +1,6 @@
 # OSCAR How-To Video Guides
 
-Concise, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.2** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
+Concise, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.3** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
 
 ## Encoding & Playback Profile
 
@@ -46,6 +46,7 @@ Concise, single-task `1920x1080` screen-recording guides covering every major wo
 | 25 | [Swap Pluggable OCR Packs & Air-Gapped Regional .pmtiles Basemaps](#25-pluggable-runtime-extensions-and-pmtiles) ([MP4](videos/25-pluggable-runtime-extensions-and-pmtiles.mp4)) | Track C | 20.7s | 1473.9 KiB | [VTT](captions/25-pluggable-runtime-extensions-and-pmtiles.vtt) · [SRT](captions/25-pluggable-runtime-extensions-and-pmtiles.srt) |
 | 26 | [Stage Ubuntu 24.04 Off-Site & Cut Over to Air-Gapped Portal Subnets](#26-ubuntu-hotel-staging-and-airgapped-cutover) ([MP4](videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4)) | Track D | 15.6s | 516.8 KiB | [VTT](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt) · [SRT](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.srt) |
 | 27 | [Connect Cargo NII (WCO UFF 2.0 & 3.0.0) SMB Shares & Inspect 16-Bit X-Rays](#27-cargo-uff-smb-and-xray-inspection) ([MP4](videos/27-cargo-uff-smb-and-xray-inspection.mp4)) | Track D | 55.8s | 2686.5 KiB | [VTT](captions/27-cargo-uff-smb-and-xray-inspection.vtt) · [SRT](captions/27-cargo-uff-smb-and-xray-inspection.srt) |
+| 28 | [Practice Safely in the Ephemeral Hands-On Training Sandbox & Guided Academy](#28-hands-on-training-sandbox) ([MP4](videos/28-hands-on-training-sandbox.mp4)) | Track D | 21.6s | 966.3 KiB | [VTT](captions/28-hands-on-training-sandbox.vtt) · [SRT](captions/28-hands-on-training-sandbox.srt) |
 
 ## Track A — CLI Deployment, Upgrades & Storage Lifecycle
 
@@ -371,3 +372,15 @@ Enable an optional SMBv2/SMBv3 Cargo Non-Intrusive Inspection share in Runtime E
 2. In **Event Details** (`/event-details`), click **Browse Cargo Share** (`CargoUffSmbPickerDialog`) to search by container/plate (including **OCR ±1** 1-character fuzzy matching), scanner ID, customs HS code, or UFF UUID.
 3. Click **Inspect 16-Bit X-Ray** (`CargoUffViewerDialog`) to view the instant progressive preview followed by full 16-bit Window/Level, **HEMD (`Z_eff`)** material coloration, **High-Z** `<Annotation>` bounding boxes, and the longitudinal RPM Gamma/Neutron alignment strip.
 4. Click **Link to Adjudication** to attach a lightweight `.uffref.json` NAS pointer, stage the customs manifest PDF, and auto-populate embedded ANSI N42.42 spectra into **WebID** without copying multi-megabyte `.uff` archives.
+
+<a id="28-hands-on-training-sandbox"></a>
+### 28. Practice Safely in the Ephemeral Hands-On Training Sandbox & Guided Academy
+
+Launch the isolated ephemeral Training Sandbox (:8444) with zero production database or Parquet writes, inject live Rapiscan RPM alarms and NORM/fault scenarios from the Training Coach, practice SensorHub Admin lane setup in Split-Pane mode, and export a watermarked PDF Training Completion Record.
+
+- **Video:** [Watch `28-hands-on-training-sandbox.mp4` (21.6s, 966.3 KiB)](videos/28-hands-on-training-sandbox.mp4) · [WebVTT Captions](captions/28-hands-on-training-sandbox.vtt) · [SRT Captions](captions/28-hands-on-training-sandbox.srt)
+
+1. Start the isolated sandbox (`sudo bash oscar.sh sandbox start` or `Help (?) -> Launch Hands-On Training Sandbox`), open `:8444`, and confirm the single-row **TRAINING SANDBOX** badge and **Training Coach** dock.
+2. Select **Track 1 — Operator (`Lab 1.3`)** on `/event-log`, click **Inject Distributed NORM (Code 9999)**, and watch the live loopback Rapiscan + EML pipeline auto-verify the lab outcome.
+3. Switch to **Track 3 — Administrator** and click **Open Split-Pane SensorHub Admin** to configure lanes against loopback `127.0.0.1:10099` and `rtsp://127.0.0.1:8554/tutorial-cam` (or import `tutorial-1-lane.csv`) beside the Guided Coach.
+4. Enter the trainee name to download a watermarked 1-page PDF **Training Completion Record**, then run `oscar.sh sandbox stop` (`oscar.bat sandbox stop`) to flush all disposable sandbox volumes in under 2 seconds.
