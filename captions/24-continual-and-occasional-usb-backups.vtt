@@ -1,17 +1,17 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:03.744
+00:00:00.040 --> 00:00:05.237
 Open USB Backups (/usb-backups) to inspect the attached NTFS USB 3.x NVMe SSD, capacity, WAL LSN, and deduplicated pack counts.
 
 2
-00:00:03.784 --> 00:00:07.626
+00:00:05.277 --> 00:00:09.983
 Click Sync Incremental Snapshot Now for a 0.0 s downtime delta backup, and download backup-key.txt for off-site escrow.
 
 3
-00:00:07.666 --> 00:00:12.274
+00:00:10.023 --> 00:00:15.473
 Configure Continual Background Sync (automatic reconnect catch-up) or Occasional / On-Demand Visit Sync and save.
 
 4
-00:00:12.314 --> 00:00:16.712
+00:00:15.513 --> 00:00:21.382
 Click Safely Eject USB Drive and confirm the green SAFE TO UNPLUG banner before unplugging for laptop offload.

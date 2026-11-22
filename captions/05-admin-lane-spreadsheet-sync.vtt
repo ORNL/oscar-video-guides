@@ -1,13 +1,13 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:03.809
-Locate the multi-lane spreadsheet Config File Path and Upload/Download controls in OSCAR Service.
+00:00:00.040 --> 00:00:05.761
+Locate Spreadsheet Config Path and the Upload and Download controls in OSCAR Service.
 
 2
-00:00:03.849 --> 00:00:07.211
-Apply the synchronized spreadsheet configuration to provision lanes and OperationalViews.
+00:00:05.801 --> 00:00:10.882
+Click Apply Changes and Save to synchronize spreadsheet lanes and OperationalViews.
 
 3
-00:00:07.251 --> 00:00:10.612
-Expand Sensors to confirm all imported Lane System modules are active.
+00:00:10.922 --> 00:00:16.770
+Expand Sensors to confirm imported Lane01 through Lane50 modules are registered and active.

@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:03,441
-Inspect RPM connectivity, camera health, and Ext-Occ / fault indicators across lanes on Status of Health.
+00:00:00,040 --> 00:00:06,044
+Inspect Online RPM/camera pills and Extended occupancy: Clear status on Lane01 in Status of Health.
 
 2
-00:00:03,481 --> 00:00:06,842
-Navigate to the Site Map (/map) from the left navigation rail.
+00:00:06,084 --> 00:00:10,733
+Navigate to the Site Map (/map) and verify loaded map tiles and all 50 georeferenced portal lane markers.
 
 3
-00:00:06,882 --> 00:00:10,242
-Inspect georeferenced portal lane markers and facility map controls.
+00:00:10,773 --> 00:00:18,056
+Click a georeferenced portal lane marker to open its live status popup and inspect map layer and zoom controls.

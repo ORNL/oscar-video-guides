@@ -1,13 +1,13 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:04.283
-Select Lane50 on the Dashboard to open live Lane Details (/lane-view).
+00:00:00.040 --> 00:00:08.555
+Select Lane01 on the Dashboard to open live Lane Details (/lane-view) and stream multi-second telemetry.
 
 2
-00:00:04.323 --> 00:00:08.022
-Monitor live camera video alongside real-time Gamma and Neutron count-rate waveforms and detector plot toggles.
+00:00:08.595 --> 00:00:18.342
+Monitor live camera video alongside multi-point TOTALS waveforms, then inspect GAMMA DETECTORS and NEUTRON DETECTORS.
 
 3
-00:00:08.062 --> 00:00:11.422
+00:00:18.382 --> 00:00:23.105
 Inspect the lane occupancy DataGrid below the live charts to review recent lane events.

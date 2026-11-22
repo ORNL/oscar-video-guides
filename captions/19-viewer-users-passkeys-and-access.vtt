@@ -1,17 +1,17 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:03.754
+00:00:00.040 --> 00:00:05.241
 Review persistent Stay Signed In status, offline Passkeys, and local-password vs. Octelium tunnel separation.
 
 2
-00:00:03.794 --> 00:00:09.452
-Open Users & Roles, click Bulk Enroll (CSV / Paste), and paste an operator and viewer roster.
+00:00:05.281 --> 00:00:11.692
+Open Users & Roles, click Bulk Enroll (CSV / Paste), and submit an operator and viewer roster.
 
 3
-00:00:09.492 --> 00:00:14.385
-Inspect the generated Startup Text Messages and 1-Tap Passkey/Password Setup QR Codes.
+00:00:11.732 --> 00:00:17.480
+Inspect the generated Startup Messages & 1-Tap Setup QR Codes pack.
 
 4
-00:00:14.425 --> 00:00:24.364
-Mint a scoped Federation Service Token and click Open Servers Page (Federation Token Mode) to configure remote node access.
+00:00:17.520 --> 00:00:29.630
+Mint a scoped Federation Service Token and open Servers (/servers?auth=bearer) in Federation Token mode.

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OSCAR 3.11.4 How-To Video Guides</title>
+  <title>OSCAR 3.11.6 How-To Video Guides</title>
   <style>
     :root {
       color-scheme: dark;
@@ -81,8 +81,8 @@
 </head>
 <body>
   <header>
-    <h1>OSCAR 3.11.4 How-To Video Guides</h1>
-    <p>Concise, zero-filler 1080p workflow screen recordings encoded via NVIDIA RTX 5060 Ti hardware NVENC H.264 (NV12 4:2:0, 10s GOP 300, differential 30 FPS peak VFR) with synchronized closed captions and sequential step references.</p>
+    <h1>OSCAR 3.11.6 How-To Video Guides</h1>
+    <p>Concise, zero-filler 1080p workflow screen recordings encoded via NVIDIA RTX 5060 Ti hardware NVENC H.264 (NV12 4:2:0, 8s GOP 240, 30 FPS CFR) with synchronized closed captions and sequential step references.</p>
   </header>
   <main>
       <article class="card" id="01-deployment-init-and-credentials" data-track="Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle">
@@ -90,16 +90,16 @@
           <span class="badge">01</span>
           <div>
             <h2>Initialize OSCAR Deployment, Admin Credentials &amp; TLS</h2>
-            <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 11.2s · 201 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 13.5s · 343.6 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Extract a clean OSCAR release archive, initialize administrator credentials and TLS SAN certificates with oscar init, and verify healthy container startup.</p>
+        <p class="summary">Extract a clean OSCAR 3.11.6 release archive, initialize administrator credentials and TLS SAN certificates with oscar init, and verify healthy container startup.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/01-deployment-init-and-credentials.mp4" type="video/mp4" />
           <track kind="captions" src="captions/01-deployment-init-and-credentials.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Extract <code>oscar-3.11.0.zip</code> into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into <code>oscar-3.11.0/</code>.</li>
+            <li>Extract <code>oscar-3.11.6.zip</code> into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into <code>oscar-3.11.6/</code>.</li>
             <li>Run <code>sudo bash oscar.sh init</code> (or <code>.\oscar.bat init</code> on Windows 11) and supply the deployment hostname, IANA timezone, and administrator password (<code>&gt;= 14</code> characters).</li>
             <li>Allow <code>init</code> to generate deployment-bound PostgreSQL secrets, TLS gateway certificates, and external <code>oscar_oscar_state</code> / <code>oscar_postgres_data</code> volumes.</li>
             <li>Run <code>sudo bash oscar.sh status</code> (or <code>.\oscar.bat status</code>) to confirm <code>oscar-gateway</code>, <code>oscar</code>, and <code>oscar-postgis</code> report <code>running (healthy)</code>.</li>
@@ -116,17 +116,17 @@
           <span class="badge">02</span>
           <div>
             <h2>Upgrade OSCAR in a Clean Release Directory</h2>
-            <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 12.8s · 293.5 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 14.5s · 309.3 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Verify a pre-upgrade snapshot, copy only .env, secrets/, and tls/ into a newly extracted release folder, and run oscar upgrade while preserving external volumes.</p>
+        <p class="summary">Verify a pre-upgrade snapshot, copy only .env, secrets/, and tls/ into a newly extracted oscar-3.11.6 folder, and run oscar upgrade while preserving external volumes.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/02-clean-directory-upgrade.mp4" type="video/mp4" />
           <track kind="captions" src="captions/02-clean-directory-upgrade.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>When <code>single</code> backup mode is enabled, run <code>sudo bash oscar.sh backup</code> and <code>sudo bash oscar.sh backup-verify</code> from the active release directory before upgrading.</li>
-            <li>Extract the target <code>oscar-3.11.0.zip</code> archive into a separate sibling directory — never unzip over an existing release directory.</li>
+            <li>Extract the target <code>oscar-3.11.6.zip</code> archive into a separate sibling directory — never unzip over an existing release directory.</li>
             <li>Copy only <code>.env</code>, <code>secrets/</code>, and <code>tls/</code> (plus <code>.oscar-volume-adoption</code> if previously adopted) into the newly extracted directory.</li>
             <li>Run <code>sudo bash oscar.sh upgrade</code> (or <code>.\oscar.bat upgrade</code>) and confirm all containers return <code>healthy</code> with preserved named volumes and archive roots.</li>
         </ol>
@@ -142,7 +142,7 @@
           <span class="badge">03</span>
           <div>
             <h2>Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup</h2>
-            <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 11.4s · 193.1 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 13.5s · 317.5 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
         <p class="summary">Inspect PARQUET_PRIMARY cold-tier generation status, verify sealed Parquet SHA-256 parity receipts, and run a coordinated single-snapshot backup and verification.</p>
@@ -168,7 +168,7 @@
           <span class="badge">04</span>
           <div>
             <h2>Configure OSCAR Service Retention &amp; Custom Disposition Codes</h2>
-            <p class="meta">Track B — SensorHub Admin Configuration · 12.3s · 693.4 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track B — SensorHub Admin Configuration · 21.5s · 763.4 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
         <p class="summary">Open Services -&gt; OSCAR Service in SensorHub Admin to review 5-JPEG media retention settings, storage-pressure thresholds, and custom adjudication disposition codes.</p>
@@ -178,8 +178,8 @@
         </video>
         <ol class="steps">
             <li>Open <code>https://oscar.local/sensorhub/admin</code>, expand <strong>Services</strong>, and select <strong>OSCAR Service</strong>.</li>
-            <li>Review <strong>Video Retention Config</strong> (<code>timeToRetention = 0</code>, <code>frameRetentionCount = 5</code>, <code>jpegQuality = 85</code>) and <strong>Storage Pressure Retention Config</strong>.</li>
-            <li>Expand <strong>Custom Disposition Codes</strong> to add or update site-specific adjudication code entries alongside built-in codes.</li>
+            <li>Review <strong>Video Retention Config</strong> (<code>Age Before Five-Frame Retention</code>, <code>Video Query Period</code>) and <strong>Storage Pressure Retention Config</strong> (<code>Trigger Usage (%)</code>, <code>Target Usage (%)</code>, <code>OCR Crop Retention</code>).</li>
+            <li>Open <strong>Custom Disposition Codes</strong> and click <strong><code>+</code></strong> to add or update site-specific adjudication code entries alongside built-in codes.</li>
             <li>Click <strong>Apply Changes</strong> and <strong>Save</strong> in the top toolbar to persist the updated service configuration.</li>
         </ol>
         <div class="links">
@@ -194,19 +194,19 @@
           <span class="badge">05</span>
           <div>
             <h2>Sync Multi-Lane Spreadsheet Configuration (config.csv)</h2>
-            <p class="meta">Track B — SensorHub Admin Configuration · 10.6s · 418.8 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track B — SensorHub Admin Configuration · 17.5s · 544.9 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Import or download the multi-lane config.csv spreadsheet in OSCAR Service to provision RPM endpoints, RTSP cameras, and OperationalViews assignments in bulk.</p>
+        <p class="summary">Import or download the multi-lane config.csv spreadsheet via Spreadsheet Config Path in OSCAR Service to provision RPM endpoints, RTSP cameras, and OperationalViews assignments in bulk.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/05-admin-lane-spreadsheet-sync.mp4" type="video/mp4" />
           <track kind="captions" src="captions/05-admin-lane-spreadsheet-sync.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Navigate to <strong>Services -&gt; OSCAR Service</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>).</li>
-            <li>Locate <strong>Config File Path</strong> / <strong>Upload</strong> under <strong>General</strong> to upload or export the site's multi-lane <code>config.csv</code> spreadsheet (including <code>OperationalViews</code> semicolon-delimited keys such as <code>east-gate;entrance</code>).</li>
+            <li>Locate <strong>Spreadsheet Config Path</strong> and use <strong>Upload</strong> or <strong>Download</strong> under <strong>General</strong> to import or export the site's multi-lane <code>config.csv</code> spreadsheet (including <code>OperationalViews</code> semicolon-delimited keys such as <code>east-gate;entrance</code>).</li>
             <li>Click <strong>Apply Changes</strong> and <strong>Save</strong> to synchronize all lane definitions.</li>
-            <li>Expand <strong>Sensors</strong> in the left accordion to confirm every imported <code>Lane System</code> module is registered and online.</li>
+            <li>Expand <strong>Sensors</strong> in the left accordion to confirm imported <code>Lane01</code>–<code>Lane50</code> modules are registered and active.</li>
         </ol>
         <div class="links">
           <a href="videos/05-admin-lane-spreadsheet-sync.mp4" aria-label="MP4 Video — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">MP4 Video</a>
@@ -220,18 +220,18 @@
           <span class="badge">06</span>
           <div>
             <h2>Configure a Lane System &amp; Georeferenced Site Diagram</h2>
-            <p class="meta">Track B — SensorHub Admin Configuration · 14.9s · 785 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track B — SensorHub Admin Configuration · 23.5s · 831.2 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Inspect individual Lane System location, Extended Occupancy Threshold (min), and camera/RPM options under Sensors, then configure the georeferenced facility Site Diagram bounding coordinates in OSCAR Service.</p>
+        <p class="summary">Inspect Lane01 General, Fixed Location, and Lane Options settings under Sensors, populate georeferenced Lower-Left and Upper-Right Site Diagram bounds in OSCAR Service, and save.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/06-admin-manual-lane-and-site-diagram.mp4" type="video/mp4" />
           <track kind="captions" src="captions/06-admin-manual-lane-and-site-diagram.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <strong>Sensors</strong> in SensorHub Admin and select a <strong>Lane System</strong> module.</li>
+            <li>Open <strong>Sensors</strong> in SensorHub Admin and select <strong>Lane01</strong>.</li>
             <li>Review <strong>General</strong> (including <strong>Extended Occupancy Threshold (min)</strong> and <strong>Operational View Keys</strong>), <strong>Fixed Location</strong> (latitude/longitude coordinates), and <strong>Lane Options</strong> (RPM driver address and RTSP camera stream parameters).</li>
-            <li>Switch to <strong>Services -&gt; OSCAR Service</strong> and inspect <strong>Site Diagram Config</strong> to upload a site map image and set georeferenced lower-left and upper-right coordinates.</li>
+            <li>Switch to <strong>Services -&gt; OSCAR Service -&gt; Site Diagram Config</strong>, click <strong>Add</strong>, and enter georeferenced <strong>Site Lower Left Bound</strong> and <strong>Site Upper Right Bound</strong> coordinates.</li>
             <li>Click <strong>Apply Changes</strong> and <strong>Save</strong> to publish lane coordinates and site map bounds to the Viewer.</li>
         </ol>
         <div class="links">
@@ -246,10 +246,10 @@
           <span class="badge">07</span>
           <div>
             <h2>Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML</h2>
-            <p class="meta">Track B — SensorHub Admin Configuration · 11.8s · 818.1 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track B — SensorHub Admin Configuration · 17s · 1545.4 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Verify or upload a separately licensed EML VM-250 .jar plugin in OSCAR Service, inspect per-lane EML enablement under Lane Options, and review built-in operator documentation.</p>
+        <p class="summary">Verify or upload a separately licensed EML VM-250 .jar plugin in OSCAR Service, review Code 9999 documentation in the localized README, and confirm per-lane EML enablement under Lane Options.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/07-admin-eml-plugin-setup.mp4" type="video/mp4" />
           <track kind="captions" src="captions/07-admin-eml-plugin-setup.vtt" srclang="en" label="English" default />
@@ -257,8 +257,8 @@
         <ol class="steps">
             <li>Open <strong>Services -&gt; OSCAR Service</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>).</li>
             <li>Locate <strong>EML Plugin Path</strong> and use <strong>Upload</strong> to install the external licensed EML VM-250 <code>.jar</code> runtime into private state storage.</li>
-            <li>Open <strong>Sensors -&gt; &lt;Rapiscan Lane&gt; -&gt; Lane Options</strong> to verify per-lane EML analysis settings (<code>Collimated</code> / <code>Enable EML</code>).</li>
-            <li>Open the <strong>README</strong> tab in OSCAR Service to reference localized administrator guidance on automated <code>Code 9999: EML Non-Threat</code> adjudications.</li>
+            <li>Open the <strong>README</strong> tab in OSCAR Service and scroll to the <strong>EML</strong> / <code>Code 9999: EML Non-Threat</code> guidance.</li>
+            <li>Open <strong>Sensors -&gt; Lane01 -&gt; Lane Options</strong> to verify <strong>EML Configuration</strong> (<code>Lane Width (m)</code>, <code>Enable EML Analysis</code>, <code>Is Collimated</code>).</li>
         </ol>
         <div class="links">
           <a href="videos/07-admin-eml-plugin-setup.mp4" aria-label="MP4 Video — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">MP4 Video</a>
@@ -272,7 +272,7 @@
           <span class="badge">08</span>
           <div>
             <h2>Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 17.9s · 3062.2 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 25.5s · 3670.8 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
         <p class="summary">Authenticate at the OSCAR TLS gateway login page (with Keep me signed in until I log out and offline Passkey support), switch console UI localization live across 4 languages, open the Operator Quick Guide (?), and configure federated OSCAR nodes.</p>
@@ -283,7 +283,7 @@
         <ol class="steps">
             <li>Open <code>https://oscar.local</code>, enter the operator <strong>Username</strong> and <strong>Password</strong> (with <strong>Keep me signed in until I log out</strong> enabled, or click <strong>Sign in with a passkey</strong>), and click <strong>Sign in</strong>.</li>
             <li>Click the top-bar language selector (<strong>English</strong>) to switch the console interface live between <code>English</code>, <code>Español</code>, <code>Français</code>, and <code>Ελληνικά</code>, and click the <code>?</code> help icon to open the <strong>Operator Quick Guide &amp; Glossary</strong>.</li>
-            <li>Open <strong>Nodes</strong> (<code>/servers</code>) from the navigation drawer to verify <strong>Local Node</strong> status or add federated OSCAR nodes using interactive browser sessions or scoped <strong>Federation Service Tokens (<code>oscar_fed_...</code>)</strong>.</li>
+            <li>Open <strong>Servers</strong> (<code>/servers</code>) from the navigation drawer to verify <strong>Local Node</strong> status or add federated OSCAR nodes using interactive browser sessions or scoped <strong>Federation Service Tokens (<code>oscar_fed_...</code>)</strong>.</li>
         </ol>
         <div class="links">
           <a href="videos/08-viewer-signin-language-and-nodes.mp4" aria-label="MP4 Video — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">MP4 Video</a>
@@ -297,18 +297,18 @@
           <span class="badge">09</span>
           <div>
             <h2>Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 12.9s · 939.5 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 19.5s · 1455.2 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Monitor real-time 50-lane status tiles and live alarm occupancy rows on the Dashboard, customize visible panels with Customize Dashboard, and launch rapid alarm review.</p>
+        <p class="summary">Monitor real-time 50-lane status tiles and live alarm occupancy rows on the Dashboard, toggle Dashboard Widgets, and launch rapid alarm telemetry and adjudication review.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/09-dashboard-monitoring-and-quick-adjudication.mp4" type="video/mp4" />
           <track kind="captions" src="captions/09-dashboard-monitoring-and-quick-adjudication.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open the OSCAR <strong>Dashboard</strong> (<code>/</code>) to monitor real-time <strong>Lane Status</strong> tiles across all configured portal lanes and toggle <strong>Customize Dashboard</strong> to show or hide <strong>Lane Status</strong>, <strong>Events</strong>, or <strong>Map</strong>.</li>
-            <li>Review incoming occupancy and gamma/neutron alarm rows in the live Dashboard event table, sorting or customizing visible columns as needed.</li>
-            <li>Click a row's action menu (<code>⋮</code>) or double-click an alarm row to open immediate event inspection and adjudication controls.</li>
+            <li>Open the OSCAR <strong>Dashboard</strong> (<code>/</code>) to monitor real-time <strong>Lane Status</strong> tiles across all 50 portal lanes and use the <strong>Dashboard Widgets</strong> bar to toggle <strong>Lane Status</strong>, <strong>Events Table</strong>, or <strong>Map / Preview</strong>.</li>
+            <li>Review incoming occupancy and gamma/neutron alarm rows in the live Dashboard event table and open a row's action menu (<code>⋮</code> -&gt; <strong>Details</strong>).</li>
+            <li>Inspect the populated <strong>Gamma</strong> and <strong>Neutron</strong> count-rate waveforms alongside the <strong>Adjudication Form</strong> on <strong>Event Details</strong>.</li>
         </ol>
         <div class="links">
           <a href="videos/09-dashboard-monitoring-and-quick-adjudication.mp4" aria-label="MP4 Video — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">MP4 Video</a>
@@ -322,7 +322,7 @@
           <span class="badge">10</span>
           <div>
             <h2>Scope Workstation Lanes with Fail-Closed Operational Views</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 11.4s · 662.3 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 17.5s · 866.9 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
         <p class="summary">Scope the Dashboard and Status of Health to an assigned workstation Operational View (?view=east-gate) and verify fail-closed protection on unassigned views.</p>
@@ -331,8 +331,8 @@
           <track kind="captions" src="captions/10-operational-views-scoping.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open a workstation-scoped URL such as <code>https://oscar.local/?view=east-gate</code> and confirm the <strong><code>View: east-gate</code></strong> badge appears in the header.</li>
-            <li>Navigate to <strong>Status of Health</strong> (<code>/health?view=east-gate</code>) to verify that only lanes assigned to <code>east-gate</code> are loaded.</li>
+            <li>Open a workstation-scoped URL such as <code>https://oscar.local/?view=east-gate</code> and confirm the <strong><code>east-gate (10)</code></strong> scoped view indicator restricts visible lanes.</li>
+            <li>Navigate to <strong>Status of Health</strong> (<code>/health?view=east-gate</code>) to verify that only the <code>10</code> lanes assigned to <code>east-gate</code> are loaded.</li>
             <li>Verify that unassigned or malformed <code>?view=</code> keys fail closed with an explicit warning banner and zero loaded lane data.</li>
         </ol>
         <div class="links">
@@ -347,18 +347,18 @@
           <span class="badge">11</span>
           <div>
             <h2>Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 12s · 2359.3 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 24s · 4614.1 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Open Lane Details from the Dashboard to watch live RTSP/HLS camera video alongside real-time Gamma and Neutron count-rate charts (including Show Individual Detectors and Separate Plots (Accessibility) toggles) and lane occupancy history.</p>
+        <p class="summary">Open Lane Details from the Dashboard to watch live RTSP/WebRTC camera video alongside multi-second real-time Gamma and Neutron count-rate waveforms across TOTALS, GAMMA DETECTORS, and NEUTRON DETECTORS views, plus lane occupancy history.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/11-live-lane-video-and-charts.mp4" type="video/mp4" />
           <track kind="captions" src="captions/11-live-lane-video-and-charts.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Click a lane tile under <strong>Lane Status</strong> on the Dashboard (<code>/</code>) to open <strong>Lane Details</strong> (<code>/lane-view</code>).</li>
-            <li>Monitor the live camera video player alongside the real-time <strong>Gamma</strong> (red) and <strong>Neutron</strong> (blue) count-rate waveform charts, and toggle <strong>Show Individual Detectors</strong> or <strong>Separate Plots (Accessibility)</strong> (<code>G1</code>–<code>G4</code>, <code>N1</code>–<code>N4</code>).</li>
-            <li>Scroll to the lane event table below the charts to inspect historical occupancies recorded on that lane.</li>
+            <li>Click <strong>Lane01</strong> under <strong>Lane Status</strong> on the Dashboard (<code>/</code>) to open <strong>Lane Details</strong> (<code>/lane-view</code>) and let live camera video and 5 Hz count-rate streams populate.</li>
+            <li>Monitor live camera video alongside multi-second <strong>TOTALS</strong> Gamma and Neutron waveforms, then switch between <strong>GAMMA DETECTORS</strong> (<code>G1</code>–<code>G4</code>) and <strong>NEUTRON DETECTORS</strong> (<code>N1</code>–<code>N4</code>).</li>
+            <li>Scroll to the lane occupancy table below the live charts to inspect historical occupancies recorded on that lane.</li>
         </ol>
         <div class="links">
           <a href="videos/11-live-lane-video-and-charts.mp4" aria-label="MP4 Video — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">MP4 Video</a>
@@ -372,19 +372,19 @@
           <span class="badge">12</span>
           <div>
             <h2>Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 27s · 2383.5 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 35.5s · 3024.3 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Expand the Alarm Category Co-Occurrence (UpSet) panel to filter by populated-first main categories or combinations (including crimson Other SNM), correlate repeat occupancies by normalized Vehicle ID and Compare Passes, apply server-side Advanced Filters, and look up exact records by Event UUID.</p>
+        <p class="summary">Correlate repeat occupancies by normalized Vehicle ID in Multi-Pass Vehicle Comparison, filter Event Log via Alarm Category Co-Occurrence (UpSet), build nested server-side Advanced Filters, and look up exact records by Event UUID.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/12-event-log-filtering-and-adjudication-codes.mp4" type="video/mp4" />
           <track kind="captions" src="captions/12-event-log-filtering-and-adjudication-codes.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Navigate to <strong>Event Log</strong> (<code>/event-log</code>), enter a container or plate identifier in the <strong>Vehicle / Container ID</strong> search bar (ignoring case, spaces, and hyphens), click <strong>SEARCH VEHICLE</strong>, and click <strong>COMPARE PASSES (<code>N</code>)</strong> to inspect correlated transits.</li>
-            <li>Click <strong>Alarm Category Co-Occurrence (UpSet)</strong> (<code>Show</code>) to display populated main categories first (<code>Unknown</code>, <code>SNM</code>, <code>NORM</code>, <code>Medical</code>, <code>Industrial</code>, <code>Gamma</code>, <code>Neutron</code>), then click any populated <strong>Categories</strong> chip, combination bar, or rolled-up crimson <strong>Other SNM</strong> bar to filter the table.</li>
-            <li>Click <strong>ADVANCED FILTERS</strong> to filter server-side by date/time window, lane, alarm status, <strong>Vehicle ID</strong>, or <strong>Adjudication Code</strong> (including automated <code>Code 9998: Extended Occupancy Gamma Alarm</code>, <code>Code 9999: EML Non-Threat</code>, and custom codes).</li>
-            <li>Paste an occupancy observation identifier into <strong>Event UUID</strong> and click <strong>FIND EVENT</strong> to open that exact record.</li>
+            <li>Click <strong>Alarm Category Co-Occurrence (UpSet)</strong> (<code>Show</code>) to display populated main categories first (<code>Unknown</code>, <code>SNM</code>, <code>NORM</code>, <code>Medical</code>, <code>Industrial</code>, <code>Gamma</code>, <code>Neutron</code>), then click any populated category chip or combination bar to filter the table.</li>
+            <li>Click <strong>ADVANCED FILTERS</strong> and <strong>ADD CONDITION</strong> to filter server-side by date/time window, lane, alarm status, <strong>Vehicle ID</strong>, or <strong>Adjudication Code</strong> (<code>Code 9998</code>, <code>Code 9999</code>, built-in <code>1–11</code>, and custom codes).</li>
+            <li>Paste an occupancy observation identifier into <strong>Event UUID</strong> and click <strong>FIND EVENT</strong> to open that exact record on <strong>Event Details</strong>.</li>
         </ol>
         <div class="links">
           <a href="videos/12-event-log-filtering-and-adjudication-codes.mp4" aria-label="MP4 Video — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">MP4 Video</a>
@@ -398,17 +398,17 @@
           <span class="badge">13</span>
           <div>
             <h2>Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 19.4s · 1216.1 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 26s · 1726.6 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Inspect five-frame retained JPEG camera evidence, toggle individual detector charts, examine exact RPM Daily File Output lines (hot journal or cold historical slice), and submit an append-only adjudication.</p>
+        <p class="summary">Inspect five-frame retained JPEG camera evidence across First, Middle, and Last keyframes, switch detector waveform tabs, examine exact GS, GA, NS, and GX RPM Daily File Output records, and submit an append-only adjudication.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/13-event-details-adjudication-and-daily-file.mp4" type="video/mp4" />
           <track kind="captions" src="captions/13-event-details-adjudication-and-daily-file.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>), verify the <strong>Event UUID</strong> header bar, and step through the five retained camera JPEG thumbnails under <strong>Retained camera evidence</strong>.</li>
-            <li>Toggle <strong>Show Individual Detectors</strong> / <strong>Separate Plots (Accessibility)</strong> on the waveform charts and scroll to <strong>Daily File Output</strong> to inspect exact <code>GS</code>, <code>GA</code>, <code>NS</code>, and <code>GX</code> RPM daily-file records.</li>
+            <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>), verify the <strong>Event UUID</strong> header bar, and step through the five retained camera JPEG thumbnails (<code>First</code>, <code>Middle</code>, <code>Last</code>) under <strong>Retained camera evidence</strong>.</li>
+            <li>Switch between <strong>TOTALS</strong> and <strong>GAMMA DETECTORS</strong> / <strong>NEUTRON DETECTORS</strong> on the waveform charts and scroll to <strong>Daily File Output</strong> to inspect exact <code>GS</code>, <code>GA</code>, <code>NS</code>, and <code>GX</code> RPM daily-file records.</li>
             <li>Complete <strong>Vehicle ID</strong>, <strong>Adjudicate</strong> disposition code, <strong>Secondary Inspection</strong>, and <strong>Notes</strong> under <strong>Adjudication Form</strong>.</li>
             <li>Click <strong>Submit</strong> and confirm in <strong>Confirm Adjudication Submission</strong> (<code>Confirm &amp; Submit</code>) to append the signed audit record while preserving prior adjudications.</li>
         </ol>
@@ -424,16 +424,16 @@
           <span class="badge">14</span>
           <div>
             <h2>Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 25.2s · 1723.7 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 17.5s · 1335.6 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Export a SHA-256-authenticated Alarm QR image from Event Details, then import and verify its cryptographic integrity and waveforms offline on Alarm Transfer.</p>
+        <p class="summary">Export a SHA-256-authenticated Alarm QR image from Event Details, then import and verify its cryptographic integrity and reconstructed waveforms offline on Alarm Transfer.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/14-airgapped-alarm-qr-transfer.mp4" type="video/mp4" />
           <track kind="captions" src="captions/14-airgapped-alarm-qr-transfer.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>On <strong>Event Details</strong>, click <strong>Export Alarm QR</strong> to generate the <code>OSCAR-ALARM:1:</code> signed transfer payload.</li>
+            <li>On <strong>Event Details</strong>, click <strong>Export Alarm QR</strong> to generate the <code>OSCAR-ALARM:1:</code> signed transfer payload and QR symbol.</li>
             <li>Click <strong>Download QR Image</strong> (or <strong>Download Alarm File</strong>) to save the portable PNG QR symbol or JSON package.</li>
             <li>Open <strong>Alarm Transfer</strong> (<code>/alarm-transfer</code>) on the receiving workstation and import the QR PNG image or scan via camera.</li>
             <li>Confirm <strong><code>The alarm data passed its SHA-256 integrity check.</code></strong> and review the reconstructed occupancy UUID and Gamma/Neutron waveforms.</li>
@@ -450,18 +450,18 @@
           <span class="badge">15</span>
           <div>
             <h2>Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 10.2s · 1251.1 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 18.5s · 2277.7 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Track RPM connectivity, camera stream health, detector/tamper faults, and Fault - Extended Occupancy (Ext-Occ, with automated Code 9998 gamma-only alarm adjudication) on Status of Health, then inspect georeferenced lane markers on Site Map.</p>
+        <p class="summary">Track RPM connectivity, camera stream health, detector/tamper faults, and Extended occupancy: Clear status on Status of Health, then open live georeferenced portal lane marker popups on Site Map.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/15-status-of-health-and-site-map.mp4" type="video/mp4" />
           <track kind="captions" src="captions/15-status-of-health-and-site-map.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <strong>Status of Health</strong> (<code>/health</code>) from the navigation drawer to inspect real-time RPM connectivity, camera stream status, and detector or tamper fault badges across every lane.</li>
-            <li>Review lane-level health indicators and <code>Fault - Extended Occupancy</code> (<code>Ext-Occ</code>) status (which suppresses gamma-only extended occupancy alarms from the Dashboard and auto-adjudicates them as <code>Code 9998: Extended Occupancy Gamma Alarm</code>).</li>
-            <li>Open <strong>Map</strong> (<code>/map</code>) to view georeferenced lane markers and real-time alarm/health status overlaid on the facility map.</li>
+            <li>Open <strong>Status of Health</strong> (<code>/health</code>) from the navigation drawer to inspect real-time <code>Online</code> RPM/camera pills and detector or tamper fault badges across every lane.</li>
+            <li>Review lane-level <code>Extended occupancy: Clear</code> / <code>Fault - Extended Occupancy</code> status (which suppresses gamma-only extended occupancy alarms from the Dashboard and auto-adjudicates them as <code>Code 9998: Extended Occupancy Gamma Alarm</code>).</li>
+            <li>Open <strong>Map</strong> (<code>/map</code>) and click any georeferenced portal lane marker to inspect its live telemetry popup alongside map layer and zoom controls.</li>
         </ol>
         <div class="links">
           <a href="videos/15-status-of-health-and-site-map.mp4" aria-label="MP4 Video — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">MP4 Video</a>
@@ -475,10 +475,10 @@
           <span class="badge">16</span>
           <div>
             <h2>Analyze National View Statistics &amp; Generate Multi-Format Reports</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 19.6s · 658 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 24.5s · 939.2 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Review aggregated occupancy and alarm trends on National View, then configure and generate RDS Site, Lane, Event, Adjudication (starting with summed All Selected Lanes totals), Adjudication Details, or consolidated Vehicle Incident reports in PDF, CSV, JSON, or Excel (.xlsx) format.</p>
+        <p class="summary">Review aggregated occupancy and alarm rows on National View, then configure and generate a populated Vehicle Incident Report preview inline with Open and Download controls.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/16-national-statistics-and-reports.mp4" type="video/mp4" />
           <track kind="captions" src="captions/16-national-statistics-and-reports.vtt" srclang="en" label="English" default />
@@ -486,7 +486,7 @@
         <ol class="steps">
             <li>Open <strong>National View</strong> (<code>/national-view</code>) to inspect aggregated occupancy totals, gamma/neutron alarm counts, and multi-lane trends.</li>
             <li>Navigate to <strong>Report Generator</strong> (<code>/report</code>) and choose <strong>Node Selector</strong>, <strong>Report Scope</strong> (<code>Entire Node</code>, <code>Operational View</code>, or <code>Specific Lanes</code>), <strong>Report Type</strong> (<code>RDS_SITE</code>, <code>LANE</code>, <code>EVENT</code>, <code>ADJUDICATION</code>, <code>ADJUDICATION_DETAILS</code>, or <code>VEHICLE_INCIDENT</code>), <strong>Export Format</strong> (<code>PDF</code>, <code>CSV</code>, <code>JSON</code>, or <code>Excel (.xlsx)</code>), and <strong>Time Range</strong>.</li>
-            <li>When generating a <strong>Vehicle Incident Report</strong>, enter a normalized <strong>Vehicle ID</strong> (or leave blank for all tagged vehicles), click <strong>Generate Report</strong>, and review the rendered PDF or inline tabular preview (<code>CSV</code>, <code>JSON</code>, <code>XLSX</code>) before downloading.</li>
+            <li>Enter a normalized <strong>Vehicle ID</strong>, click <strong>Generate Report</strong>, and review the populated inline tabular preview alongside <strong>Open</strong> and <strong>Download</strong> controls.</li>
         </ol>
         <div class="links">
           <a href="videos/16-national-statistics-and-reports.mp4" aria-label="MP4 Video — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">MP4 Video</a>
@@ -500,18 +500,18 @@
           <span class="badge">17</span>
           <div>
             <h2>Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 32.4s · 2777.8 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 38s · 2708.3 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Inspect optional per-lane Vehicle OCR configuration in SensorHub Admin, open an alarm in Event Details to review ISO 6346 container auto-fill, OCR suggestion chips, and Multi-Pass Vehicle History, compare overlaid radiation traces across passes, and record an adjudication.</p>
+        <p class="summary">Inspect per-lane Vehicle OCR configuration on an OCR-enabled lane in SensorHub Admin, open an alarm in Event Details to review ISO 6346 container auto-fill, OCR suggestion chips, and Multi-Pass Vehicle History, compare overlaid radiation traces across passes, and record an adjudication.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/17-vehicle-ocr-and-adjudication.mp4" type="video/mp4" />
           <track kind="captions" src="captions/17-vehicle-ocr-and-adjudication.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <strong>Sensors -&gt; &lt;Lane System&gt; -&gt; Vehicle OCR</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>) to review <strong>Enable Vehicle OCR</strong>, <strong>Alarms Only</strong>, <strong>Frames Per Clip</strong>, and confidence thresholds.</li>
+            <li>Open <strong>Sensors -&gt; Lane50 -&gt; Vehicle OCR</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>) to review <strong>Enable Vehicle OCR</strong>, <strong>Alarms Only</strong>, <strong>Frames Per Clip</strong>, and confidence thresholds.</li>
             <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>) in OSCAR Viewer for an alarm occupancy on an OCR-enabled lane to verify ISO 6346 <strong>Vehicle ID</strong> auto-fill, clickable OCR suggestion chips, and the <strong>Multi-Pass Vehicle History</strong> correlation banner.</li>
-            <li>Click <strong>COMPARE PASSES</strong> to inspect chronological confirmation re-scans or secondary spectroscopic transits, visual continuity crops, and on-demand overlaid gamma/neutron radiation traces.</li>
+            <li>Click <strong>COMPARE PASSES</strong> and <strong>LOAD RADIATION TRACES</strong> to inspect chronological confirmation re-scans, visual continuity crops, and overlaid gamma/neutron radiation waveforms.</li>
             <li>Select an <strong>Adjudicate</strong> disposition code and <strong>Secondary Inspection</strong> status, click <strong>Submit</strong>, and confirm in <strong>Confirm Adjudication Submission</strong> to append the signed audit decision.</li>
         </ol>
         <div class="links">
@@ -526,19 +526,19 @@
           <span class="badge">18</span>
           <div>
             <h2>Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 16.3s · 2027.5 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 26s · 2840.2 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Open Help (?) to browse the localized Operator Quick Guide &amp; Glossary, export the built-in 400-event browser Flight Recorder + rolling server logs into oscar-support-&lt;UTC&gt;.zip (or run oscar.sh / oscar.bat support-bundle offline), and inspect summary.json and redaction-report.json.</p>
+        <p class="summary">Open Help (?) to browse the localized Operator Quick Guide &amp; Glossary, export the built-in 400-event browser Flight Recorder + rolling server logs into oscar-support-&lt;UTC&gt;.zip, run oscar.sh / oscar.bat support-bundle offline, and inspect summary.json and redaction-report.json.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/18-operator-help-and-support-bundle.mp4" type="video/mp4" />
           <track kind="captions" src="captions/18-operator-help-and-support-bundle.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Click the <strong>Help (<code>?</code>)</strong> button in the OSCAR Viewer top navigation bar to open the localized <strong>OSCAR 3.11.0 Operator Quick Guide &amp; Glossary</strong> (<code>en</code>, <code>es</code>, <code>fr</code>, <code>el</code>).</li>
+            <li>Click the <strong>Help (<code>?</code>)</strong> button in the OSCAR Viewer top navigation bar to open the localized <strong>OSCAR 3.11.6 Operator Quick Guide &amp; Glossary</strong> (<code>en</code>, <code>es</code>, <code>fr</code>, <code>el</code>).</li>
             <li>Open <strong>Manual &amp; Video Guides</strong> and click <strong>Export Support Bundle</strong> to merge the 400-event browser Flight Recorder (<code>client/client-diagnostics.json</code>) with rolling server logs (<code>backend/oscar.log</code>) into <code>oscar-support-&lt;UTC&gt;.zip</code> (automatically falling back to <code>oscar-client-support-&lt;UTC&gt;.zip</code> if the server is offline).</li>
             <li>When containers are stopped or unreachable over HTTPS, run <code>sudo bash oscar.sh support-bundle</code> (Ubuntu) or <code>.\oscar.bat support-bundle</code> (Windows) on the host to capture <code>oscar-host-support-&lt;UTC&gt;.zip</code>.</li>
-            <li>Inspect <code>summary.json</code>, <code>client/client-diagnostics.json</code>, and <code>redaction-report.json</code> to review recent errors and confirm automatic <code>[REDACTED]</code> credential scrubbing.</li>
+            <li>Inspect <code>summary.json</code>, <code>client/client-diagnostics.json</code>, and <code>redaction-report.json</code> side-by-side to review recent events and confirm automatic <code>[REDACTED]</code> credential scrubbing.</li>
         </ol>
         <div class="links">
           <a href="videos/18-operator-help-and-support-bundle.mp4" aria-label="MP4 Video — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">MP4 Video</a>
@@ -552,19 +552,19 @@
           <span class="badge">19</span>
           <div>
             <h2>Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 24.4s · 2275 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 30.5s · 2672.1 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Open Users &amp; Access (/users) to enroll offline WebAuthn Passkeys (with local passwords independent of Octelium tunnel credentials), bulk-enroll a CSV user list with 1-tap setup QR codes, mint scoped Federation Service Tokens, and launch Servers (/servers?auth=bearer) in Federation Token mode.</p>
+        <p class="summary">Open Users &amp; Access (/users) to enroll offline WebAuthn Passkeys, bulk-enroll a CSV user list with 1-tap setup QR codes, mint scoped Federation Service Tokens, and launch Servers (/servers?auth=bearer) in Federation Token mode.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/19-viewer-users-passkeys-and-access.mp4" type="video/mp4" />
           <track kind="captions" src="captions/19-viewer-users-passkeys-and-access.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <strong>Users &amp; Access</strong> (<code>/users</code>) from the navigation drawer (or click your username in the top bar) to inspect your persistent session status (<code>Stays signed in until you click Log Out</code>), register offline <strong>Passkeys / YubiKeys</strong>, or update your local OSCAR password (which is completely separate from any Octelium Zero-Trust tunnel credentials).</li>
+            <li>Open <strong>Users &amp; Access</strong> (<code>/users</code>) from the navigation drawer to inspect persistent session status (<code>Stays signed in until you click Log Out</code>), register offline <strong>Passkeys / YubiKeys</strong>, or update your local OSCAR password (separate from Octelium tunnel credentials).</li>
             <li>Switch to <strong>Users &amp; Roles</strong> and click <strong>Bulk Enroll (CSV / Paste)</strong> to upload or paste a CSV/Excel user list (<code>username, role, display_name, views</code>), preview validated rows, and click <strong>Enroll User(s) &amp; Generate QR Pack</strong>.</li>
             <li>Copy or print the generated <strong>Startup Messages &amp; 1-Tap Setup QR Codes</strong> (<code>/login/enroll?token=oscar_inv_...</code>, including fallback workstation codes for phone-free facilities).</li>
-            <li>Open <strong>Federation Tokens</strong>, mint a least-privilege <code>oscar_fed_...</code> token, and click <strong>Open Servers Page (Federation Token Mode)</strong> (<code>/servers?auth=bearer</code>) on the NOC/HQ viewer to paste the token into <strong>Servers</strong> (<code>HTTPS</code>, port <code>443</code>).</li>
+            <li>Open <strong>Federation Tokens</strong>, mint a least-privilege <code>oscar_fed_...</code> token, inspect the minted token banner, and click <strong>Open Servers Page (Federation Token Mode)</strong> (<code>/servers?auth=bearer</code>) to paste the token into <strong>Servers</strong> (<code>HTTPS</code>, port <code>443</code>).</li>
         </ol>
         <div class="links">
           <a href="videos/19-viewer-users-passkeys-and-access.mp4" aria-label="MP4 Video — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">MP4 Video</a>
@@ -578,19 +578,19 @@
           <span class="badge">20</span>
           <div>
             <h2>Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 45.9s · 2617.3 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 52.5s · 2853.4 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Mint a scoped oscar_fed_* Federation Service Token on a remote portal, register the remote HTTPS node on the Central HQ Viewer, verify combined lane counts in National View, correlate transits across nodes in Events -&gt; Compare Passes, and export a unified multi-node Vehicle Incident Report (JSON &amp; PDF).</p>
+        <p class="summary">Mint a scoped oscar_fed_* Federation Service Token on West Gate Portal, register the remote HTTPS node on Central HQ Node, correlate cross-portal container transits in Events -&gt; Compare Passes, and export unified multi-node Vehicle Incident JSON and PDF reports.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/20-multi-node-federation-vehicle-search-and-report.mp4" type="video/mp4" />
           <track kind="captions" src="captions/20-multi-node-federation-vehicle-search-and-report.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>On the remote OSCAR portal, open <strong>Users &amp; Access (<code>/users</code>) -&gt; Federation Tokens</strong>, enter a descriptive node label, select <code>Viewer</code> or <code>Operator</code>, and click <strong>Create Federation Token</strong> to mint a revocable <code>oscar_fed_...</code> bearer credential.</li>
-            <li>On the primary/HQ OSCAR Viewer, open <strong>Servers (<code>/servers</code>)</strong>, enter the remote portal's <strong>Name</strong>, <strong>Address</strong>, and <strong>Port <code>443</code></strong> with <strong>Use a secure connection</strong> checked, select <strong>Federation Service Token</strong>, paste the <code>oscar_fed_...</code> token, and click <strong>Add Node</strong>.</li>
-            <li>Verify combined multi-node statistics in <strong>National View (<code>/national-view</code>)</strong>, then open <strong>Events (<code>/event-log</code>)</strong>, enter an ISO 6346 container ID or license plate, and click <strong>Compare Passes</strong> to inspect cross-node crossings, OCR crops, and UpSet co-occurrence.</li>
-            <li>Open <strong>Report Generator (<code>/report</code>)</strong>, choose <strong>Vehicle Incident Report</strong>, keep <strong>Include correlated passes from federated nodes</strong> checked, and generate consolidated <code>JSON</code>, <code>CSV</code>, <code>Excel (.xlsx)</code>, and <code>PDF</code> reports containing transits from all federated nodes.</li>
+            <li>On the remote OSCAR portal (<strong>West Gate Portal</strong>), open <strong>Users &amp; Access (<code>/users</code>) -&gt; Federation Tokens</strong>, enter a descriptive node label, select <code>Viewer</code> or <code>Operator</code>, and click <strong>Create Federation Token</strong> to mint a revocable <code>oscar_fed_...</code> bearer credential.</li>
+            <li>On <strong>Central HQ Node</strong>, open <strong>Servers (<code>/servers?auth=bearer</code>)</strong>, enter <strong>West Gate Portal</strong>, its HTTPS address, and port <code>443</code>, paste the <code>oscar_fed_...</code> token, and click <strong>Add Node</strong>.</li>
+            <li>Open <strong>Events (<code>/event-log</code>)</strong>, enter an ISO 6346 container ID, click <strong>SEARCH VEHICLE</strong>, and click <strong>COMPARE PASSES</strong> + <strong>LOAD RADIATION TRACES</strong> to inspect cross-node crossings, OCR crops, and waveforms from both portals.</li>
+            <li>Open <strong>Report Generator (<code>/report</code>)</strong>, choose <strong>Vehicle Incident Report</strong> with <strong>Include correlated passes from federated nodes</strong> checked, and generate consolidated <code>JSON</code> and <code>PDF</code> reports spanning both federated portals.</li>
         </ol>
         <div class="links">
           <a href="videos/20-multi-node-federation-vehicle-search-and-report.mp4" aria-label="MP4 Video — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">MP4 Video</a>
@@ -604,7 +604,7 @@
           <span class="badge">21</span>
           <div>
             <h2>Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 21.7s · 1354.4 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 30s · 1704.9 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
         <p class="summary">Create centralized operator and viewer accounts in Authentik, map roles via oscar-admins, oscar-operators, and oscar-viewers, issue single-use 1-tap SSO Passkey enrollment links, and permanently revoke access across Authentik, Octelium Zero-Trust Hub, and OSCAR /users.</p>
@@ -615,8 +615,7 @@
         <ol class="steps">
             <li>In <strong>Authentik Admin (<code>https://auth.hub.example.org/if/admin/</code>) -&gt; Directory -&gt; Users</strong>, click <strong>Create</strong>, enter the username, display name, and email address, and add the user to <code>oscar-admins</code>, <code>oscar-operators</code>, or <code>oscar-viewers</code>.</li>
             <li>Open the user's <strong>Overview</strong> tab and click <strong>Create Recovery Link</strong> to copy a single-use <code>oscar-passkey-onboarding</code> URL so the recipient registers their FIDO2 Passkey in one tap.</li>
-            <li>To completely offboard a user, select the account in <strong>Authentik -&gt; Directory -&gt; Users</strong>, click <strong>Delete</strong>, and confirm permanent deletion; <code>oscar-hub-sync.timer</code> automatically purges the <code>managed-by: authentik-sync</code> user from Octelium within 30 seconds (or immediately via <code>sudo ./oscar-hub.sh sync-users</code>).</li>
-            <li>Open <strong>Users &amp; Access -&gt; Users &amp; Roles (<code>/users</code>)</strong> on federated OSCAR nodes and delete any cached user profile row to clear active browser cookies.</li>
+            <li>To completely offboard a user, select the account in <strong>Authentik -&gt; Directory -&gt; Users</strong>, click <strong>Delete</strong>, and confirm permanent deletion (<code>oscar-hub-sync.timer</code> purges Octelium Zero-Trust access automatically), then verify <code>/users</code> on OSCAR nodes.</li>
         </ol>
         <div class="links">
           <a href="videos/21-federated-sso-passkey-onboarding-and-revocation.mp4" aria-label="MP4 Video — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">MP4 Video</a>
@@ -630,10 +629,10 @@
           <span class="badge">22</span>
           <div>
             <h2>Install, Configure &amp; Run the End-to-End OSCAR Regression Suite</h2>
-            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 23.9s · 823.5 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 23.5s · 1072.6 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Install ORNL/oscar-regression, run all 246 offline unit tests, configure .env capability gates and 4-layer safety interlocks, execute smoke, full, 3.11.0-release, restore-drill, and ui-endurance profiles across all 23 functional scenarios, and inspect summary.md and CSV evidence.</p>
+        <p class="summary">Install ORNL/oscar-regression, run all 246 offline unit tests, configure .env capability gates and 4-layer safety interlocks, execute smoke, full, release, restore-drill, and ui-endurance profiles across all 23 functional scenarios, and inspect summary.md and CSV evidence.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/22-regression-suite-setup-and-certification.mp4" type="video/mp4" />
           <track kind="captions" src="captions/22-regression-suite-setup-and-certification.vtt" srclang="en" label="English" default />
@@ -641,7 +640,7 @@
         <ol class="steps">
             <li>Clone [<code>ORNL/oscar-regression</code>](https://github.com/ORNL/oscar-regression), run <code>npm ci</code> and <code>npm run install:browser</code>, and verify TypeScript compilation and all 246 offline unit tests with <code>npm run check &amp;&amp; npm test</code>.</li>
             <li>Copy <code>.env.example</code> to <code>.env</code> (<code>chmod 600 .env</code>), set target, emulator, <code>RPM_LANE_MAPPING_ACK</code>, and <code>DISPOSABLE-STORAGE</code> safety interlocks, and run <code>./scripts/rebind-active-release.sh --apply --build-label &lt;label&gt;</code> after clean-directory upgrades.</li>
-            <li>Execute <code>npm run test:smoke</code> (<code>13</code> read-only scenarios), <code>npm run test:full</code> (<code>23</code> scenarios including faults, alarms, Vehicle OCR, EML, and <code>PARQUET_PRIMARY</code> retirement), <code>npm run test:3.11.0-release</code>, <code>npm run test:restore-drill</code>, <code>./scripts/run-ui-endurance.sh</code>, or <code>-- --scenario &lt;list&gt;</code>.</li>
+            <li>Execute <code>npm run test:smoke</code> (<code>13</code> read-only scenarios), <code>npm run test:full</code> (<code>23</code> scenarios including faults, alarms, Vehicle OCR, EML, Cargo UFF, Sandbox, WebRelay, and <code>PARQUET_PRIMARY</code> retirement), <code>npm run test:restore-drill</code>, or <code>./scripts/run-ui-endurance.sh</code>.</li>
             <li>Review <code>results/&lt;UTC-timestamp&gt;-&lt;runner&gt;/summary.md</code>, <code>functional-results.csv</code>, <code>performance.csv</code>, <code>storage-performance.csv</code>, <code>errors.csv</code>, and <code>evidence/</code> screenshots (<code>exit 0</code> requires <code>0</code> incorrect checks).</li>
         </ol>
         <div class="links">
@@ -656,7 +655,7 @@
           <span class="badge">23</span>
           <div>
             <h2>Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR</h2>
-            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 16.4s · 443.6 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 17.5s · 577.8 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
         <p class="summary">Prepare unattended 24/7 Windows 11 + WSL 2 hosts with oscar.bat prepare-host, attach outbound Zero-Trust tunnels, and size 100% Container &amp; License Plate OCR cleanly (6 OCR lanes on Windows 11 WSL 2 vs. 50 OCR lanes on Ubuntu Server 24.04 bare-metal) without 5 Hz RPM sample bunching.</p>
@@ -667,7 +666,7 @@
         <ol class="steps">
             <li>On Windows 11 x86-64 (Administrator PowerShell 5.1), run <code>.\oscar.bat host-check</code> and <code>.\oscar.bat prepare-host</code> to enable High Performance AC power, disable sleep/USB suspend, and write bounded <code>%USERPROFILE%\.wslconfig</code> limits.</li>
             <li>Attach firewalled portals outbound over TLS <code>443</code> via <code>.\oscar-remote-access.ps1 configure</code> (Windows) or <code>sudo bash oscar-remote-access.sh configure</code> (Ubuntu).</li>
-            <li>When enabling <code>100%</code> per-lane Container &amp; License Plate OCR (<code>ocrConfig.enabled = true</code>), size Windows 11 + WSL 2 deployments to <code>1–8</code> lanes (such as <code>6</code> lanes) so Hyper-V/WSL 2 network virtualization maintains smooth <code>200 ms</code> (<code>5 Hz</code>) radiation plots, and deploy <code>25–50</code> OCR-enabled lanes on Ubuntu Server 24.04 bare-metal.</li>
+            <li>When enabling <code>100%</code> per-lane Container &amp; License Plate OCR (<code>ocrConfig.enabled = true</code>), size Windows 11 + WSL 2 deployments to <code>1–8</code> lanes (<code>6</code> lanes validated) for smooth <code>200 ms</code> (<code>5 Hz</code>) radiation plots, and deploy <code>25–50</code> OCR lanes on Ubuntu Server 24.04 bare-metal.</li>
         </ol>
         <div class="links">
           <a href="videos/23-windows-wsl2-host-readiness-and-ocr-scaling.mp4" aria-label="MP4 Video — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">MP4 Video</a>
@@ -681,7 +680,7 @@
           <span class="badge">24</span>
           <div>
             <h2>Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 16.7s · 944.6 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 22s · 1166.7 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
         <p class="summary">Open USB Backups (/usb-backups) to inspect an attached NTFS external USB 3.x NVMe SSD, configure Continual vs. Occasional zero-downtime sync, run an on-demand incremental backup, download the off-site recovery key, and perform a 1-click Safely Eject USB Drive offload.</p>
@@ -691,9 +690,9 @@
         </video>
         <ol class="steps">
             <li>Open <strong>USB Backups (<code>/usb-backups</code>)</strong> from the left navigation drawer to inspect the attached external USB 3.x NVMe SSD (<code>ATTACHED &amp; ONLINE</code>), carrier capacity, PostgreSQL WAL LSN, and deduplicated Parquet/media pack counts.</li>
+            <li>Click <strong>Sync Incremental Snapshot Now</strong> to capture new sealed Parquet daily packs, retained media/OCR crops, and an encrypted PostgreSQL checkpoint, and click <strong>Download Off-Site Recovery Key (<code>backup-key.txt</code>)</strong> for off-site escrow.</li>
             <li>Under <strong>Backup Mode &amp; Sync Schedule</strong>, choose <strong>Continual Background Sync</strong> (<code>15 min</code> default, <code>0.0 s</code> portal outage with automatic USB reconnect catch-up) or <strong>Occasional / On-Demand Visit Sync</strong>, and click <strong>Save Mode &amp; Schedule</strong>.</li>
-            <li>Click <strong>Sync Incremental Snapshot Now</strong> to capture new sealed Parquet daily packs, retained media/OCR crops, and an encrypted PostgreSQL checkpoint, and click <strong>Download Off-Site Recovery Key (<code>backup-key.txt</code>)</strong> to store the decryption key in off-site escrow.</li>
-            <li>Before unplugging the drive for laptop offload (<code>COPY-TO-ANOTHER-DRIVE.bat</code> or <code>./copy-to-another-drive.sh</code>) or cold-iron recovery (<code>sudo bash oscar.sh usb-backup restore</code>), click <strong>Safely Eject USB Drive</strong> and wait for the green <strong>SAFE TO UNPLUG</strong> banner.</li>
+            <li>Before unplugging the drive for laptop offload (<code>COPY-TO-ANOTHER-DRIVE.bat</code> or <code>./copy-to-another-drive.sh</code>) or cold-iron recovery (<code>sudo bash oscar.sh usb-backup restore</code>), click <strong>Safely Eject USB Drive</strong> and confirm the green <strong>SAFE TO UNPLUG</strong> banner.</li>
         </ol>
         <div class="links">
           <a href="videos/24-continual-and-occasional-usb-backups.mp4" aria-label="MP4 Video — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">MP4 Video</a>
@@ -707,19 +706,19 @@
           <span class="badge">25</span>
           <div>
             <h2>Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps</h2>
-            <p class="meta">Track C — OSCAR Viewer Console Operations · 20.7s · 1473.9 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 27.5s · 1655.2 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Open Runtime Extensions (/extensions) to inspect OSCAR's shipped built-in defaults, hot-swap a Unicode regional OCR plate-rule pack and an offline PMTiles v3 (.pmtiles) regional basemap, render live portal lane markers offline on Map (/map), review Spectroscopy, Trusted CAs, Policy Packs &amp; EML, and restore shipped defaults.</p>
+        <p class="summary">Open Runtime Extensions (/extensions) to inspect OSCAR's shipped built-in defaults, hot-swap a Unicode regional OCR plate-rule pack and an offline PMTiles v3 (.pmtiles) regional basemap, render live portal lane markers over regional corridor roads/waterways on Map (/map), and restore shipped defaults.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/25-pluggable-runtime-extensions-and-pmtiles.mp4" type="video/mp4" />
           <track kind="captions" src="captions/25-pluggable-runtime-extensions-and-pmtiles.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <strong>Runtime Extensions (<code>/extensions</code>)</strong> from the left navigation drawer to review the six upgrade-safe extension domains (<code>OCR Models &amp; Engines</code>, <code>Offline Maps (.pmtiles)</code>, <code>Spectroscopy / Nuclide ID</code>, <code>Trusted CA Certificates</code>, <code>Adjudication Policy Packs</code>, and <code>EML Alarm Assessment</code>) persisted under <code>/var/lib/oscar/extensions/</code>.</li>
+            <li>Open <strong>Runtime Extensions (<code>/extensions</code>)</strong> from the left navigation drawer to review the upgrade-safe extension domains (<code>OCR Models &amp; Engines</code>, <code>Offline Maps (.pmtiles)</code>, <code>Spectroscopy / Nuclide ID</code>, <code>Trusted CA Certificates</code>, <code>Adjudication Policy Packs</code>, <code>EML Alarm Assessment</code>, and <code>Cargo NII (WCO UFF)</code>).</li>
             <li>On <strong>OCR Models &amp; Engines</strong>, upload a compliant <code>plate-rules.json</code> or ONNX/SPI <code>.zip</code> package to activate regional non-Latin or numeric plate rules (<code>CUSTOM OVERRIDE (UPGRADE-SAFE)</code>) while inheriting OSCAR's shipped PP-OCRv3 + PARSeq models.</li>
-            <li>Switch to <strong>Offline Maps (<code>.pmtiles</code>)</strong>, enter a layer display name, upload a Protomaps <strong>PMTiles v3</strong> regional archive (<code>pmtiles extract ...</code>), and open <strong>Map (<code>/map</code>)</strong> to view live portal lane markers over <code>Offline: &lt;Layer Name&gt;</code> via HTTP <code>206</code> byte-range serving with zero internet requests.</li>
-            <li>Browse <strong>Spectroscopy</strong>, <strong>Trusted CA Certificates</strong>, <strong>Adjudication Policy Packs</strong>, and <strong>EML Alarm Assessment</strong>, or click <strong>Reset to Shipped Default</strong> on any tab to revert immediately with zero portal downtime.</li>
+            <li>Switch to <strong>Offline Maps (<code>.pmtiles</code>)</strong>, enter <code>Regional Port Corridor</code>, upload a Protomaps <strong>PMTiles v3</strong> regional archive, and open <strong>Map (<code>/map</code>)</strong> to view all 50 portal lane markers over <code>Offline: Regional Port Corridor</code> via HTTP <code>206</code> byte-range serving.</li>
+            <li>Return to <strong>Runtime Extensions (<code>/extensions</code>)</strong> and click <strong>Reset to Shipped Default</strong> to revert immediately (<code>SHIPPED DEFAULT ACTIVE</code>) with zero portal downtime.</li>
         </ol>
         <div class="links">
           <a href="videos/25-pluggable-runtime-extensions-and-pmtiles.mp4" aria-label="MP4 Video — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">MP4 Video</a>
@@ -733,16 +732,16 @@
           <span class="badge">26</span>
           <div>
             <h2>Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets</h2>
-            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 15.6s · 516.8 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 16.5s · 712.3 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Unpack the self-contained Ubuntu 24.04 offline bundle on hotel/office Wi-Fi, identify physical NICs by carrier blink, pre-stage the portal's static Netplan YAML without dropping SSH, expand Ubuntu LVM root storage and initialize OSCAR offline, then cut over on-site and discover RPMs and RTSP cameras.</p>
+        <p class="summary">Unpack the self-contained Ubuntu 24.04 offline bundle on hotel/office Wi-Fi, identify physical NICs by carrier blink, pre-stage the portal's static Netplan YAML without dropping SSH, expand Ubuntu LVM root storage and initialize OSCAR 3.11.6 offline, then cut over on-site and discover RPMs and RTSP cameras.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4" type="video/mp4" />
           <track kind="captions" src="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Off-site (hotel or staging bench), extract <code>oscar-3.11.0-ubuntu-x86_64-offline-full.zip</code>, verify bundle checksums (<code>sudo bash verify-bundle.sh</code>), and run <code>sudo bash oscar.sh identify-nics --watch</code> while plugging a patch cord into the target NIC to confirm its Linux interface name (<code>enp2s0</code>).</li>
+            <li>Off-site (hotel or staging bench), extract <code>oscar-3.11.6-ubuntu-x86_64-offline-full.zip</code>, verify bundle checksums (<code>sudo bash verify-bundle.sh</code>), and run <code>sudo bash oscar.sh identify-nics --watch</code> while plugging a patch cord into the target NIC to confirm its Linux interface name (<code>enp2s0</code>).</li>
             <li>Stage the portal's static IPv4 configuration safely without touching active Wi-Fi/SSH via <code>sudo bash oscar.sh stage-site-network --interface enp2s0 --ip 198.51.100.10/24 --gateway 198.51.100.1</code>.</li>
             <li>Run <code>sudo bash oscar.sh prepare-host --offline --expand-lvm</code> to expand Ubuntu Server's default <code>100 GiB</code> LVM logical volume across the full NVMe disk and install offline <code>.deb</code> packages, then run <code>sudo bash oscar.sh init --offline</code> to load air-gapped container images and initialize credentials.</li>
             <li>On-site inside the air-gapped portal rack, apply the pre-staged static subnet with <code>sudo bash oscar.sh apply-site-network</code> and scan the sensor LAN with <code>sudo bash oscar.sh discover-devices --interface enp2s0</code> to verify Rapiscan RPM (<code>10001–10050</code>) and RTSP camera (<code>554</code>/<code>8554</code>) endpoints.</li>
@@ -759,19 +758,19 @@
           <span class="badge">27</span>
           <div>
             <h2>Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays</h2>
-            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 55.8s · 2686.5 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 36.5s · 3066 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Enable an optional SMBv2/SMBv3 Cargo Non-Intrusive Inspection share in Runtime Extensions, browse scanner packages with 1-character fuzzy ISO 6346 OCR correlation in Event Details, inspect progressive 16-bit dual-energy HEMD radiographs aligned with the RPM gamma/neutron waveform, and link evidence with zero archive download.</p>
+        <p class="summary">Enable an optional SMBv2/SMBv3 Cargo Non-Intrusive Inspection share in Runtime Extensions, browse scanner packages with 1-character fuzzy ISO 6346 OCR correlation in Event Details, inspect progressive 16-bit dual-energy HEMD radiographs aligned with the RPM gamma/neutron waveform, and stage a .uffref.json adjudication pointer.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/27-cargo-uff-smb-and-xray-inspection.mp4" type="video/mp4" />
           <track kind="captions" src="captions/27-cargo-uff-smb-and-xray-inspection.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Open <strong>Runtime Extensions</strong> (<code>/extensions</code>), select <strong>Cargo NII (WCO UFF)</strong>, configure the read-only SMBv2/SMBv3 share (<code>\\nas.port.local\oscar-uff</code>), click <strong>TEST CONNECTION</strong>, and click <strong>SAVE &amp; INDEX</strong> to index <code>.uff</code> packages in place.</li>
-            <li>In <strong>Event Details</strong> (<code>/event-details</code>), click <strong>Browse Cargo Share</strong> (<code>CargoUffSmbPickerDialog</code>) to search by container/plate (including <strong>OCR ±1</strong> 1-character fuzzy matching), scanner ID, customs HS code, or UFF UUID.</li>
-            <li>Click <strong>Inspect 16-Bit X-Ray</strong> (<code>CargoUffViewerDialog</code>) to view the instant progressive preview followed by full 16-bit Window/Level, <strong>HEMD (<code>Z_eff</code>)</strong> material coloration, <strong>High-Z</strong> <code>&lt;Annotation&gt;</code> bounding boxes, and the longitudinal RPM Gamma/Neutron alignment strip.</li>
-            <li>Click <strong>Link to Adjudication</strong> to attach a lightweight <code>.uffref.json</code> NAS pointer, stage the customs manifest PDF, and auto-populate embedded ANSI N42.42 spectra into <strong>WebID</strong> without copying multi-megabyte <code>.uff</code> archives.</li>
+            <li>Open <strong>Runtime Extensions</strong> (<code>/extensions</code>), select <strong>Cargo NII (WCO UFF)</strong>, configure the read-only SMBv2/SMBv3 share (<code>\\nas.port.local\oscar-uff</code>), click <strong>TEST CONNECTION</strong>, and click <strong>SAVE &amp; INDEX</strong> to index <code>160</code> <code>.uff</code> packages in place.</li>
+            <li>In <strong>Event Details</strong> (<code>/event-details</code>), click <strong>Browse Cargo UFF</strong> to search by ISO 6346 container ID (<code>EGHU3972694</code>, including <strong>OCR ±1</strong> 1-character fuzzy matching), scanner ID, customs HS code, or UFF UUID.</li>
+            <li>Click <strong>Inspect 16-Bit X-Ray</strong> to view full 16-bit Window/Level, <strong>HEMD (<code>Z_eff</code>)</strong> material coloration, <strong>High-Z</strong> <code>&lt;Annotation&gt;</code> bounding boxes, and the synchronized RPM Gamma/Neutron waveform alignment strip.</li>
+            <li>Click <strong>Link to Adjudication</strong> to stage a lightweight <code>.uffref.json</code> NAS pointer, manifest PDF, and embedded ANSI N42.42 spectrum in <strong>Evidence Collection</strong> without copying multi-megabyte <code>.uff</code> archives.</li>
         </ol>
         <div class="links">
           <a href="videos/27-cargo-uff-smb-and-xray-inspection.mp4" aria-label="MP4 Video — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">MP4 Video</a>
@@ -785,19 +784,19 @@
           <span class="badge">28</span>
           <div>
             <h2>Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy</h2>
-            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 21.6s · 966.3 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 31s · 1757.8 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Launch the isolated ephemeral Training Sandbox (:8444) with zero production database or Parquet writes, inject live Rapiscan RPM alarms and NORM/fault scenarios from the Training Coach, practice SensorHub Admin lane setup in Split-Pane mode, and export a watermarked PDF Training Completion Record.</p>
+        <p class="summary">Launch the isolated ephemeral Training Sandbox (:8444) with zero production database or Parquet writes, inject live Rapiscan RPM alarms and NORM/fault scenarios until Lab 1.3 turns Auto-Verified, inspect Services -&gt; OSCAR Service inside Split-Pane SensorHub Admin, and export a watermarked PDF Training Completion Record.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/28-hands-on-training-sandbox.mp4" type="video/mp4" />
           <track kind="captions" src="captions/28-hands-on-training-sandbox.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
             <li>Start the isolated sandbox (<code>sudo bash oscar.sh sandbox start</code> or <code>Help (?) -&gt; Launch Hands-On Training Sandbox</code>), open <code>:8444</code>, and confirm the single-row <strong>TRAINING SANDBOX</strong> badge and <strong>Training Coach</strong> dock.</li>
-            <li>Select <strong>Track 1 — Operator (<code>Lab 1.3</code>)</strong> on <code>/event-log</code>, click <strong>Inject Distributed NORM (Code 9999)</strong>, and watch the live loopback Rapiscan + EML pipeline auto-verify the lab outcome.</li>
-            <li>Switch to <strong>Track 3 — Administrator</strong> and click <strong>Open Split-Pane SensorHub Admin</strong> to configure lanes against loopback <code>127.0.0.1:10099</code> and <code>rtsp://127.0.0.1:8554/tutorial-cam</code> (or import <code>tutorial-1-lane.csv</code>) beside the Guided Coach.</li>
-            <li>Enter the trainee name to download a watermarked 1-page PDF <strong>Training Completion Record</strong>, then run <code>oscar.sh sandbox stop</code> (<code>oscar.bat sandbox stop</code>) to flush all disposable sandbox volumes in under 2 seconds.</li>
+            <li>Select <strong>Track 1 — Operator (<code>Lab 1.3</code>)</strong> on <code>/event-log</code>, click <strong>Inject Distributed NORM (Code 9999)</strong>, and wait for the live loopback Rapiscan + EML pipeline to turn <strong>Lab 1.3</strong> green <strong><code>Auto-Verified</code></strong>.</li>
+            <li>Switch to <strong>Track 3 — Administrator</strong>, click <strong>Open Split-Pane SensorHub Admin</strong>, and expand <strong>Services -&gt; OSCAR Service</strong> inside the embedded admin pane beside the Guided Coach.</li>
+            <li>Enter the trainee name to download a watermarked 1-page PDF <strong>Training Completion Record</strong>, then run <code>oscar.sh sandbox stop</code> (<code>oscar.bat sandbox stop</code>) when finished to flush disposable sandbox volumes.</li>
         </ol>
         <div class="links">
           <a href="videos/28-hands-on-training-sandbox.mp4" aria-label="MP4 Video — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">MP4 Video</a>
@@ -806,24 +805,24 @@
         </div>
       </article>
 
-      <article class="card" id="29-lane-webrelay-lights-and-sound" data-track="Track C — Operator &amp; Supervisor Console Workflows">
+      <article class="card" id="29-lane-webrelay-lights-and-sound" data-track="Track C — OSCAR Viewer Console Operations">
         <div class="card-head">
           <span class="badge">29</span>
           <div>
             <h2>Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)</h2>
-            <p class="meta">Track C — Operator &amp; Supervisor Console Workflows · 20.5s · 1183.8 KiB · 1080p NVENC H.264 VFR</p>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 32.5s · 2300.2 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Configure per-lane ControlByWeb WebRelay-Quad HTTP/XML control in Status of Health (/health) or Lane View (/lane-view), inspect live R1-R4 coil telemetry and Code 9999 / Code 9998 suppression counts, fire timed commissioning pulses on Gamma Red + Siren (R3) and Neutron Blue (R4), and open the anytime Guided Walkthrough refresher.</p>
+        <p class="summary">Configure per-lane ControlByWeb WebRelay-Quad HTTP/XML control in Status of Health (/health), inspect live R1-R4 coil telemetry and Code 9999 / Code 9998 suppression counts, fire timed commissioning pulses on Gamma Red + Siren (R3) and Neutron Blue (R4), and open the anytime Guided Walkthrough refresher.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/29-lane-webrelay-lights-and-sound.mp4" type="video/mp4" />
           <track kind="captions" src="captions/29-lane-webrelay-lights-and-sound.vtt" srclang="en" label="English" default />
         </video>
         <ol class="steps">
-            <li>Sign in as an <strong>Administrator</strong>, open <strong>Status of Health (<code>/health</code>)</strong> or <strong>Lane View (<code>/lane-view</code>)</strong>, and click <strong>Lights &amp; Sound</strong> on the target lane row to open the native <code>&lt;dialog&gt;</code> control modal.</li>
+            <li>Sign in as an <strong>Administrator</strong>, open <strong>Status of Health (<code>/health</code>)</strong>, and click <strong>Lights &amp; Sound</strong> on <strong>Lane01</strong> to open the native <code>&lt;dialog&gt;</code> WebRelay-Quad control modal.</li>
             <li>Enter the lane's ControlByWeb <code>WebRelay-Quad</code> IPv4/hostname (<code>198.51.100.21</code>), port (<code>80</code>), pulse duration (<code>5 s</code>), and mode (<code>AUTO</code>), click <strong>Test Connection</strong>, and click <strong>Save &amp; Apply to Lane</strong>.</li>
-            <li>Verify <code>R1=1</code> and <code>R2=1</code> intercept coils arm in <code>AUTO</code> mode (suppressing physical beacon/siren triggers on <code>Code 9999: EML Non-Threat</code> and optional <code>Code 9998</code>), then click <strong>Pulse Gamma Light + Sound (<code>R3</code>)</strong> and <strong>Pulse Neutron Blue (<code>R4</code>)</strong> to confirm timed commissioning outputs.</li>
-            <li>Click <strong>Hardware Pass-Through (<code>0,0,0,0</code>)</strong> or <strong>Mute Outputs (<code>1,1,0,0</code>)</strong> during maintenance, or open <strong>Guided Walkthrough</strong> in the top bar anytime for a safe read-only refresher and <code>:8444</code> auto-shutdown countdown.</li>
+            <li>Verify <code>R1=ARMED</code> and <code>R2=ARMED</code> intercept coils in <code>AUTO</code> mode, fire timed commissioning pulses on <strong>Gamma Light + Sound (<code>R3=ACTIVE</code>)</strong> and <strong>Neutron Blue (<code>R4=ACTIVE</code>)</strong>, and click <strong>Silence</strong> to re-arm <code>R1=ARMED, R2=ARMED</code>.</li>
+            <li>Close the dialog, verify <strong>WebRelay (AUTO) · Online</strong> on <code>/health</code>, and open <strong>Guided Walkthrough</strong> in the top bar anytime for a safe read-only refresher and <code>:8444</code> auto-shutdown details.</li>
         </ol>
         <div class="links">
           <a href="videos/29-lane-webrelay-lights-and-sound.mp4" aria-label="MP4 Video — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">MP4 Video</a>

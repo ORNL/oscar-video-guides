@@ -1,15 +1,15 @@
 1
-00:00:00,040 --> 00:00:02,134
-OSCAR's built-in Flight Recorder runs automatically on every node; click Help (?) in the top bar to open the Operator Quick Guide & Diagnostics.
+00:00:00,040 --> 00:00:06,621
+Click Help (?) in the top bar and browse Console Pages, Reports & Exports, and Key Terms Explained.
 
 2
-00:00:02,174 --> 00:00:05,056
-Click Export Support Bundle to merge the 400-event browser Flight Recorder with rolling server logs into oscar-support-<UTC>.zip (or client-only if offline).
+00:00:06,661 --> 00:00:13,626
+Open Manual & Video Guides and click Export Support Bundle to download secret-redacted client + server diagnostics.
 
 3
-00:00:05,096 --> 00:00:10,585
-When containers are stopped or unreachable, run sudo bash oscar.sh support-bundle or oscar.bat support-bundle on the host to capture oscar-host-support-<UTC>.zip.
+00:00:13,666 --> 00:00:19,208
+When containers are stopped or unreachable, run sudo bash oscar.sh support-bundle or oscar.bat support-bundle on the host.
 
 4
-00:00:10,625 --> 00:00:16,325
-Inspect summary.json, client/client-diagnostics.json, and redaction-report.json to review flight-recorder events with automatic [REDACTED] credential scrubbing.
+00:00:19,248 --> 00:00:25,117
+Inspect summary.json, client/client-diagnostics.json, and redaction-report.json side-by-side to verify automatic [REDACTED] credential scrubbing.

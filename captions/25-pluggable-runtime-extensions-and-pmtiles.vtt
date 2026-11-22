@@ -1,17 +1,17 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:04.056
-Open Runtime Extensions (/extensions) to inspect shipped OCR defaults, then upload a Unicode regional plate-rules.json override.
+00:00:00.040 --> 00:00:06.568
+Open Runtime Extensions (/extensions) to inspect shipped OCR defaults, upload a Unicode regional plate-rules.json override, and verify CUSTOM OVERRIDE.
 
 2
-00:00:04.096 --> 00:00:09.673
+00:00:06.608 --> 00:00:13.594
 Switch to Offline Maps (.pmtiles), name the layer Regional Port Corridor, and upload a PMTiles v3 regional archive.
 
 3
-00:00:09.713 --> 00:00:15.686
-Review Spectroscopy and Trusted CA tabs, then open Map (/map) to verify Offline: Regional Port Corridor with live portal lane markers.
+00:00:13.634 --> 00:00:19.871
+Open Map (/map) and select Offline: Regional Port Corridor to render regional corridor roads, waterways, and all 50 portal lane markers offline.
 
 4
-00:00:15.726 --> 00:00:20.652
-Return to Runtime Extensions (/extensions) and click Reset to Shipped Default to restore OSCAR's built-in configuration.
+00:00:19.911 --> 00:00:26.619
+Return to Runtime Extensions (/extensions) and click Reset to Shipped Default to restore SHIPPED DEFAULT ACTIVE.

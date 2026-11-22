@@ -1,15 +1,15 @@
 1
-00:00:00,040 --> 00:00:13,067
+00:00:00,040 --> 00:00:10,501
 Search Event Log by normalized Vehicle ID and open Multi-Pass Vehicle Comparison.
 
 2
-00:00:13,107 --> 00:00:19,611
-Expand Alarm Category Co-Occurrence (UpSet) and filter by a populated main category.
+00:00:10,541 --> 00:00:20,943
+Expand Alarm Category Co-Occurrence (UpSet) and filter Event Log by a populated main category.
 
 3
-00:00:19,651 --> 00:00:23,011
-Click ADVANCED FILTERS on Event Log to open server-side lane, date, Vehicle ID, and adjudication filters.
+00:00:20,983 --> 00:00:27,806
+Click ADVANCED FILTERS and ADD CONDITION to configure server-side lane, date, Vehicle ID, and adjudication filters.
 
 4
-00:00:23,051 --> 00:00:26,956
-Enter an occupancy identifier in Event UUID and click FIND EVENT for direct lookup.
+00:00:27,846 --> 00:00:34,867
+Enter an occupancy identifier in Event UUID and click FIND EVENT to open the exact Event Details record.

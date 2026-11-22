@@ -1,13 +1,13 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:03.600
+00:00:00.040 --> 00:00:04.683
 Expand Services in SensorHub Admin and select OSCAR Service.
 
 2
-00:00:03.640 --> 00:00:07.635
+00:00:04.723 --> 00:00:13.381
 Inspect Video Retention Config and Storage Pressure Retention Config defaults.
 
 3
-00:00:07.675 --> 00:00:12.020
-Open Custom Disposition Codes, then click Apply Changes and Save.
+00:00:13.421 --> 00:00:20.581
+Open Custom Disposition Codes, add a custom disposition entry, and click Apply Changes and Save.

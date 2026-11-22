@@ -1,11 +1,11 @@
 1
-00:00:02,507 --> 00:00:13,327
-In Authentik Directory -> Users, create an operator account with an email address and add it to oscar-operators, oscar-admins, or oscar-viewers.
+00:00:00,040 --> 00:00:12,218
+In Authentik Directory -> Users, create demo.operator with an email address and assign oscar-operators.
 
 2
-00:00:13,367 --> 00:00:15,833
-Click Create recovery link on the user Overview tab to generate a single-use 1-tap SSO Passkey enrollment URL.
+00:00:12,258 --> 00:00:19,547
+Open the user Overview tab and click Create recovery link to generate a single-use 1-tap SSO Passkey enrollment URL.
 
 3
-00:00:15,873 --> 00:00:21,714
-To offboard a user completely, delete the account in Authentik; oscar-hub-sync automatically revokes Octelium access, then delete any cached /users row.
+00:00:19,587 --> 00:00:29,447
+Delete demo.operator in Authentik to trigger oscar-hub-sync Zero-Trust revocation, then confirm clean Users & Roles (/users) on OSCAR.

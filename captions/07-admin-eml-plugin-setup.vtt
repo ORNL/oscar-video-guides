@@ -1,13 +1,13 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:03.440
+00:00:00.040 --> 00:00:04.473
 Inspect EML Plugin Path and Upload control in Services -> OSCAR Service.
 
 2
-00:00:03.480 --> 00:00:06.842
-Open the localized README tab in OSCAR Service to review EML setup documentation.
+00:00:04.513 --> 00:00:08.819
+Open the localized README tab and scroll to the EML and Code 9999 auto-adjudication section.
 
 3
-00:00:06.882 --> 00:00:11.817
-Switch to Sensors -> Lane System -> Lane Options to confirm per-lane EML configuration.
+00:00:08.859 --> 00:00:16.131
+Switch to Sensors -> Lane01 -> Lane Options to confirm EML Configuration and Enable EML Analysis.
