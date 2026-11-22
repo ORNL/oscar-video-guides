@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OSCAR 3.11.3 How-To Video Guides</title>
+  <title>OSCAR 3.11.4 How-To Video Guides</title>
   <style>
     :root {
       color-scheme: dark;
@@ -81,7 +81,7 @@
 </head>
 <body>
   <header>
-    <h1>OSCAR 3.11.3 How-To Video Guides</h1>
+    <h1>OSCAR 3.11.4 How-To Video Guides</h1>
     <p>Concise, zero-filler 1080p workflow screen recordings encoded via NVIDIA RTX 5060 Ti hardware NVENC H.264 (NV12 4:2:0, 10s GOP 300, differential 30 FPS peak VFR) with synchronized closed captions and sequential step references.</p>
   </header>
   <main>
@@ -803,6 +803,32 @@
           <a href="videos/28-hands-on-training-sandbox.mp4" aria-label="MP4 Video — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">MP4 Video</a>
           <a href="captions/28-hands-on-training-sandbox.vtt" aria-label="WebVTT (.vtt) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">WebVTT (.vtt)</a>
           <a href="captions/28-hands-on-training-sandbox.srt" aria-label="SubRip (.srt) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="29-lane-webrelay-lights-and-sound" data-track="Track C — Operator &amp; Supervisor Console Workflows">
+        <div class="card-head">
+          <span class="badge">29</span>
+          <div>
+            <h2>Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)</h2>
+            <p class="meta">Track C — Operator &amp; Supervisor Console Workflows · 20.5s · 1183.8 KiB · 1080p NVENC H.264 VFR</p>
+          </div>
+        </div>
+        <p class="summary">Configure per-lane ControlByWeb WebRelay-Quad HTTP/XML control in Status of Health (/health) or Lane View (/lane-view), inspect live R1-R4 coil telemetry and Code 9999 / Code 9998 suppression counts, fire timed commissioning pulses on Gamma Red + Siren (R3) and Neutron Blue (R4), and open the anytime Guided Walkthrough refresher.</p>
+        <video controls width="1920" height="1080" preload="metadata" playsinline>
+          <source src="videos/29-lane-webrelay-lights-and-sound.mp4" type="video/mp4" />
+          <track kind="captions" src="captions/29-lane-webrelay-lights-and-sound.vtt" srclang="en" label="English" default />
+        </video>
+        <ol class="steps">
+            <li>Sign in as an <strong>Administrator</strong>, open <strong>Status of Health (<code>/health</code>)</strong> or <strong>Lane View (<code>/lane-view</code>)</strong>, and click <strong>Lights &amp; Sound</strong> on the target lane row to open the native <code>&lt;dialog&gt;</code> control modal.</li>
+            <li>Enter the lane's ControlByWeb <code>WebRelay-Quad</code> IPv4/hostname (<code>198.51.100.21</code>), port (<code>80</code>), pulse duration (<code>5 s</code>), and mode (<code>AUTO</code>), click <strong>Test Connection</strong>, and click <strong>Save &amp; Apply to Lane</strong>.</li>
+            <li>Verify <code>R1=1</code> and <code>R2=1</code> intercept coils arm in <code>AUTO</code> mode (suppressing physical beacon/siren triggers on <code>Code 9999: EML Non-Threat</code> and optional <code>Code 9998</code>), then click <strong>Pulse Gamma Light + Sound (<code>R3</code>)</strong> and <strong>Pulse Neutron Blue (<code>R4</code>)</strong> to confirm timed commissioning outputs.</li>
+            <li>Click <strong>Hardware Pass-Through (<code>0,0,0,0</code>)</strong> or <strong>Mute Outputs (<code>1,1,0,0</code>)</strong> during maintenance, or open <strong>Guided Walkthrough</strong> in the top bar anytime for a safe read-only refresher and <code>:8444</code> auto-shutdown countdown.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/29-lane-webrelay-lights-and-sound.mp4" aria-label="MP4 Video — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">MP4 Video</a>
+          <a href="captions/29-lane-webrelay-lights-and-sound.vtt" aria-label="WebVTT (.vtt) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">WebVTT (.vtt)</a>
+          <a href="captions/29-lane-webrelay-lights-and-sound.srt" aria-label="SubRip (.srt) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">SubRip (.srt)</a>
         </div>
       </article>
   </main>

@@ -1,0 +1,15 @@
+1
+00:00:00,040 --> 00:00:03,441
+Open Status of Health (/health) as an Administrator and click Lights & Sound on Lane01 to open the WebRelay-Quad control dialog.
+
+2
+00:00:03,481 --> 00:00:10,030
+Test ControlByWeb HTTP/XML connectivity (198.51.100.21), enable AUTO EML gatekeeping, and save to arm R1=1 and R2=1 intercept coils.
+
+3
+00:00:10,070 --> 00:00:14,740
+Fire timed commissioning pulses on Gamma Red Light + Siren (R3) and Neutron Blue Light (R4), then re-arm AUTO intercept.
+
+4
+00:00:14,780 --> 00:00:20,527
+Confirm WebRelay (AUTO) · Online on Status of Health, and open Guided Walkthrough anytime for a safe read-only refresher and :8444 auto-shutdown info.

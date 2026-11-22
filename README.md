@@ -1,6 +1,6 @@
 # OSCAR How-To Video Guides
 
-Concise, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.3** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
+Concise, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.4** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
 
 ## Encoding & Playback Profile
 
@@ -47,6 +47,7 @@ Concise, single-task `1920x1080` screen-recording guides covering every major wo
 | 26 | [Stage Ubuntu 24.04 Off-Site & Cut Over to Air-Gapped Portal Subnets](#26-ubuntu-hotel-staging-and-airgapped-cutover) ([MP4](videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4)) | Track D | 15.6s | 516.8 KiB | [VTT](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt) · [SRT](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.srt) |
 | 27 | [Connect Cargo NII (WCO UFF 2.0 & 3.0.0) SMB Shares & Inspect 16-Bit X-Rays](#27-cargo-uff-smb-and-xray-inspection) ([MP4](videos/27-cargo-uff-smb-and-xray-inspection.mp4)) | Track D | 55.8s | 2686.5 KiB | [VTT](captions/27-cargo-uff-smb-and-xray-inspection.vtt) · [SRT](captions/27-cargo-uff-smb-and-xray-inspection.srt) |
 | 28 | [Practice Safely in the Ephemeral Hands-On Training Sandbox & Guided Academy](#28-hands-on-training-sandbox) ([MP4](videos/28-hands-on-training-sandbox.mp4)) | Track D | 21.6s | 966.3 KiB | [VTT](captions/28-hands-on-training-sandbox.vtt) · [SRT](captions/28-hands-on-training-sandbox.srt) |
+| 29 | [Configure & Control Per-Lane Physical RPM Lights & Sound (WebRelay-Quad)](#29-lane-webrelay-lights-and-sound) ([MP4](videos/29-lane-webrelay-lights-and-sound.mp4)) | Track C | 20.5s | 1183.8 KiB | [VTT](captions/29-lane-webrelay-lights-and-sound.vtt) · [SRT](captions/29-lane-webrelay-lights-and-sound.srt) |
 
 ## Track A — CLI Deployment, Upgrades & Storage Lifecycle
 
@@ -384,3 +385,17 @@ Launch the isolated ephemeral Training Sandbox (:8444) with zero production data
 2. Select **Track 1 — Operator (`Lab 1.3`)** on `/event-log`, click **Inject Distributed NORM (Code 9999)**, and watch the live loopback Rapiscan + EML pipeline auto-verify the lab outcome.
 3. Switch to **Track 3 — Administrator** and click **Open Split-Pane SensorHub Admin** to configure lanes against loopback `127.0.0.1:10099` and `rtsp://127.0.0.1:8554/tutorial-cam` (or import `tutorial-1-lane.csv`) beside the Guided Coach.
 4. Enter the trainee name to download a watermarked 1-page PDF **Training Completion Record**, then run `oscar.sh sandbox stop` (`oscar.bat sandbox stop`) to flush all disposable sandbox volumes in under 2 seconds.
+
+## Track C — Operator & Supervisor Console Workflows
+
+<a id="29-lane-webrelay-lights-and-sound"></a>
+### 29. Configure & Control Per-Lane Physical RPM Lights & Sound (WebRelay-Quad)
+
+Configure per-lane ControlByWeb WebRelay-Quad HTTP/XML control in Status of Health (/health) or Lane View (/lane-view), inspect live R1-R4 coil telemetry and Code 9999 / Code 9998 suppression counts, fire timed commissioning pulses on Gamma Red + Siren (R3) and Neutron Blue (R4), and open the anytime Guided Walkthrough refresher.
+
+- **Video:** [Watch `29-lane-webrelay-lights-and-sound.mp4` (20.5s, 1183.8 KiB)](videos/29-lane-webrelay-lights-and-sound.mp4) · [WebVTT Captions](captions/29-lane-webrelay-lights-and-sound.vtt) · [SRT Captions](captions/29-lane-webrelay-lights-and-sound.srt)
+
+1. Sign in as an **Administrator**, open **Status of Health (`/health`)** or **Lane View (`/lane-view`)**, and click **Lights & Sound** on the target lane row to open the native `<dialog>` control modal.
+2. Enter the lane's ControlByWeb `WebRelay-Quad` IPv4/hostname (`198.51.100.21`), port (`80`), pulse duration (`5 s`), and mode (`AUTO`), click **Test Connection**, and click **Save & Apply to Lane**.
+3. Verify `R1=1` and `R2=1` intercept coils arm in `AUTO` mode (suppressing physical beacon/siren triggers on `Code 9999: EML Non-Threat` and optional `Code 9998`), then click **Pulse Gamma Light + Sound (`R3`)** and **Pulse Neutron Blue (`R4`)** to confirm timed commissioning outputs.
+4. Click **Hardware Pass-Through (`0,0,0,0`)** or **Mute Outputs (`1,1,0,0`)** during maintenance, or open **Guided Walkthrough** in the top bar anytime for a safe read-only refresher and `:8444` auto-shutdown countdown.
