@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:05.465
+00:00:00.040 --> 00:00:12.561
 Clonez ORNL/oscar-regression, exécutez npm ci et npm run install:browser,
 puis vérifiez les 246 tests unitaires via npm run check et npm test.
 
 2
-00:00:05.505 --> 00:00:11.107
+00:00:12.601 --> 00:00:22.323
 Configurez .env avec les verrous cible, émulateur, voies et
 DISPOSABLE-STORAGE, et exécutez rebind-active-release.sh après mise à niveau.
 
 3
-00:00:11.147 --> 00:00:16.747
+00:00:22.363 --> 00:00:32.082
 Lancez smoke, full, restore-drill ou ui-endurance, ou passez
 --scenario pour cibler des modules précis de la suite.
 
 4
-00:00:16.787 --> 00:00:22.582
+00:00:32.122 --> 00:00:41.851
 Inspectez results/<run-id>/summary.md, functional-results.csv,
 performance.csv et evidence/ ; le code 0 exige zéro échec.

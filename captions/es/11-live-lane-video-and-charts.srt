@@ -1,14 +1,14 @@
 1
-00:00:00,040 --> 00:00:08,555
+00:00:00,040 --> 00:00:21,532
 Seleccione Lane01 en el Panel para abrir la vista en vivo
 del carril (/lane-view) y recibir telemetría continua.
 
 2
-00:00:08,595 --> 00:00:18,342
+00:00:21,572 --> 00:00:53,012
 Supervise el vídeo en vivo junto a las curvas TOTALS y
 revise las pestañas GAMMA DETECTORS y NEUTRON DETECTORS.
 
 3
-00:00:18,382 --> 00:00:23,105
+00:00:53,052 --> 00:01:01,413
 Revise la tabla de Ocupación del carril debajo de los
 gráficos en vivo para consultar eventos recientes.

@@ -1,19 +1,19 @@
 1
-00:00:00,040 --> 00:00:07,073
+00:00:00,040 --> 00:00:09,800
 Sur West Gate Portal, ouvrez Utilisateurs et accès -> Jetons de
 fédération et créez un jeton de service oscar_fed_ restreint.
 
 2
-00:00:07,113 --> 00:00:16,325
+00:00:09,840 --> 00:00:20,403
 Sur Central HQ Node, ouvrez Serveurs en mode Jeton de fédération
 (HTTPS 443), collez le jeton et connectez West Gate Portal.
 
 3
-00:00:16,365 --> 00:00:31,044
+00:00:20,443 --> 00:00:55,563
 Recherchez le conteneur EMCU 141779-0 dans Événements et cliquez sur Comparer
 les passages pour voir transits, extraits OCR et courbes des deux portails.
 
 4
-00:00:31,084 --> 00:00:51,907
+00:00:55,603 --> 00:01:29,333
 Dans Générateur de rapports, cochez Inclure les passages corrélés
 des nœuds fédérés et générez les rapports JSON et PDF unifiés.

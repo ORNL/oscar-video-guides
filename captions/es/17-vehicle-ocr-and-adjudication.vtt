@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:06.704
+00:00:00.040 --> 00:00:09.382
 Seleccione un carril con OCR (Lane45–Lane50) en SensorHub
 Admin y abra Vehicle OCR para verificar Enable Vehicle OCR.
 
 2
-00:00:06.744 --> 00:00:16.077
+00:00:09.422 --> 00:00:19.983
 Abra Detalles del evento en OSCAR Viewer para revisar
 sugerencias OCR ISO 6346, autocompletado e Historial multipasada.
 
 3
-00:00:16.117 --> 00:00:25.216
+00:00:20.023 --> 00:00:31.946
 Pulse COMPARE PASSES y LOAD RADIATION TRACES para inspeccionar
 pasadas entre carriles, recortes OCR y curvas superpuestas.
 
 4
-00:00:25.256 --> 00:00:37.517
+00:00:31.986 --> 00:00:47.634
 Seleccione el código de Adjudicación y el estado de
 Inspección secundaria, y confirme el envío inmutable.

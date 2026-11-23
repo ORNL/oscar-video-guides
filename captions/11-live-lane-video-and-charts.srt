@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:08,555
+00:00:00,040 --> 00:00:21,532
 Select Lane01 on the Dashboard to open live Lane Details (/lane-view) and stream multi-second telemetry.
 
 2
-00:00:08,595 --> 00:00:18,342
+00:00:21,572 --> 00:00:53,012
 Monitor live camera video alongside multi-point TOTALS waveforms, then inspect GAMMA DETECTORS and NEUTRON DETECTORS.
 
 3
-00:00:18,382 --> 00:00:23,105
+00:00:53,052 --> 00:01:01,413
 Inspect the lane occupancy DataGrid below the live charts to review recent lane events.

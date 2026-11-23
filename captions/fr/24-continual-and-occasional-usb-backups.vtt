@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:05.237
+00:00:00.040 --> 00:00:11.241
 Ouvrez Sauvegardes USB (/usb-backups) pour inspecter le SSD USB 3.x
 NVMe NTFS connecté, sa capacité, le WAL LSN et les packs dédupliqués.
 
 2
-00:00:05.277 --> 00:00:09.983
+00:00:11.281 --> 00:00:21.561
 Cliquez sur Sync Incremental Snapshot Now pour une sauvegarde delta sans
 coupure (0,0 s) et téléchargez backup-key.txt pour garde hors site.
 
 3
-00:00:10.023 --> 00:00:15.473
+00:00:21.601 --> 00:00:32.273
 Configurez Continual Background Sync (rattrapage automatique à la
 reconnexion) ou Occasional / On-Demand Visit Sync et enregistrez.
 
 4
-00:00:15.513 --> 00:00:21.382
+00:00:32.313 --> 00:00:42.594
 Cliquez sur Safely Eject USB Drive et confirmez le
 bandeau vert SAFE TO UNPLUG avant de débrancher le disque.

@@ -1,14 +1,14 @@
 1
-00:00:00,040 --> 00:00:04,473
+00:00:00,040 --> 00:00:08,442
 Inspectez EML Plugin Path et le bouton
 Upload dans Services -> OSCAR Service.
 
 2
-00:00:04,513 --> 00:00:08,819
+00:00:08,482 --> 00:00:16,942
 Ouvrez l’onglet README traduit et accédez à la
 section d’auto-Adjudication EML et Code 9999.
 
 3
-00:00:08,859 --> 00:00:16,131
+00:00:16,982 --> 00:00:26,399
 Passez à Sensors -> Lane01 -> Lane Options pour
 vérifier EML Configuration et Enable EML Analysis.

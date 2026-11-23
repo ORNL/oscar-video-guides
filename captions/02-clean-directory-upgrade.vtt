@@ -1,13 +1,13 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:04.030
-Extract oscar-3.11.6.zip into a clean sibling directory without overlaying old files.
+00:00:00.040 --> 00:00:09.241
+Extract oscar-3.11.8.zip into a clean sibling directory without overlaying old files.
 
 2
-00:00:04.070 --> 00:00:08.903
-Copy only .env, secrets/, and tls/ from the active deployment into next/oscar-3.11.6/.
+00:00:09.281 --> 00:00:19.050
+Copy only .env, secrets/, and tls/ from the active deployment into next/oscar-3.11.8/.
 
 3
-00:00:08.943 --> 00:00:13.603
+00:00:19.090 --> 00:00:28.799
 Run sudo bash oscar.sh upgrade to migrate indexes under lock and recreate containers cleanly.

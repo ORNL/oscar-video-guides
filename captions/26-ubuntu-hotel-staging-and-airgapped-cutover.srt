@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:05,592
+00:00:00,040 --> 00:00:11,522
 Off-site: identify physical Ethernet ports by link state and pre-stage the portal static subnet without dropping SSH.
 
 2
-00:00:05,632 --> 00:00:10,555
-Expand Ubuntu 24.04 default 100 GiB LVM root across the full NVMe SSD and initialize OSCAR 3.11.6 completely offline.
+00:00:11,562 --> 00:00:22,282
+Expand Ubuntu 24.04 default 100 GiB LVM root across the full NVMe SSD and initialize OSCAR 3.11.8 completely offline.
 
 3
-00:00:10,595 --> 00:00:15,855
+00:00:22,322 --> 00:00:33,043
 On-site in the portal rack: apply the staged static Netplan profile and scan enp2s0 for RPMs and RTSP cameras.

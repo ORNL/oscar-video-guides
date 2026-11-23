@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:06,310
+00:00:00,040 --> 00:00:09,380
 Click Export Alarm QR on Event Details to render and download the SHA-256 signed QR PNG image.
 
 2
-00:00:06,350 --> 00:00:10,638
+00:00:09,420 --> 00:00:17,781
 Open Alarm Transfer (/alarm-transfer) and import the exported Alarm QR PNG image.
 
 3
-00:00:10,678 --> 00:00:16,627
+00:00:17,821 --> 00:00:26,181
 Verify the SHA-256 integrity check banner and reconstructed offline Gamma/Neutron waveforms.

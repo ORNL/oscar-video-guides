@@ -1,14 +1,14 @@
 1
-00:00:00,040 --> 00:00:06,032
+00:00:00,040 --> 00:00:08,441
 Surveillez en temps réel l’État des voies sur les 50 voies
 du portique et inspectez les Widgets du Tableau de bord.
 
 2
-00:00:06,072 --> 00:00:12,403
+00:00:08,481 --> 00:00:18,071
 Inspectez les lignes d’Occupation et d’alarme en direct
 dans le Tableau de bord et ouvrez Détails de l’événement.
 
 3
-00:00:12,443 --> 00:00:18,867
+00:00:18,111 --> 00:00:28,132
 Examinez les courbes d’alarme Gamma/Neutrons et le
 Formulaire d’Adjudication dans Détails de l’événement.

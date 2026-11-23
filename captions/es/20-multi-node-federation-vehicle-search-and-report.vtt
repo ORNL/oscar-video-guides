@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:07.073
+00:00:00.040 --> 00:00:09.800
 En West Gate Portal, abra Usuarios y acceso -> Tokens de
 federación y emita un token de servicio oscar_fed_ acotado.
 
 2
-00:00:07.113 --> 00:00:16.325
+00:00:09.840 --> 00:00:20.403
 En Central HQ Node, abra Servidores en modo Token de federación
 (HTTPS 443), pegue el token y conecte West Gate Portal.
 
 3
-00:00:16.365 --> 00:00:31.044
+00:00:20.443 --> 00:00:55.563
 Busque en Eventos el contenedor EMCU 141779-0 y pulse Comparar
 pasadas para ver tránsitos, recortes OCR y curvas de ambos portales.
 
 4
-00:00:31.084 --> 00:00:51.907
+00:00:55.603 --> 00:01:29.333
 En Generador de informes, active Incluir pasadas correlacionadas
 de nodos federados y genere informes JSON y PDF unificados.

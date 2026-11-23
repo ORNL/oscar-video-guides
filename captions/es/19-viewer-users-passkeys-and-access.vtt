@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:05.241
+00:00:00.040 --> 00:00:08.441
 Revise el estado de sesión persistente, las Passkeys sin
 conexión y la separación entre clave local y túnel Octelium.
 
 2
-00:00:05.281 --> 00:00:11.692
+00:00:08.481 --> 00:00:17.780
 Abra Usuarios y roles, pulse Bulk Enroll (CSV /
 Paste) y envíe una lista de operadores y visores.
 
 3
-00:00:11.732 --> 00:00:17.480
+00:00:17.820 --> 00:00:26.181
 Inspeccione el paquete generado de mensajes de
 inicio y códigos QR de configuración en 1 toque.
 
 4
-00:00:17.520 --> 00:00:29.630
+00:00:26.221 --> 00:00:39.033
 Emita un Token de servicio de federación acotado y
 abra Servidores (/servers?auth=bearer) en modo token.

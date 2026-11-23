@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:03,940
+00:00:00,040 --> 00:00:09,240
 Check PARQUET_PRIMARY cold-tier generation status and parity receipts.
 
 2
-00:00:03,980 --> 00:00:07,882
+00:00:09,280 --> 00:00:18,440
 Verify SHA-256 digests and row-count parity across sealed Parquet archive partitions.
 
 3
-00:00:07,922 --> 00:00:12,582
+00:00:18,480 --> 00:00:27,661
 Create a coordinated single-snapshot backup and run backup-verify.

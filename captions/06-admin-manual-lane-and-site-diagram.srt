@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:08,497
+00:00:00,040 --> 00:00:13,013
 Inspect Lane01 General (Extended Occupancy Threshold), Fixed Location, and Lane Options tabs.
 
 2
-00:00:08,537 --> 00:00:17,972
+00:00:13,053 --> 00:00:31,205
 Open Services -> OSCAR Service -> Site Diagram Config and populate Lower-Left and Upper-Right bounding coordinates.
 
 3
-00:00:18,012 --> 00:00:22,630
+00:00:31,245 --> 00:00:40,405
 Click Apply Changes and Save to publish georeferenced lane markers and site bounds.

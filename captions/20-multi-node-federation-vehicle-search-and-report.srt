@@ -1,15 +1,15 @@
 1
-00:00:00,040 --> 00:00:07,073
+00:00:00,040 --> 00:00:09,800
 On West Gate Portal, open Users & Access -> Federation Tokens and mint a scoped oscar_fed_ service token.
 
 2
-00:00:07,113 --> 00:00:16,325
+00:00:09,840 --> 00:00:20,403
 On Central HQ Node, open Servers in Federation Token mode (HTTPS 443), paste the token, and connect West Gate Portal.
 
 3
-00:00:16,365 --> 00:00:31,044
-Search Events for container EMCU 141779-0 and click Compare Passes to inspect transits, OCR crops, and waveforms from both portals.
+00:00:20,443 --> 00:00:55,563
+Search Events for container HAMU 131337-0 and click Compare Passes to inspect transits, OCR crops, and waveforms from both portals.
 
 4
-00:00:31,084 --> 00:00:51,907
+00:00:55,603 --> 00:01:29,333
 In Report Generator, enable Include correlated passes from federated nodes and generate unified JSON and PDF Vehicle Incident reports.

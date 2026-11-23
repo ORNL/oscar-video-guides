@@ -1,14 +1,14 @@
 1
-00:00:00,040 --> 00:00:06,044
+00:00:00,040 --> 00:00:09,696
 Inspectez les badges En ligne RPM/caméra et l’état
 Extended occupancy: Clear de Lane01 dans État de santé.
 
 2
-00:00:06,084 --> 00:00:10,733
+00:00:09,736 --> 00:00:20,016
 Accédez à la Carte du site (/map) et vérifiez les tuiles
 chargées ainsi que les 50 marqueurs de voies géoréférencés.
 
 3
-00:00:10,773 --> 00:00:18,056
+00:00:20,056 --> 00:00:31,695
 Cliquez sur un marqueur de voie géoréférencé pour afficher
 son état en direct et inspecter les couches et le zoom.

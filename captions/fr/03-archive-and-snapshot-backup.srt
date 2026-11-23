@@ -1,13 +1,13 @@
 1
-00:00:00,040 --> 00:00:03,940
+00:00:00,040 --> 00:00:09,240
 Vérifiez l’état des générations du niveau
 froid PARQUET_PRIMARY et les reçus de parité.
 
 2
-00:00:03,980 --> 00:00:07,882
+00:00:09,280 --> 00:00:18,440
 Validez les empreintes SHA-256 et la parité du
 nombre de lignes des partitions Parquet scellées.
 
 3
-00:00:07,922 --> 00:00:12,582
+00:00:18,480 --> 00:00:27,661
 Créez une sauvegarde instantanée coordonnée et exécutez backup-verify.

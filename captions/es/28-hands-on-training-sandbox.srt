@@ -1,19 +1,19 @@
 1
-00:00:00,040 --> 00:00:06,135
+00:00:00,040 --> 00:00:08,540
 Confirme la insignia TRAINING SANDBOX (:8444) en el Entorno
 de práctica y seleccione Lab 1.3 en la Guía de Práctica.
 
 2
-00:00:06,175 --> 00:00:15,878
+00:00:08,580 --> 00:00:59,925
 Pulse Inject Distributed NORM (Code 9999) en DemoLane01 y espere
 a que la auto-Adjudicación EML marque Lab 1.3 como Auto-Verified.
 
 3
-00:00:15,918 --> 00:00:23,524
+00:00:59,965 --> 00:01:10,106
 Cambie al Bloque 3 — Administrador, abra SensorHub Admin en vista
 dividida y revise Services -> OSCAR Service junto a la guía.
 
 4
-00:00:23,564 --> 00:00:30,094
+00:01:10,146 --> 00:01:18,508
 Introduzca el nombre del operador en formación y exporte el
 registro PDF de finalización de 1 página con marca de agua.

@@ -1,15 +1,15 @@
 1
-00:00:00,040 --> 00:00:06,568
+00:00:00,040 --> 00:00:10,800
 Open Runtime Extensions (/extensions) to inspect shipped OCR defaults, upload a Unicode regional plate-rules.json override, and verify CUSTOM OVERRIDE.
 
 2
-00:00:06,608 --> 00:00:13,594
+00:00:10,840 --> 00:00:24,133
 Switch to Offline Maps (.pmtiles), name the layer Regional Port Corridor, and upload a PMTiles v3 regional archive.
 
 3
-00:00:13,634 --> 00:00:19,871
+00:00:24,173 --> 00:00:36,213
 Open Map (/map) and select Offline: Regional Port Corridor to render regional corridor roads, waterways, and all 50 portal lane markers offline.
 
 4
-00:00:19,911 --> 00:00:26,619
+00:00:36,253 --> 00:00:47,445
 Return to Runtime Extensions (/extensions) and click Reset to Shipped Default to restore SHIPPED DEFAULT ACTIVE.

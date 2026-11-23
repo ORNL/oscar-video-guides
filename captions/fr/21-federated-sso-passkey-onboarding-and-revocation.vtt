@@ -1,16 +1,16 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:12.218
+00:00:00.040 --> 00:00:15.888
 Dans Authentik Directory -> Users, créez demo.operator avec
 une adresse courriel et attribuez le groupe oscar-operators.
 
 2
-00:00:12.258 --> 00:00:19.547
+00:00:15.928 --> 00:00:26.068
 Ouvrez l’onglet Overview du compte et cliquez sur Create
 recovery link pour générer un lien SSO Passkey à usage unique.
 
 3
-00:00:19.587 --> 00:00:29.447
+00:00:26.108 --> 00:00:38.738
 Supprimez demo.operator dans Authentik pour déclencher la révocation
 Zero-Trust oscar-hub-sync, puis vérifiez Utilisateurs et rôles (/users).

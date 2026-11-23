@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:07,605
+00:00:00,040 --> 00:00:09,801
 Step through First, Middle, and Last retained JPEG camera frames and inspect GAMMA DETECTORS waveforms in Event Details.
 
 2
-00:00:07,645 --> 00:00:12,681
+00:00:09,841 --> 00:00:19,562
 Scroll to Daily File Output to inspect exact GS, GA, NS, and GX daily-file records for the event.
 
 3
-00:00:12,721 --> 00:00:25,088
+00:00:19,602 --> 00:00:38,203
 Fill out Vehicle ID, Adjudicate code, Secondary Inspection, and Notes, then confirm append-only submission.

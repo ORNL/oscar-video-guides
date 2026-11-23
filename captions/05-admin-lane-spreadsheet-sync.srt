@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:05,761
+00:00:00,040 --> 00:00:09,780
 Locate Spreadsheet Config Path and the Upload and Download controls in OSCAR Service.
 
 2
-00:00:05,801 --> 00:00:10,882
+00:00:09,820 --> 00:00:19,223
 Click Apply Changes and Save to synchronize spreadsheet lanes and OperationalViews.
 
 3
-00:00:10,922 --> 00:00:16,770
+00:00:19,263 --> 00:00:29,128
 Expand Sensors to confirm imported Lane01 through Lane50 modules are registered and active.

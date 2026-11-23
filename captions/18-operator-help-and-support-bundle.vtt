@@ -1,17 +1,17 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:06.621
+00:00:00.040 --> 00:00:09.800
 Click Help (?) in the top bar and browse Console Pages, Reports & Exports, and Key Terms Explained.
 
 2
-00:00:06.661 --> 00:00:13.626
+00:00:09.840 --> 00:00:19.140
 Open Manual & Video Guides and click Export Support Bundle to download secret-redacted client + server diagnostics.
 
 3
-00:00:13.666 --> 00:00:19.208
+00:00:19.180 --> 00:00:28.480
 When containers are stopped or unreachable, run sudo bash oscar.sh support-bundle or oscar.bat support-bundle on the host.
 
 4
-00:00:19.248 --> 00:00:25.117
+00:00:28.520 --> 00:00:36.908
 Inspect summary.json, client/client-diagnostics.json, and redaction-report.json side-by-side to verify automatic [REDACTED] credential scrubbing.
