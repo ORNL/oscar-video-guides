@@ -1,0 +1,19 @@
+1
+00:00:00,040 --> 00:00:09,382
+Ouvrez Utilisateurs -> Mise à jour système, vérifiez zéro compte
+GitHub requis et cliquez sur Vérifier GitHub.
+
+2
+00:00:09,436 --> 00:00:19,195
+Consultez les notes et le condensé SHA-256 anonymes, puis ouvrez la
+confirmation avec repli automatique.
+
+3
+00:00:19,235 --> 00:00:28,078
+Lancez la mise à niveau pour suivre téléchargement, contrôle
+SHA-256, extraction propre et bascule /healthz.
+
+4
+00:00:28,118 --> 00:00:37,419
+Fermez la fenêtre terminée et descendez au téléversement .zip hors
+ligne pour les portails isolés.

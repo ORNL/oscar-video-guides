@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:09.382
+Open Users & Access -> System Update, verify Zero GitHub Login Required, and click Check GitHub Releases.
+
+2
+00:00:09.436 --> 00:00:19.195
+Inspect the anonymous GitHub release notes and SHA-256 digest, then open the confirmation dialog to review rollback safeguards.
+
+3
+00:00:19.235 --> 00:00:28.078
+Start the upgrade to watch live host-agent download, SHA-256 verification, sibling extraction, and health-checked cutover.
+
+4
+00:00:28.118 --> 00:00:37.419
+Close the completed dialog and scroll to Offline Release .zip Upload for air-gapped portals without internet access.

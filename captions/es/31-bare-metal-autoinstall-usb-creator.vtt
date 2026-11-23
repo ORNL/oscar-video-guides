@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:11.481
+Abra la GUI independiente del creador USB, elija un USB de 64 GiB y
+verifique las rutas ISO y offline-full.zip.
+
+2
+00:00:11.521 --> 00:00:25.569
+Defina nombre de host, clave y cifrado LUKS2, escriba ERASE-USB para
+desbloquear y cree el USB verificado.
+
+3
+00:00:25.719 --> 00:00:36.319
+Ejecute --list-drives en terminal para confirmar que los discos
+internos NVMe y OSCAR_BACKUP quedan protegidos.
+
+4
+00:00:36.359 --> 00:01:04.305
+Ejecute la CLI con --password-file, LUKS2, --require-sudo-password y
+--ssh-keys-only para crear CIDATA y OSCAR_MEDIA.

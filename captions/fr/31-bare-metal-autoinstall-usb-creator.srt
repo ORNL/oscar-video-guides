@@ -1,0 +1,19 @@
+1
+00:00:00,040 --> 00:00:11,481
+Ouvrez le GUI autonome du créateur USB, choisissez une clé USB 64
+Gio et vérifiez ISO et offline-full.zip.
+
+2
+00:00:11,521 --> 00:00:25,569
+Définissez hôte, mot de passe et chiffrement LUKS2, tapez ERASE-USB
+puis créez la clé USB vérifiée.
+
+3
+00:00:25,719 --> 00:00:36,319
+Exécutez --list-drives dans le terminal pour confirmer la protection
+des disques NVMe et OSCAR_BACKUP.
+
+4
+00:00:36,359 --> 00:01:04,305
+Lancez la CLI avec --password-file, LUKS2, --require-sudo-password
+et --ssh-keys-only pour CIDATA et OSCAR_MEDIA.

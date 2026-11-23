@@ -1,6 +1,6 @@
 # OSCAR How-To Video Guides
 
-Human-paced, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.8** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus 4-language (`en`, `es`, `fr`, `el`) standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
+Human-paced, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.9** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus 4-language (`en`, `es`, `fr`, `el`) standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
 
 ## Encoding & Playback Profile
 
@@ -10,7 +10,7 @@ Human-paced, single-task `1920x1080` screen-recording guides covering every majo
 | Container & Color | Universal `.mp4` (`+faststart`), `NV12` / `4:2:0` (`yuv420p`), `BT.709` |
 | Compression & GOP | `8 s` forced IDR keyframe interval (`GOP 240 @ 30fps`) + NVENC `p7`/`hq` B-frame skip blocks |
 | Resolution & FPS | `1920x1080` (`1080p`) constant `30 FPS` (`CFR`) |
-| Captions | Embedded MP4 `mov_text` track + 4-language (`en`, `es`, `fr`, `el`) [`captions/`](captions/) `.vtt` & `.srt` (`232` subtitle files) |
+| Captions | Embedded MP4 `mov_text` track + 4-language (`en`, `es`, `fr`, `el`) [`captions/`](captions/) `.vtt` & `.srt` (`248` subtitle files) |
 
 - **Interactive HTML5 Player with Closed Captions:** Open [`index.html`](index.html) locally (or via GitHub Pages) to watch every guide with synchronized WebVTT closed captions.
 - **Reproducible NVENC Encoding Script:** [`scripts/encode-nvenc-5060ti.sh`](scripts/encode-nvenc-5060ti.sh) and validator [`scripts/verify-guides.py`](scripts/verify-guides.py).
@@ -48,6 +48,8 @@ Human-paced, single-task `1920x1080` screen-recording guides covering every majo
 | 27 | [Connect Cargo NII (WCO UFF 2.0 & 3.0.0) SMB Shares & Inspect 16-Bit X-Rays](#27-cargo-uff-smb-and-xray-inspection) ([MP4](videos/27-cargo-uff-smb-and-xray-inspection.mp4)) | Track D | 55s | 3599.7 KiB | [VTT](captions/27-cargo-uff-smb-and-xray-inspection.vtt) · [SRT](captions/27-cargo-uff-smb-and-xray-inspection.srt) |
 | 28 | [Practice Safely in the Ephemeral Hands-On Training Sandbox & Guided Academy](#28-hands-on-training-sandbox) ([MP4](videos/28-hands-on-training-sandbox.mp4)) | Track D | 79s | 3193.2 KiB | [VTT](captions/28-hands-on-training-sandbox.vtt) · [SRT](captions/28-hands-on-training-sandbox.srt) |
 | 29 | [Configure & Control Per-Lane Physical RPM Lights & Sound (WebRelay-Quad)](#29-lane-webrelay-lights-and-sound) ([MP4](videos/29-lane-webrelay-lights-and-sound.mp4)) | Track C | 44s | 2607.8 KiB | [VTT](captions/29-lane-webrelay-lights-and-sound.vtt) · [SRT](captions/29-lane-webrelay-lights-and-sound.srt) |
+| 30 | [Update OSCAR From the GUI Without a GitHub Login (GitHub & Offline .zip)](#30-zero-login-github-system-update) ([MP4](videos/30-zero-login-github-system-update.mp4)) | Track C | 38s | 1118.9 KiB | [VTT](captions/30-zero-login-github-system-update.vtt) · [SRT](captions/30-zero-login-github-system-update.srt) |
+| 31 | [Build an Air-Gapped Ubuntu 24.04 Autoinstall USB Drive (GUI, TUI & CLI)](#31-bare-metal-autoinstall-usb-creator) ([MP4](videos/31-bare-metal-autoinstall-usb-creator.mp4)) | Track D | 65s | 1681.4 KiB | [VTT](captions/31-bare-metal-autoinstall-usb-creator.vtt) · [SRT](captions/31-bare-metal-autoinstall-usb-creator.srt) |
 
 ## Track A — CLI Deployment, Upgrades & Storage Lifecycle
 
@@ -336,6 +338,18 @@ Configure per-lane ControlByWeb WebRelay-Quad HTTP/XML control in Status of Heal
 3. Verify `R1=ARMED` and `R2=ARMED` intercept coils in `AUTO` mode, fire timed commissioning pulses on **Gamma Light + Sound (`R3=ACTIVE`)** and **Neutron Blue (`R4=ACTIVE`)**, and click **Silence** to re-arm `R1=ARMED, R2=ARMED`.
 4. Close the dialog, verify **WebRelay (AUTO) · Online** on `/health`, and open **Guided Walkthrough** in the top bar anytime for a safe read-only refresher and `:8444` auto-shutdown details.
 
+<a id="30-zero-login-github-system-update"></a>
+### 30. Update OSCAR From the GUI Without a GitHub Login (GitHub & Offline .zip)
+
+Open Users & Access -> System Update (/users?tab=update), discover and SHA-256-verify the latest official ORNL/oscar GitHub Release anonymously with zero GitHub account or token, confirm sibling-directory installation with automatic fail-safe rollback inside the native modal dialog, and stage air-gapped .zip bundles on offline portals.
+
+- **Video:** [Watch `30-zero-login-github-system-update.mp4` (38s, 1118.9 KiB)](videos/30-zero-login-github-system-update.mp4) · [WebVTT Captions](captions/30-zero-login-github-system-update.vtt) · [SRT Captions](captions/30-zero-login-github-system-update.srt)
+
+1. Open **Users & Access -> System Update** (`/users?tab=update`) to verify `Zero GitHub Login Required` and `Host Update Agent: Active`.
+2. Click **Check GitHub Releases** to discover the latest official `ORNL/oscar` release anonymously via `releases/latest` and `releases.atom` and verify its expected SHA-256 digest.
+3. Click **Download & Install** to open the native confirmation `<dialog>` (`Cancel` focused by default), review sibling-directory extraction and automatic fail-safe rollback, and confirm installation.
+4. Monitor live host-agent download, SHA-256 verification, container rebuild, and `/healthz` readiness cutover—or upload an air-gapped `oscar-<version>.zip` bundle on offline portals.
+
 ## Track D — End-to-End Regression & Multi-OS Capacity Scaling
 
 <a id="22-regression-suite-setup-and-certification"></a>
@@ -396,3 +410,15 @@ Launch the isolated ephemeral Training Sandbox (:8444) with zero production data
 2. Select **Track 1 — Operator (`Lab 1.3`)** on `/event-log`, click **Inject Distributed NORM (Code 9999)**, and wait for the live loopback Rapiscan + EML pipeline to turn **Lab 1.3** green **`Auto-Verified`**.
 3. Switch to **Track 3 — Administrator**, click **Open Split-Pane SensorHub Admin**, and expand **Services -> OSCAR Service** inside the embedded admin pane beside the Guided Coach.
 4. Enter the trainee name to download a watermarked 1-page PDF **Training Completion Record**, then run `oscar.sh sandbox stop` (`oscar.bat sandbox stop`) when finished to flush disposable sandbox volumes.
+
+<a id="31-bare-metal-autoinstall-usb-creator"></a>
+### 31. Build an Air-Gapped Ubuntu 24.04 Autoinstall USB Drive (GUI, TUI & CLI)
+
+Use the compact standalone oscar-3.11.9-autoinstall-usb-creator.zip on Windows 11 or Ubuntu—via Desktop GUI, interactive terminal TUI, or scriptable CLI—to combine ubuntu-24.04-live-server-amd64.iso and oscar-3.11.9-ubuntu-x86_64-offline-full.zip onto a UEFI Secure-Boot USB installer with native SHA-512 password hashing and optional LUKS2 encryption.
+
+- **Video:** [Watch `31-bare-metal-autoinstall-usb-creator.mp4` (65s, 1681.4 KiB)](videos/31-bare-metal-autoinstall-usb-creator.mp4) · [WebVTT Captions](captions/31-bare-metal-autoinstall-usb-creator.vtt) · [SRT Captions](captions/31-bare-metal-autoinstall-usb-creator.srt)
+
+1. Download the compact standalone `oscar-3.11.9-autoinstall-usb-creator.zip` alongside `ubuntu-24.04.5-live-server-amd64.iso` and `oscar-3.11.9-ubuntu-x86_64-offline-full.zip` without unpacking the offline bundle.
+2. Launch the Desktop GUI (`create-autoinstall-usb.bat` on Windows 11 or `sudo bash create-autoinstall-usb.sh --gui` on Ubuntu) to pick a removable USB drive while internal NVMe OS and `OSCAR_BACKUP` disks stay hidden.
+3. Configure the target server hostname, Linux admin password (`$6$` SHA-512), `sudo` password requirement, and optional 12+ character LUKS2 encryption, then type `ERASE-USB` to build and SHA-256-verify the installer.
+4. Use the interactive terminal TUI (`-Tui` / `--tui`) or non-interactive CLI flags (`--password-file`, `--luks-passphrase-file`, `--ssh-keys-only`, `--confirm ERASE-USB`) for headless staging and automation.
