@@ -1,0 +1,14 @@
+1
+00:00:00,040 --> 00:00:05,450
+Sous Windows 11 + WSL 2, exécutez oscar.bat host-check et prepare-host pour
+le réglage 24/7, puis connectez TLS 443 sortant via oscar-remote-access.ps1.
+
+2
+00:00:05,490 --> 00:00:11,082
+Dimensionnez Windows 11 WSL 2 à 1–8 voies (6 à 100 % OCR) sans
+gigue TCP Hyper-V ; utilisez Ubuntu 24.04 nu pour 25–50 voies OCR.
+
+3
+00:00:11,122 --> 00:00:16,908
+Synchronisez le config.csv adapté dans SensorHub Admin, vérifiez les
+courbes fluides à 5 Hz et fédérez les nœuds via jetons oscar_fed_*.

@@ -1,0 +1,13 @@
+1
+00:00:00,040 --> 00:00:04,683
+Dépliez Services dans SensorHub Admin et sélectionnez OSCAR Service.
+
+2
+00:00:04,723 --> 00:00:13,381
+Inspectez les paramètres de Video Retention
+Config et Storage Pressure Retention Config.
+
+3
+00:00:13,421 --> 00:00:20,581
+Ouvrez Custom Disposition Codes, ajoutez un code d’Adjudication
+personnalisé, puis cliquez sur Apply Changes et Save.

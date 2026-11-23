@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:05.241
+Vérifiez l’état de session persistante, les Passkeys hors ligne
+et la séparation entre mot de passe local et tunnel Octelium.
+
+2
+00:00:05.281 --> 00:00:11.692
+Ouvrez Utilisateurs et rôles, cliquez sur Bulk Enroll (CSV
+/ Paste) et soumettez une liste d’opérateurs et de lecteurs.
+
+3
+00:00:11.732 --> 00:00:17.480
+Inspectez le pack généré de messages de démarrage
+et de codes QR de configuration en 1 geste.
+
+4
+00:00:17.520 --> 00:00:29.630
+Créez un Jeton de service de fédération restreint et
+ouvrez Serveurs (/servers?auth=bearer) en mode jeton.

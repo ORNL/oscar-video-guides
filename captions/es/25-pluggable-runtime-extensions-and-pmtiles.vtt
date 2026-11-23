@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:06.568
+Abra Extensiones (/extensions) para revisar valores OCR integrados,
+cargar un archivo Unicode plate-rules.json y verificar CUSTOM OVERRIDE.
+
+2
+00:00:06.608 --> 00:00:13.594
+Cambie a Offline Maps (.pmtiles), asigne el nombre Regional
+Port Corridor y cargue un archivo regional PMTiles v3.
+
+3
+00:00:13.634 --> 00:00:19.871
+Abra Mapa (/map) y elija Offline: Regional Port Corridor para
+mostrar vías, canales y los 50 marcadores de carril sin conexión.
+
+4
+00:00:19.911 --> 00:00:26.619
+Vuelva a Extensiones (/extensions) y pulse Reset to
+Shipped Default para restaurar SHIPPED DEFAULT ACTIVE.

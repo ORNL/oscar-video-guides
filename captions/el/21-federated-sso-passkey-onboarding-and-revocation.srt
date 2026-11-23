@@ -1,0 +1,14 @@
+1
+00:00:00,040 --> 00:00:12,218
+Στο Authentik Directory -> Users, δημιουργήστε τον χρήστη
+demo.operator με email και αναθέστε την ομάδα oscar-operators.
+
+2
+00:00:12,258 --> 00:00:19,547
+Ανοίξτε την καρτέλα Overview του χρήστη και πατήστε Create recovery
+link για δημιουργία συνδέσμου εγγραφής SSO Passkey μίας χρήσης.
+
+3
+00:00:19,587 --> 00:00:29,447
+Διαγράψτε το demo.operator στο Authentik για ανάκληση Zero-Trust μέσω
+oscar-hub-sync και επιβεβαιώστε το Χρήστες & ρόλοι (/users) στο OSCAR.

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OSCAR 3.11.6 How-To Video Guides</title>
+  <title>OSCAR 3.11.7 How-To Video Guides</title>
   <style>
     :root {
       color-scheme: dark;
@@ -74,15 +74,28 @@
       font-size: 13px;
       color: #7dd3fc;
     }
-    .links { display: flex; gap: 16px; font-size: 13px; }
-    .links a { color: var(--accent); text-decoration: none; }
+    .steps a { color: var(--accent); }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 13px; align-items: center; }
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      min-block-size: 24px;
+      min-inline-size: 24px;
+    }
     .links a:hover { text-decoration: underline; }
+    :where(a:any-link):focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>OSCAR 3.11.6 How-To Video Guides</h1>
-    <p>Concise, zero-filler 1080p workflow screen recordings encoded via NVIDIA RTX 5060 Ti hardware NVENC H.264 (NV12 4:2:0, 8s GOP 240, 30 FPS CFR) with synchronized closed captions and sequential step references.</p>
+    <h1>OSCAR 3.11.7 How-To Video Guides</h1>
+    <p>Concise, zero-filler 1080p workflow screen recordings encoded via NVIDIA RTX 5060 Ti hardware NVENC H.264 (NV12 4:2:0, 8s GOP 240, 30 FPS CFR) with synchronized 4-language WebVTT &amp; SubRip closed captions (English, <span lang="es">Español</span>, <span lang="fr">Français</span>, <span lang="el">Ελληνικά</span>) and sequential step references.</p>
   </header>
   <main>
       <article class="card" id="01-deployment-init-and-credentials" data-track="Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle">
@@ -93,21 +106,30 @@
             <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 13.5s · 343.6 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Extract a clean OSCAR 3.11.6 release archive, initialize administrator credentials and TLS SAN certificates with oscar init, and verify healthy container startup.</p>
+        <p class="summary">Extract a clean OSCAR 3.11.7 release archive, initialize administrator credentials and TLS SAN certificates with oscar init, and verify healthy container startup.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/01-deployment-init-and-credentials.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/01-deployment-init-and-credentials.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/01-deployment-init-and-credentials.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/01-deployment-init-and-credentials.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/01-deployment-init-and-credentials.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/01-deployment-init-and-credentials.vtt">
         </video>
         <ol class="steps">
-            <li>Extract <code>oscar-3.11.6.zip</code> into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into <code>oscar-3.11.6/</code>.</li>
+            <li>Extract <code>oscar-3.11.7.zip</code> into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into <code>oscar-3.11.7/</code>.</li>
             <li>Run <code>sudo bash oscar.sh init</code> (or <code>.\oscar.bat init</code> on Windows 11) and supply the deployment hostname, IANA timezone, and administrator password (<code>&gt;= 14</code> characters).</li>
             <li>Allow <code>init</code> to generate deployment-bound PostgreSQL secrets, TLS gateway certificates, and external <code>oscar_oscar_state</code> / <code>oscar_postgres_data</code> volumes.</li>
             <li>Run <code>sudo bash oscar.sh status</code> (or <code>.\oscar.bat status</code>) to confirm <code>oscar-gateway</code>, <code>oscar</code>, and <code>oscar-postgis</code> report <code>running (healthy)</code>.</li>
         </ol>
         <div class="links">
           <a href="videos/01-deployment-init-and-credentials.mp4" aria-label="MP4 Video — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">MP4 Video</a>
-          <a href="captions/01-deployment-init-and-credentials.vtt" aria-label="WebVTT (.vtt) — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">WebVTT (.vtt)</a>
-          <a href="captions/01-deployment-init-and-credentials.srt" aria-label="SubRip (.srt) — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">SubRip (.srt)</a>
+          <a href="captions/01-deployment-init-and-credentials.vtt" aria-label="WebVTT (.vtt) English — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">WebVTT (.vtt)</a>
+          <a href="captions/es/01-deployment-init-and-credentials.vtt" aria-label="VTT (ES) — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">VTT (ES)</a>
+          <a href="captions/fr/01-deployment-init-and-credentials.vtt" aria-label="VTT (FR) — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">VTT (FR)</a>
+          <a href="captions/el/01-deployment-init-and-credentials.vtt" aria-label="VTT (EL) — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">VTT (EL)</a>
+          <a href="captions/01-deployment-init-and-credentials.srt" aria-label="SubRip (.srt) English — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">SubRip (.srt)</a>
+          <a href="captions/es/01-deployment-init-and-credentials.srt" aria-label="SRT (ES) — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">SRT (ES)</a>
+          <a href="captions/fr/01-deployment-init-and-credentials.srt" aria-label="SRT (FR) — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">SRT (FR)</a>
+          <a href="captions/el/01-deployment-init-and-credentials.srt" aria-label="SRT (EL) — Module 01: Initialize OSCAR Deployment, Admin Credentials &amp; TLS">SRT (EL)</a>
         </div>
       </article>
 
@@ -119,21 +141,30 @@
             <p class="meta">Track A — CLI Deployment, Upgrades &amp; Storage Lifecycle · 14.5s · 309.3 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Verify a pre-upgrade snapshot, copy only .env, secrets/, and tls/ into a newly extracted oscar-3.11.6 folder, and run oscar upgrade while preserving external volumes.</p>
+        <p class="summary">Verify a pre-upgrade snapshot, copy only .env, secrets/, and tls/ into a newly extracted oscar-3.11.7 folder, and run oscar upgrade while preserving external volumes.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/02-clean-directory-upgrade.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/02-clean-directory-upgrade.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/02-clean-directory-upgrade.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/02-clean-directory-upgrade.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/02-clean-directory-upgrade.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/02-clean-directory-upgrade.vtt">
         </video>
         <ol class="steps">
             <li>When <code>single</code> backup mode is enabled, run <code>sudo bash oscar.sh backup</code> and <code>sudo bash oscar.sh backup-verify</code> from the active release directory before upgrading.</li>
-            <li>Extract the target <code>oscar-3.11.6.zip</code> archive into a separate sibling directory — never unzip over an existing release directory.</li>
+            <li>Extract the target <code>oscar-3.11.7.zip</code> archive into a separate sibling directory — never unzip over an existing release directory.</li>
             <li>Copy only <code>.env</code>, <code>secrets/</code>, and <code>tls/</code> (plus <code>.oscar-volume-adoption</code> if previously adopted) into the newly extracted directory.</li>
             <li>Run <code>sudo bash oscar.sh upgrade</code> (or <code>.\oscar.bat upgrade</code>) and confirm all containers return <code>healthy</code> with preserved named volumes and archive roots.</li>
         </ol>
         <div class="links">
           <a href="videos/02-clean-directory-upgrade.mp4" aria-label="MP4 Video — Module 02: Upgrade OSCAR in a Clean Release Directory">MP4 Video</a>
-          <a href="captions/02-clean-directory-upgrade.vtt" aria-label="WebVTT (.vtt) — Module 02: Upgrade OSCAR in a Clean Release Directory">WebVTT (.vtt)</a>
-          <a href="captions/02-clean-directory-upgrade.srt" aria-label="SubRip (.srt) — Module 02: Upgrade OSCAR in a Clean Release Directory">SubRip (.srt)</a>
+          <a href="captions/02-clean-directory-upgrade.vtt" aria-label="WebVTT (.vtt) English — Module 02: Upgrade OSCAR in a Clean Release Directory">WebVTT (.vtt)</a>
+          <a href="captions/es/02-clean-directory-upgrade.vtt" aria-label="VTT (ES) — Module 02: Upgrade OSCAR in a Clean Release Directory">VTT (ES)</a>
+          <a href="captions/fr/02-clean-directory-upgrade.vtt" aria-label="VTT (FR) — Module 02: Upgrade OSCAR in a Clean Release Directory">VTT (FR)</a>
+          <a href="captions/el/02-clean-directory-upgrade.vtt" aria-label="VTT (EL) — Module 02: Upgrade OSCAR in a Clean Release Directory">VTT (EL)</a>
+          <a href="captions/02-clean-directory-upgrade.srt" aria-label="SubRip (.srt) English — Module 02: Upgrade OSCAR in a Clean Release Directory">SubRip (.srt)</a>
+          <a href="captions/es/02-clean-directory-upgrade.srt" aria-label="SRT (ES) — Module 02: Upgrade OSCAR in a Clean Release Directory">SRT (ES)</a>
+          <a href="captions/fr/02-clean-directory-upgrade.srt" aria-label="SRT (FR) — Module 02: Upgrade OSCAR in a Clean Release Directory">SRT (FR)</a>
+          <a href="captions/el/02-clean-directory-upgrade.srt" aria-label="SRT (EL) — Module 02: Upgrade OSCAR in a Clean Release Directory">SRT (EL)</a>
         </div>
       </article>
 
@@ -148,7 +179,10 @@
         <p class="summary">Inspect PARQUET_PRIMARY cold-tier generation status, verify sealed Parquet SHA-256 parity receipts, and run a coordinated single-snapshot backup and verification.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/03-archive-and-snapshot-backup.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/03-archive-and-snapshot-backup.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/03-archive-and-snapshot-backup.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/03-archive-and-snapshot-backup.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/03-archive-and-snapshot-backup.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/03-archive-and-snapshot-backup.vtt">
         </video>
         <ol class="steps">
             <li>Run <code>sudo bash oscar.sh archive status</code> (or <code>.\oscar.bat archive status</code>) to inspect <code>PARQUET_PRIMARY</code> staging windows, sealed generation counts, and parity receipts.</li>
@@ -158,8 +192,14 @@
         </ol>
         <div class="links">
           <a href="videos/03-archive-and-snapshot-backup.mp4" aria-label="MP4 Video — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">MP4 Video</a>
-          <a href="captions/03-archive-and-snapshot-backup.vtt" aria-label="WebVTT (.vtt) — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">WebVTT (.vtt)</a>
-          <a href="captions/03-archive-and-snapshot-backup.srt" aria-label="SubRip (.srt) — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">SubRip (.srt)</a>
+          <a href="captions/03-archive-and-snapshot-backup.vtt" aria-label="WebVTT (.vtt) English — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">WebVTT (.vtt)</a>
+          <a href="captions/es/03-archive-and-snapshot-backup.vtt" aria-label="VTT (ES) — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">VTT (ES)</a>
+          <a href="captions/fr/03-archive-and-snapshot-backup.vtt" aria-label="VTT (FR) — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">VTT (FR)</a>
+          <a href="captions/el/03-archive-and-snapshot-backup.vtt" aria-label="VTT (EL) — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">VTT (EL)</a>
+          <a href="captions/03-archive-and-snapshot-backup.srt" aria-label="SubRip (.srt) English — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">SubRip (.srt)</a>
+          <a href="captions/es/03-archive-and-snapshot-backup.srt" aria-label="SRT (ES) — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">SRT (ES)</a>
+          <a href="captions/fr/03-archive-and-snapshot-backup.srt" aria-label="SRT (FR) — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">SRT (FR)</a>
+          <a href="captions/el/03-archive-and-snapshot-backup.srt" aria-label="SRT (EL) — Module 03: Verify Parquet Cold-Tier Archives &amp; Single-Snapshot Backup">SRT (EL)</a>
         </div>
       </article>
 
@@ -174,7 +214,10 @@
         <p class="summary">Open Services -&gt; OSCAR Service in SensorHub Admin to review 5-JPEG media retention settings, storage-pressure thresholds, and custom adjudication disposition codes.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/04-admin-oscar-service-and-custom-codes.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/04-admin-oscar-service-and-custom-codes.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/04-admin-oscar-service-and-custom-codes.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/04-admin-oscar-service-and-custom-codes.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/04-admin-oscar-service-and-custom-codes.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/04-admin-oscar-service-and-custom-codes.vtt">
         </video>
         <ol class="steps">
             <li>Open <code>https://oscar.local/sensorhub/admin</code>, expand <strong>Services</strong>, and select <strong>OSCAR Service</strong>.</li>
@@ -184,8 +227,14 @@
         </ol>
         <div class="links">
           <a href="videos/04-admin-oscar-service-and-custom-codes.mp4" aria-label="MP4 Video — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">MP4 Video</a>
-          <a href="captions/04-admin-oscar-service-and-custom-codes.vtt" aria-label="WebVTT (.vtt) — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">WebVTT (.vtt)</a>
-          <a href="captions/04-admin-oscar-service-and-custom-codes.srt" aria-label="SubRip (.srt) — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">SubRip (.srt)</a>
+          <a href="captions/04-admin-oscar-service-and-custom-codes.vtt" aria-label="WebVTT (.vtt) English — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">WebVTT (.vtt)</a>
+          <a href="captions/es/04-admin-oscar-service-and-custom-codes.vtt" aria-label="VTT (ES) — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">VTT (ES)</a>
+          <a href="captions/fr/04-admin-oscar-service-and-custom-codes.vtt" aria-label="VTT (FR) — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">VTT (FR)</a>
+          <a href="captions/el/04-admin-oscar-service-and-custom-codes.vtt" aria-label="VTT (EL) — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">VTT (EL)</a>
+          <a href="captions/04-admin-oscar-service-and-custom-codes.srt" aria-label="SubRip (.srt) English — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">SubRip (.srt)</a>
+          <a href="captions/es/04-admin-oscar-service-and-custom-codes.srt" aria-label="SRT (ES) — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">SRT (ES)</a>
+          <a href="captions/fr/04-admin-oscar-service-and-custom-codes.srt" aria-label="SRT (FR) — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">SRT (FR)</a>
+          <a href="captions/el/04-admin-oscar-service-and-custom-codes.srt" aria-label="SRT (EL) — Module 04: Configure OSCAR Service Retention &amp; Custom Disposition Codes">SRT (EL)</a>
         </div>
       </article>
 
@@ -200,7 +249,10 @@
         <p class="summary">Import or download the multi-lane config.csv spreadsheet via Spreadsheet Config Path in OSCAR Service to provision RPM endpoints, RTSP cameras, and OperationalViews assignments in bulk.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/05-admin-lane-spreadsheet-sync.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/05-admin-lane-spreadsheet-sync.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/05-admin-lane-spreadsheet-sync.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/05-admin-lane-spreadsheet-sync.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/05-admin-lane-spreadsheet-sync.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/05-admin-lane-spreadsheet-sync.vtt">
         </video>
         <ol class="steps">
             <li>Navigate to <strong>Services -&gt; OSCAR Service</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>).</li>
@@ -210,8 +262,14 @@
         </ol>
         <div class="links">
           <a href="videos/05-admin-lane-spreadsheet-sync.mp4" aria-label="MP4 Video — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">MP4 Video</a>
-          <a href="captions/05-admin-lane-spreadsheet-sync.vtt" aria-label="WebVTT (.vtt) — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">WebVTT (.vtt)</a>
-          <a href="captions/05-admin-lane-spreadsheet-sync.srt" aria-label="SubRip (.srt) — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">SubRip (.srt)</a>
+          <a href="captions/05-admin-lane-spreadsheet-sync.vtt" aria-label="WebVTT (.vtt) English — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">WebVTT (.vtt)</a>
+          <a href="captions/es/05-admin-lane-spreadsheet-sync.vtt" aria-label="VTT (ES) — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">VTT (ES)</a>
+          <a href="captions/fr/05-admin-lane-spreadsheet-sync.vtt" aria-label="VTT (FR) — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">VTT (FR)</a>
+          <a href="captions/el/05-admin-lane-spreadsheet-sync.vtt" aria-label="VTT (EL) — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">VTT (EL)</a>
+          <a href="captions/05-admin-lane-spreadsheet-sync.srt" aria-label="SubRip (.srt) English — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">SubRip (.srt)</a>
+          <a href="captions/es/05-admin-lane-spreadsheet-sync.srt" aria-label="SRT (ES) — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">SRT (ES)</a>
+          <a href="captions/fr/05-admin-lane-spreadsheet-sync.srt" aria-label="SRT (FR) — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">SRT (FR)</a>
+          <a href="captions/el/05-admin-lane-spreadsheet-sync.srt" aria-label="SRT (EL) — Module 05: Sync Multi-Lane Spreadsheet Configuration (config.csv)">SRT (EL)</a>
         </div>
       </article>
 
@@ -226,7 +284,10 @@
         <p class="summary">Inspect Lane01 General, Fixed Location, and Lane Options settings under Sensors, populate georeferenced Lower-Left and Upper-Right Site Diagram bounds in OSCAR Service, and save.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/06-admin-manual-lane-and-site-diagram.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/06-admin-manual-lane-and-site-diagram.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/06-admin-manual-lane-and-site-diagram.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/06-admin-manual-lane-and-site-diagram.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/06-admin-manual-lane-and-site-diagram.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/06-admin-manual-lane-and-site-diagram.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>Sensors</strong> in SensorHub Admin and select <strong>Lane01</strong>.</li>
@@ -236,8 +297,14 @@
         </ol>
         <div class="links">
           <a href="videos/06-admin-manual-lane-and-site-diagram.mp4" aria-label="MP4 Video — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">MP4 Video</a>
-          <a href="captions/06-admin-manual-lane-and-site-diagram.vtt" aria-label="WebVTT (.vtt) — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">WebVTT (.vtt)</a>
-          <a href="captions/06-admin-manual-lane-and-site-diagram.srt" aria-label="SubRip (.srt) — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">SubRip (.srt)</a>
+          <a href="captions/06-admin-manual-lane-and-site-diagram.vtt" aria-label="WebVTT (.vtt) English — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">WebVTT (.vtt)</a>
+          <a href="captions/es/06-admin-manual-lane-and-site-diagram.vtt" aria-label="VTT (ES) — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">VTT (ES)</a>
+          <a href="captions/fr/06-admin-manual-lane-and-site-diagram.vtt" aria-label="VTT (FR) — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">VTT (FR)</a>
+          <a href="captions/el/06-admin-manual-lane-and-site-diagram.vtt" aria-label="VTT (EL) — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">VTT (EL)</a>
+          <a href="captions/06-admin-manual-lane-and-site-diagram.srt" aria-label="SubRip (.srt) English — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">SubRip (.srt)</a>
+          <a href="captions/es/06-admin-manual-lane-and-site-diagram.srt" aria-label="SRT (ES) — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">SRT (ES)</a>
+          <a href="captions/fr/06-admin-manual-lane-and-site-diagram.srt" aria-label="SRT (FR) — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">SRT (FR)</a>
+          <a href="captions/el/06-admin-manual-lane-and-site-diagram.srt" aria-label="SRT (EL) — Module 06: Configure a Lane System &amp; Georeferenced Site Diagram">SRT (EL)</a>
         </div>
       </article>
 
@@ -252,7 +319,10 @@
         <p class="summary">Verify or upload a separately licensed EML VM-250 .jar plugin in OSCAR Service, review Code 9999 documentation in the localized README, and confirm per-lane EML enablement under Lane Options.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/07-admin-eml-plugin-setup.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/07-admin-eml-plugin-setup.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/07-admin-eml-plugin-setup.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/07-admin-eml-plugin-setup.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/07-admin-eml-plugin-setup.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/07-admin-eml-plugin-setup.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>Services -&gt; OSCAR Service</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>).</li>
@@ -262,8 +332,14 @@
         </ol>
         <div class="links">
           <a href="videos/07-admin-eml-plugin-setup.mp4" aria-label="MP4 Video — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">MP4 Video</a>
-          <a href="captions/07-admin-eml-plugin-setup.vtt" aria-label="WebVTT (.vtt) — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">WebVTT (.vtt)</a>
-          <a href="captions/07-admin-eml-plugin-setup.srt" aria-label="SubRip (.srt) — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">SubRip (.srt)</a>
+          <a href="captions/07-admin-eml-plugin-setup.vtt" aria-label="WebVTT (.vtt) English — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">WebVTT (.vtt)</a>
+          <a href="captions/es/07-admin-eml-plugin-setup.vtt" aria-label="VTT (ES) — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">VTT (ES)</a>
+          <a href="captions/fr/07-admin-eml-plugin-setup.vtt" aria-label="VTT (FR) — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">VTT (FR)</a>
+          <a href="captions/el/07-admin-eml-plugin-setup.vtt" aria-label="VTT (EL) — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">VTT (EL)</a>
+          <a href="captions/07-admin-eml-plugin-setup.srt" aria-label="SubRip (.srt) English — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">SubRip (.srt)</a>
+          <a href="captions/es/07-admin-eml-plugin-setup.srt" aria-label="SRT (ES) — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">SRT (ES)</a>
+          <a href="captions/fr/07-admin-eml-plugin-setup.srt" aria-label="SRT (FR) — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">SRT (FR)</a>
+          <a href="captions/el/07-admin-eml-plugin-setup.srt" aria-label="SRT (EL) — Module 07: Upload External EML VM-250 Plugin &amp; Enable Per-Lane EML">SRT (EL)</a>
         </div>
       </article>
 
@@ -278,17 +354,26 @@
         <p class="summary">Authenticate at the OSCAR TLS gateway login page (with Keep me signed in until I log out and offline Passkey support), switch console UI localization live across 4 languages, open the Operator Quick Guide (?), and configure federated OSCAR nodes.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/08-viewer-signin-language-and-nodes.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/08-viewer-signin-language-and-nodes.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/08-viewer-signin-language-and-nodes.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/08-viewer-signin-language-and-nodes.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/08-viewer-signin-language-and-nodes.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/08-viewer-signin-language-and-nodes.vtt">
         </video>
         <ol class="steps">
             <li>Open <code>https://oscar.local</code>, enter the operator <strong>Username</strong> and <strong>Password</strong> (with <strong>Keep me signed in until I log out</strong> enabled, or click <strong>Sign in with a passkey</strong>), and click <strong>Sign in</strong>.</li>
-            <li>Click the top-bar language selector (<strong>English</strong>) to switch the console interface live between <code>English</code>, <code>Español</code>, <code>Français</code>, and <code>Ελληνικά</code>, and click the <code>?</code> help icon to open the <strong>Operator Quick Guide &amp; Glossary</strong>.</li>
+            <li>Click the top-bar language selector (<strong>English</strong>) to switch the console interface live between <code>English</code>, <code lang="es">Español</code>, <code lang="fr">Français</code>, and <code lang="el">Ελληνικά</code>, and click the <code>?</code> help icon to open the <strong>Operator Quick Guide &amp; Glossary</strong>.</li>
             <li>Open <strong>Servers</strong> (<code>/servers</code>) from the navigation drawer to verify <strong>Local Node</strong> status or add federated OSCAR nodes using interactive browser sessions or scoped <strong>Federation Service Tokens (<code>oscar_fed_...</code>)</strong>.</li>
         </ol>
         <div class="links">
           <a href="videos/08-viewer-signin-language-and-nodes.mp4" aria-label="MP4 Video — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">MP4 Video</a>
-          <a href="captions/08-viewer-signin-language-and-nodes.vtt" aria-label="WebVTT (.vtt) — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">WebVTT (.vtt)</a>
-          <a href="captions/08-viewer-signin-language-and-nodes.srt" aria-label="SubRip (.srt) — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">SubRip (.srt)</a>
+          <a href="captions/08-viewer-signin-language-and-nodes.vtt" aria-label="WebVTT (.vtt) English — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">WebVTT (.vtt)</a>
+          <a href="captions/es/08-viewer-signin-language-and-nodes.vtt" aria-label="VTT (ES) — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">VTT (ES)</a>
+          <a href="captions/fr/08-viewer-signin-language-and-nodes.vtt" aria-label="VTT (FR) — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">VTT (FR)</a>
+          <a href="captions/el/08-viewer-signin-language-and-nodes.vtt" aria-label="VTT (EL) — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">VTT (EL)</a>
+          <a href="captions/08-viewer-signin-language-and-nodes.srt" aria-label="SubRip (.srt) English — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">SubRip (.srt)</a>
+          <a href="captions/es/08-viewer-signin-language-and-nodes.srt" aria-label="SRT (ES) — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">SRT (ES)</a>
+          <a href="captions/fr/08-viewer-signin-language-and-nodes.srt" aria-label="SRT (FR) — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">SRT (FR)</a>
+          <a href="captions/el/08-viewer-signin-language-and-nodes.srt" aria-label="SRT (EL) — Module 08: Sign In to OSCAR Viewer, Switch Language &amp; Manage Nodes">SRT (EL)</a>
         </div>
       </article>
 
@@ -303,7 +388,10 @@
         <p class="summary">Monitor real-time 50-lane status tiles and live alarm occupancy rows on the Dashboard, toggle Dashboard Widgets, and launch rapid alarm telemetry and adjudication review.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/09-dashboard-monitoring-and-quick-adjudication.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/09-dashboard-monitoring-and-quick-adjudication.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/09-dashboard-monitoring-and-quick-adjudication.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/09-dashboard-monitoring-and-quick-adjudication.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/09-dashboard-monitoring-and-quick-adjudication.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/09-dashboard-monitoring-and-quick-adjudication.vtt">
         </video>
         <ol class="steps">
             <li>Open the OSCAR <strong>Dashboard</strong> (<code>/</code>) to monitor real-time <strong>Lane Status</strong> tiles across all 50 portal lanes and use the <strong>Dashboard Widgets</strong> bar to toggle <strong>Lane Status</strong>, <strong>Events Table</strong>, or <strong>Map / Preview</strong>.</li>
@@ -312,8 +400,14 @@
         </ol>
         <div class="links">
           <a href="videos/09-dashboard-monitoring-and-quick-adjudication.mp4" aria-label="MP4 Video — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">MP4 Video</a>
-          <a href="captions/09-dashboard-monitoring-and-quick-adjudication.vtt" aria-label="WebVTT (.vtt) — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">WebVTT (.vtt)</a>
-          <a href="captions/09-dashboard-monitoring-and-quick-adjudication.srt" aria-label="SubRip (.srt) — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">SubRip (.srt)</a>
+          <a href="captions/09-dashboard-monitoring-and-quick-adjudication.vtt" aria-label="WebVTT (.vtt) English — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">WebVTT (.vtt)</a>
+          <a href="captions/es/09-dashboard-monitoring-and-quick-adjudication.vtt" aria-label="VTT (ES) — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">VTT (ES)</a>
+          <a href="captions/fr/09-dashboard-monitoring-and-quick-adjudication.vtt" aria-label="VTT (FR) — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">VTT (FR)</a>
+          <a href="captions/el/09-dashboard-monitoring-and-quick-adjudication.vtt" aria-label="VTT (EL) — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">VTT (EL)</a>
+          <a href="captions/09-dashboard-monitoring-and-quick-adjudication.srt" aria-label="SubRip (.srt) English — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">SubRip (.srt)</a>
+          <a href="captions/es/09-dashboard-monitoring-and-quick-adjudication.srt" aria-label="SRT (ES) — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">SRT (ES)</a>
+          <a href="captions/fr/09-dashboard-monitoring-and-quick-adjudication.srt" aria-label="SRT (FR) — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">SRT (FR)</a>
+          <a href="captions/el/09-dashboard-monitoring-and-quick-adjudication.srt" aria-label="SRT (EL) — Module 09: Monitor Live 50-Lane Dashboard &amp; Inspect Alarm Rows">SRT (EL)</a>
         </div>
       </article>
 
@@ -328,7 +422,10 @@
         <p class="summary">Scope the Dashboard and Status of Health to an assigned workstation Operational View (?view=east-gate) and verify fail-closed protection on unassigned views.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/10-operational-views-scoping.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/10-operational-views-scoping.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/10-operational-views-scoping.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/10-operational-views-scoping.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/10-operational-views-scoping.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/10-operational-views-scoping.vtt">
         </video>
         <ol class="steps">
             <li>Open a workstation-scoped URL such as <code>https://oscar.local/?view=east-gate</code> and confirm the <strong><code>east-gate (10)</code></strong> scoped view indicator restricts visible lanes.</li>
@@ -337,8 +434,14 @@
         </ol>
         <div class="links">
           <a href="videos/10-operational-views-scoping.mp4" aria-label="MP4 Video — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">MP4 Video</a>
-          <a href="captions/10-operational-views-scoping.vtt" aria-label="WebVTT (.vtt) — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">WebVTT (.vtt)</a>
-          <a href="captions/10-operational-views-scoping.srt" aria-label="SubRip (.srt) — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">SubRip (.srt)</a>
+          <a href="captions/10-operational-views-scoping.vtt" aria-label="WebVTT (.vtt) English — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">WebVTT (.vtt)</a>
+          <a href="captions/es/10-operational-views-scoping.vtt" aria-label="VTT (ES) — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">VTT (ES)</a>
+          <a href="captions/fr/10-operational-views-scoping.vtt" aria-label="VTT (FR) — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">VTT (FR)</a>
+          <a href="captions/el/10-operational-views-scoping.vtt" aria-label="VTT (EL) — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">VTT (EL)</a>
+          <a href="captions/10-operational-views-scoping.srt" aria-label="SubRip (.srt) English — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">SubRip (.srt)</a>
+          <a href="captions/es/10-operational-views-scoping.srt" aria-label="SRT (ES) — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">SRT (ES)</a>
+          <a href="captions/fr/10-operational-views-scoping.srt" aria-label="SRT (FR) — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">SRT (FR)</a>
+          <a href="captions/el/10-operational-views-scoping.srt" aria-label="SRT (EL) — Module 10: Scope Workstation Lanes with Fail-Closed Operational Views">SRT (EL)</a>
         </div>
       </article>
 
@@ -353,7 +456,10 @@
         <p class="summary">Open Lane Details from the Dashboard to watch live RTSP/WebRTC camera video alongside multi-second real-time Gamma and Neutron count-rate waveforms across TOTALS, GAMMA DETECTORS, and NEUTRON DETECTORS views, plus lane occupancy history.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/11-live-lane-video-and-charts.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/11-live-lane-video-and-charts.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/11-live-lane-video-and-charts.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/11-live-lane-video-and-charts.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/11-live-lane-video-and-charts.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/11-live-lane-video-and-charts.vtt">
         </video>
         <ol class="steps">
             <li>Click <strong>Lane01</strong> under <strong>Lane Status</strong> on the Dashboard (<code>/</code>) to open <strong>Lane Details</strong> (<code>/lane-view</code>) and let live camera video and 5 Hz count-rate streams populate.</li>
@@ -362,8 +468,14 @@
         </ol>
         <div class="links">
           <a href="videos/11-live-lane-video-and-charts.mp4" aria-label="MP4 Video — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">MP4 Video</a>
-          <a href="captions/11-live-lane-video-and-charts.vtt" aria-label="WebVTT (.vtt) — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">WebVTT (.vtt)</a>
-          <a href="captions/11-live-lane-video-and-charts.srt" aria-label="SubRip (.srt) — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">SubRip (.srt)</a>
+          <a href="captions/11-live-lane-video-and-charts.vtt" aria-label="WebVTT (.vtt) English — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">WebVTT (.vtt)</a>
+          <a href="captions/es/11-live-lane-video-and-charts.vtt" aria-label="VTT (ES) — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">VTT (ES)</a>
+          <a href="captions/fr/11-live-lane-video-and-charts.vtt" aria-label="VTT (FR) — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">VTT (FR)</a>
+          <a href="captions/el/11-live-lane-video-and-charts.vtt" aria-label="VTT (EL) — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">VTT (EL)</a>
+          <a href="captions/11-live-lane-video-and-charts.srt" aria-label="SubRip (.srt) English — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">SubRip (.srt)</a>
+          <a href="captions/es/11-live-lane-video-and-charts.srt" aria-label="SRT (ES) — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">SRT (ES)</a>
+          <a href="captions/fr/11-live-lane-video-and-charts.srt" aria-label="SRT (FR) — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">SRT (FR)</a>
+          <a href="captions/el/11-live-lane-video-and-charts.srt" aria-label="SRT (EL) — Module 11: Inspect Live Lane Camera Stream &amp; Gamma/Neutron Waveforms">SRT (EL)</a>
         </div>
       </article>
 
@@ -378,7 +490,10 @@
         <p class="summary">Correlate repeat occupancies by normalized Vehicle ID in Multi-Pass Vehicle Comparison, filter Event Log via Alarm Category Co-Occurrence (UpSet), build nested server-side Advanced Filters, and look up exact records by Event UUID.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/12-event-log-filtering-and-adjudication-codes.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/12-event-log-filtering-and-adjudication-codes.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/12-event-log-filtering-and-adjudication-codes.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/12-event-log-filtering-and-adjudication-codes.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/12-event-log-filtering-and-adjudication-codes.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/12-event-log-filtering-and-adjudication-codes.vtt">
         </video>
         <ol class="steps">
             <li>Navigate to <strong>Event Log</strong> (<code>/event-log</code>), enter a container or plate identifier in the <strong>Vehicle / Container ID</strong> search bar (ignoring case, spaces, and hyphens), click <strong>SEARCH VEHICLE</strong>, and click <strong>COMPARE PASSES (<code>N</code>)</strong> to inspect correlated transits.</li>
@@ -388,8 +503,14 @@
         </ol>
         <div class="links">
           <a href="videos/12-event-log-filtering-and-adjudication-codes.mp4" aria-label="MP4 Video — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">MP4 Video</a>
-          <a href="captions/12-event-log-filtering-and-adjudication-codes.vtt" aria-label="WebVTT (.vtt) — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">WebVTT (.vtt)</a>
-          <a href="captions/12-event-log-filtering-and-adjudication-codes.srt" aria-label="SubRip (.srt) — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">SubRip (.srt)</a>
+          <a href="captions/12-event-log-filtering-and-adjudication-codes.vtt" aria-label="WebVTT (.vtt) English — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">WebVTT (.vtt)</a>
+          <a href="captions/es/12-event-log-filtering-and-adjudication-codes.vtt" aria-label="VTT (ES) — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">VTT (ES)</a>
+          <a href="captions/fr/12-event-log-filtering-and-adjudication-codes.vtt" aria-label="VTT (FR) — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">VTT (FR)</a>
+          <a href="captions/el/12-event-log-filtering-and-adjudication-codes.vtt" aria-label="VTT (EL) — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">VTT (EL)</a>
+          <a href="captions/12-event-log-filtering-and-adjudication-codes.srt" aria-label="SubRip (.srt) English — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">SubRip (.srt)</a>
+          <a href="captions/es/12-event-log-filtering-and-adjudication-codes.srt" aria-label="SRT (ES) — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">SRT (ES)</a>
+          <a href="captions/fr/12-event-log-filtering-and-adjudication-codes.srt" aria-label="SRT (FR) — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">SRT (FR)</a>
+          <a href="captions/el/12-event-log-filtering-and-adjudication-codes.srt" aria-label="SRT (EL) — Module 12: Filter Event Log by UpSet Categories, Vehicle ID, Adjudication Code &amp; Event UUID">SRT (EL)</a>
         </div>
       </article>
 
@@ -404,7 +525,10 @@
         <p class="summary">Inspect five-frame retained JPEG camera evidence across First, Middle, and Last keyframes, switch detector waveform tabs, examine exact GS, GA, NS, and GX RPM Daily File Output records, and submit an append-only adjudication.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/13-event-details-adjudication-and-daily-file.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/13-event-details-adjudication-and-daily-file.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/13-event-details-adjudication-and-daily-file.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/13-event-details-adjudication-and-daily-file.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/13-event-details-adjudication-and-daily-file.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/13-event-details-adjudication-and-daily-file.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>Event Details</strong> (<code>/event-details?eventId=&lt;id&gt;</code>), verify the <strong>Event UUID</strong> header bar, and step through the five retained camera JPEG thumbnails (<code>First</code>, <code>Middle</code>, <code>Last</code>) under <strong>Retained camera evidence</strong>.</li>
@@ -414,8 +538,14 @@
         </ol>
         <div class="links">
           <a href="videos/13-event-details-adjudication-and-daily-file.mp4" aria-label="MP4 Video — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">MP4 Video</a>
-          <a href="captions/13-event-details-adjudication-and-daily-file.vtt" aria-label="WebVTT (.vtt) — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">WebVTT (.vtt)</a>
-          <a href="captions/13-event-details-adjudication-and-daily-file.srt" aria-label="SubRip (.srt) — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">SubRip (.srt)</a>
+          <a href="captions/13-event-details-adjudication-and-daily-file.vtt" aria-label="WebVTT (.vtt) English — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">WebVTT (.vtt)</a>
+          <a href="captions/es/13-event-details-adjudication-and-daily-file.vtt" aria-label="VTT (ES) — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">VTT (ES)</a>
+          <a href="captions/fr/13-event-details-adjudication-and-daily-file.vtt" aria-label="VTT (FR) — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">VTT (FR)</a>
+          <a href="captions/el/13-event-details-adjudication-and-daily-file.vtt" aria-label="VTT (EL) — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">VTT (EL)</a>
+          <a href="captions/13-event-details-adjudication-and-daily-file.srt" aria-label="SubRip (.srt) English — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">SubRip (.srt)</a>
+          <a href="captions/es/13-event-details-adjudication-and-daily-file.srt" aria-label="SRT (ES) — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">SRT (ES)</a>
+          <a href="captions/fr/13-event-details-adjudication-and-daily-file.srt" aria-label="SRT (FR) — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">SRT (FR)</a>
+          <a href="captions/el/13-event-details-adjudication-and-daily-file.srt" aria-label="SRT (EL) — Module 13: Review Retained 5-Frame Media, Daily File Output &amp; Adjudicate">SRT (EL)</a>
         </div>
       </article>
 
@@ -430,7 +560,10 @@
         <p class="summary">Export a SHA-256-authenticated Alarm QR image from Event Details, then import and verify its cryptographic integrity and reconstructed waveforms offline on Alarm Transfer.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/14-airgapped-alarm-qr-transfer.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/14-airgapped-alarm-qr-transfer.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/14-airgapped-alarm-qr-transfer.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/14-airgapped-alarm-qr-transfer.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/14-airgapped-alarm-qr-transfer.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/14-airgapped-alarm-qr-transfer.vtt">
         </video>
         <ol class="steps">
             <li>On <strong>Event Details</strong>, click <strong>Export Alarm QR</strong> to generate the <code>OSCAR-ALARM:1:</code> signed transfer payload and QR symbol.</li>
@@ -440,8 +573,14 @@
         </ol>
         <div class="links">
           <a href="videos/14-airgapped-alarm-qr-transfer.mp4" aria-label="MP4 Video — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">MP4 Video</a>
-          <a href="captions/14-airgapped-alarm-qr-transfer.vtt" aria-label="WebVTT (.vtt) — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">WebVTT (.vtt)</a>
-          <a href="captions/14-airgapped-alarm-qr-transfer.srt" aria-label="SubRip (.srt) — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">SubRip (.srt)</a>
+          <a href="captions/14-airgapped-alarm-qr-transfer.vtt" aria-label="WebVTT (.vtt) English — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">WebVTT (.vtt)</a>
+          <a href="captions/es/14-airgapped-alarm-qr-transfer.vtt" aria-label="VTT (ES) — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">VTT (ES)</a>
+          <a href="captions/fr/14-airgapped-alarm-qr-transfer.vtt" aria-label="VTT (FR) — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">VTT (FR)</a>
+          <a href="captions/el/14-airgapped-alarm-qr-transfer.vtt" aria-label="VTT (EL) — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">VTT (EL)</a>
+          <a href="captions/14-airgapped-alarm-qr-transfer.srt" aria-label="SubRip (.srt) English — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">SubRip (.srt)</a>
+          <a href="captions/es/14-airgapped-alarm-qr-transfer.srt" aria-label="SRT (ES) — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">SRT (ES)</a>
+          <a href="captions/fr/14-airgapped-alarm-qr-transfer.srt" aria-label="SRT (FR) — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">SRT (FR)</a>
+          <a href="captions/el/14-airgapped-alarm-qr-transfer.srt" aria-label="SRT (EL) — Module 14: Export Signed Alarm QR &amp; Verify Offline on Air-Gapped Transfer">SRT (EL)</a>
         </div>
       </article>
 
@@ -456,7 +595,10 @@
         <p class="summary">Track RPM connectivity, camera stream health, detector/tamper faults, and Extended occupancy: Clear status on Status of Health, then open live georeferenced portal lane marker popups on Site Map.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/15-status-of-health-and-site-map.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/15-status-of-health-and-site-map.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/15-status-of-health-and-site-map.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/15-status-of-health-and-site-map.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/15-status-of-health-and-site-map.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/15-status-of-health-and-site-map.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>Status of Health</strong> (<code>/health</code>) from the navigation drawer to inspect real-time <code>Online</code> RPM/camera pills and detector or tamper fault badges across every lane.</li>
@@ -465,8 +607,14 @@
         </ol>
         <div class="links">
           <a href="videos/15-status-of-health-and-site-map.mp4" aria-label="MP4 Video — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">MP4 Video</a>
-          <a href="captions/15-status-of-health-and-site-map.vtt" aria-label="WebVTT (.vtt) — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">WebVTT (.vtt)</a>
-          <a href="captions/15-status-of-health-and-site-map.srt" aria-label="SubRip (.srt) — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">SubRip (.srt)</a>
+          <a href="captions/15-status-of-health-and-site-map.vtt" aria-label="WebVTT (.vtt) English — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">WebVTT (.vtt)</a>
+          <a href="captions/es/15-status-of-health-and-site-map.vtt" aria-label="VTT (ES) — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">VTT (ES)</a>
+          <a href="captions/fr/15-status-of-health-and-site-map.vtt" aria-label="VTT (FR) — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">VTT (FR)</a>
+          <a href="captions/el/15-status-of-health-and-site-map.vtt" aria-label="VTT (EL) — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">VTT (EL)</a>
+          <a href="captions/15-status-of-health-and-site-map.srt" aria-label="SubRip (.srt) English — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">SubRip (.srt)</a>
+          <a href="captions/es/15-status-of-health-and-site-map.srt" aria-label="SRT (ES) — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">SRT (ES)</a>
+          <a href="captions/fr/15-status-of-health-and-site-map.srt" aria-label="SRT (FR) — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">SRT (FR)</a>
+          <a href="captions/el/15-status-of-health-and-site-map.srt" aria-label="SRT (EL) — Module 15: Monitor RPM/Camera Status of Health &amp; Georeferenced Site Map">SRT (EL)</a>
         </div>
       </article>
 
@@ -481,7 +629,10 @@
         <p class="summary">Review aggregated occupancy and alarm rows on National View, then configure and generate a populated Vehicle Incident Report preview inline with Open and Download controls.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/16-national-statistics-and-reports.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/16-national-statistics-and-reports.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/16-national-statistics-and-reports.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/16-national-statistics-and-reports.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/16-national-statistics-and-reports.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/16-national-statistics-and-reports.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>National View</strong> (<code>/national-view</code>) to inspect aggregated occupancy totals, gamma/neutron alarm counts, and multi-lane trends.</li>
@@ -490,8 +641,14 @@
         </ol>
         <div class="links">
           <a href="videos/16-national-statistics-and-reports.mp4" aria-label="MP4 Video — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">MP4 Video</a>
-          <a href="captions/16-national-statistics-and-reports.vtt" aria-label="WebVTT (.vtt) — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">WebVTT (.vtt)</a>
-          <a href="captions/16-national-statistics-and-reports.srt" aria-label="SubRip (.srt) — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">SubRip (.srt)</a>
+          <a href="captions/16-national-statistics-and-reports.vtt" aria-label="WebVTT (.vtt) English — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">WebVTT (.vtt)</a>
+          <a href="captions/es/16-national-statistics-and-reports.vtt" aria-label="VTT (ES) — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">VTT (ES)</a>
+          <a href="captions/fr/16-national-statistics-and-reports.vtt" aria-label="VTT (FR) — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">VTT (FR)</a>
+          <a href="captions/el/16-national-statistics-and-reports.vtt" aria-label="VTT (EL) — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">VTT (EL)</a>
+          <a href="captions/16-national-statistics-and-reports.srt" aria-label="SubRip (.srt) English — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">SubRip (.srt)</a>
+          <a href="captions/es/16-national-statistics-and-reports.srt" aria-label="SRT (ES) — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">SRT (ES)</a>
+          <a href="captions/fr/16-national-statistics-and-reports.srt" aria-label="SRT (FR) — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">SRT (FR)</a>
+          <a href="captions/el/16-national-statistics-and-reports.srt" aria-label="SRT (EL) — Module 16: Analyze National View Statistics &amp; Generate Multi-Format Reports">SRT (EL)</a>
         </div>
       </article>
 
@@ -506,7 +663,10 @@
         <p class="summary">Inspect per-lane Vehicle OCR configuration on an OCR-enabled lane in SensorHub Admin, open an alarm in Event Details to review ISO 6346 container auto-fill, OCR suggestion chips, and Multi-Pass Vehicle History, compare overlaid radiation traces across passes, and record an adjudication.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/17-vehicle-ocr-and-adjudication.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/17-vehicle-ocr-and-adjudication.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/17-vehicle-ocr-and-adjudication.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/17-vehicle-ocr-and-adjudication.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/17-vehicle-ocr-and-adjudication.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/17-vehicle-ocr-and-adjudication.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>Sensors -&gt; Lane50 -&gt; Vehicle OCR</strong> in SensorHub Admin (<code>https://oscar.local/sensorhub/admin</code>) to review <strong>Enable Vehicle OCR</strong>, <strong>Alarms Only</strong>, <strong>Frames Per Clip</strong>, and confidence thresholds.</li>
@@ -516,8 +676,14 @@
         </ol>
         <div class="links">
           <a href="videos/17-vehicle-ocr-and-adjudication.mp4" aria-label="MP4 Video — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">MP4 Video</a>
-          <a href="captions/17-vehicle-ocr-and-adjudication.vtt" aria-label="WebVTT (.vtt) — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">WebVTT (.vtt)</a>
-          <a href="captions/17-vehicle-ocr-and-adjudication.srt" aria-label="SubRip (.srt) — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">SubRip (.srt)</a>
+          <a href="captions/17-vehicle-ocr-and-adjudication.vtt" aria-label="WebVTT (.vtt) English — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">WebVTT (.vtt)</a>
+          <a href="captions/es/17-vehicle-ocr-and-adjudication.vtt" aria-label="VTT (ES) — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">VTT (ES)</a>
+          <a href="captions/fr/17-vehicle-ocr-and-adjudication.vtt" aria-label="VTT (FR) — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">VTT (FR)</a>
+          <a href="captions/el/17-vehicle-ocr-and-adjudication.vtt" aria-label="VTT (EL) — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">VTT (EL)</a>
+          <a href="captions/17-vehicle-ocr-and-adjudication.srt" aria-label="SubRip (.srt) English — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">SubRip (.srt)</a>
+          <a href="captions/es/17-vehicle-ocr-and-adjudication.srt" aria-label="SRT (ES) — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">SRT (ES)</a>
+          <a href="captions/fr/17-vehicle-ocr-and-adjudication.srt" aria-label="SRT (FR) — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">SRT (FR)</a>
+          <a href="captions/el/17-vehicle-ocr-and-adjudication.srt" aria-label="SRT (EL) — Module 17: Configure Vehicle OCR, Compare Multi-Pass Transits &amp; Adjudicate">SRT (EL)</a>
         </div>
       </article>
 
@@ -532,18 +698,27 @@
         <p class="summary">Open Help (?) to browse the localized Operator Quick Guide &amp; Glossary, export the built-in 400-event browser Flight Recorder + rolling server logs into oscar-support-&lt;UTC&gt;.zip, run oscar.sh / oscar.bat support-bundle offline, and inspect summary.json and redaction-report.json.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/18-operator-help-and-support-bundle.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/18-operator-help-and-support-bundle.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/18-operator-help-and-support-bundle.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/18-operator-help-and-support-bundle.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/18-operator-help-and-support-bundle.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/18-operator-help-and-support-bundle.vtt">
         </video>
         <ol class="steps">
-            <li>Click the <strong>Help (<code>?</code>)</strong> button in the OSCAR Viewer top navigation bar to open the localized <strong>OSCAR 3.11.6 Operator Quick Guide &amp; Glossary</strong> (<code>en</code>, <code>es</code>, <code>fr</code>, <code>el</code>).</li>
+            <li>Click the <strong>Help (<code>?</code>)</strong> button in the OSCAR Viewer top navigation bar to open the localized <strong>OSCAR 3.11.7 Operator Quick Guide &amp; Glossary</strong> (<code>en</code>, <code>es</code>, <code>fr</code>, <code>el</code>).</li>
             <li>Open <strong>Manual &amp; Video Guides</strong> and click <strong>Export Support Bundle</strong> to merge the 400-event browser Flight Recorder (<code>client/client-diagnostics.json</code>) with rolling server logs (<code>backend/oscar.log</code>) into <code>oscar-support-&lt;UTC&gt;.zip</code> (automatically falling back to <code>oscar-client-support-&lt;UTC&gt;.zip</code> if the server is offline).</li>
             <li>When containers are stopped or unreachable over HTTPS, run <code>sudo bash oscar.sh support-bundle</code> (Ubuntu) or <code>.\oscar.bat support-bundle</code> (Windows) on the host to capture <code>oscar-host-support-&lt;UTC&gt;.zip</code>.</li>
             <li>Inspect <code>summary.json</code>, <code>client/client-diagnostics.json</code>, and <code>redaction-report.json</code> side-by-side to review recent events and confirm automatic <code>[REDACTED]</code> credential scrubbing.</li>
         </ol>
         <div class="links">
           <a href="videos/18-operator-help-and-support-bundle.mp4" aria-label="MP4 Video — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">MP4 Video</a>
-          <a href="captions/18-operator-help-and-support-bundle.vtt" aria-label="WebVTT (.vtt) — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">WebVTT (.vtt)</a>
-          <a href="captions/18-operator-help-and-support-bundle.srt" aria-label="SubRip (.srt) — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">SubRip (.srt)</a>
+          <a href="captions/18-operator-help-and-support-bundle.vtt" aria-label="WebVTT (.vtt) English — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">WebVTT (.vtt)</a>
+          <a href="captions/es/18-operator-help-and-support-bundle.vtt" aria-label="VTT (ES) — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">VTT (ES)</a>
+          <a href="captions/fr/18-operator-help-and-support-bundle.vtt" aria-label="VTT (FR) — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">VTT (FR)</a>
+          <a href="captions/el/18-operator-help-and-support-bundle.vtt" aria-label="VTT (EL) — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">VTT (EL)</a>
+          <a href="captions/18-operator-help-and-support-bundle.srt" aria-label="SubRip (.srt) English — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">SubRip (.srt)</a>
+          <a href="captions/es/18-operator-help-and-support-bundle.srt" aria-label="SRT (ES) — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">SRT (ES)</a>
+          <a href="captions/fr/18-operator-help-and-support-bundle.srt" aria-label="SRT (FR) — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">SRT (FR)</a>
+          <a href="captions/el/18-operator-help-and-support-bundle.srt" aria-label="SRT (EL) — Module 18: Use Flight Recorder, Help (?) &amp; Redacted Support Bundles (UI &amp; CLI)">SRT (EL)</a>
         </div>
       </article>
 
@@ -558,7 +733,10 @@
         <p class="summary">Open Users &amp; Access (/users) to enroll offline WebAuthn Passkeys, bulk-enroll a CSV user list with 1-tap setup QR codes, mint scoped Federation Service Tokens, and launch Servers (/servers?auth=bearer) in Federation Token mode.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/19-viewer-users-passkeys-and-access.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/19-viewer-users-passkeys-and-access.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/19-viewer-users-passkeys-and-access.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/19-viewer-users-passkeys-and-access.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/19-viewer-users-passkeys-and-access.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/19-viewer-users-passkeys-and-access.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>Users &amp; Access</strong> (<code>/users</code>) from the navigation drawer to inspect persistent session status (<code>Stays signed in until you click Log Out</code>), register offline <strong>Passkeys / YubiKeys</strong>, or update your local OSCAR password (separate from Octelium tunnel credentials).</li>
@@ -568,8 +746,14 @@
         </ol>
         <div class="links">
           <a href="videos/19-viewer-users-passkeys-and-access.mp4" aria-label="MP4 Video — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">MP4 Video</a>
-          <a href="captions/19-viewer-users-passkeys-and-access.vtt" aria-label="WebVTT (.vtt) — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">WebVTT (.vtt)</a>
-          <a href="captions/19-viewer-users-passkeys-and-access.srt" aria-label="SubRip (.srt) — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">SubRip (.srt)</a>
+          <a href="captions/19-viewer-users-passkeys-and-access.vtt" aria-label="WebVTT (.vtt) English — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">WebVTT (.vtt)</a>
+          <a href="captions/es/19-viewer-users-passkeys-and-access.vtt" aria-label="VTT (ES) — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">VTT (ES)</a>
+          <a href="captions/fr/19-viewer-users-passkeys-and-access.vtt" aria-label="VTT (FR) — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">VTT (FR)</a>
+          <a href="captions/el/19-viewer-users-passkeys-and-access.vtt" aria-label="VTT (EL) — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">VTT (EL)</a>
+          <a href="captions/19-viewer-users-passkeys-and-access.srt" aria-label="SubRip (.srt) English — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">SubRip (.srt)</a>
+          <a href="captions/es/19-viewer-users-passkeys-and-access.srt" aria-label="SRT (ES) — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">SRT (ES)</a>
+          <a href="captions/fr/19-viewer-users-passkeys-and-access.srt" aria-label="SRT (FR) — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">SRT (FR)</a>
+          <a href="captions/el/19-viewer-users-passkeys-and-access.srt" aria-label="SRT (EL) — Module 19: Manage Users, Bulk QR Invites, Offline Passkeys &amp; Federation Tokens">SRT (EL)</a>
         </div>
       </article>
 
@@ -584,7 +768,10 @@
         <p class="summary">Mint a scoped oscar_fed_* Federation Service Token on West Gate Portal, register the remote HTTPS node on Central HQ Node, correlate cross-portal container transits in Events -&gt; Compare Passes, and export unified multi-node Vehicle Incident JSON and PDF reports.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/20-multi-node-federation-vehicle-search-and-report.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/20-multi-node-federation-vehicle-search-and-report.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/20-multi-node-federation-vehicle-search-and-report.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/20-multi-node-federation-vehicle-search-and-report.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/20-multi-node-federation-vehicle-search-and-report.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/20-multi-node-federation-vehicle-search-and-report.vtt">
         </video>
         <ol class="steps">
             <li>On the remote OSCAR portal (<strong>West Gate Portal</strong>), open <strong>Users &amp; Access (<code>/users</code>) -&gt; Federation Tokens</strong>, enter a descriptive node label, select <code>Viewer</code> or <code>Operator</code>, and click <strong>Create Federation Token</strong> to mint a revocable <code>oscar_fed_...</code> bearer credential.</li>
@@ -594,8 +781,14 @@
         </ol>
         <div class="links">
           <a href="videos/20-multi-node-federation-vehicle-search-and-report.mp4" aria-label="MP4 Video — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">MP4 Video</a>
-          <a href="captions/20-multi-node-federation-vehicle-search-and-report.vtt" aria-label="WebVTT (.vtt) — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">WebVTT (.vtt)</a>
-          <a href="captions/20-multi-node-federation-vehicle-search-and-report.srt" aria-label="SubRip (.srt) — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">SubRip (.srt)</a>
+          <a href="captions/20-multi-node-federation-vehicle-search-and-report.vtt" aria-label="WebVTT (.vtt) English — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">WebVTT (.vtt)</a>
+          <a href="captions/es/20-multi-node-federation-vehicle-search-and-report.vtt" aria-label="VTT (ES) — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">VTT (ES)</a>
+          <a href="captions/fr/20-multi-node-federation-vehicle-search-and-report.vtt" aria-label="VTT (FR) — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">VTT (FR)</a>
+          <a href="captions/el/20-multi-node-federation-vehicle-search-and-report.vtt" aria-label="VTT (EL) — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">VTT (EL)</a>
+          <a href="captions/20-multi-node-federation-vehicle-search-and-report.srt" aria-label="SubRip (.srt) English — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">SubRip (.srt)</a>
+          <a href="captions/es/20-multi-node-federation-vehicle-search-and-report.srt" aria-label="SRT (ES) — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">SRT (ES)</a>
+          <a href="captions/fr/20-multi-node-federation-vehicle-search-and-report.srt" aria-label="SRT (FR) — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">SRT (FR)</a>
+          <a href="captions/el/20-multi-node-federation-vehicle-search-and-report.srt" aria-label="SRT (EL) — Module 20: Federate Multi-Site Nodes, Search Vehicles Across Portals &amp; Generate Reports">SRT (EL)</a>
         </div>
       </article>
 
@@ -610,7 +803,10 @@
         <p class="summary">Create centralized operator and viewer accounts in Authentik, map roles via oscar-admins, oscar-operators, and oscar-viewers, issue single-use 1-tap SSO Passkey enrollment links, and permanently revoke access across Authentik, Octelium Zero-Trust Hub, and OSCAR /users.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/21-federated-sso-passkey-onboarding-and-revocation.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/21-federated-sso-passkey-onboarding-and-revocation.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/21-federated-sso-passkey-onboarding-and-revocation.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/21-federated-sso-passkey-onboarding-and-revocation.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/21-federated-sso-passkey-onboarding-and-revocation.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/21-federated-sso-passkey-onboarding-and-revocation.vtt">
         </video>
         <ol class="steps">
             <li>In <strong>Authentik Admin (<code>https://auth.hub.example.org/if/admin/</code>) -&gt; Directory -&gt; Users</strong>, click <strong>Create</strong>, enter the username, display name, and email address, and add the user to <code>oscar-admins</code>, <code>oscar-operators</code>, or <code>oscar-viewers</code>.</li>
@@ -619,8 +815,14 @@
         </ol>
         <div class="links">
           <a href="videos/21-federated-sso-passkey-onboarding-and-revocation.mp4" aria-label="MP4 Video — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">MP4 Video</a>
-          <a href="captions/21-federated-sso-passkey-onboarding-and-revocation.vtt" aria-label="WebVTT (.vtt) — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">WebVTT (.vtt)</a>
-          <a href="captions/21-federated-sso-passkey-onboarding-and-revocation.srt" aria-label="SubRip (.srt) — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">SubRip (.srt)</a>
+          <a href="captions/21-federated-sso-passkey-onboarding-and-revocation.vtt" aria-label="WebVTT (.vtt) English — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">WebVTT (.vtt)</a>
+          <a href="captions/es/21-federated-sso-passkey-onboarding-and-revocation.vtt" aria-label="VTT (ES) — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">VTT (ES)</a>
+          <a href="captions/fr/21-federated-sso-passkey-onboarding-and-revocation.vtt" aria-label="VTT (FR) — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">VTT (FR)</a>
+          <a href="captions/el/21-federated-sso-passkey-onboarding-and-revocation.vtt" aria-label="VTT (EL) — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">VTT (EL)</a>
+          <a href="captions/21-federated-sso-passkey-onboarding-and-revocation.srt" aria-label="SubRip (.srt) English — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">SubRip (.srt)</a>
+          <a href="captions/es/21-federated-sso-passkey-onboarding-and-revocation.srt" aria-label="SRT (ES) — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">SRT (ES)</a>
+          <a href="captions/fr/21-federated-sso-passkey-onboarding-and-revocation.srt" aria-label="SRT (FR) — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">SRT (FR)</a>
+          <a href="captions/el/21-federated-sso-passkey-onboarding-and-revocation.srt" aria-label="SRT (EL) — Module 21: Onboard Authentik SSO Passkey Users &amp; Revoke Access Across All Layers">SRT (EL)</a>
         </div>
       </article>
 
@@ -635,18 +837,27 @@
         <p class="summary">Install ORNL/oscar-regression, run all 246 offline unit tests, configure .env capability gates and 4-layer safety interlocks, execute smoke, full, release, restore-drill, and ui-endurance profiles across all 23 functional scenarios, and inspect summary.md and CSV evidence.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/22-regression-suite-setup-and-certification.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/22-regression-suite-setup-and-certification.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/22-regression-suite-setup-and-certification.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/22-regression-suite-setup-and-certification.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/22-regression-suite-setup-and-certification.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/22-regression-suite-setup-and-certification.vtt">
         </video>
         <ol class="steps">
-            <li>Clone [<code>ORNL/oscar-regression</code>](https://github.com/ORNL/oscar-regression), run <code>npm ci</code> and <code>npm run install:browser</code>, and verify TypeScript compilation and all 246 offline unit tests with <code>npm run check &amp;&amp; npm test</code>.</li>
+            <li>Clone <a href="https://github.com/ORNL/oscar-regression"><code>ORNL/oscar-regression</code></a>, run <code>npm ci</code> and <code>npm run install:browser</code>, and verify TypeScript compilation and all 246 offline unit tests with <code>npm run check &amp;&amp; npm test</code>.</li>
             <li>Copy <code>.env.example</code> to <code>.env</code> (<code>chmod 600 .env</code>), set target, emulator, <code>RPM_LANE_MAPPING_ACK</code>, and <code>DISPOSABLE-STORAGE</code> safety interlocks, and run <code>./scripts/rebind-active-release.sh --apply --build-label &lt;label&gt;</code> after clean-directory upgrades.</li>
             <li>Execute <code>npm run test:smoke</code> (<code>13</code> read-only scenarios), <code>npm run test:full</code> (<code>23</code> scenarios including faults, alarms, Vehicle OCR, EML, Cargo UFF, Sandbox, WebRelay, and <code>PARQUET_PRIMARY</code> retirement), <code>npm run test:restore-drill</code>, or <code>./scripts/run-ui-endurance.sh</code>.</li>
             <li>Review <code>results/&lt;UTC-timestamp&gt;-&lt;runner&gt;/summary.md</code>, <code>functional-results.csv</code>, <code>performance.csv</code>, <code>storage-performance.csv</code>, <code>errors.csv</code>, and <code>evidence/</code> screenshots (<code>exit 0</code> requires <code>0</code> incorrect checks).</li>
         </ol>
         <div class="links">
           <a href="videos/22-regression-suite-setup-and-certification.mp4" aria-label="MP4 Video — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">MP4 Video</a>
-          <a href="captions/22-regression-suite-setup-and-certification.vtt" aria-label="WebVTT (.vtt) — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">WebVTT (.vtt)</a>
-          <a href="captions/22-regression-suite-setup-and-certification.srt" aria-label="SubRip (.srt) — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">SubRip (.srt)</a>
+          <a href="captions/22-regression-suite-setup-and-certification.vtt" aria-label="WebVTT (.vtt) English — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">WebVTT (.vtt)</a>
+          <a href="captions/es/22-regression-suite-setup-and-certification.vtt" aria-label="VTT (ES) — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">VTT (ES)</a>
+          <a href="captions/fr/22-regression-suite-setup-and-certification.vtt" aria-label="VTT (FR) — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">VTT (FR)</a>
+          <a href="captions/el/22-regression-suite-setup-and-certification.vtt" aria-label="VTT (EL) — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">VTT (EL)</a>
+          <a href="captions/22-regression-suite-setup-and-certification.srt" aria-label="SubRip (.srt) English — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">SubRip (.srt)</a>
+          <a href="captions/es/22-regression-suite-setup-and-certification.srt" aria-label="SRT (ES) — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">SRT (ES)</a>
+          <a href="captions/fr/22-regression-suite-setup-and-certification.srt" aria-label="SRT (FR) — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">SRT (FR)</a>
+          <a href="captions/el/22-regression-suite-setup-and-certification.srt" aria-label="SRT (EL) — Module 22: Install, Configure &amp; Run the End-to-End OSCAR Regression Suite">SRT (EL)</a>
         </div>
       </article>
 
@@ -661,7 +872,10 @@
         <p class="summary">Prepare unattended 24/7 Windows 11 + WSL 2 hosts with oscar.bat prepare-host, attach outbound Zero-Trust tunnels, and size 100% Container &amp; License Plate OCR cleanly (6 OCR lanes on Windows 11 WSL 2 vs. 50 OCR lanes on Ubuntu Server 24.04 bare-metal) without 5 Hz RPM sample bunching.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/23-windows-wsl2-host-readiness-and-ocr-scaling.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt">
         </video>
         <ol class="steps">
             <li>On Windows 11 x86-64 (Administrator PowerShell 5.1), run <code>.\oscar.bat host-check</code> and <code>.\oscar.bat prepare-host</code> to enable High Performance AC power, disable sleep/USB suspend, and write bounded <code>%USERPROFILE%\.wslconfig</code> limits.</li>
@@ -670,8 +884,14 @@
         </ol>
         <div class="links">
           <a href="videos/23-windows-wsl2-host-readiness-and-ocr-scaling.mp4" aria-label="MP4 Video — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">MP4 Video</a>
-          <a href="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt" aria-label="WebVTT (.vtt) — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">WebVTT (.vtt)</a>
-          <a href="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.srt" aria-label="SubRip (.srt) — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">SubRip (.srt)</a>
+          <a href="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt" aria-label="WebVTT (.vtt) English — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">WebVTT (.vtt)</a>
+          <a href="captions/es/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt" aria-label="VTT (ES) — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">VTT (ES)</a>
+          <a href="captions/fr/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt" aria-label="VTT (FR) — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">VTT (FR)</a>
+          <a href="captions/el/23-windows-wsl2-host-readiness-and-ocr-scaling.vtt" aria-label="VTT (EL) — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">VTT (EL)</a>
+          <a href="captions/23-windows-wsl2-host-readiness-and-ocr-scaling.srt" aria-label="SubRip (.srt) English — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">SubRip (.srt)</a>
+          <a href="captions/es/23-windows-wsl2-host-readiness-and-ocr-scaling.srt" aria-label="SRT (ES) — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">SRT (ES)</a>
+          <a href="captions/fr/23-windows-wsl2-host-readiness-and-ocr-scaling.srt" aria-label="SRT (FR) — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">SRT (FR)</a>
+          <a href="captions/el/23-windows-wsl2-host-readiness-and-ocr-scaling.srt" aria-label="SRT (EL) — Module 23: Prepare Windows 11 WSL 2 Hosts &amp; Right-Size 100% Per-Lane OCR">SRT (EL)</a>
         </div>
       </article>
 
@@ -686,7 +906,10 @@
         <p class="summary">Open USB Backups (/usb-backups) to inspect an attached NTFS external USB 3.x NVMe SSD, configure Continual vs. Occasional zero-downtime sync, run an on-demand incremental backup, download the off-site recovery key, and perform a 1-click Safely Eject USB Drive offload.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/24-continual-and-occasional-usb-backups.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/24-continual-and-occasional-usb-backups.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/24-continual-and-occasional-usb-backups.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/24-continual-and-occasional-usb-backups.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/24-continual-and-occasional-usb-backups.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/24-continual-and-occasional-usb-backups.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>USB Backups (<code>/usb-backups</code>)</strong> from the left navigation drawer to inspect the attached external USB 3.x NVMe SSD (<code>ATTACHED &amp; ONLINE</code>), carrier capacity, PostgreSQL WAL LSN, and deduplicated Parquet/media pack counts.</li>
@@ -696,8 +919,14 @@
         </ol>
         <div class="links">
           <a href="videos/24-continual-and-occasional-usb-backups.mp4" aria-label="MP4 Video — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">MP4 Video</a>
-          <a href="captions/24-continual-and-occasional-usb-backups.vtt" aria-label="WebVTT (.vtt) — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">WebVTT (.vtt)</a>
-          <a href="captions/24-continual-and-occasional-usb-backups.srt" aria-label="SubRip (.srt) — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">SubRip (.srt)</a>
+          <a href="captions/24-continual-and-occasional-usb-backups.vtt" aria-label="WebVTT (.vtt) English — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">WebVTT (.vtt)</a>
+          <a href="captions/es/24-continual-and-occasional-usb-backups.vtt" aria-label="VTT (ES) — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">VTT (ES)</a>
+          <a href="captions/fr/24-continual-and-occasional-usb-backups.vtt" aria-label="VTT (FR) — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">VTT (FR)</a>
+          <a href="captions/el/24-continual-and-occasional-usb-backups.vtt" aria-label="VTT (EL) — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">VTT (EL)</a>
+          <a href="captions/24-continual-and-occasional-usb-backups.srt" aria-label="SubRip (.srt) English — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">SubRip (.srt)</a>
+          <a href="captions/es/24-continual-and-occasional-usb-backups.srt" aria-label="SRT (ES) — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">SRT (ES)</a>
+          <a href="captions/fr/24-continual-and-occasional-usb-backups.srt" aria-label="SRT (FR) — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">SRT (FR)</a>
+          <a href="captions/el/24-continual-and-occasional-usb-backups.srt" aria-label="SRT (EL) — Module 24: Manage Continual &amp; Occasional USB NVMe Backups &amp; Safe Field Eject">SRT (EL)</a>
         </div>
       </article>
 
@@ -712,7 +941,10 @@
         <p class="summary">Open Runtime Extensions (/extensions) to inspect OSCAR's shipped built-in defaults, hot-swap a Unicode regional OCR plate-rule pack and an offline PMTiles v3 (.pmtiles) regional basemap, render live portal lane markers over regional corridor roads/waterways on Map (/map), and restore shipped defaults.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/25-pluggable-runtime-extensions-and-pmtiles.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/25-pluggable-runtime-extensions-and-pmtiles.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/25-pluggable-runtime-extensions-and-pmtiles.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/25-pluggable-runtime-extensions-and-pmtiles.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/25-pluggable-runtime-extensions-and-pmtiles.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/25-pluggable-runtime-extensions-and-pmtiles.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>Runtime Extensions (<code>/extensions</code>)</strong> from the left navigation drawer to review the upgrade-safe extension domains (<code>OCR Models &amp; Engines</code>, <code>Offline Maps (.pmtiles)</code>, <code>Spectroscopy / Nuclide ID</code>, <code>Trusted CA Certificates</code>, <code>Adjudication Policy Packs</code>, <code>EML Alarm Assessment</code>, and <code>Cargo NII (WCO UFF)</code>).</li>
@@ -722,8 +954,14 @@
         </ol>
         <div class="links">
           <a href="videos/25-pluggable-runtime-extensions-and-pmtiles.mp4" aria-label="MP4 Video — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">MP4 Video</a>
-          <a href="captions/25-pluggable-runtime-extensions-and-pmtiles.vtt" aria-label="WebVTT (.vtt) — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">WebVTT (.vtt)</a>
-          <a href="captions/25-pluggable-runtime-extensions-and-pmtiles.srt" aria-label="SubRip (.srt) — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">SubRip (.srt)</a>
+          <a href="captions/25-pluggable-runtime-extensions-and-pmtiles.vtt" aria-label="WebVTT (.vtt) English — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">WebVTT (.vtt)</a>
+          <a href="captions/es/25-pluggable-runtime-extensions-and-pmtiles.vtt" aria-label="VTT (ES) — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">VTT (ES)</a>
+          <a href="captions/fr/25-pluggable-runtime-extensions-and-pmtiles.vtt" aria-label="VTT (FR) — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">VTT (FR)</a>
+          <a href="captions/el/25-pluggable-runtime-extensions-and-pmtiles.vtt" aria-label="VTT (EL) — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">VTT (EL)</a>
+          <a href="captions/25-pluggable-runtime-extensions-and-pmtiles.srt" aria-label="SubRip (.srt) English — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">SubRip (.srt)</a>
+          <a href="captions/es/25-pluggable-runtime-extensions-and-pmtiles.srt" aria-label="SRT (ES) — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">SRT (ES)</a>
+          <a href="captions/fr/25-pluggable-runtime-extensions-and-pmtiles.srt" aria-label="SRT (FR) — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">SRT (FR)</a>
+          <a href="captions/el/25-pluggable-runtime-extensions-and-pmtiles.srt" aria-label="SRT (EL) — Module 25: Swap Pluggable OCR Packs &amp; Air-Gapped Regional .pmtiles Basemaps">SRT (EL)</a>
         </div>
       </article>
 
@@ -735,21 +973,30 @@
             <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 16.5s · 712.3 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Unpack the self-contained Ubuntu 24.04 offline bundle on hotel/office Wi-Fi, identify physical NICs by carrier blink, pre-stage the portal's static Netplan YAML without dropping SSH, expand Ubuntu LVM root storage and initialize OSCAR 3.11.6 offline, then cut over on-site and discover RPMs and RTSP cameras.</p>
+        <p class="summary">Unpack the self-contained Ubuntu 24.04 offline bundle on hotel/office Wi-Fi, identify physical NICs by carrier blink, pre-stage the portal's static Netplan YAML without dropping SSH, expand Ubuntu LVM root storage and initialize OSCAR 3.11.7 offline, then cut over on-site and discover RPMs and RTSP cameras.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt">
         </video>
         <ol class="steps">
-            <li>Off-site (hotel or staging bench), extract <code>oscar-3.11.6-ubuntu-x86_64-offline-full.zip</code>, verify bundle checksums (<code>sudo bash verify-bundle.sh</code>), and run <code>sudo bash oscar.sh identify-nics --watch</code> while plugging a patch cord into the target NIC to confirm its Linux interface name (<code>enp2s0</code>).</li>
+            <li>Off-site (hotel or staging bench), extract <code>oscar-3.11.7-ubuntu-x86_64-offline-full.zip</code>, verify bundle checksums (<code>sudo bash verify-bundle.sh</code>), and run <code>sudo bash oscar.sh identify-nics --watch</code> while plugging a patch cord into the target NIC to confirm its Linux interface name (<code>enp2s0</code>).</li>
             <li>Stage the portal's static IPv4 configuration safely without touching active Wi-Fi/SSH via <code>sudo bash oscar.sh stage-site-network --interface enp2s0 --ip 198.51.100.10/24 --gateway 198.51.100.1</code>.</li>
             <li>Run <code>sudo bash oscar.sh prepare-host --offline --expand-lvm</code> to expand Ubuntu Server's default <code>100 GiB</code> LVM logical volume across the full NVMe disk and install offline <code>.deb</code> packages, then run <code>sudo bash oscar.sh init --offline</code> to load air-gapped container images and initialize credentials.</li>
             <li>On-site inside the air-gapped portal rack, apply the pre-staged static subnet with <code>sudo bash oscar.sh apply-site-network</code> and scan the sensor LAN with <code>sudo bash oscar.sh discover-devices --interface enp2s0</code> to verify Rapiscan RPM (<code>10001–10050</code>) and RTSP camera (<code>554</code>/<code>8554</code>) endpoints.</li>
         </ol>
         <div class="links">
           <a href="videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4" aria-label="MP4 Video — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">MP4 Video</a>
-          <a href="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" aria-label="WebVTT (.vtt) — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">WebVTT (.vtt)</a>
-          <a href="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.srt" aria-label="SubRip (.srt) — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">SubRip (.srt)</a>
+          <a href="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" aria-label="WebVTT (.vtt) English — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">WebVTT (.vtt)</a>
+          <a href="captions/es/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" aria-label="VTT (ES) — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">VTT (ES)</a>
+          <a href="captions/fr/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" aria-label="VTT (FR) — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">VTT (FR)</a>
+          <a href="captions/el/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt" aria-label="VTT (EL) — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">VTT (EL)</a>
+          <a href="captions/26-ubuntu-hotel-staging-and-airgapped-cutover.srt" aria-label="SubRip (.srt) English — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">SubRip (.srt)</a>
+          <a href="captions/es/26-ubuntu-hotel-staging-and-airgapped-cutover.srt" aria-label="SRT (ES) — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">SRT (ES)</a>
+          <a href="captions/fr/26-ubuntu-hotel-staging-and-airgapped-cutover.srt" aria-label="SRT (FR) — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">SRT (FR)</a>
+          <a href="captions/el/26-ubuntu-hotel-staging-and-airgapped-cutover.srt" aria-label="SRT (EL) — Module 26: Stage Ubuntu 24.04 Off-Site &amp; Cut Over to Air-Gapped Portal Subnets">SRT (EL)</a>
         </div>
       </article>
 
@@ -764,7 +1011,10 @@
         <p class="summary">Enable an optional SMBv2/SMBv3 Cargo Non-Intrusive Inspection share in Runtime Extensions, browse scanner packages with 1-character fuzzy ISO 6346 OCR correlation in Event Details, inspect progressive 16-bit dual-energy HEMD radiographs aligned with the RPM gamma/neutron waveform, and stage a .uffref.json adjudication pointer.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/27-cargo-uff-smb-and-xray-inspection.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/27-cargo-uff-smb-and-xray-inspection.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/27-cargo-uff-smb-and-xray-inspection.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/27-cargo-uff-smb-and-xray-inspection.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/27-cargo-uff-smb-and-xray-inspection.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/27-cargo-uff-smb-and-xray-inspection.vtt">
         </video>
         <ol class="steps">
             <li>Open <strong>Runtime Extensions</strong> (<code>/extensions</code>), select <strong>Cargo NII (WCO UFF)</strong>, configure the read-only SMBv2/SMBv3 share (<code>\\nas.port.local\oscar-uff</code>), click <strong>TEST CONNECTION</strong>, and click <strong>SAVE &amp; INDEX</strong> to index <code>160</code> <code>.uff</code> packages in place.</li>
@@ -774,8 +1024,14 @@
         </ol>
         <div class="links">
           <a href="videos/27-cargo-uff-smb-and-xray-inspection.mp4" aria-label="MP4 Video — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">MP4 Video</a>
-          <a href="captions/27-cargo-uff-smb-and-xray-inspection.vtt" aria-label="WebVTT (.vtt) — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">WebVTT (.vtt)</a>
-          <a href="captions/27-cargo-uff-smb-and-xray-inspection.srt" aria-label="SubRip (.srt) — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">SubRip (.srt)</a>
+          <a href="captions/27-cargo-uff-smb-and-xray-inspection.vtt" aria-label="WebVTT (.vtt) English — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">WebVTT (.vtt)</a>
+          <a href="captions/es/27-cargo-uff-smb-and-xray-inspection.vtt" aria-label="VTT (ES) — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">VTT (ES)</a>
+          <a href="captions/fr/27-cargo-uff-smb-and-xray-inspection.vtt" aria-label="VTT (FR) — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">VTT (FR)</a>
+          <a href="captions/el/27-cargo-uff-smb-and-xray-inspection.vtt" aria-label="VTT (EL) — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">VTT (EL)</a>
+          <a href="captions/27-cargo-uff-smb-and-xray-inspection.srt" aria-label="SubRip (.srt) English — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">SubRip (.srt)</a>
+          <a href="captions/es/27-cargo-uff-smb-and-xray-inspection.srt" aria-label="SRT (ES) — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">SRT (ES)</a>
+          <a href="captions/fr/27-cargo-uff-smb-and-xray-inspection.srt" aria-label="SRT (FR) — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">SRT (FR)</a>
+          <a href="captions/el/27-cargo-uff-smb-and-xray-inspection.srt" aria-label="SRT (EL) — Module 27: Connect Cargo NII (WCO UFF 2.0 &amp; 3.0.0) SMB Shares &amp; Inspect 16-Bit X-Rays">SRT (EL)</a>
         </div>
       </article>
 
@@ -790,7 +1046,10 @@
         <p class="summary">Launch the isolated ephemeral Training Sandbox (:8444) with zero production database or Parquet writes, inject live Rapiscan RPM alarms and NORM/fault scenarios until Lab 1.3 turns Auto-Verified, inspect Services -&gt; OSCAR Service inside Split-Pane SensorHub Admin, and export a watermarked PDF Training Completion Record.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/28-hands-on-training-sandbox.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/28-hands-on-training-sandbox.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/28-hands-on-training-sandbox.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/28-hands-on-training-sandbox.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/28-hands-on-training-sandbox.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/28-hands-on-training-sandbox.vtt">
         </video>
         <ol class="steps">
             <li>Start the isolated sandbox (<code>sudo bash oscar.sh sandbox start</code> or <code>Help (?) -&gt; Launch Hands-On Training Sandbox</code>), open <code>:8444</code>, and confirm the single-row <strong>TRAINING SANDBOX</strong> badge and <strong>Training Coach</strong> dock.</li>
@@ -800,8 +1059,14 @@
         </ol>
         <div class="links">
           <a href="videos/28-hands-on-training-sandbox.mp4" aria-label="MP4 Video — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">MP4 Video</a>
-          <a href="captions/28-hands-on-training-sandbox.vtt" aria-label="WebVTT (.vtt) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">WebVTT (.vtt)</a>
-          <a href="captions/28-hands-on-training-sandbox.srt" aria-label="SubRip (.srt) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">SubRip (.srt)</a>
+          <a href="captions/28-hands-on-training-sandbox.vtt" aria-label="WebVTT (.vtt) English — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">WebVTT (.vtt)</a>
+          <a href="captions/es/28-hands-on-training-sandbox.vtt" aria-label="VTT (ES) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">VTT (ES)</a>
+          <a href="captions/fr/28-hands-on-training-sandbox.vtt" aria-label="VTT (FR) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">VTT (FR)</a>
+          <a href="captions/el/28-hands-on-training-sandbox.vtt" aria-label="VTT (EL) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">VTT (EL)</a>
+          <a href="captions/28-hands-on-training-sandbox.srt" aria-label="SubRip (.srt) English — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">SubRip (.srt)</a>
+          <a href="captions/es/28-hands-on-training-sandbox.srt" aria-label="SRT (ES) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">SRT (ES)</a>
+          <a href="captions/fr/28-hands-on-training-sandbox.srt" aria-label="SRT (FR) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">SRT (FR)</a>
+          <a href="captions/el/28-hands-on-training-sandbox.srt" aria-label="SRT (EL) — Module 28: Practice Safely in the Ephemeral Hands-On Training Sandbox &amp; Guided Academy">SRT (EL)</a>
         </div>
       </article>
 
@@ -816,7 +1081,10 @@
         <p class="summary">Configure per-lane ControlByWeb WebRelay-Quad HTTP/XML control in Status of Health (/health), inspect live R1-R4 coil telemetry and Code 9999 / Code 9998 suppression counts, fire timed commissioning pulses on Gamma Red + Siren (R3) and Neutron Blue (R4), and open the anytime Guided Walkthrough refresher.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/29-lane-webrelay-lights-and-sound.mp4" type="video/mp4" />
-          <track kind="captions" src="captions/29-lane-webrelay-lights-and-sound.vtt" srclang="en" label="English" default />
+          <track kind="captions" srclang="en" label="English" src="captions/29-lane-webrelay-lights-and-sound.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/29-lane-webrelay-lights-and-sound.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/29-lane-webrelay-lights-and-sound.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/29-lane-webrelay-lights-and-sound.vtt">
         </video>
         <ol class="steps">
             <li>Sign in as an <strong>Administrator</strong>, open <strong>Status of Health (<code>/health</code>)</strong>, and click <strong>Lights &amp; Sound</strong> on <strong>Lane01</strong> to open the native <code>&lt;dialog&gt;</code> WebRelay-Quad control modal.</li>
@@ -826,8 +1094,14 @@
         </ol>
         <div class="links">
           <a href="videos/29-lane-webrelay-lights-and-sound.mp4" aria-label="MP4 Video — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">MP4 Video</a>
-          <a href="captions/29-lane-webrelay-lights-and-sound.vtt" aria-label="WebVTT (.vtt) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">WebVTT (.vtt)</a>
-          <a href="captions/29-lane-webrelay-lights-and-sound.srt" aria-label="SubRip (.srt) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">SubRip (.srt)</a>
+          <a href="captions/29-lane-webrelay-lights-and-sound.vtt" aria-label="WebVTT (.vtt) English — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">WebVTT (.vtt)</a>
+          <a href="captions/es/29-lane-webrelay-lights-and-sound.vtt" aria-label="VTT (ES) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">VTT (ES)</a>
+          <a href="captions/fr/29-lane-webrelay-lights-and-sound.vtt" aria-label="VTT (FR) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">VTT (FR)</a>
+          <a href="captions/el/29-lane-webrelay-lights-and-sound.vtt" aria-label="VTT (EL) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">VTT (EL)</a>
+          <a href="captions/29-lane-webrelay-lights-and-sound.srt" aria-label="SubRip (.srt) English — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">SubRip (.srt)</a>
+          <a href="captions/es/29-lane-webrelay-lights-and-sound.srt" aria-label="SRT (ES) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">SRT (ES)</a>
+          <a href="captions/fr/29-lane-webrelay-lights-and-sound.srt" aria-label="SRT (FR) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">SRT (FR)</a>
+          <a href="captions/el/29-lane-webrelay-lights-and-sound.srt" aria-label="SRT (EL) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">SRT (EL)</a>
         </div>
       </article>
   </main>

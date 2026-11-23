@@ -1,0 +1,14 @@
+1
+00:00:00,040 --> 00:00:07,605
+Parcourez les images JPEG conservées (First, Middle,
+Last) et inspectez les courbes GAMMA DETECTORS.
+
+2
+00:00:07,645 --> 00:00:12,681
+Faites défiler jusqu’à Sortie du fichier journalier pour
+inspecter les enregistrements exacts GS, GA, NS et GX.
+
+3
+00:00:12,721 --> 00:00:25,088
+Renseignez ID véhicule, code d’Adjudication, Inspection
+secondaire et Notes, puis confirmez l’envoi immuable.

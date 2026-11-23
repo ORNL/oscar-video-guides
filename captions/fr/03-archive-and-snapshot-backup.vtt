@@ -1,0 +1,15 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:03.940
+Vérifiez l’état des générations du niveau
+froid PARQUET_PRIMARY et les reçus de parité.
+
+2
+00:00:03.980 --> 00:00:07.882
+Validez les empreintes SHA-256 et la parité du
+nombre de lignes des partitions Parquet scellées.
+
+3
+00:00:07.922 --> 00:00:12.582
+Créez une sauvegarde instantanée coordonnée et exécutez backup-verify.

@@ -1,0 +1,16 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:12.218
+En Authentik Directory -> Users, cree demo.operator con
+correo electrónico y asigne el grupo oscar-operators.
+
+2
+00:00:12.258 --> 00:00:19.547
+Abra la pestaña Overview del usuario y pulse Create recovery
+link para generar un enlace SSO Passkey de un solo uso.
+
+3
+00:00:19.587 --> 00:00:29.447
+Elimine demo.operator en Authentik para activar la revocación Zero-Trust
+de oscar-hub-sync y verifique Usuarios y roles (/users) en OSCAR.
