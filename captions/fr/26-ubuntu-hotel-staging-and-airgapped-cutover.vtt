@@ -1,16 +1,16 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:05.592
+00:00:00.040 --> 00:00:11.522
 Hors site : identifiez les ports Ethernet physiques par état
 de lien et pré-stagez le sous-réseau statique sans couper SSH.
 
 2
-00:00:05.632 --> 00:00:10.555
+00:00:11.562 --> 00:00:22.282
 Étendez le volume racine LVM de 100 Gio d’Ubuntu 24.04 sur tout
-le SSD NVMe et initialisez OSCAR 3.11.6 entièrement hors ligne.
+le SSD NVMe et initialisez OSCAR 3.11.8 entièrement hors ligne.
 
 3
-00:00:10.595 --> 00:00:15.855
+00:00:22.322 --> 00:00:33.043
 Sur site dans la baie du portique : appliquez le profil Netplan
 statique et scannez enp2s0 pour détecter les RPM et caméras RTSP.

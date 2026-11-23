@@ -1,19 +1,19 @@
 1
-00:00:00,040 --> 00:00:06,621
+00:00:00,040 --> 00:00:09,800
 Pulse Ayuda (?) en la barra superior y explore Páginas
 de consola, Informes y formatos y Términos explicados.
 
 2
-00:00:06,661 --> 00:00:13,626
+00:00:09,840 --> 00:00:19,140
 Abra Manual y videoguías y pulse Exportar paquete de soporte
 para descargar diagnósticos redactados de cliente y servidor.
 
 3
-00:00:13,666 --> 00:00:19,208
+00:00:19,180 --> 00:00:28,480
 Si los contenedores están detenidos o inaccesibles, ejecute
 sudo bash oscar.sh support-bundle u oscar.bat support-bundle en el host.
 
 4
-00:00:19,248 --> 00:00:25,117
+00:00:28,520 --> 00:00:36,908
 Revise summary.json, client/client-diagnostics.json y
 redaction-report.json para verificar el filtrado automático [REDACTED].

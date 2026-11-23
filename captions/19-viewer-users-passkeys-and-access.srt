@@ -1,15 +1,15 @@
 1
-00:00:00,040 --> 00:00:05,241
+00:00:00,040 --> 00:00:08,441
 Review persistent Stay Signed In status, offline Passkeys, and local-password vs. Octelium tunnel separation.
 
 2
-00:00:05,281 --> 00:00:11,692
+00:00:08,481 --> 00:00:17,780
 Open Users & Roles, click Bulk Enroll (CSV / Paste), and submit an operator and viewer roster.
 
 3
-00:00:11,732 --> 00:00:17,480
+00:00:17,820 --> 00:00:26,181
 Inspect the generated Startup Messages & 1-Tap Setup QR Codes pack.
 
 4
-00:00:17,520 --> 00:00:29,630
+00:00:26,221 --> 00:00:39,033
 Mint a scoped Federation Service Token and open Servers (/servers?auth=bearer) in Federation Token mode.

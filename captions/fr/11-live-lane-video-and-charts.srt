@@ -1,14 +1,14 @@
 1
-00:00:00,040 --> 00:00:08,555
+00:00:00,040 --> 00:00:21,532
 Sélectionnez Lane01 sur le Tableau de bord pour ouvrir la vue
 en direct (/lane-view) et recevoir la télémétrie continue.
 
 2
-00:00:08,595 --> 00:00:18,342
+00:00:21,572 --> 00:00:53,012
 Suivez la vidéo en direct avec les courbes TOTALS,
 puis inspectez GAMMA DETECTORS et NEUTRON DETECTORS.
 
 3
-00:00:18,382 --> 00:00:23,105
+00:00:53,052 --> 00:01:01,413
 Consultez le tableau d’Occupation de la voie sous les
 graphiques en direct pour revoir les événements récents.

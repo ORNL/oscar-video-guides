@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:06.135
+00:00:00.040 --> 00:00:08.540
 Confirmez le badge TRAINING SANDBOX (:8444) dans le Bac
 à sable et sélectionnez Lab 1.3 dans le Coach Formation.
 
 2
-00:00:06.175 --> 00:00:15.878
+00:00:08.580 --> 00:00:59.925
 Cliquez sur Inject Distributed NORM (Code 9999) sur DemoLane01 et
 attendez que l’auto-Adjudication EML marque Lab 1.3 Auto-Verified.
 
 3
-00:00:15.918 --> 00:00:23.524
+00:00:59.965 --> 00:01:10.106
 Passez au Parcours 3 — Administrateur, ouvrez SensorHub Admin en
 vue partagée et inspectez Services -> OSCAR Service à côté du coach.
 
 4
-00:00:23.564 --> 00:00:30.094
+00:01:10.146 --> 00:01:18.508
 Saisissez le nom du stagiaire et exportez l’attestation
 PDF de réussite d’une page avec filigrane.

@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:05,450
+00:00:00,040 --> 00:00:11,481
 On Windows 11 + WSL 2, run oscar.bat host-check and prepare-host for 24/7 power/WSL tuning, and attach outbound TLS 443 via oscar-remote-access.ps1.
 
 2
-00:00:05,490 --> 00:00:11,082
+00:00:11,521 --> 00:00:26,281
 Size Windows 11 WSL 2 nodes to 1–8 lanes (such as 6 lanes at 100% OCR) to avoid Hyper-V TCP sample bunching; use Ubuntu 24.04 bare-metal for 25–50 OCR lanes.
 
 3
-00:00:11,122 --> 00:00:16,908
-Sync the right-sized config.csv in SensorHub Admin, verify smooth 5 Hz plots in Live Lane View, and federate field and HQ nodes via oscar_fed_* tokens.
+00:00:26,321 --> 00:00:54,123
+Review the right-sized config.csv path in SensorHub Admin and verify smooth 5 Hz Gamma and Neutron waveforms with live camera video on Lane50.

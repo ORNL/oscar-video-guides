@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:05,760
+00:00:00,040 --> 00:00:09,920
 Verify the east-gate Operational View scopes Dashboard Lane Status tiles to the 10 East Gate lanes only.
 
 2
-00:00:05,800 --> 00:00:11,348
+00:00:09,960 --> 00:00:19,169
 Navigate to Status of Health (/health?view=east-gate) and confirm Operational View scoping to 10 lanes.
 
 3
-00:00:11,388 --> 00:00:16,619
+00:00:19,209 --> 00:00:28,369
 Confirm fail-closed protection blocks lane loading when an unassigned view key is requested.

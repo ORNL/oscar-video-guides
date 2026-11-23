@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:06.676
+00:00:00.040 --> 00:00:09.380
 Dans État de santé (/health), ciblez Feux et sirène sur
 Lane01 et ouvrez la fenêtre de commande WebRelay-Quad.
 
 2
-00:00:06.716 --> 00:00:14.454
+00:00:09.420 --> 00:00:19.923
 Testez la connexion HTTP/XML ControlByWeb (198.51.100.21), activez
 le filtrage AUTO EML et enregistrez pour armer les relais R1 et R2.
 
 3
-00:00:14.494 --> 00:00:23.416
+00:00:19.963 --> 00:00:31.783
 Déclenchez des impulsions temporisées sur feu rouge gamma + sirène (R3=ACTIVE)
 et bleu neutron (R4=ACTIVE), puis cliquez sur Silence pour réarmer R1 et R2.
 
 4
-00:00:23.456 --> 00:00:31.687
+00:00:31.823 --> 00:00:43.223
 Confirmez WebRelay (AUTO) · En ligne dans État de santé et ouvrez
 Parcours guidé pour une révision sûre et l’arrêt auto sur :8444.

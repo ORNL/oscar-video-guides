@@ -1,14 +1,14 @@
 1
-00:00:00,040 --> 00:00:05,592
+00:00:00,040 --> 00:00:11,522
 Fuera de sitio: identifique puertos Ethernet físicos por estado
 de enlace y preconfigure la subred estática sin cortar SSH.
 
 2
-00:00:05,632 --> 00:00:10,555
+00:00:11,562 --> 00:00:22,282
 Expanda el volumen raíz LVM de 100 GiB de Ubuntu 24.04 a todo
-el SSD NVMe e inicialice OSCAR 3.11.6 totalmente sin conexión.
+el SSD NVMe e inicialice OSCAR 3.11.8 totalmente sin conexión.
 
 3
-00:00:10,595 --> 00:00:15,855
+00:00:22,322 --> 00:00:33,043
 En sitio en el bastidor del pórtico: aplique el perfil Netplan
 estático y escanee enp2s0 para detectar RPM y cámaras RTSP.

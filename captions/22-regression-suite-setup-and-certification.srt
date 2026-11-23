@@ -1,15 +1,15 @@
 1
-00:00:00,040 --> 00:00:05,465
+00:00:00,040 --> 00:00:12,561
 Clone ORNL/oscar-regression, run npm ci and npm run install:browser, then run npm run check and npm test to verify all 246 unit tests.
 
 2
-00:00:05,505 --> 00:00:11,107
+00:00:12,601 --> 00:00:22,323
 Configure .env with target, emulator, lane-mapping, and DISPOSABLE-STORAGE acknowledgements, and use rebind-active-release.sh after upgrades.
 
 3
-00:00:11,147 --> 00:00:16,747
+00:00:22,363 --> 00:00:32,082
 Run smoke, full, restore-drill, or ui-endurance—or pass --scenario to target individual modules across the regression suite.
 
 4
-00:00:16,787 --> 00:00:22,582
+00:00:32,122 --> 00:00:41,851
 Inspect results/<run-id>/summary.md, functional-results.csv, performance.csv, and evidence/ screenshots; exit code 0 requires zero incorrect checks.

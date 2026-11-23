@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:06.621
+00:00:00.040 --> 00:00:09.800
 Cliquez sur Aide (?) dans la barre supérieure et parcourez
 Pages de la console, Rapports et exports et Termes expliqués.
 
 2
-00:00:06.661 --> 00:00:13.626
+00:00:09.840 --> 00:00:19.140
 Ouvrez Manuel et guides vidéo et cliquez sur Exporter l’archive
 d’assistance pour télécharger les diagnostics masqués.
 
 3
-00:00:13.666 --> 00:00:19.208
+00:00:19.180 --> 00:00:28.480
 Si les conteneurs sont arrêtés ou injoignables, exécutez
 sudo bash oscar.sh support-bundle ou oscar.bat support-bundle sur l’hôte.
 
 4
-00:00:19.248 --> 00:00:25.117
+00:00:28.520 --> 00:00:36.908
 Inspectez summary.json, client/client-diagnostics.json et
 redaction-report.json pour vérifier le masquage automatique [REDACTED].

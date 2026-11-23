@@ -1,16 +1,16 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:07.448
+00:00:00.040 --> 00:00:12.541
 Inicie sesión en https://oscar.local con sesión
 persistente activada (o mediante Passkey).
 
 2
-00:00:07.488 --> 00:00:19.119
+00:00:12.581 --> 00:00:22.320
 Cambie en vivo el idioma del visor entre English
 y Español y abra la Guía rápida del operador (?).
 
 3
-00:00:19.159 --> 00:00:24.977
+00:00:22.360 --> 00:00:30.720
 Abra la página Servidores (/servers) para verificar
 la conexión del nodo local y los ajustes multinodo.

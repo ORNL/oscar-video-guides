@@ -1,15 +1,15 @@
 1
-00:00:00,040 --> 00:00:06,135
+00:00:00,040 --> 00:00:08,540
 Confirm the TRAINING SANDBOX badge (:8444) and select Lab 1.3 in the multi-modal Training Coach.
 
 2
-00:00:06,175 --> 00:00:15,878
+00:00:08,580 --> 00:00:59,925
 Click Inject Distributed NORM (Code 9999) on DemoLane01 and wait for live EML auto-adjudication to mark Lab 1.3 Auto-Verified.
 
 3
-00:00:15,918 --> 00:00:23,524
+00:00:59,965 --> 00:01:10,106
 Switch to Track 3 — Administrator, open Split-Pane SensorHub Admin, and inspect Services -> OSCAR Service beside the Coach.
 
 4
-00:00:23,564 --> 00:00:30,094
+00:01:10,146 --> 00:01:18,508
 Enter a trainee name and export the watermarked 1-page PDF Training Completion Record.

@@ -1,14 +1,14 @@
 1
-00:00:00,040 --> 00:00:04,030
-Extraiga oscar-3.11.6.zip en un directorio
+00:00:00,040 --> 00:00:09,241
+Extraiga oscar-3.11.8.zip en un directorio
 paralelo limpio sin sobrescribir archivos previos.
 
 2
-00:00:04,070 --> 00:00:08,903
+00:00:09,281 --> 00:00:19,050
 Copie únicamente .env, secrets/ y tls/ del
-despliegue activo en next/oscar-3.11.6/.
+despliegue activo en next/oscar-3.11.8/.
 
 3
-00:00:08,943 --> 00:00:13,603
+00:00:19,090 --> 00:00:28,799
 Ejecute sudo bash oscar.sh upgrade para migrar
 índices bajo bloqueo y recrear contenedores.

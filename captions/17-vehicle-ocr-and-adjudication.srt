@@ -1,15 +1,15 @@
 1
-00:00:00,040 --> 00:00:06,704
+00:00:00,040 --> 00:00:09,382
 Select an OCR-enabled lane (Lane45–Lane50) in SensorHub Admin and open Vehicle OCR to verify Enable Vehicle OCR.
 
 2
-00:00:06,744 --> 00:00:16,077
+00:00:09,422 --> 00:00:19,983
 Open Event Details in OSCAR Viewer to inspect ISO 6346 OCR suggestion chips, Vehicle ID auto-fill, and Multi-Pass Vehicle History.
 
 3
-00:00:16,117 --> 00:00:25,216
+00:00:20,023 --> 00:00:31,946
 Click COMPARE PASSES and LOAD RADIATION TRACES to inspect cross-lane transits, OCR crops, and overlaid radiation waveforms.
 
 4
-00:00:25,256 --> 00:00:37,517
+00:00:31,986 --> 00:00:47,634
 Select Adjudicate disposition and Secondary Inspection status, then confirm append-only submission.

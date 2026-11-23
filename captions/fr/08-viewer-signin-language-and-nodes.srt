@@ -1,14 +1,14 @@
 1
-00:00:00,040 --> 00:00:07,448
+00:00:00,040 --> 00:00:12,541
 Connectez-vous sur https://oscar.local avec
 session persistante activée (ou par Passkey).
 
 2
-00:00:07,488 --> 00:00:19,119
+00:00:12,581 --> 00:00:22,320
 Basculez la langue de l’interface entre English et
 Español et ouvrez le Guide rapide opérateur (?).
 
 3
-00:00:19,159 --> 00:00:24,977
+00:00:22,360 --> 00:00:30,720
 Ouvrez la page Serveurs (/servers) pour vérifier la
 connectivité du nœud local et la configuration multi-nœuds.

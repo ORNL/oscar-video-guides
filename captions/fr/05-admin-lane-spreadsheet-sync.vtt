@@ -1,16 +1,16 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:05.761
+00:00:00.040 --> 00:00:09.780
 Repérez Spreadsheet Config Path ainsi que les
 boutons Upload et Download dans OSCAR Service.
 
 2
-00:00:05.801 --> 00:00:10.882
+00:00:09.820 --> 00:00:19.223
 Cliquez sur Apply Changes et Save pour synchroniser
 les voies de la feuille et OperationalViews.
 
 3
-00:00:10.922 --> 00:00:16.770
+00:00:19.263 --> 00:00:29.128
 Dépliez Sensors pour confirmer que les modules
 importés Lane01 à Lane50 sont enregistrés et actifs.

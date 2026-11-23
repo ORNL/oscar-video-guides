@@ -1,16 +1,16 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:05.450
+00:00:00.040 --> 00:00:11.481
 En Windows 11 + WSL 2, ejecute oscar.bat host-check y prepare-host para
 ajuste 24/7, y conecte TLS 443 saliente con oscar-remote-access.ps1.
 
 2
-00:00:05.490 --> 00:00:11.082
+00:00:11.521 --> 00:00:26.281
 Dimensione nodos Windows 11 WSL 2 a 1–8 carriles (6 al 100% OCR) sin
 ráfagas TCP Hyper-V; use Ubuntu 24.04 físico para 25–50 carriles OCR.
 
 3
-00:00:11.122 --> 00:00:16.908
-Sincronice el config.csv ajustado en SensorHub Admin, verifique
-curvas fluidas de 5 Hz y federe nodos mediante tokens oscar_fed_*.
+00:00:26.321 --> 00:00:54.123
+Revise la ruta de config.csv en SensorHub Admin y verifique curvas
+fluidas de 5 Hz de Gamma y Neutrones con video en vivo en Lane50.

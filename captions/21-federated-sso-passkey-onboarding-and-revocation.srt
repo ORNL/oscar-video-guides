@@ -1,11 +1,11 @@
 1
-00:00:00,040 --> 00:00:12,218
+00:00:00,040 --> 00:00:15,888
 In Authentik Directory -> Users, create demo.operator with an email address and assign oscar-operators.
 
 2
-00:00:12,258 --> 00:00:19,547
+00:00:15,928 --> 00:00:26,068
 Open the user Overview tab and click Create recovery link to generate a single-use 1-tap SSO Passkey enrollment URL.
 
 3
-00:00:19,587 --> 00:00:29,447
+00:00:26,108 --> 00:00:38,738
 Delete demo.operator in Authentik to trigger oscar-hub-sync Zero-Trust revocation, then confirm clean Users & Roles (/users) on OSCAR.

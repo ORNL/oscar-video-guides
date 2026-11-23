@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.040 --> 00:00:06.568
+00:00:00.040 --> 00:00:10.800
 Ouvrez Extensions (/extensions) pour voir les défauts OCR intégrés,
 charger un fichier Unicode plate-rules.json et vérifier CUSTOM OVERRIDE.
 
 2
-00:00:06.608 --> 00:00:13.594
+00:00:10.840 --> 00:00:24.133
 Passez à Offline Maps (.pmtiles), nommez la couche Regional
 Port Corridor et téléversez une archive régionale PMTiles v3.
 
 3
-00:00:13.634 --> 00:00:19.871
+00:00:24.173 --> 00:00:36.213
 Ouvrez Carte (/map) et sélectionnez Offline: Regional Port Corridor
 pour afficher routes, voies navigables et les 50 marqueurs hors ligne.
 
 4
-00:00:19.911 --> 00:00:26.619
+00:00:36.253 --> 00:00:47.445
 Revenez dans Extensions (/extensions) et cliquez sur Reset
 to Shipped Default pour rétablir SHIPPED DEFAULT ACTIVE.
