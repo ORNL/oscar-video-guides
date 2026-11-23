@@ -1,6 +1,6 @@
 # OSCAR How-To Video Guides
 
-Human-paced, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.10** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus 4-language (`en`, `es`, `fr`, `el`) standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
+Human-paced, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.11** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus 4-language (`en`, `es`, `fr`, `el`) standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
 
 ## Encoding & Playback Profile
 
@@ -414,11 +414,11 @@ Launch the isolated ephemeral Training Sandbox (:8444) with zero production data
 <a id="31-bare-metal-autoinstall-usb-creator"></a>
 ### 31. Build an Air-Gapped Ubuntu 24.04 Autoinstall USB Drive (GUI, TUI & CLI)
 
-Use the compact standalone oscar-3.11.10-autoinstall-usb-creator.zip on Windows 11 or Ubuntu—via Desktop GUI, interactive terminal TUI, or scriptable CLI—to combine ubuntu-24.04-live-server-amd64.iso, oscar-3.11.10-ubuntu-x86_64-offline-full.zip, a PBKDF2-hashed initial OSCAR web admin password, and pre-configured site lanes (lanes.csv / config.json) onto a turnkey UEFI Secure-Boot USB installer.
+Use the compact standalone oscar-3.11.11-autoinstall-usb-creator.zip on Windows 11 or Ubuntu—via Desktop GUI, interactive terminal TUI, or scriptable CLI—to combine ubuntu-24.04-live-server-amd64.iso, oscar-3.11.11-ubuntu-x86_64-offline-full.zip, a PBKDF2-hashed initial OSCAR web admin password, and pre-configured site lanes (lanes.csv / config.json) onto a turnkey UEFI Secure-Boot USB installer.
 
 - **Video:** [Watch `31-bare-metal-autoinstall-usb-creator.mp4` (67s, 1739.4 KiB)](videos/31-bare-metal-autoinstall-usb-creator.mp4) · [WebVTT Captions](captions/31-bare-metal-autoinstall-usb-creator.vtt) · [SRT Captions](captions/31-bare-metal-autoinstall-usb-creator.srt)
 
-1. Download the compact standalone `oscar-3.11.10-autoinstall-usb-creator.zip` alongside `ubuntu-24.04.5-live-server-amd64.iso` and `oscar-3.11.10-ubuntu-x86_64-offline-full.zip` without unpacking the offline bundle.
+1. Download the compact standalone `oscar-3.11.11-autoinstall-usb-creator.zip` alongside `ubuntu-24.04.5-live-server-amd64.iso` and `oscar-3.11.11-ubuntu-x86_64-offline-full.zip` without unpacking the offline bundle.
 2. Launch the Desktop GUI (`create-autoinstall-usb.bat` on Windows 11 or `sudo bash create-autoinstall-usb.sh --gui` on Ubuntu) to pick a removable USB drive while internal NVMe OS and `OSCAR_BACKUP` disks stay hidden.
 3. Set the server hostname, Linux admin password (`$6$` SHA-512), optional LUKS2 encryption, initial OSCAR web `admin` password (PBKDF2-hashed), and `lanes.csv` with `Auto-initialize OSCAR on first boot`, then type `ERASE-USB` to build.
 4. Use the interactive terminal TUI (`-Tui` / `--tui`) or non-interactive CLI flags (`--oscar-admin-password-file`, `--lanes-file`, `--auto-init-oscar`, `--confirm ERASE-USB`) so on site you only register users and upload `.pmtiles` or the site diagram.
