@@ -1,15 +1,19 @@
 1
-00:00:00,040 --> 00:00:11,481
-Open the standalone Autoinstall USB Creator GUI, select a removable 64 GiB USB drive, and verify auto-detected ISO and offline bundle paths.
+00:00:00,040 --> 00:00:11,482
+Open the Autoinstall USB Creator GUI, pick a 64 GiB USB drive, and
+verify ISO & bundle paths.
 
 2
-00:00:11,521 --> 00:00:25,569
-Set server hostname, admin password, and LUKS2 disk encryption, type ERASE-USB to unlock, and build the verified bootable USB.
+00:00:11,522 --> 00:00:27,578
+Pre-stage PBKDF2 OSCAR admin password & lanes.csv with first-boot
+auto-init, then build.
 
 3
-00:00:25,719 --> 00:00:36,319
-Run --list-drives in the terminal to verify internal NVMe OS and OSCAR_BACKUP drives remain protected before launching TUI or CLI.
+00:00:27,724 --> 00:00:38,325
+Run --list-drives to confirm internal NVMe OS and OSCAR_BACKUP
+drives remain protected.
 
 4
-00:00:36,359 --> 00:01:04,305
-Execute the non-interactive CLI with --password-file, LUKS2, --require-sudo-password, and --ssh-keys-only to stage CIDATA and OSCAR_MEDIA.
+00:00:38,365 --> 00:01:06,510
+Run the CLI with --oscar-admin-password-file, --lanes-file, and
+--auto-init-oscar.

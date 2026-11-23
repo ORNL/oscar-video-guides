@@ -1,19 +1,19 @@
 1
-00:00:00,040 --> 00:00:11,481
-Ouvrez le GUI autonome du créateur USB, choisissez une clé USB 64
-Gio et vérifiez ISO et offline-full.zip.
+00:00:00,040 --> 00:00:11,482
+Ouvrez l'interface USB Autoinstall, choisissez une clé 64 Gio et
+vérifiez l'ISO.
 
 2
-00:00:11,521 --> 00:00:25,569
-Définissez hôte, mot de passe et chiffrement LUKS2, tapez ERASE-USB
-puis créez la clé USB vérifiée.
+00:00:11,522 --> 00:00:27,578
+Préconfigurez le mot de passe admin PBKDF2 et lanes.csv avec auto-
+init, puis créez.
 
 3
-00:00:25,719 --> 00:00:36,319
-Exécutez --list-drives dans le terminal pour confirmer la protection
-des disques NVMe et OSCAR_BACKUP.
+00:00:27,724 --> 00:00:38,325
+Lancez --list-drives pour vérifier que les disques NVMe et
+OSCAR_BACKUP sont protégés.
 
 4
-00:00:36,359 --> 00:01:04,305
-Lancez la CLI avec --password-file, LUKS2, --require-sudo-password
-et --ssh-keys-only pour CIDATA et OSCAR_MEDIA.
+00:00:38,365 --> 00:01:06,510
+Exécutez la CLI avec --oscar-admin-password-file, --lanes-file et
+--auto-init-oscar.
