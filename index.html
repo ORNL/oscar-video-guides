@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OSCAR 3.11.8 How-To Video Guides</title>
+  <title>OSCAR 3.11.9 How-To Video Guides</title>
   <style>
     :root {
       color-scheme: dark;
@@ -81,7 +81,7 @@
 </head>
 <body>
   <header>
-    <h1>OSCAR 3.11.8 How-To Video Guides</h1>
+    <h1>OSCAR 3.11.9 How-To Video Guides</h1>
     <p>Human-paced, step-by-step 1080p workflow screen recordings encoded via NVIDIA RTX 5060 Ti hardware NVENC H.264 (NV12 4:2:0, 8s GOP 240, 30 FPS CFR) with synchronized 4-language (English, Español, Français, Ελληνικά) closed captions and sequential step references.</p>
   </header>
   <main>
@@ -915,6 +915,64 @@
           <a href="videos/29-lane-webrelay-lights-and-sound.mp4" aria-label="MP4 Video — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">MP4 Video</a>
           <a href="captions/29-lane-webrelay-lights-and-sound.vtt" aria-label="WebVTT (.vtt) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">WebVTT (.vtt)</a>
           <a href="captions/29-lane-webrelay-lights-and-sound.srt" aria-label="SubRip (.srt) — Module 29: Configure &amp; Control Per-Lane Physical RPM Lights &amp; Sound (WebRelay-Quad)">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="30-zero-login-github-system-update" data-track="Track C — OSCAR Viewer Console Operations">
+        <div class="card-head">
+          <span class="badge">30</span>
+          <div>
+            <h2>Update OSCAR From the GUI Without a GitHub Login (GitHub &amp; Offline .zip)</h2>
+            <p class="meta">Track C — OSCAR Viewer Console Operations · 38s · 1118.9 KiB · 1080p NVENC H.264 30 FPS</p>
+          </div>
+        </div>
+        <p class="summary">Open Users &amp; Access -&gt; System Update (/users?tab=update), discover and SHA-256-verify the latest official ORNL/oscar GitHub Release anonymously with zero GitHub account or token, confirm sibling-directory installation with automatic fail-safe rollback inside the native modal dialog, and stage air-gapped .zip bundles on offline portals.</p>
+        <video controls width="1920" height="1080" preload="metadata" playsinline>
+          <source src="videos/30-zero-login-github-system-update.mp4" type="video/mp4" />
+          <track kind="captions" srclang="en" label="English" src="captions/30-zero-login-github-system-update.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/30-zero-login-github-system-update.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/30-zero-login-github-system-update.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/30-zero-login-github-system-update.vtt">
+        </video>
+        <ol class="steps">
+            <li>Open <strong>Users &amp; Access -&gt; System Update</strong> (<code>/users?tab=update</code>) to verify <code>Zero GitHub Login Required</code> and <code>Host Update Agent: Active</code>.</li>
+            <li>Click <strong>Check GitHub Releases</strong> to discover the latest official <code>ORNL/oscar</code> release anonymously via <code>releases/latest</code> and <code>releases.atom</code> and verify its expected SHA-256 digest.</li>
+            <li>Click <strong>Download &amp; Install</strong> to open the native confirmation <code>&lt;dialog&gt;</code> (<code>Cancel</code> focused by default), review sibling-directory extraction and automatic fail-safe rollback, and confirm installation.</li>
+            <li>Monitor live host-agent download, SHA-256 verification, container rebuild, and <code>/healthz</code> readiness cutover—or upload an air-gapped <code>oscar-&lt;version&gt;.zip</code> bundle on offline portals.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/30-zero-login-github-system-update.mp4" aria-label="MP4 Video — Module 30: Update OSCAR From the GUI Without a GitHub Login (GitHub &amp; Offline .zip)">MP4 Video</a>
+          <a href="captions/30-zero-login-github-system-update.vtt" aria-label="WebVTT (.vtt) — Module 30: Update OSCAR From the GUI Without a GitHub Login (GitHub &amp; Offline .zip)">WebVTT (.vtt)</a>
+          <a href="captions/30-zero-login-github-system-update.srt" aria-label="SubRip (.srt) — Module 30: Update OSCAR From the GUI Without a GitHub Login (GitHub &amp; Offline .zip)">SubRip (.srt)</a>
+        </div>
+      </article>
+
+      <article class="card" id="31-bare-metal-autoinstall-usb-creator" data-track="Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling">
+        <div class="card-head">
+          <span class="badge">31</span>
+          <div>
+            <h2>Build an Air-Gapped Ubuntu 24.04 Autoinstall USB Drive (GUI, TUI &amp; CLI)</h2>
+            <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 65s · 1681.4 KiB · 1080p NVENC H.264 30 FPS</p>
+          </div>
+        </div>
+        <p class="summary">Use the compact standalone oscar-3.11.9-autoinstall-usb-creator.zip on Windows 11 or Ubuntu—via Desktop GUI, interactive terminal TUI, or scriptable CLI—to combine ubuntu-24.04-live-server-amd64.iso and oscar-3.11.9-ubuntu-x86_64-offline-full.zip onto a UEFI Secure-Boot USB installer with native SHA-512 password hashing and optional LUKS2 encryption.</p>
+        <video controls width="1920" height="1080" preload="metadata" playsinline>
+          <source src="videos/31-bare-metal-autoinstall-usb-creator.mp4" type="video/mp4" />
+          <track kind="captions" srclang="en" label="English" src="captions/31-bare-metal-autoinstall-usb-creator.vtt" default>
+          <track kind="captions" srclang="es" label="Español" src="captions/es/31-bare-metal-autoinstall-usb-creator.vtt">
+          <track kind="captions" srclang="fr" label="Français" src="captions/fr/31-bare-metal-autoinstall-usb-creator.vtt">
+          <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/31-bare-metal-autoinstall-usb-creator.vtt">
+        </video>
+        <ol class="steps">
+            <li>Download the compact standalone <code>oscar-3.11.9-autoinstall-usb-creator.zip</code> alongside <code>ubuntu-24.04.5-live-server-amd64.iso</code> and <code>oscar-3.11.9-ubuntu-x86_64-offline-full.zip</code> without unpacking the offline bundle.</li>
+            <li>Launch the Desktop GUI (<code>create-autoinstall-usb.bat</code> on Windows 11 or <code>sudo bash create-autoinstall-usb.sh --gui</code> on Ubuntu) to pick a removable USB drive while internal NVMe OS and <code>OSCAR_BACKUP</code> disks stay hidden.</li>
+            <li>Configure the target server hostname, Linux admin password (<code>$6$</code> SHA-512), <code>sudo</code> password requirement, and optional 12+ character LUKS2 encryption, then type <code>ERASE-USB</code> to build and SHA-256-verify the installer.</li>
+            <li>Use the interactive terminal TUI (<code>-Tui</code> / <code>--tui</code>) or non-interactive CLI flags (<code>--password-file</code>, <code>--luks-passphrase-file</code>, <code>--ssh-keys-only</code>, <code>--confirm ERASE-USB</code>) for headless staging and automation.</li>
+        </ol>
+        <div class="links">
+          <a href="videos/31-bare-metal-autoinstall-usb-creator.mp4" aria-label="MP4 Video — Module 31: Build an Air-Gapped Ubuntu 24.04 Autoinstall USB Drive (GUI, TUI &amp; CLI)">MP4 Video</a>
+          <a href="captions/31-bare-metal-autoinstall-usb-creator.vtt" aria-label="WebVTT (.vtt) — Module 31: Build an Air-Gapped Ubuntu 24.04 Autoinstall USB Drive (GUI, TUI &amp; CLI)">WebVTT (.vtt)</a>
+          <a href="captions/31-bare-metal-autoinstall-usb-creator.srt" aria-label="SubRip (.srt) — Module 31: Build an Air-Gapped Ubuntu 24.04 Autoinstall USB Drive (GUI, TUI &amp; CLI)">SubRip (.srt)</a>
         </div>
       </article>
   </main>

@@ -9,7 +9,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-EXPECTED_GUIDE_COUNT = 29
+EXPECTED_GUIDE_COUNT = 31
 LOCALIZED_LANGS: tuple[tuple[str, str], ...] = (
     ("es", "Español"),
     ("fr", "Français"),

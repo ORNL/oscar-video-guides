@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:09.382
+Abra Usuarios y acceso -> Actualización del sistema, verifique cero
+login GitHub y pulse Comprobar versiones.
+
+2
+00:00:09.436 --> 00:00:19.195
+Revise las notas y el resumen SHA-256 anónimos, y abra el cuadro de
+confirmación con respaldo automático.
+
+3
+00:00:19.235 --> 00:00:28.078
+Inicie la actualización para ver descarga, verificación SHA-256,
+extracción limpia y corte verificado por /healthz.
+
+4
+00:00:28.118 --> 00:00:37.419
+Cierre el cuadro completado y baje hasta Carga de paquete .zip sin
+conexión para portales aislados.
