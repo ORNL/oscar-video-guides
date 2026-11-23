@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:06.676
+En Estado de salud (/health), resalte Luces y sonido
+en Lane01 y abra el cuadro de control WebRelay-Quad.
+
+2
+00:00:06.716 --> 00:00:14.454
+Pruebe la conexión HTTP/XML ControlByWeb (198.51.100.21), active
+el filtro AUTO EML y guarde para armar los relés R1 y R2.
+
+3
+00:00:14.494 --> 00:00:23.416
+Active pulsos temporizados en luz roja gamma + sirena (R3=ACTIVE)
+y azul neutrones (R4=ACTIVE), y pulse Silence para rearmar R1 y R2.
+
+4
+00:00:23.456 --> 00:00:31.687
+Confirme WebRelay (AUTO) · En línea en Estado de salud y abra
+Recorrido guiado para repaso seguro e info de apagado auto en :8444.

@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:10.501
+Busque en el Registro de eventos por ID de vehículo
+normalizado y abra la Comparación multipasada.
+
+2
+00:00:10.541 --> 00:00:20.943
+Despliegue Coocurrencia de alarmas y categorías (UpSet)
+y filtre los eventos por una categoría principal.
+
+3
+00:00:20.983 --> 00:00:27.806
+Pulse ADVANCED FILTERS y ADD CONDITION para filtrar en
+el servidor por carril, fecha, vehículo y Adjudicación.
+
+4
+00:00:27.846 --> 00:00:34.867
+Introduzca un identificador de Ocupación en Event UUID
+y pulse FIND EVENT para abrir Detalles del evento.

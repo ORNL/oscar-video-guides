@@ -1,0 +1,19 @@
+1
+00:00:00,040 --> 00:00:10,501
+Recherchez dans le Journal des événements par ID véhicule
+normalisé et ouvrez la Comparaison multipassage.
+
+2
+00:00:10,541 --> 00:00:20,943
+Dépliez Co-occurrence des alarmes et catégories (UpSet)
+et filtrez le journal par une catégorie principale.
+
+3
+00:00:20,983 --> 00:00:27,806
+Cliquez sur ADVANCED FILTERS et ADD CONDITION pour filtrer
+côté serveur par voie, date, véhicule et Adjudication.
+
+4
+00:00:27,846 --> 00:00:34,867
+Saisissez un identifiant d’Occupation dans Event UUID et
+cliquez sur FIND EVENT pour ouvrir Détails de l’événement.

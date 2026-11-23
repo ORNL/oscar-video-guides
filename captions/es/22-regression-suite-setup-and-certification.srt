@@ -1,0 +1,19 @@
+1
+00:00:00,040 --> 00:00:05,465
+Clone ORNL/oscar-regression, ejecute npm ci y npm run install:browser,
+y valide las 246 pruebas unitarias con npm run check y npm test.
+
+2
+00:00:05,505 --> 00:00:11,107
+Configure .env con los bloqueos de destino, emulador, mapeo y
+DISPOSABLE-STORAGE, y use rebind-active-release.sh tras actualizar.
+
+3
+00:00:11,147 --> 00:00:16,747
+Ejecute smoke, full, restore-drill o ui-endurance, o pase
+--scenario para probar módulos individuales de la suite.
+
+4
+00:00:16,787 --> 00:00:22,582
+Revise results/<run-id>/summary.md, functional-results.csv,
+performance.csv y evidence/; el código 0 exige cero fallos.

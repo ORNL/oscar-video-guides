@@ -1,0 +1,14 @@
+1
+00:00:00,040 --> 00:00:05,760
+Verifique que la Vista operativa east-gate limite el Estado
+de carriles del Panel a los 10 carriles de East Gate.
+
+2
+00:00:05,800 --> 00:00:11,348
+Abra Estado de salud (/health?view=east-gate) y
+confirme que la Vista operativa filtra 10 carriles.
+
+3
+00:00:11,388 --> 00:00:16,619
+Confirme que la protección segura bloquea la carga
+de carriles al solicitar una vista no asignada.

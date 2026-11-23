@@ -1,0 +1,16 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:06.310
+Pulse Exportar QR de alarma en Detalles del evento para
+generar y descargar la imagen PNG QR firmada con SHA-256.
+
+2
+00:00:06.350 --> 00:00:10.638
+Abra Transferencia de alarmas (/alarm-transfer) e
+importe la imagen PNG del QR de alarma exportado.
+
+3
+00:00:10.678 --> 00:00:16.627
+Verifique el aviso de comprobación de integridad SHA-256
+y las curvas Gamma/Neutrones reconstruidas sin conexión.

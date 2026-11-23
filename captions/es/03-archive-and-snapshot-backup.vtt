@@ -1,0 +1,16 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:03.940
+Consulte el estado de generaciones de nivel
+frío PARQUET_PRIMARY y los recibos de paridad.
+
+2
+00:00:03.980 --> 00:00:07.882
+Verifique las sumas SHA-256 y la paridad de
+filas en las particiones Parquet selladas.
+
+3
+00:00:07.922 --> 00:00:12.582
+Cree una copia de seguridad instantánea
+coordinada y ejecute backup-verify.

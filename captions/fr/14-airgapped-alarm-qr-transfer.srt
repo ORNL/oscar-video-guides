@@ -1,0 +1,14 @@
+1
+00:00:00,040 --> 00:00:06,310
+Cliquez sur Exporter le QR de l’alarme dans Détails de
+l’événement pour télécharger l’image PNG QR signée SHA-256.
+
+2
+00:00:06,350 --> 00:00:10,638
+Ouvrez Transfert d’alarme (/alarm-transfer) et
+importez l’image PNG du QR d’alarme exporté.
+
+3
+00:00:10,678 --> 00:00:16,627
+Vérifiez le bandeau d’intégrité SHA-256 et les
+courbes Gamma/Neutrons reconstruites hors ligne.

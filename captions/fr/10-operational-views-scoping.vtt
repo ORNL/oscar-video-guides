@@ -1,0 +1,16 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:05.760
+Vérifiez que la Vue opérationnelle east-gate
+limite le Tableau de bord aux 10 voies East Gate.
+
+2
+00:00:05.800 --> 00:00:11.348
+Accédez à État de santé (/health?view=east-gate) et
+confirmez le filtrage de la Vue opérationnelle sur 10 voies.
+
+3
+00:00:11.388 --> 00:00:16.619
+Confirmez que la sécurité par défaut bloque le chargement
+des voies lorsqu’une vue non assignée est demandée.

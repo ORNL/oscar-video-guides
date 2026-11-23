@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:06.621
+Pulse Ayuda (?) en la barra superior y explore Páginas
+de consola, Informes y formatos y Términos explicados.
+
+2
+00:00:06.661 --> 00:00:13.626
+Abra Manual y videoguías y pulse Exportar paquete de soporte
+para descargar diagnósticos redactados de cliente y servidor.
+
+3
+00:00:13.666 --> 00:00:19.208
+Si los contenedores están detenidos o inaccesibles, ejecute
+sudo bash oscar.sh support-bundle u oscar.bat support-bundle en el host.
+
+4
+00:00:19.248 --> 00:00:25.117
+Revise summary.json, client/client-diagnostics.json y
+redaction-report.json para verificar el filtrado automático [REDACTED].

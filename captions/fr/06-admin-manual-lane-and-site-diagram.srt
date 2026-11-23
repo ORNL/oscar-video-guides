@@ -1,0 +1,14 @@
+1
+00:00:00,040 --> 00:00:08,497
+Inspectez sur Lane01 les onglets General (seuil
+d’Occupation prolongée), Fixed Location et Lane Options.
+
+2
+00:00:08,537 --> 00:00:17,972
+Ouvrez Services -> OSCAR Service -> Site Diagram Config
+et renseignez les coordonnées Lower-Left et Upper-Right.
+
+3
+00:00:18,012 --> 00:00:22,630
+Cliquez sur Apply Changes et Save pour publier les
+marqueurs de voies et les limites géoréférencées du site.
