@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OSCAR 3.11.10 How-To Video Guides</title>
+  <title>OSCAR 3.11.11 How-To Video Guides</title>
   <style>
     :root {
       color-scheme: dark;
@@ -81,7 +81,7 @@
 </head>
 <body>
   <header>
-    <h1>OSCAR 3.11.10 How-To Video Guides</h1>
+    <h1>OSCAR 3.11.11 How-To Video Guides</h1>
     <p>Human-paced, step-by-step 1080p workflow screen recordings encoded via NVIDIA RTX 5060 Ti hardware NVENC H.264 (NV12 4:2:0, 8s GOP 240, 30 FPS CFR) with synchronized 4-language (English, Español, Français, Ελληνικά) closed captions and sequential step references.</p>
   </header>
   <main>
@@ -955,7 +955,7 @@
             <p class="meta">Track D — End-to-End Regression &amp; Multi-OS Capacity Scaling · 67s · 1739.4 KiB · 1080p NVENC H.264 30 FPS</p>
           </div>
         </div>
-        <p class="summary">Use the compact standalone oscar-3.11.10-autoinstall-usb-creator.zip on Windows 11 or Ubuntu—via Desktop GUI, interactive terminal TUI, or scriptable CLI—to combine ubuntu-24.04-live-server-amd64.iso, oscar-3.11.10-ubuntu-x86_64-offline-full.zip, a PBKDF2-hashed initial OSCAR web admin password, and pre-configured site lanes (lanes.csv / config.json) onto a turnkey UEFI Secure-Boot USB installer.</p>
+        <p class="summary">Use the compact standalone oscar-3.11.11-autoinstall-usb-creator.zip on Windows 11 or Ubuntu—via Desktop GUI, interactive terminal TUI, or scriptable CLI—to combine ubuntu-24.04-live-server-amd64.iso, oscar-3.11.11-ubuntu-x86_64-offline-full.zip, a PBKDF2-hashed initial OSCAR web admin password, and pre-configured site lanes (lanes.csv / config.json) onto a turnkey UEFI Secure-Boot USB installer.</p>
         <video controls width="1920" height="1080" preload="metadata" playsinline>
           <source src="videos/31-bare-metal-autoinstall-usb-creator.mp4" type="video/mp4" />
           <track kind="captions" srclang="en" label="English" src="captions/31-bare-metal-autoinstall-usb-creator.vtt" default>
@@ -964,7 +964,7 @@
           <track kind="captions" srclang="el" label="Ελληνικά" src="captions/el/31-bare-metal-autoinstall-usb-creator.vtt">
         </video>
         <ol class="steps">
-            <li>Download the compact standalone <code>oscar-3.11.10-autoinstall-usb-creator.zip</code> alongside <code>ubuntu-24.04.5-live-server-amd64.iso</code> and <code>oscar-3.11.10-ubuntu-x86_64-offline-full.zip</code> without unpacking the offline bundle.</li>
+            <li>Download the compact standalone <code>oscar-3.11.11-autoinstall-usb-creator.zip</code> alongside <code>ubuntu-24.04.5-live-server-amd64.iso</code> and <code>oscar-3.11.11-ubuntu-x86_64-offline-full.zip</code> without unpacking the offline bundle.</li>
             <li>Launch the Desktop GUI (<code>create-autoinstall-usb.bat</code> on Windows 11 or <code>sudo bash create-autoinstall-usb.sh --gui</code> on Ubuntu) to pick a removable USB drive while internal NVMe OS and <code>OSCAR_BACKUP</code> disks stay hidden.</li>
             <li>Set the server hostname, Linux admin password (<code>$6$</code> SHA-512), optional LUKS2 encryption, initial OSCAR web <code>admin</code> password (PBKDF2-hashed), and <code>lanes.csv</code> with <code>Auto-initialize OSCAR on first boot</code>, then type <code>ERASE-USB</code> to build.</li>
             <li>Use the interactive terminal TUI (<code>-Tui</code> / <code>--tui</code>) or non-interactive CLI flags (<code>--oscar-admin-password-file</code>, <code>--lanes-file</code>, <code>--auto-init-oscar</code>, <code>--confirm ERASE-USB</code>) so on site you only register users and upload <code>.pmtiles</code> or the site diagram.</li>
