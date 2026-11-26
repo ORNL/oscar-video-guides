@@ -1,11 +1,14 @@
 1
 00:00:00,040 --> 00:00:16,212
-Ouvrez Tableaux personnalisés (/dashboards), lancez Mur multivoie et consultez les flux vidéo et graphiques de rayonnement.
+Ouvrez Tableaux personnalisés (/dashboards), lancez Mur multivoie et
+consultez les flux vidéo et graphiques de rayonnement.
 
 2
 00:00:16,321 --> 00:00:27,460
-Cliquez sur Modifier la mise en page et Ajouter un widget pour vérifier les limites <= 4 vidéos (4/4) et <= 6 graphiques (4/6).
+Cliquez sur Modifier la mise en page et Ajouter un widget pour
+vérifier les limites <= 4 vidéos (4/4) et <= 6 graphiques (4/6).
 
 3
 00:00:27,500 --> 00:00:38,061
-Fermez Ajouter un widget, cliquez sur Terminé pour verrouiller et ouvrez Importer / Exporter pour télécharger un JSON validé.
+Fermez Ajouter un widget, cliquez sur Terminé pour verrouiller et
+ouvrez Importer / Exporter pour télécharger un JSON validé.

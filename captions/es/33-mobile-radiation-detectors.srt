@@ -1,11 +1,14 @@
 1
 00:00:00,040 --> 00:00:09,801
-Configure PatrolRS350 como Sistema de detector móvil con conexión mochila RS-350 (sin cámaras de pórtico ni ocupación prolongada).
+Configure PatrolRS350 como Sistema de detector móvil con conexión
+mochila RS-350 (sin cámaras de pórtico ni ocupación prolongada).
 
 2
 00:00:10,433 --> 00:00:20,791
-Abra Mapa (/map) para seguir el marcador móvil PatrolRS350 y su traza GPS en vivo junto a los carriles del portal.
+Abra Mapa (/map) para seguir el marcador móvil PatrolRS350 y su
+traza GPS en vivo junto a los carriles del portal.
 
 3
 00:00:33,562 --> 00:00:47,285
-Abra Vista de carril (/lane-view) para PatrolRS350 y revise estado en línea, coordenadas GPS, dosis y espectro de 1.024 canales.
+Abra Vista de carril (/lane-view) para PatrolRS350 y revise estado
+en línea, coordenadas GPS, dosis y espectro de 1.024 canales.
