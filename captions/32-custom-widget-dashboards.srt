@@ -1,0 +1,11 @@
+1
+00:00:00,040 --> 00:00:16,212
+Open Custom Dashboards (/dashboards), launch Multi-Lane Wallboard, and view live video feeds and radiation charts.
+
+2
+00:00:16,321 --> 00:00:27,460
+Click Edit Layout and Add Widget to inspect the <= 4 live-video (4/4) and <= 6 live-chart (4/6) per-page guardrails.
+
+3
+00:00:27,500 --> 00:00:38,061
+Close Add Widget, click Done to lock the layout, and open Import / Export to download a validated JSON layout.

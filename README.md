@@ -1,6 +1,6 @@
 # OSCAR How-To Video Guides
 
-Human-paced, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.11.15** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus 4-language (`en`, `es`, `fr`, `el`) standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
+Human-paced, single-task `1920x1080` screen-recording guides covering every major workflow in **OSCAR 3.12.0** ([`ORNL/oscar`](https://github.com/ORNL/oscar)). Each module starts immediately at `00:00` with the workflow action, runs under 2 minutes, includes embedded `mov_text` soft subtitles plus 4-language (`en`, `es`, `fr`, `el`) standalone `.vtt` / `.srt` caption files, and pairs with a 3-to-4-step sequential reference block.
 
 ## Encoding & Playback Profile
 
@@ -10,7 +10,7 @@ Human-paced, single-task `1920x1080` screen-recording guides covering every majo
 | Container & Color | Universal `.mp4` (`+faststart`), `NV12` / `4:2:0` (`yuv420p`), `BT.709` |
 | Compression & GOP | `8 s` forced IDR keyframe interval (`GOP 240 @ 30fps`) + NVENC `p7`/`hq` B-frame skip blocks |
 | Resolution & FPS | `1920x1080` (`1080p`) constant `30 FPS` (`CFR`) |
-| Captions | Embedded MP4 `mov_text` track + 4-language (`en`, `es`, `fr`, `el`) [`captions/`](captions/) `.vtt` & `.srt` (`248` subtitle files) |
+| Captions | Embedded MP4 `mov_text` track + 4-language (`en`, `es`, `fr`, `el`) [`captions/`](captions/) `.vtt` & `.srt` (`264` subtitle files) |
 
 - **Interactive HTML5 Player with Closed Captions:** Open [`index.html`](index.html) locally (or via GitHub Pages) to watch every guide with synchronized WebVTT closed captions.
 - **Reproducible NVENC Encoding Script:** [`scripts/encode-nvenc-5060ti.sh`](scripts/encode-nvenc-5060ti.sh) and validator [`scripts/verify-guides.py`](scripts/verify-guides.py).
@@ -50,17 +50,19 @@ Human-paced, single-task `1920x1080` screen-recording guides covering every majo
 | 29 | [Configure & Control Per-Lane Physical RPM Lights & Sound (WebRelay-Quad)](#29-lane-webrelay-lights-and-sound) ([MP4](videos/29-lane-webrelay-lights-and-sound.mp4)) | Track C | 44s | 2607.8 KiB | [VTT](captions/29-lane-webrelay-lights-and-sound.vtt) · [SRT](captions/29-lane-webrelay-lights-and-sound.srt) |
 | 30 | [Update OSCAR From the GUI Without a GitHub Login (GitHub & Offline .zip)](#30-zero-login-github-system-update) ([MP4](videos/30-zero-login-github-system-update.mp4)) | Track C | 38s | 1118.9 KiB | [VTT](captions/30-zero-login-github-system-update.vtt) · [SRT](captions/30-zero-login-github-system-update.srt) |
 | 31 | [Build an Air-Gapped Ubuntu 24.04 Autoinstall USB Drive (GUI, TUI & CLI)](#31-bare-metal-autoinstall-usb-creator) ([MP4](videos/31-bare-metal-autoinstall-usb-creator.mp4)) | Track D | 67s | 1739.4 KiB | [VTT](captions/31-bare-metal-autoinstall-usb-creator.vtt) · [SRT](captions/31-bare-metal-autoinstall-usb-creator.srt) |
+| 32 | [Build, Customize & Share Custom Widget Dashboards](#32-custom-widget-dashboards) ([MP4](videos/32-custom-widget-dashboards.mp4)) | Track C | 38.5s | 4743.3 KiB | [VTT](captions/32-custom-widget-dashboards.vtt) · [SRT](captions/32-custom-widget-dashboards.srt) |
+| 33 | [Configure & Monitor Mobile Radiation Detectors (RS-350 & Kromek D5)](#33-mobile-radiation-detectors) ([MP4](videos/33-mobile-radiation-detectors.mp4)) | Track C | 48s | 2331.7 KiB | [VTT](captions/33-mobile-radiation-detectors.vtt) · [SRT](captions/33-mobile-radiation-detectors.srt) |
 
 ## Track A — CLI Deployment, Upgrades & Storage Lifecycle
 
 <a id="01-deployment-init-and-credentials"></a>
 ### 01. Initialize OSCAR Deployment, Admin Credentials & TLS
 
-Extract a clean OSCAR 3.11.8 release archive, initialize administrator credentials and TLS SAN certificates with oscar init, and verify healthy container startup.
+Extract a clean OSCAR 3.12.0 release archive, initialize administrator credentials and TLS SAN certificates with oscar init, and verify healthy container startup.
 
 - **Video:** [Watch `01-deployment-init-and-credentials.mp4` (28.5s, 587.7 KiB)](videos/01-deployment-init-and-credentials.mp4) · [WebVTT Captions](captions/01-deployment-init-and-credentials.vtt) · [SRT Captions](captions/01-deployment-init-and-credentials.srt)
 
-1. Extract `oscar-3.11.8.zip` into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into `oscar-3.11.8/`.
+1. Extract `oscar-3.12.0.zip` into a clean release directory on Ubuntu Server 24.04 or Windows 11 and change into `oscar-3.12.0/`.
 2. Run `sudo bash oscar.sh init` (or `.\oscar.bat init` on Windows 11) and supply the deployment hostname, IANA timezone, and administrator password (`>= 14` characters).
 3. Allow `init` to generate deployment-bound PostgreSQL secrets, TLS gateway certificates, and external `oscar_oscar_state` / `oscar_postgres_data` volumes.
 4. Run `sudo bash oscar.sh status` (or `.\oscar.bat status`) to confirm `oscar-gateway`, `oscar`, and `oscar-postgis` report `running (healthy)`.
@@ -68,12 +70,12 @@ Extract a clean OSCAR 3.11.8 release archive, initialize administrator credentia
 <a id="02-clean-directory-upgrade"></a>
 ### 02. Upgrade OSCAR in a Clean Release Directory
 
-Verify a pre-upgrade snapshot, copy only .env, secrets/, and tls/ into a newly extracted oscar-3.11.8 folder, and run oscar upgrade while preserving external volumes.
+Verify a pre-upgrade snapshot, copy only .env, secrets/, and tls/ into a newly extracted oscar-3.12.0 folder, and run oscar upgrade while preserving external volumes.
 
 - **Video:** [Watch `02-clean-directory-upgrade.mp4` (29.5s, 519.6 KiB)](videos/02-clean-directory-upgrade.mp4) · [WebVTT Captions](captions/02-clean-directory-upgrade.vtt) · [SRT Captions](captions/02-clean-directory-upgrade.srt)
 
 1. When `single` backup mode is enabled, run `sudo bash oscar.sh backup` and `sudo bash oscar.sh backup-verify` from the active release directory before upgrading.
-2. Extract the target `oscar-3.11.8.zip` archive into a separate sibling directory — never unzip over an existing release directory.
+2. Extract the target `oscar-3.12.0.zip` archive into a separate sibling directory — never unzip over an existing release directory.
 3. Copy only `.env`, `secrets/`, and `tls/` (plus `.oscar-volume-adoption` if previously adopted) into the newly extracted directory.
 4. Run `sudo bash oscar.sh upgrade` (or `.\oscar.bat upgrade`) and confirm all containers return `healthy` with preserved named volumes and archive roots.
 
@@ -262,7 +264,7 @@ Open Help (?) to browse the localized Operator Quick Guide & Glossary, export th
 
 - **Video:** [Watch `18-operator-help-and-support-bundle.mp4` (37.5s, 3333.3 KiB)](videos/18-operator-help-and-support-bundle.mp4) · [WebVTT Captions](captions/18-operator-help-and-support-bundle.vtt) · [SRT Captions](captions/18-operator-help-and-support-bundle.srt)
 
-1. Click the **Help (`?`)** button in the OSCAR Viewer top navigation bar to open the localized **OSCAR 3.11.8 Operator Quick Guide & Glossary** (`en`, `es`, `fr`, `el`).
+1. Click the **Help (`?`)** button in the OSCAR Viewer top navigation bar to open the localized **OSCAR 3.12.0 Operator Quick Guide & Glossary** (`en`, `es`, `fr`, `el`).
 2. Open **Manual & Video Guides** and click **Export Support Bundle** to merge the 400-event browser Flight Recorder (`client/client-diagnostics.json`) with rolling server logs (`backend/oscar.log`) into `oscar-support-<UTC>.zip` (automatically falling back to `oscar-client-support-<UTC>.zip` if the server is offline).
 3. When containers are stopped or unreachable over HTTPS, run `sudo bash oscar.sh support-bundle` (Ubuntu) or `.\oscar.bat support-bundle` (Windows) on the host to capture `oscar-host-support-<UTC>.zip`.
 4. Inspect `summary.json`, `client/client-diagnostics.json`, and `redaction-report.json` side-by-side to review recent events and confirm automatic `[REDACTED]` credential scrubbing.
@@ -350,6 +352,29 @@ Open Users & Access -> System Update (/users?tab=update), discover and SHA-256-v
 3. Click **Download & Install** to open the native confirmation `<dialog>` (`Cancel` focused by default), review sibling-directory extraction and automatic fail-safe rollback, and confirm installation.
 4. Monitor live host-agent download, SHA-256 verification, container rebuild, and `/healthz` readiness cutover—or upload an air-gapped `oscar-<version>.zip` bundle on offline portals.
 
+<a id="32-custom-widget-dashboards"></a>
+### 32. Build, Customize & Share Custom Widget Dashboards
+
+Open Custom Dashboards (/dashboards) to launch starter templates such as Multi-Lane Wallboard, arrange widgets within the <= 4 live-video and <= 6 live-chart guardrails, and export or import validated JSON layouts without altering the 8 canonical routes.
+
+- **Video:** [Watch `32-custom-widget-dashboards.mp4` (38.5s, 4743.3 KiB)](videos/32-custom-widget-dashboards.mp4) · [WebVTT Captions](captions/32-custom-widget-dashboards.vtt) · [SRT Captions](captions/32-custom-widget-dashboards.srt)
+
+1. Open **Custom Dashboards** (`/dashboards`) from the navigation drawer and launch a starter template such as **Multi-Lane Wallboard** or **Alarm & Map Overview**.
+2. Inspect live camera streams, real-time radiation waveforms, and lane health strips while all 8 canonical OSCAR routes remain untouched.
+3. Click **Edit Layout** and **Add Widget** to verify the per-page `<= 4` live-video (`4/4`) and `<= 6` live-chart (`4/6`) browser stability guardrails.
+4. Click **Done** to lock the view-scoped layout and use **Import / Export** to download or restore validated JSON layouts (`<= 512 KiB`).
+
+<a id="33-mobile-radiation-detectors"></a>
+### 33. Configure & Monitor Mobile Radiation Detectors (RS-350 & Kromek D5)
+
+Provision a Mobile Detector System (RS-350 Backpack or Kromek D5) in SensorHub Admin without portal cameras or Extended Occupancy faults, track live GPS trails and hotspot popups on Map (/map), and inspect live gamma/neutron counts and 1,024-channel spectra in Lane View (/lane-view).
+
+- **Video:** [Watch `33-mobile-radiation-detectors.mp4` (48s, 2331.7 KiB)](videos/33-mobile-radiation-detectors.mp4) · [WebVTT Captions](captions/33-mobile-radiation-detectors.vtt) · [SRT Captions](captions/33-mobile-radiation-detectors.srt)
+
+1. In **SensorHub Admin** (`/sensorhub/admin`), add a **Mobile Detector System** (`PatrolRS350`), select **RS-350 Backpack** (or **Kromek D5**), enter the detector TCP host and port, and click **Apply Changes** + **Start**.
+2. Open **Map** (`/map`) to track the live roving walker marker, GPS breadcrumb trail, and spectroscopic alarm popups alongside fixed portal lanes.
+3. Click the mobile unit marker to open **Lane View** (`/lane-view`) and inspect the **LIVE** telemetry card, GPS coordinates, real-time gamma/neutron count waveforms, and full-channel energy spectrum.
+
 ## Track D — End-to-End Regression & Multi-OS Capacity Scaling
 
 <a id="22-regression-suite-setup-and-certification"></a>
@@ -382,7 +407,7 @@ Unpack the self-contained Ubuntu 24.04 offline bundle on hotel/office Wi-Fi, ide
 
 - **Video:** [Watch `26-ubuntu-hotel-staging-and-airgapped-cutover.mp4` (33.5s, 1007.3 KiB)](videos/26-ubuntu-hotel-staging-and-airgapped-cutover.mp4) · [WebVTT Captions](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.vtt) · [SRT Captions](captions/26-ubuntu-hotel-staging-and-airgapped-cutover.srt)
 
-1. Off-site (hotel or staging bench), extract `oscar-3.11.8-ubuntu-x86_64-offline-full.zip`, verify bundle checksums (`sudo bash verify-bundle.sh`), and run `sudo bash oscar.sh identify-nics --watch` while plugging a patch cord into the target NIC to confirm its Linux interface name (`enp2s0`).
+1. Off-site (hotel or staging bench), extract `oscar-3.12.0-ubuntu-x86_64-offline-full.zip`, verify bundle checksums (`sudo bash verify-bundle.sh`), and run `sudo bash oscar.sh identify-nics --watch` while plugging a patch cord into the target NIC to confirm its Linux interface name (`enp2s0`).
 2. Stage the portal's static IPv4 configuration safely without touching active Wi-Fi/SSH via `sudo bash oscar.sh stage-site-network --interface enp2s0 --ip 198.51.100.10/24 --gateway 198.51.100.1`.
 3. Run `sudo bash oscar.sh prepare-host --offline --expand-lvm` to expand Ubuntu Server's default `100 GiB` LVM logical volume across the full NVMe disk and install offline `.deb` packages, then run `sudo bash oscar.sh init --offline` to load air-gapped container images and initialize credentials.
 4. On-site inside the air-gapped portal rack, apply the pre-staged static subnet with `sudo bash oscar.sh apply-site-network` and scan the sensor LAN with `sudo bash oscar.sh discover-devices --interface enp2s0` to verify Rapiscan RPM (`10001–10050`) and RTSP camera (`554`/`8554`) endpoints.
@@ -414,11 +439,11 @@ Launch the isolated ephemeral Training Sandbox (:8444) with zero production data
 <a id="31-bare-metal-autoinstall-usb-creator"></a>
 ### 31. Build an Air-Gapped Ubuntu 24.04 Autoinstall USB Drive (GUI, TUI & CLI)
 
-Use the compact standalone oscar-3.11.15-autoinstall-usb-creator.zip on Windows 11 or Ubuntu—via Desktop GUI, interactive terminal TUI, or scriptable CLI—to combine ubuntu-24.04-live-server-amd64.iso, oscar-3.11.15-ubuntu-x86_64-offline-full.zip, a PBKDF2-hashed initial OSCAR web admin password, and pre-configured site lanes (lanes.csv / config.json) onto a turnkey UEFI Secure-Boot USB installer.
+Use the compact standalone oscar-3.12.0-autoinstall-usb-creator.zip on Windows 11 or Ubuntu—via Desktop GUI, interactive terminal TUI, or scriptable CLI—to combine ubuntu-24.04-live-server-amd64.iso, oscar-3.12.0-ubuntu-x86_64-offline-full.zip, a PBKDF2-hashed initial OSCAR web admin password, and pre-configured site lanes (lanes.csv / config.json) onto a turnkey UEFI Secure-Boot USB installer.
 
 - **Video:** [Watch `31-bare-metal-autoinstall-usb-creator.mp4` (67s, 1739.4 KiB)](videos/31-bare-metal-autoinstall-usb-creator.mp4) · [WebVTT Captions](captions/31-bare-metal-autoinstall-usb-creator.vtt) · [SRT Captions](captions/31-bare-metal-autoinstall-usb-creator.srt)
 
-1. Download the compact standalone `oscar-3.11.15-autoinstall-usb-creator.zip` alongside `ubuntu-24.04.5-live-server-amd64.iso` and `oscar-3.11.15-ubuntu-x86_64-offline-full.zip` without unpacking the offline bundle.
+1. Download the compact standalone `oscar-3.12.0-autoinstall-usb-creator.zip` alongside `ubuntu-24.04.5-live-server-amd64.iso` and `oscar-3.12.0-ubuntu-x86_64-offline-full.zip` without unpacking the offline bundle.
 2. Launch the Desktop GUI (`create-autoinstall-usb.bat` on Windows 11 or `sudo bash create-autoinstall-usb.sh --gui` on Ubuntu) to pick a removable USB drive while internal NVMe OS and `OSCAR_BACKUP` disks stay hidden.
 3. Set the server hostname, Linux admin password (`$6$` SHA-512), optional LUKS2 encryption, initial OSCAR web `admin` password (PBKDF2-hashed), and `lanes.csv` with `Auto-initialize OSCAR on first boot`, then type `ERASE-USB` to build.
 4. Use the interactive terminal TUI (`-Tui` / `--tui`) or non-interactive CLI flags (`--oscar-admin-password-file`, `--lanes-file`, `--auto-init-oscar`, `--confirm ERASE-USB`) so on site you only register users and upload `.pmtiles` or the site diagram.

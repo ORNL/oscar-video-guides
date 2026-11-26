@@ -1,0 +1,13 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:09.801
+Configure PatrolRS350 as a Mobile Detector System with RS-350 Backpack connection (no portal cameras or Extended Occupancy fields).
+
+2
+00:00:10.433 --> 00:00:20.791
+Open Map (/map) to track the roving PatrolRS350 walker marker and live GPS breadcrumb trail alongside portal lanes.
+
+3
+00:00:33.562 --> 00:00:47.285
+Open Lane View (/lane-view) for PatrolRS350 to inspect LIVE status, GPS coordinates, gamma/neutron counts, and the 1,024-channel spectrum.
